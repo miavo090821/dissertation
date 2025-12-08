@@ -1,0 +1,30 @@
+# this file is for people using the code to know 
+# what are the required libraries or api or utilities 
+#for the venv virtual environment to be able to run the code. 
+
+# having the venv to help people run the code lightly without 
+#having to install all the dependences in their computer.
+
+# YouTube Self-Censorship Research Project
+# Python dependencies
+
+# google API (youtube data api)
+google-api-python-client==2.111.0 # this is youtube data api 
+
+# Data processing
+pandas==2.1.4
+openpyxl==3.1.2
+
+# NLP
+nltk==3.8.1
+
+# Visualization
+matplotlib==3.8.2
+seaborn==0.13.0
+
+# Utilities
+python-dateutil==2.8.2
+tqdm==4.66.1
+python-dotenv==1.0.0
+requests>=2.28.0
+
