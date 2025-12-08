@@ -1,0 +1,14 @@
+# this file is a memo and note for git, and everything else. 
+#  they will not be run as a program for this project. 
+
+#  git commit via command line: 
+# git remote add origin https://github.com/miavo090821/dissertation.git
+
+git add .
+git commit -m "message"
+git push
+If GitHub changed first:
+git pull
+git add .
+git commit -m "message"
+git push
