@@ -1,0 +1,48 @@
+{
+  "description": "Keywords for detecting viewer perception of speech alteration due to monetization (RQ2)",
+  "version": "2.1",
+  "last_updated": "2025-11-30",
+  "notes": "Removed ambiguous keywords: corn, mascara, camping, accountant, vocabulary, locals, silence, buried, hidden",
+  "categories": {
+    "monetization_pressure": {
+      "description": "Terms indicating the financial pressure to conform",
+      "keywords": [
+        "demonetise",
+        "demonetised",
+        "demonetize",
+        "demonetized",
+        "demonetisation",
+        "yellow dollar",
+        "yellow icon",
+        "ad friendly",
+        "ad-friendly",
+        "advertiser friendly",
+        "brand safe",
+        "brand safety",
+        "lost monetization",
+        "lost revenue",
+        "for the ads",
+        "adpocalypse"
+      ]
+    },
+    "censorship_behavior": {
+      "description": "Direct observations of self-censorship actions",
+      "keywords": [
+        "self-censor",
+        "self censor",
+        "censored",
+        "censoring",
+        "can't say",
+        "cant say",
+        "cannot say",
+        "not allowed to say",
+        "youtube won't let",
+        "watch your mouth",
+        "watch your language",
+        "biting your tongue",
+        "hold back",
+        "careful with words"
+      ]
+    }
+}
+}
