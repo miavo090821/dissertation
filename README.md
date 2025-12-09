@@ -65,6 +65,35 @@ The `.env` file is automatically loaded when you run scripts. It's gitignored so
 - Supadata: https://supadata.ai/ (for transcripts)
 
 ---
+
+## Folder Structure
+
+```
+dissertation/
+├── config.py                    # Configuration (requires .env file)
+├── requirements.txt             # Python dependencies
+│
+├── scripts/
+│   ├── step1_extract_single_video.py    # Test ONE video
+│   ├── step2_batch_extract.py           # Extract ALL videos
+│   ├── step3_sensitivity_analysis.py    # RQ1: Sensitive word analysis
+│   ├── step4_comments_analysis.py       # RQ2: Comment perception
+│   ├── step5_algospeak_detection.py     # RQ3: Algospeak in transcripts + comments
+│   ├── step6_generate_report.py         # Compile Excel report
+│   ├── step7_visualizations.py          # Generate charts
+│   └── utils/                           # Helper functions
+│
+├── data/
+│   ├── input/video_urls.csv             # Video list with manual ad status
+│   ├── raw/{video_id}/                  # Extracted data per video
+│   ├── output/                          # Current analysis results
+│   └── archive/                         # Previous run archives
+│
+├── dictionaries/
+    ├── sensitive_words.json             
+    └── perception_keywords.json         
+```
+---
 ## Workflow
 
 ### Initial Setup
