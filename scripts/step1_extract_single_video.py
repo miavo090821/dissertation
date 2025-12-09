@@ -199,9 +199,6 @@ def get_comments_with_replies(youtube, video_id: str, max_comments: int = 100) -
                             })
                 
                 comments.append(comment_data)
-                
-                if len(comments) >= max_comments:
-                    break
             
             next_page_token = response.get('nextPageToken')
             if not next_page_token:
@@ -244,11 +241,7 @@ def main():
         print("  ERROR: Failed to fetch metadata")
         sys.exit(1)
     
-    print("\n[2/3] Fetching transcript...")
-    transcript_text, segments = get_transcript_supadata(video_id)
-    if transcript_text:
-        with open(os.path.join(video_dir, 'transcript.txt'), 'w', encoding='utf-8') as f:
-            f.write(transcript_text)
+    
         if segments:
             with open(os.path.join(video_dir, 'transcript_segments.json'), 'w', encoding='utf-8') as f:
                 json.dump(segments, f, indent=2, ensure_ascii=False)
