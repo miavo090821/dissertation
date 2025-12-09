@@ -71,6 +71,22 @@ def get_video_metadata(api_key: str, video_id: str) -> dict:
 def get_channel_info(api_key: str, channel_id: str) -> dict:
 
 def get_video_transcript(video_id: str, max_retries: int = 3) -> tuple:
+    """
+    Fetch video transcript using youtube-transcript-api.
+    
+    Includes retry logic with exponential backoff for rate limiting (429 errors).
+    
+    Args:
+        video_id: YouTube video ID
+        max_retries: Number of retries on rate limit errors
+        
+    Returns:
+        Tuple of (transcript_text, transcript_segments)
+        - transcript_text: Full transcript as plain text
+        - transcript_segments: List of dicts with 'start', 'duration', 'text'
+        
+    Returns (None, None) if transcript unavailable.
+    """
     import time
     
     segments = None
@@ -82,8 +98,50 @@ def get_video_transcript(video_id: str, max_retries: int = 3) -> tuple:
             wait_time = 5 * (2 ** (attempt - 1))
             print(f"  [RETRY] Waiting {wait_time}s before retry {attempt + 1}/{max_retries}...")
             time.sleep(wait_time)
-            
-            # Process segments - handle both dict and object formats
+        
+        # Method 1: Direct get_transcript() - simplest and most reliable
+        try:
+            segments = YouTubeTranscriptApi.get_transcript(video_id, languages=['en', 'en-US', 'en-GB'])
+            break  # Success!
+        except Exception as e:
+            last_error = e
+            if '429' in str(e) or 'Too Many Requests' in str(e):
+                continue  # Rate limited, will retry
+        
+        # Method 2: Try list_transcripts approach
+        try:
+            transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
+            # Try auto-generated specifically (most common)
+            try:
+                transcript = transcript_list.find_generated_transcript(['en', 'en-US', 'en-GB'])
+                segments = transcript.fetch()
+                break  # Success!
+            except Exception:
+                # Try manual transcripts
+                try:
+                    transcript = transcript_list.find_manually_created_transcript(['en', 'en-US', 'en-GB'])
+                    segments = transcript.fetch()
+                    break  # Success!
+                except Exception:
+                    # Last resort: any available transcript
+                    available = list(transcript_list)
+                    if available:
+                        segments = available[0].fetch()
+                        break  # Success!
+        except Exception as e:
+            last_error = e
+            if '429' in str(e) or 'Too Many Requests' in str(e):
+                continue  # Rate limited, will retry
+    
+    if not segments:
+        error_msg = str(last_error) if last_error else "Unknown error"
+        if '429' in error_msg or 'Too Many Requests' in error_msg:
+            print(f"  [WARNING] Rate limited by YouTube for {video_id}. Try again later.")
+        else:
+            print(f"  [WARNING] Could not retrieve transcript for {video_id}: {error_msg[:100]}")
+        return None, None
+    
+    # Process segments - handle both dict and object formats
     full_text_parts = []
     processed_segments = []
     
@@ -105,6 +163,54 @@ def get_video_transcript(video_id: str, max_retries: int = 3) -> tuple:
     full_text = ' '.join(full_text_parts)
     return full_text, processed_segments
 
+
+def get_video_comments(api_key: str, video_id: str, max_comments: int = 200) -> list:
+    # Fetch video comments from YouTube API.
+    
+    # Uses pagination to fetch more than the default 20/100 limit.
+    
+    # Args:
+    #     api_key: YouTube Data API v3 key
+    #     video_id: YouTube video ID
+    #     max_comments: Maximum number of comments to fetch
+        
+    # Returns:
+    #     List of comment dictionaries containing:
+    #     - author: str
+    #     - author_channel_id: str
+    #     - text: str
+    #     - like_count: int
+    #     - published_at: str
+    #     - updated_at: str
+
+    youtube = get_youtube_client(api_key)
+    comments = []
+    next_page_token = None
+    
+    try:
+        while len(comments) < max_comments:
+            # Fetch up to 100 per request (API max)
+            fetch_count = min(100, max_comments - len(comments))
+            
+            request = youtube.commentThreads().list(
+                part="snippet",
+                videoId=video_id,
+                maxResults=fetch_count,
+                pageToken=next_page_token,
+                textFormat="plainText",
+                order="relevance"
+            )
+            response = request.execute()
+                
+    except Exception as e:
+        # Comments might be disabled
+        if "commentsDisabled" in str(e):
+            print(f"  [INFO] Comments are disabled for {video_id}")
+        else:
+            print(f"  [WARNING] Error fetching comments for {video_id}: {e}")
+    
+    return comments
+
 def get_video_comments(api_key: str, video_id: str, max_comments: int = 200) -> list:
     youtube = get_youtube_client(api_key)
     comments = []
@@ -119,8 +225,21 @@ def parse_duration(duration_str: str) -> int:
     if not match:
         return 0
     
+    hours = int(match.group(1) or 0)
+    minutes = int(match.group(2) or 0)
+    seconds = int(match.group(3) or 0)
+    
+    return hours * 3600 + minutes * 60 + seconds
+    
 def format_duration(seconds: int) -> str:
- 
+    hours = seconds // 3600
+    minutes = (seconds % 3600) // 60
+    secs = seconds % 60
+    
+    if hours > 0:
+        return f"{hours:02d}:{minutes:02d}:{secs:02d}"
+    else:
+        return f"{minutes:02d}:{secs:02d}"
  
 def save_video_data(output_dir: str, video_id: str, metadata: dict, 
                     transcript_text: str, transcript_segments: list, 
