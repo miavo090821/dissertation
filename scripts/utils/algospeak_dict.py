@@ -127,4 +127,78 @@ ALGOSPEAK_DICT = {
     "r slur": "ableist slur",
 }
 
+
 # Categories for analysis
+ALGOSPEAK_CATEGORIES = {
+    "violence_death": ["unalive", "unalived", "unaliving", "sewerslide", "sewer slide", 
+                       "self delete", "self-delete", "final rest", "kll", "k!ll", 
+                       "m*rder", "murd3r", "d*e", "d!e", "de@th", "d3ath"],
+    
+    "sexual": ["seggs", "s3x", "s*x", "secks", "spicy time", "grape", "graped", 
+               "graping", "s.a.", "SA'd", "nip nops", "bewbs", "bobs",
+               "corn", "cornography", "spicy accountant", "accountant", "onlyfans", "only fans", "the hub"],
+    
+    "profanity": ["fck", "f*ck", "f**k", "effing", "sht", "sh*t", "bs", "b.s.",
+                  "a$$", "@ss", "btch", "b*tch"],
+    
+    "drugs": ["unmentionables", "devil's lettuce", "jazz cabbage", "mary jane",
+              "special brownies", "nose candy", "booger sugar", "snow", "lucy",
+              "molly", "vitamins", "supplements"],
+    
+    "mental_health": ["le sad", "big sad", "the big D", "panic merchant", 
+                      "spicy brain", "grippy sock vacation", "grippy socks"],
+    
+    "weapons": ["mascara", "pew pew", "boom stick", "stabby", "ouch sword",
+                "lead dispenser", "freedom seed dispenser"],
+    
+    "platform_moderation": ["cornfield", "naughty step", "yellow dollar", 
+                           "no money", "money gone", "ad unfriendly", "shadow realm",
+                           "in jail", "timeout"]
+}
+
+
+def get_all_algospeak_terms() -> list:
+    # Get all algospeak terms as a list.
+    
+    # Returns:
+    #     List of all algospeak terms
+    return list(ALGOSPEAK_DICT.keys())
+
+def get_category(term: str) -> str:
+    # Get the category of an algospeak term.
+    
+    # Args:
+    #     term: Algospeak term
+        
+    # Returns:
+    #     Category name or "other"
+    
+    term_lower = term.lower()
+    for category, terms in ALGOSPEAK_CATEGORIES.items():
+        if term_lower in terms:
+            return category
+    return "other"
+
+def analyze_algospeak_usage(text: str) -> dict:
+    # Analyze text for algospeak usage.
+    
+    # Args:
+    #     text: Input text to analyze
+        
+    # Returns:
+    #     Dictionary with counts of algospeak terms by category
+    
+    usage_counts = {category: 0 for category in ALGOSPEAK_CATEGORIES.keys()}
+    usage_counts["other"] = 0
+    
+    # Normalize text to lowercase for matching
+    text_lower = text.lower()
+    
+    for term in ALGOSPEAK_DICT.keys():
+        pattern = r'\b' + re.escape(term.lower()) + r'\b'
+        matches = re.findall(pattern, text_lower)
+        if matches:
+            category = get_category(term)
+            usage_counts[category] += len(matches)
+    
+    return usage_counts
