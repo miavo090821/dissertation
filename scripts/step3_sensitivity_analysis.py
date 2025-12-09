@@ -49,6 +49,14 @@ def load_metadata(raw_dir: str, video_id: str) -> dict:
     return {}       
 
 def load_transcript(raw_dir: str, video_id: str) -> str:
+    # Load transcript text for a video.
+    transcript_path = os.path.join(raw_dir, video_id, 'transcript.txt')
+    
+    if os.path.exists(transcript_path):
+        with open(transcript_path, 'r', encoding='utf-8') as f:
+            return f.read() 
+    return ""
+
 
 def main():
     print("STEP 3: SENSITIVITY ANALYSIS\n")

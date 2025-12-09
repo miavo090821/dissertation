@@ -8,6 +8,9 @@ import sys
 import os
 import csv
 import json
+import re
+import argparse
+from datetime import datetime
 
 # Add parent directory to path for imports
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -23,3 +26,17 @@ from scripts.utils.algospeak_dict import (
     ALGOSPEAK_CATEGORIES,
     get_category
 )
+
+def get_extracted_videos(raw_dir: str) -> list:
+
+def load_transcript(raw_dir: str, video_id: str) -> str:
+
+def load_comments(raw_dir: str, video_id: str) -> list:
+    
+def load_metadata(raw_dir: str, video_id: str) -> dict:
+    
+def detect_algospeak_with_boundaries(text: str) -> list:
+    
+def archive_output(output_dir: str) -> str:
+    
+def main():

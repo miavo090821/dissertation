@@ -19,6 +19,49 @@ except ImportError:
     print("ERROR: config.py not found!")
     sys.exit(1)     
 from scripts.utils.nlp_processor import analyze_comments_perception
+
+def get_extracted_videos(raw_dir: str) -> list:
+    # Get list of video IDs that have been extracted.
+    if not os.path.exists(raw_dir):
+        return []
+    
+    video_ids = []
+    for entry in os.listdir(raw_dir):
+        video_path = os.path.join(raw_dir, entry)
+        if os.path.isdir(video_path):
+            video_ids.append(entry)
+    return video_ids
+
+def load_comments(raw_dir: str, video_id: str) -> list:
+    # Load comments for a video.
+    comments_path = os.path.join(raw_dir, video_id, 'comments.json')
+    
+    if os.path.exists(comments_path):
+        with open(comments_path, 'r', encoding='utf-8') as f:
+            return json.load(f) 
+    return []
+
+def load_metadata(raw_dir: str, video_id: str) -> dict:
+    # Load metadata for a video.
+    metadata_path = os.path.join(raw_dir, video_id, 'metadata.json')
+    
+    if os.path.exists(metadata_path):
+        with open(metadata_path, 'r', encoding='utf-8') as f:
+            return json.load(f) 
+    return {}
+
+
+def search_comment_with_word_boundaries(text: str, keywords_dict: dict) -> list:
+    """Search for keywords in text using word boundary matching."""
+    import re
+    found_keywords = []
+    for category, keywords in keywords_dict.items():
+        for keyword in keywords:
+            pattern = r'\b' + re.escape(keyword) + r'\b'
+            if re.search(pattern, text, re.IGNORECASE):
+                found_keywords.append((category, keyword))
+    return found_keywords
+
 def main():
     print("STEP 4: COMMENTS ANALYSIS (RQ2 - PERCEPTION)\n")
     
