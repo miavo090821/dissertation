@@ -28,10 +28,43 @@ from scripts.utils.algospeak_dict import (
 )
 
 def get_extracted_videos(raw_dir: str) -> list:
-
+    """Get list of video IDs that have valid extracted transcripts."""
+    # Ensure directory exists
+    if not os.path.exists(raw_dir):
+        return []
+    
+    video_ids = []
+    # Loop through each folder inside the raw data directory
+    for item in os.listdir(raw_dir):
+        item_path = os.path.join(raw_dir, item)
+        # Each video has its own subdirectory
+        if os.path.isdir(item_path):
+            # Check whether a transcript file exists for this video
+            transcript_path = os.path.join(item_path, 'transcript.txt')
+            if os.path.exists(transcript_path):
+                video_ids.append(item)  
+                
 def load_transcript(raw_dir: str, video_id: str) -> str:
+    """Load transcript text for a video."""
+    transcript_path = os.path.join(raw_dir, video_id, 'transcript.txt')
+    
+    # If file exists, read and return its content
+    if os.path.exists(transcript_path):
+        with open(transcript_path, 'r', encoding='utf-8') as f:
+            return f.read()
+    
+    # Return empty string if missing
+    return ""
+
 
 def load_comments(raw_dir: str, video_id: str) -> list:
+    """Load comments for a video."""
+    comments_path = os.path.join(raw_dir, video_id, 'comments.json')
+    
+    if os.path.exists(comments_path):
+        with open(comments_path, 'r', encoding='utf-8') as f:
+            return json.load(f) 
+    return []
     
 def load_metadata(raw_dir: str, video_id: str) -> dict:
     
