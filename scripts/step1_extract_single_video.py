@@ -6,6 +6,8 @@
 import sys
 import os
 import json
+import re
+import requests
 
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, base_dir)
@@ -72,12 +74,30 @@ def get_transcript_supadata(video_id: str) -> tuple:
                         comment_data["replies"].append(reply_data)
                 
                 comments.append(comment_data)
-            
+                
+                if total_reply_count > 0:
+                    included_replies = item.get('replies', {}).get('comments', [])
+                    for reply in included_replies:
+                        reply_snippet = reply['snippet']
+                        reply_data = {
+                            'author': reply_snippet.get('authorDisplayName'),
+                            'text': reply_snippet.get('textDisplay'),
+                            'likeCount': reply_snippet.get('likeCount'),
+                            'publishedAt': reply_snippet.get('publishedAt')
+                        }
+                        comment_data['replies'].append(reply_data)
+                else:
+                        reply_request = youtube.comments().list()
             next_page_token = response.get("nextPageToken")
+            comments.append(comment_data)
             if not next_page_token:
                 break
     except Exception as e:
-        print(f"Error fetching comments: {e}")
+        if "commentsDisabled" in str(e):
+            print("  Comments disabled for this video")
+        else:
+            print(f"  Error fetching comments: {e}")
+    
     return comments
 
 
@@ -99,13 +119,34 @@ def main():
     
     print("[1/3] Fetching metadata...")
     metadata = get_video_metadata(youtube, video_id)
+    if metadata:
+        with open(os.path.join(video_dir, 'metadata.json'), 'w', encoding='utf-8') as f:
+            json.dump(metadata, f, indent=2, ensure_ascii=False)
+        print(f"  Title: {metadata['title'][:50]}...")
+    else:
+        print("  No metadata found for this video.")
+        return
     
     print("\n[2/3] Fetching transcript...")
     transcript_text, segments = get_transcript_supadata(video_id)
-
+    if transcript_text:
+        with open(os.path.join(video_dir, 'transcript.txt'), 'w', encoding='utf-8') as f:
+            f.write(transcript_text)
+        with open(os.path.join(video_dir, 'transcript_segments.json'), 'w', encoding='utf-8') as f:
+            json.dump(segments, f, indent=2, ensure_ascii=False)
+        print(f"  Transcript length: {len(transcript_text)} characters")
+    else:
+        print("  No transcript found for this video.")
+        
+        
     print("\n[3/3] Fetching comments...")
     comments = get_comments_with_replies(youtube, video_id, max_comments=100)
-
+    if comments:
+        with open(os.path.join(video_dir, 'comments.json'), 'w', encoding='utf-8') as f:
+            json.dump(comments, f, indent=2, ensure_ascii=False)
+        print(f"  Fetched {len(comments)} comments")
+    else:
+        print("  No comments found for this video.")
 
 if __name__ == "__main__":
     main()

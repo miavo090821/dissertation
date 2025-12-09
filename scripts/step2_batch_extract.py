@@ -32,8 +32,6 @@ except Exception as e:
     print(f"ERROR: config.py found but failed to load: {e}")
     sys.exit(1)
     
-    
-    
 def extract_video_id(url_or_id: str) -> str:
     # Extract video ID from URL or return as-is.
     patterns = [
@@ -45,8 +43,6 @@ def extract_video_id(url_or_id: str) -> str:
         if match:
             return match.group(1)
     return url_or_id
-
-
 
 def get_video_metadata(youtube, video_id: str) -> dict:
     # Fetch video metadata using YouTube Data API.
@@ -111,7 +107,6 @@ def get_transcript_supadata(video_id: str) -> tuple:
         print(f"    ERROR: Failed to fetch transcript for video ID {video_id}: {e}")
         return "", {}           
 
-
 def get_comments_with_replies(youtube, video_id: str, max_comments: int = 200) -> list:
     # Fetch comments with replies using YouTube Data API.
     comments = []
@@ -126,8 +121,6 @@ def load_video_list(input_dir: str) -> list:
         sys.exit(1)
         
     videos = []
-    
-
 def main():
     parser = argparse.ArgumentParser(description='Batch extract video data')
     parser.add_argument('--skip-existing', action='store_true', help='Skip videos with existing data')
