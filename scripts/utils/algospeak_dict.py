@@ -159,46 +159,108 @@ ALGOSPEAK_CATEGORIES = {
 
 def get_all_algospeak_terms() -> list:
     # Get all algospeak terms as a list.
-    
     # Returns:
     #     List of all algospeak terms
     return list(ALGOSPEAK_DICT.keys())
 
-def get_category(term: str) -> str:
-    # Get the category of an algospeak term.
-    
+
+def get_algospeak_meaning(term: str) -> str:
+    # Get the original meaning of an algospeak term.
     # Args:
-    #     term: Algospeak term
-        
+    #     term: Algospeak term to look up
     # Returns:
-    #     Category name or "other"
+    #     Original meaning or None if not found
     
+    return ALGOSPEAK_DICT.get(term.lower())
+
+
+def get_category(term: str) -> str:
+    """
+    Get the category of an algospeak term.
+    
+    Args:
+        term: Algospeak term
+        
+    Returns:
+        Category name or "other"
+    """
     term_lower = term.lower()
     for category, terms in ALGOSPEAK_CATEGORIES.items():
         if term_lower in terms:
             return category
     return "other"
 
-def analyze_algospeak_usage(text: str) -> dict:
-    # Analyze text for algospeak usage.
+
+def detect_algospeak(text: str) -> list:
+    # Detect algospeak terms in text.
     
     # Args:
-    #     text: Input text to analyze
+    #     text: Text to analyze
         
     # Returns:
-    #     Dictionary with counts of algospeak terms by category
-    
-    usage_counts = {category: 0 for category in ALGOSPEAK_CATEGORIES.keys()}
-    usage_counts["other"] = 0
-    
-    # Normalize text to lowercase for matching
+    #     List of dictionaries containing:
+    #     - term: The algospeak term found
+    #     - meaning: What it represents
+    #     - category: Category of the term
+    #     - count: Number of occurrences
+
     text_lower = text.lower()
+    results = []
     
-    for term in ALGOSPEAK_DICT.keys():
-        pattern = r'\b' + re.escape(term.lower()) + r'\b'
-        matches = re.findall(pattern, text_lower)
-        if matches:
-            category = get_category(term)
-            usage_counts[category] += len(matches)
+    for term, meaning in ALGOSPEAK_DICT.items():
+        term_lower = term.lower()
+        count = text_lower.count(term_lower)
+        
+        if count > 0:
+            results.append({
+                'term': term,
+                'meaning': meaning,
+                'category': get_category(term),
+                'count': count
+            })
     
-    return usage_counts
+    # Sort by count descending
+    return sorted(results, key=lambda x: x['count'], reverse=True)
+
+
+def analyze_algospeak_usage(text: str) -> dict:
+    """
+    Comprehensive algospeak analysis of text.
+    
+    Args:
+        text: Text to analyze
+        
+    Returns:
+        Dictionary containing:
+        - total_algospeak_count: Total algospeak instances
+        - unique_terms: Number of unique terms found
+        - terms: List of term details with contexts
+        - categories: Breakdown by category
+    """
+    if not text:
+        return {
+            'total_algospeak_count': 0,
+            'unique_terms': 0,
+            'terms': [],
+            'categories': {}
+        }
+    
+    detected = detect_algospeak(text)
+    
+    # Add context to each term
+    for item in detected:
+        item['contexts'] = extract_algospeak_context(text, item['term'])
+    
+    # Category breakdown
+    category_counts = {}
+    for item in detected:
+        cat = item['category']
+        category_counts[cat] = category_counts.get(cat, 0) + item['count']
+    
+    return {
+        'total_algospeak_count': sum(item['count'] for item in detected),
+        'unique_terms': len(detected),
+        'terms': detected,
+        'categories': category_counts
+    }
+
