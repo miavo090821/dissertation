@@ -1,9 +1,7 @@
 # Helper utilities for YouTube data and transcript extraction
-
-#  
 # YouTube API Helper Functions
-# Handles all interactions with YouTube Data API v3 and youtube-transcript-api
-#  
+# Handles all interactions with YouTube Data API v3 
+# and youtube-transcript-api
 
 import re
 import json
@@ -12,98 +10,52 @@ from datetime import datetime
 from googleapiclient.discovery import build
 from youtube_transcript_api import YouTubeTranscriptApi
 
-
-# Extract a canonical YouTube video id from many possible input formats
+# Extract a YouTube video ID from many URL formats
 def get_video_id(url: str) -> str:
-    #  
-    # Extract video ID from various YouTube URL formats.
-    
-    # Supports:
-    # - https://www.youtube.com/watch?v=VIDEO_ID
-    # - https://youtu.be/VIDEO_ID
-    # - https://www.youtube.com/embed/VIDEO_ID
-    # - https://www.youtube.com/v/VIDEO_ID
-    
-    # Args:
-    #     url: YouTube video URL
-        
-    # Returns:
-    #     11-character video ID
-        
-    # Raises:
-    #     ValueError: If video ID cannot be extracted
-    #  
+    # Patterns cover watch URLs, youtu.be shortlinks, embed links, and raw IDs
     patterns = [
         r"(?:v=|\/v\/|youtu\.be\/|\/embed\/)([a-zA-Z0-9_-]{11})",
-        r"^([a-zA-Z0-9_-]{11})$"  # Direct video ID
+        r"^([a-zA-Z0-9_-]{11})$"
     ]
     
+    # Try each pattern until a match is found
     for pattern in patterns:
         match = re.search(pattern, url)
         if match:
             return match.group(1)
     
+    # If no match, raise an error indicating the URL is invalid
     raise ValueError(f"Could not extract video ID from: {url}")
 
-
-# Build a YouTube client for the data api using the provided key
+# Build and return a YouTube Data API client
 def get_youtube_client(api_key: str):
-    #  
-    # Create and return a YouTube API client.
-    
-    # Args:
-    #     api_key: YouTube Data API v3 key
-        
-    # Returns:
-    #     YouTube API client object
-    #  
     return build("youtube", "v3", developerKey=api_key)
 
-
-# Retrieve core metadata for a single video and normalise to a flat dictionary
+# Fetch metadata about a specific video
 def get_video_metadata(api_key: str, video_id: str) -> dict:
-    #  
-    # Fetch video metadata from YouTube API.
-    
-    # Args:
-    #     api_key: YouTube Data API v3 key
-    #     video_id: YouTube video ID
-        
-    # Returns:
-    #     Dictionary containing:
-    #     - video_id: str
-    #     - title: str
-    #     - channel_name: str
-    #     - channel_id: str
-    #     - description: str
-    #     - published_at: str (ISO format)
-    #     - duration: str (ISO 8601 duration)
-    #     - view_count: int
-    #     - like_count: int
-    #     - comment_count: int
-    #     - tags: list
-    #     - category_id: str
-        
-    # Returns None if video not found or error occurs.
-    #  
     try:
+        # Create API client
         youtube = get_youtube_client(api_key)
         
+        # Request metadata fields from multiple parts
         request = youtube.videos().list(
             part="snippet,statistics,contentDetails",
             id=video_id
         )
         response = request.execute()
         
+        # Handle case where video does not exist or is private
         if not response.get('items'):
             print(f"  [WARNING] No video found for ID: {video_id}")
             return None
         
+        # Extract core fields from the API response
         item = response['items'][0]
         snippet = item['snippet']
         stats = item['statistics']
         content = item['contentDetails']
         
+        # Return cleaned and structured metadata dictionary
         return {
             'video_id': video_id,
             'title': snippet.get('title', ''),
@@ -121,37 +73,31 @@ def get_video_metadata(api_key: str, video_id: str) -> dict:
         }
         
     except Exception as e:
+        # Catch all failures including quota, bad keys, or network issues
         print(f"  [ERROR] Failed to fetch metadata for {video_id}: {e}")
         return None
 
-
-# Fetch high level statistics for a single channel such as subscriber count
+# Fetch information about a YouTube channel
 def get_channel_info(api_key: str, channel_id: str) -> dict:
-    #  
-    # Fetch channel information from YouTube API.
-    
-    # Args:
-    #     api_key: YouTube Data API v3 key
-    #     channel_id: YouTube channel ID
-        
-    # Returns:
-    #     Dictionary containing channel subscriber count and other info.
-    #  
     try:
         youtube = get_youtube_client(api_key)
         
+        # Request subscriber count, total views, and video count
         request = youtube.channels().list(
             part="statistics,snippet",
             id=channel_id
         )
         response = request.execute()
         
+        # Channel might not exist
         if not response.get('items'):
             return None
         
+        # Extract statistics
         item = response['items'][0]
         stats = item['statistics']
         
+        # Return cleaned info
         return {
             'channel_id': channel_id,
             'subscriber_count': int(stats.get('subscriberCount', 0)),
@@ -163,79 +109,79 @@ def get_channel_info(api_key: str, channel_id: str) -> dict:
         print(f"  [ERROR] Failed to fetch channel info: {e}")
         return None
 
-
-# Retrieve transcript text and structured segments with retry on rate limit
+# Fetch transcript using youtube-transcript-api with retries
 def get_video_transcript(video_id: str, max_retries: int = 3) -> tuple:
-    # Fetch video transcript using youtube-transcript-api.
-    
-    # Includes retry logic with exponential backoff for rate limiting (429 errors).
-    
-    # Args:
-    #     video_id: YouTube video ID
-    #     max_retries: Number of retries on rate limit errors
-        
-    # Returns:
-    #     Tuple of (transcript_text, transcript_segments)
-    #     - transcript_text: Full transcript as plain text
-    #     - transcript_segments: List of dicts with 'start', 'duration', 'text'
-        
-    # Returns (None, None) if transcript unavailable.
-
     import time
     
     segments = None
     last_error = None
     
+    # Attempt multiple retries with exponential backoff
     for attempt in range(max_retries):
         if attempt > 0:
-            # Exponential backoff: 5s, 10s, 20s
             wait_time = 5 * (2 ** (attempt - 1))
             print(f"  [RETRY] Waiting {wait_time}s before retry {attempt + 1}/{max_retries}...")
             time.sleep(wait_time)
         
-        # Method 1: Direct get_transcript() - simplest and most reliable
+        # First attempt: direct transcript fetch
         try:
-            segments = YouTubeTranscriptApi.get_transcript(video_id, languages=['en', 'en-US', 'en-GB'])
-            break  # Success!
+            segments = YouTubeTranscriptApi.get_transcript(
+                video_id,
+                languages=['en', 'en-US', 'en-GB']
+            )
+            break
         except Exception as e:
             last_error = e
             if '429' in str(e) or 'Too Many Requests' in str(e):
-                continue  # Rate limited, will retry
+                continue
         
-        # Method 2: Try list_transcripts approach
+        # Second attempt: list_transcripts approach
         try:
             transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
-            # Try auto-generated specifically (most common)
+            
+            # Try autogenerated first
             try:
-                transcript = transcript_list.find_generated_transcript(['en', 'en-US', 'en-GB'])
+                transcript = transcript_list.find_generated_transcript(
+                    ['en', 'en-US', 'en-GB']
+                )
                 segments = transcript.fetch()
-                break  # Success!
+                break
             except Exception:
-                # Try manual transcripts
-                try:
-                    transcript = transcript_list.find_manually_created_transcript(['en', 'en-US', 'en-GB'])
-                    segments = transcript.fetch()
-                    break  # Success!
-                except Exception:
-                    # Last resort: any available transcript
-                    available = list(transcript_list)
-                    if available:
-                        segments = available[0].fetch()
-                        break  # Success!
+                pass
+            
+            # Try manually uploaded transcript
+            try:
+                transcript = transcript_list.find_manually_created_transcript(
+                    ['en', 'en-US', 'en-GB']
+                )
+                segments = transcript.fetch()
+                break
+            except Exception:
+                pass
+            
+            # Last resort: use any transcript available
+            available = list(transcript_list)
+            if available:
+                segments = available[0].fetch()
+                break
+        
         except Exception as e:
             last_error = e
             if '429' in str(e) or 'Too Many Requests' in str(e):
-                continue  # Rate limited, will retry
+                continue
     
+    # If no segments were retrieved, handle error cases
     if not segments:
         error_msg = str(last_error) if last_error else "Unknown error"
+        
         if '429' in error_msg or 'Too Many Requests' in error_msg:
             print(f"  [WARNING] Rate limited by YouTube for {video_id}. Try again later.")
         else:
             print(f"  [WARNING] Could not retrieve transcript for {video_id}: {error_msg[:100]}")
+        
         return None, None
     
-    # Convert any transcript object format into a uniform list of dictionaries
+    # Convert transcript segments into plain text and structured list
     full_text_parts = []
     processed_segments = []
     
@@ -257,33 +203,15 @@ def get_video_transcript(video_id: str, max_retries: int = 3) -> tuple:
     full_text = ' '.join(full_text_parts)
     return full_text, processed_segments
 
-
-# Pull a page of comments for a video and keep fetching until limit or no page token
+# Retrieve comments from YouTube using pagination
 def get_video_comments(api_key: str, video_id: str, max_comments: int = 200) -> list:
-    # Fetch video comments from YouTube API.
-    
-    # Uses pagination to fetch more than the default 20/100 limit.
-    
-    # Args:
-    #     api_key: YouTube Data API v3 key
-    #     video_id: YouTube video ID
-    #     max_comments: Maximum number of comments to fetch
-        
-    # Returns:
-    #     List of comment dictionaries containing:
-    #     - author: str
-    #     - author_channel_id: str
-    #     - text: str
-    #     - like_count: int
-    #     - published_at: str
-    #     - updated_at: str
     youtube = get_youtube_client(api_key)
     comments = []
     next_page_token = None
     
     try:
+        # Fetch comments until maximum reached or no more results
         while len(comments) < max_comments:
-            # Fetch up to 100 per request (API max)
             fetch_count = min(100, max_comments - len(comments))
             
             request = youtube.commentThreads().list(
@@ -314,9 +242,8 @@ def get_video_comments(api_key: str, video_id: str, max_comments: int = 200) -> 
             next_page_token = response.get('nextPageToken')
             if not next_page_token:
                 break
-                
+    
     except Exception as e:
-        # Comments might be disabled
         if "commentsDisabled" in str(e):
             print(f"  [INFO] Comments are disabled for {video_id}")
         else:
@@ -324,17 +251,8 @@ def get_video_comments(api_key: str, video_id: str, max_comments: int = 200) -> 
     
     return comments
 
-
-# Convert an iso duration text into total seconds as integer
+# Convert ISO8601 YouTube duration to seconds
 def parse_duration(duration_str: str) -> int:
-    # Parse ISO 8601 duration string to seconds.
-    
-    # Args:
-    #     duration_str: Duration in ISO 8601 format (e.g., "PT1H2M3S")
-        
-    # Returns:
-    #     Duration in seconds
-
     if not duration_str:
         return 0
     
@@ -350,71 +268,43 @@ def parse_duration(duration_str: str) -> int:
     
     return hours * 3600 + minutes * 60 + seconds
 
-
-# Convert a duration in seconds into a human readable string
+# Convert seconds into HH:MM:SS
 def format_duration(seconds: int) -> str:
-    #  
-    # Format seconds to HH:MM:SS string.
-    
-    # Args:
-    #     seconds: Duration in seconds
-        
-    # Returns:
-    #     Formatted duration string
-    #  
     hours = seconds // 3600
     minutes = (seconds % 3600) // 60
     secs = seconds % 60
     
     if hours > 0:
         return f"{hours:02d}:{minutes:02d}:{secs:02d}"
-    else:
-        return f"{minutes:02d}:{secs:02d}"
+    return f"{minutes:02d}:{secs:02d}"
 
-
-# Persist all collected artefacts for a given video into a structured folder
+# Save all extracted YouTube data to structured files inside output directory
 def save_video_data(output_dir: str, video_id: str, metadata: dict, 
                     transcript_text: str, transcript_segments: list, 
                     comments: list) -> None:
-    # Save all extracted video data to files.
-    
-    # Creates a folder structure:
-    # output_dir/
-    #     video_id/
-    #         metadata.json
-    #         transcript.txt
-    #         transcript_segments.json
-    #         comments.json
-    
-    # Args:
-    #     output_dir: Base output directory
-    #     video_id: YouTube video ID
-    #     metadata: Video metadata dictionary
-    #     transcript_text: Plain text transcript
-    #     transcript_segments: List of transcript segments
-    #     comments: List of comment dictionaries
-
+    # Create a folder specific to the video
     video_dir = os.path.join(output_dir, video_id)
     os.makedirs(video_dir, exist_ok=True)
     
-    # Write metadata to json if present
+    # Save metadata JSON
     if metadata:
         with open(os.path.join(video_dir, 'metadata.json'), 'w', encoding='utf-8') as f:
             json.dump(metadata, f, indent=2, ensure_ascii=False)
     
-    # Write raw transcript text so later scripts can reuse without requery
+    # Save full transcript text
     if transcript_text:
         with open(os.path.join(video_dir, 'transcript.txt'), 'w', encoding='utf-8') as f:
             f.write(transcript_text)
     
-    # Write structured transcript segments with timing information
+    # Save detailed transcript segments
     if transcript_segments:
         with open(os.path.join(video_dir, 'transcript_segments.json'), 'w', encoding='utf-8') as f:
             json.dump(transcript_segments, f, indent=2, ensure_ascii=False)
     
-    # Write comment list for perception and algospeak analysis
+    # Save comments
     if comments:
         with open(os.path.join(video_dir, 'comments.json'), 'w', encoding='utf-8') as f:
             json.dump(comments, f, indent=2, ensure_ascii=False)
     
+    # Confirmation message for saved folder
     print(f"  [SAVED] Data saved to {video_dir}")

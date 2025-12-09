@@ -156,35 +156,33 @@ ALGOSPEAK_CATEGORIES = {
                            "in jail", "timeout"]
 }
 
-# Return a list of all algospeak terms available in the dictionary
 def get_all_algospeak_terms() -> list:
+    # Return all algospeak terms as a flat list
     return list(ALGOSPEAK_DICT.keys())
 
-# Look up the meaning of an algospeak term inside the dictionary
 def get_algospeak_meaning(term: str) -> str:
+    # Look up the meaning of a given algospeak term
+    # Return None if the term is not present
     return ALGOSPEAK_DICT.get(term.lower())
 
-# Determine which category a given algospeak term belongs to
 def get_category(term: str) -> str:
+    # Identify the semantic category of the term
+    # Return "other" if no matching category is found
     term_lower = term.lower()
     for category, terms in ALGOSPEAK_CATEGORIES.items():
-        # Check if the term exists inside the current category list
         if term_lower in terms:
             return category
-    # Default category if the term does not belong to any known category
     return "other"
 
-# Detect algospeak terms within a body of text
 def detect_algospeak(text: str) -> list:
+    # Scan the text for all algospeak terms and return structured results
     text_lower = text.lower()
     results = []
     
-    # Iterate over the algospeak dictionary to check occurrences in text
     for term, meaning in ALGOSPEAK_DICT.items():
         term_lower = term.lower()
         count = text_lower.count(term_lower)
         
-        # Add entry only if term appears at least once
         if count > 0:
             results.append({
                 'term': term,
@@ -193,48 +191,42 @@ def detect_algospeak(text: str) -> list:
                 'count': count
             })
     
-    # Sort terms by frequency in descending order
+    # Sort terms by frequency, highest first
     return sorted(results, key=lambda x: x['count'], reverse=True)
 
-# Extract text snippets surrounding each occurrence of an algospeak term
+
 def extract_algospeak_context(text: str, term: str, window: int = 60) -> list:
+    # Extract surrounding context around term occurrences for qualitative analysis
     snippets = []
     text_lower = text.lower()
     term_lower = term.lower()
     
     start = 0
     while True:
-        # Find next position of the algospeak term
         pos = text_lower.find(term_lower, start)
         if pos == -1:
             break
         
-        # Define the window around the matched term
         snippet_start = max(0, pos - window)
         snippet_end = min(len(text), pos + len(term) + window)
         
-        # Extract snippet from original text (preserves case)
         snippet = text[snippet_start:snippet_end]
-        
-        # Add ellipses to indicate truncated sections
         if snippet_start > 0:
             snippet = "..." + snippet
         if snippet_end < len(text):
             snippet = snippet + "..."
         
-        # Remove line breaks and whitespace
         snippets.append(snippet.replace('\n', ' ').strip())
         start = pos + 1
         
-        # Limit context snippets to a maximum of three
         if len(snippets) >= 3:
             break
     
     return snippets
 
-# Perform full algospeak analysis including counts, categories, and contexts
+
 def analyze_algospeak_usage(text: str) -> dict:
-    # Handle empty input text gracefully
+    # Perform full analysis including counts, categories, and contextual snippets
     if not text:
         return {
             'total_algospeak_count': 0,
@@ -243,20 +235,18 @@ def analyze_algospeak_usage(text: str) -> dict:
             'categories': {}
         }
     
-    # Detect all algospeak terms in the text
     detected = detect_algospeak(text)
     
-    # Attach context snippets to each detected term
+    # Attach context to each detected term
     for item in detected:
         item['contexts'] = extract_algospeak_context(text, item['term'])
     
-    # Count occurrences grouped by category
+    # Build category summary
     category_counts = {}
     for item in detected:
-        cat = item['category']
-        category_counts[cat] = category_counts.get(cat, 0) + item['count']
+        category = item['category']
+        category_counts[category] = category_counts.get(category, 0) + item['count']
     
-    # Return combined analysis results
     return {
         'total_algospeak_count': sum(item['count'] for item in detected),
         'unique_terms': len(detected),
