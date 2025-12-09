@@ -23,9 +23,33 @@ from scripts.utils.nlp_processor import (
     analyze_transcript,
     classify_monetization
 )
+def get_extracted_videos(raw_dir: str) -> list:
+    """Get list of video IDs that have been extracted."""
+    if not os.path.exists(raw_dir):
+        return []
+    
+    video_ids = []
+    for entry in os.listdir(raw_dir):
+        video_path = os.path.join(raw_dir, entry)
+        if os.path.isdir(video_path):
+            video_ids.append(entry)
+    return video_ids
+
 def load_sensitivity_words(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
-        return json.load(f)         
+        return json.load(f)  
+    
+def load_metadata(raw_dir: str, video_id: str) -> dict:
+    # Load metadata for a video.
+    metadata_path = os.path.join(raw_dir, video_id, 'metadata.json')
+    
+    if os.path.exists(metadata_path):
+        with open(metadata_path, 'r', encoding='utf-8') as f:
+            return json.load(f) 
+    return {}       
+
+def load_transcript(raw_dir: str, video_id: str) -> str:
+
 def main():
     print("STEP 3: SENSITIVITY ANALYSIS\n")
     
