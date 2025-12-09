@@ -64,6 +64,29 @@ def load_transcript(raw_dir: str, video_id: str) -> str:
     return ""
 
 def main():
+    # Setup paths
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    raw_dir = os.path.join(base_dir, DATA_RAW_DIR)
+    output_dir = os.path.join(base_dir, DATA_OUTPUT_DIR)
+    dict_dir = os.path.join(base_dir, DICTIONARIES_DIR)
+    
+    sensitive_words_path = os.path.join(dict_dir, 'sensitive_words.json')
+    output_path = os.path.join(output_dir, SENSITIVITY_SCORES_FILE)
+    
+    # Validate
+    if not os.path.exists(sensitive_words_path):
+        print(f"ERROR: Sensitive words dictionary not found: {sensitive_words_path}")
+        print("Please ensure dictionaries/sensitive_words.json exists")
+        sys.exit(1)
+        
+    # Get videos
+    video_ids = get_extracted_videos(raw_dir)
+    
+    if not video_ids:
+        print("ERROR: No extracted videos found")
+        print(f"Please run step2_batch_extract.py first")
+        sys.exit(1)
+        
     print("STEP 3: SENSITIVITY ANALYSIS\n")
     
     sensitivity_words = load_sensitivity_words(os.path.join(DICTIONARIES_DIR, 'sensitive_words.json'))
