@@ -64,6 +64,7 @@ def load_transcript(raw_dir: str, video_id: str) -> str:
     return ""
 
 def main():
+def main():
     # Setup paths
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     raw_dir = os.path.join(base_dir, DATA_RAW_DIR)
@@ -78,7 +79,7 @@ def main():
         print(f"ERROR: Sensitive words dictionary not found: {sensitive_words_path}")
         print("Please ensure dictionaries/sensitive_words.json exists")
         sys.exit(1)
-        
+    
     # Get videos
     video_ids = get_extracted_videos(raw_dir)
     
@@ -86,43 +87,71 @@ def main():
         print("ERROR: No extracted videos found")
         print(f"Please run step2_batch_extract.py first")
         sys.exit(1)
+    
+    print("STEP 3: SENSITIVITY ANALYSIS")
+    print(f"Videos: {len(video_ids)} | Dictionary: {sensitive_words_path}\n")
+    
+    os.makedirs(output_dir, exist_ok=True)
+    results = []
+    
+    for i, video_id in enumerate(video_ids, 1):
+        print(f"[{i}/{len(video_ids)}] Analyzing: {video_id}")
         
-    print("STEP 3: SENSITIVITY ANALYSIS\n")
-    
-    sensitivity_words = load_sensitivity_words(os.path.join(DICTIONARIES_DIR, 'sensitive_words.json'))
-    
-    output_file = os.path.join(DATA_OUTPUT_DIR, 'sensitivity_analysis_results.csv')
-    with open(output_file, 'w', newline='', encoding='utf-8') as csvfile:
-        fieldnames = ['video_id', 'sensitive_term_count', 'total_word_count', 'sensitive_term_ratio', 'monetization_classification']
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        writer.writeheader()
+        metadata = load_metadata(raw_dir, video_id)
+        transcript = load_transcript(raw_dir, video_id)
         
-        raw_data_dir = os.path.join(DATA_RAW_DIR)
-        for video_id in os.listdir(raw_data_dir):
-            video_dir = os.path.join(raw_data_dir, video_id)
-            transcript_file = os.path.join(video_dir, 'transcript.txt')
-            
-            if not os.path.isfile(transcript_file):
-                print(f"  Transcript not found for video {video_id}, skipping.")
-                continue
-            
-            with open(transcript_file, 'r', encoding='utf-8') as f:
-                transcript_text = f.read()
-            
-            analysis = analyze_transcript(transcript_text, sensitivity_words)
-            classification = classify_monetization(analysis['sensitive_term_ratio'])        
-            
-            writer.writerow({
-                'video_id': video_id,
-                'sensitive_term_count': analysis['sensitive_term_count'],
-                'total_word_count': analysis['total_word_count'],
-                'sensitive_term_ratio': analysis['sensitive_term_ratio'],
-                'monetization_classification': classification
-            })  
-            print(f"  Analyzed video {video_id}: Sensitive Terms={analysis['sensitive_term_count']}, Total Words={analysis['total_word_count']}, Ratio={analysis['sensitive_term_ratio']:.4f}, Classification={classification}")
-            
-    print(f"\nSensitivity analysis complete. Results saved to {output_file}")
+        if not transcript:
+            print("  SKIP: No transcript")
+            continue
+        
+        analysis = analyze_transcript(transcript, sensitive_words_path)
+        classification = classify_monetization(analysis['sensitive_ratio'])
+        result = {
+            'video_id': video_id,
+            'title': metadata.get('title', ''),
+            'channel_name': metadata.get('channel_name', ''),
+            'published_at': metadata.get('published_at', '')[:10] if metadata.get('published_at') else '',
+            'duration': metadata.get('duration', ''),
+            'view_count': metadata.get('view_count', 0),
+            'like_count': metadata.get('like_count', 0),
+            'comment_count': metadata.get('comment_count', 0),
+            'total_words': analysis['total_words'],
+            'sensitive_count': analysis['sensitive_count'],
+            'sensitive_ratio': analysis['sensitive_ratio'],
+            'classification': classification,
+            'found_terms': ', '.join(analysis['found_terms'][:10]),
+            'manual_starting_ads': metadata.get('manual_starting_ads', ''),
+            'manual_mid_roll_ads': metadata.get('manual_mid_roll_ads', ''),
+            'manual_ad_breaks': metadata.get('manual_ad_breaks_detected', '')
+        }
+        
+        results.append(result)
+        print(f"  Words: {analysis['total_words']:,} | Hits: {analysis['sensitive_count']} | "
+              f"Risk: {analysis['sensitive_ratio']:.2f}% | {classification}")
     
+    if results:
+        fieldnames = list(results[0].keys())
+        
+        with open(output_path, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(results)
+        
+        print("\nSUCCESS: Sensitivity analysis complete")
+        print(f"Results saved to: {output_path}")
+        print(f"Videos analyzed: {len(results)}")
+        
+        ratios = [r['sensitive_ratio'] for r in results]
+        classifications = [r['classification'] for r in results]
+        
+        print(f"\nSummary: Avg Risk {sum(ratios)/len(ratios):.2f}% | "
+              f"Min {min(ratios):.2f}% | Max {max(ratios):.2f}%")
+        print(f"Classification: Monetised {classifications.count('Likely Monetised')} | "
+              f"Uncertain {classifications.count('Uncertain')} | "
+              f"Demonetised {classifications.count('Likely Demonetised')}")
+        print("Next: Run step4_comments_analysis.py")
+    else:
+        print("ERROR: No results to save")
 if __name__ == "__main__":
     main()
     
