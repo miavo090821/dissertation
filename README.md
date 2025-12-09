@@ -28,7 +28,7 @@ RQ3 Algospeak Detection
 | **RQ3** | What algospeak substitutions do creators use? | Step 5: Algospeak Detection |
 
 
-## API Architecture and Set-up
+## 2. API Architecture and Set-up
 ### Why Two APIs?
 
 | API | Used For | Rationale |
@@ -66,7 +66,7 @@ The `.env` file is automatically loaded when you run scripts. It's gitignored so
 
 ---
 
-## Folder Structure
+## 3. Folder Structure
 
 ```
 dissertation/
@@ -94,7 +94,7 @@ dissertation/
     └── perception_keywords.json         
 ```
 ---
-## Workflow
+## 4. Workflow
 
 ### Initial Setup
 
@@ -217,7 +217,7 @@ python scripts/step7_visualizations.py         # Charts
 ---
 
 
-## Analysis Methodology
+## 5. Analysis Methodology
 
 ### Step 3: Sensitivity Analysis (RQ1)
 
@@ -321,7 +321,7 @@ python scripts/step7_visualizations.py         # Charts
 ---
 
 
-## Adding New Videos
+## 6. Adding New Videos
 
 1. **Edit `data/input/video_urls.csv`** - Add new rows with URL
 2. **⚠️ MANUALLY CLASSIFY AD STATUS** - For each new video, follow the Manual Ad Status Classification protocol (see section above) and fill in `starting_ads`, `mid_roll_ads`, and `ad_breaks_detected` columns
@@ -338,7 +338,7 @@ python scripts/step7_visualizations.py         # Charts
 
 ---
 
-## Data Formats
+## 7. Data Formats
 
 ### video_urls.csv
 
@@ -368,7 +368,7 @@ https://www.youtube.com/watch?v=VIDEO_ID,Channel Name,Yes,No,Yes,Notes here
 
 ---
 
-## Python Libraries Used
+## 8. Python Libraries Used
 
 ### Core Libraries
 
@@ -410,7 +410,7 @@ https://www.youtube.com/watch?v=VIDEO_ID,Channel Name,Yes,No,Yes,Notes here
 
 ---
 
-## Step 7: Visualization Documentation
+## 9. Visualization Documentation
 
 ### Why These Charts?
 
