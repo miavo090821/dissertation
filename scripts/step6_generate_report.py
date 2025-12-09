@@ -21,7 +21,23 @@ except ImportError:
     sys.exit(1) 
     
 def load_input_csv(base_dir: str) -> pd.DataFrame:
+    """Load the input CSV containing video URLs and IDs."""
+    input_csv_path = os.path.join(base_dir, 'input_videos.csv')
+    if os.path.exists(input_csv_path):
+        return pd.read_csv(input_csv_path)
+    else:
+        print(f"ERROR: Input CSV not found at {input_csv_path}")
+        sys.exit(1)
+    
 def extract_video_id_from_url(url: str) -> str:
+    """Extract video ID from a full YouTube URL."""
+    import re
+    pattern = r'(?:v=|\/)([0-9A-Za-z_-]{11}).*'
+    match = re.search(pattern, url)
+    if match:
+        return match.group(1)
+    return url  # Assume input is already a video ID
+
 def calculate_upload_age(published_at: str) -> tuple:
   
     
@@ -46,5 +62,6 @@ def generate_final_report():
     report_path = os.path.join(DATA_OUTPUT_DIR, FINAL_REPORT_FILE)
     report_df.to_excel(report_path, index=False)
     print(f"Final report generated: {report_path}") 
+    
 if __name__ == "__main__":
     generate_final_report()
