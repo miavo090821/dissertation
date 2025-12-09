@@ -43,6 +43,37 @@
         "hold back",
         "careful with words"
       ]
+    },
+    "off_platform_diversion": {
+      "description": "Redirecting users to other platforms for uncensored speech",
+      "keywords": [
+        "uncensored version",
+        "full version",
+        "real talk",
+        "freely speak",
+        "without filters",
+        "too spicy for youtube",
+        "patreon",
+        "rumble",
+        "subscribestar",
+        "subscribe star",
+        "odysee"
+      ]
+    }, 
+    "suppression_mechanisms": {
+      "description": "The feared consequence of 'wrong' speech",
+      "keywords": [
+        "shadow ban",
+        "shadowban",
+        "shadowbanned",
+        "suppressed",
+        "not recommended",
+        "throttled",
+        "limited reach",
+        "restricted mode",
+        "age gated",
+        "flagged"
+      ]
     }
 }
 }
