@@ -111,6 +111,58 @@ def get_comments_with_replies(youtube, video_id: str, max_comments: int = 200) -
     # Fetch comments with replies using YouTube Data API.
     comments = []
     next_page_token = None
+    try:
+        print(f"    Fetching comments from YouTube API...", end="", flush=True)
+        while len(comments) < max_comments:
+            request = youtube.commentThreads().list(
+                part="snippet,replies",
+                videoId=video_id,
+                maxResults=min(100, max_comments - len(comments)),
+                pageToken=next_page_token,
+                textFormat="plainText",
+                order="relevance"
+            )
+            response = request.execute()
+            for item in response.get("items", []):
+                comment = item["snippet"]["topLevelComment"]["snippet"]
+                comment_data = {
+                    "author": comment.get("authorDisplayName"),
+                    "text": comment.get("textDisplay"),
+                    "likeCount": comment.get("likeCount"),
+                    "publishedAt": comment.get("publishedAt"),
+                    "replies": []
+                }
+                
+                if "replies" in item:
+                    for reply in item["replies"]["comments"]:
+                        reply_snippet = reply["snippet"]
+                        reply_data = {
+                            "author": reply_snippet.get("authorDisplayName"),
+                            "text": reply_snippet.get("textDisplay"),
+                            "likeCount": reply_snippet.get("likeCount"),
+                            "publishedAt": reply_snippet.get("publishedAt")
+                        }
+                        comment_data["replies"].append(reply_data)
+                
+                comments.append(comment_data)
+                else:
+                        try:
+                            reply_request = youtube.comments().list(
+                                part="snippet",
+                                parentId=top_comment['id'],
+                                maxResults=min(50, total_reply_count),
+                                textFormat="plainText"
+                            )
+                            reply_response = reply_request.execute()
+                            for reply_item in reply_response.get("items", []):
+                                reply_snippet = reply_item["snippet"]
+                                reply_data = {
+                                    "author": reply_snippet.get("authorDisplayName"),
+                                    "text": reply_snippet.get("textDisplay"),
+                                    "likeCount": reply_snippet.get("likeCount"),
+                                    "publishedAt": reply_snippet.get("publishedAt")
+                                }
+                                comment_data["replies"].append(reply_data)
     
 def load_video_list(input_dir: str) -> list:
     # Load video URLs from CSV.
@@ -121,13 +173,77 @@ def load_video_list(input_dir: str) -> list:
         sys.exit(1)
         
     videos = []
+    with open(csv_path, 'r', encoding='utf-8-sig') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            videos.append(row['video_url'])
+    return videos
+
 def main():
     parser = argparse.ArgumentParser(description='Batch extract video data')
     parser.add_argument('--skip-existing', action='store_true', help='Skip videos with existing data')
     parser.add_argument('--transcript-delay', type=int, default=3, help='Delay between transcript fetches (default: 3s)')
     
     # Load video list
-    # Stats
+    videos = load_video_list(input_dir)
+    youtube = build("youtube", "v3", developerKey=YOUTUBE_API_KEY)
     
+    # Stats
+    stats = {
+        'metadata': {'success': 0, 'failed': 0, 'skipped': 0},
+        'transcript': {'success': 0, 'failed': 0, 'skipped': 0},
+        'comments': {'success': 0, 'failed': 0, 'skipped': 0}
+    }
+    for i, video in enumerate(videos, 1):
+        video_id = video['video_id']
+        video_dir = os.path.join(raw_dir, video_id)
+        os.makedirs(video_dir, exist_ok=True)
+        
+        print(f"\n[{i}/{len(videos)}] {video_id}")
+        # Metadata
+        metadata_path = os.path.join(video_dir, 'metadata.json')
+        if os.path.exists(metadata_path) and args.skip_existing:
+            print("  Metadata exists, skipping.")
+            stats['metadata']['skipped'] += 1
+        else:
+            metadata = get_video_metadata(youtube, video_id)
+            if metadata:
+                with open(metadata_path, 'w', encoding='utf-8') as f:
+                    json.dump(metadata, f, indent=2, ensure_ascii=False)
+                stats['metadata']['success'] += 1
+            else:
+                stats['metadata']['failed'] += 1    
+        
+        # Transcript
+        transcript_path = os.path.join(video_dir, 'transcript.json')
+        if os.path.exists(transcript_path) and args.skip_existing:
+            print("  Transcript exists, skipping.")
+            stats['transcript']['skipped'] += 1
+        else:
+            transcript, transcript_data = get_transcript_supadata(video_id)
+            if transcript:
+                with open(transcript_path, 'w', encoding='utf-8') as f:
+                    json.dump({
+                        'transcript': transcript,
+                        'data': transcript_data
+                    }, f, indent=2, ensure_ascii=False)
+                stats['transcript']['success'] += 1
+            else:
+                stats['transcript']['failed'] += 1      
+            time.sleep(args.transcript_delay)
+        # Comments
+        comments_path = os.path.join(video_dir, 'comments.json')
+        if os.path.exists(comments_path) and args.skip_existing:
+            print("  Comments exist, skipping.")
+            stats['comments']['skipped'] += 1
+        else:   
+            comments = get_comments_with_replies(youtube, video_id, max_comments=MAX_COMMENTS_PER_VIDEO)
+            if comments:
+                with open(comments_path, 'w', encoding='utf-8') as f:
+                    json.dump(comments, f, indent=2, ensure_ascii=False)
+                stats['comments']['success'] += 1
+            else:
+                stats['comments']['failed'] += 1
+
 if __name__ == "__main__":
     main()
