@@ -114,6 +114,9 @@ def main():
     args = parser.parse_args()
     
     # Setup paths
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    output_path = os.path.join(output_dir, ALGOSPEAK_FINDINGS_FILE)
+    
     # Archive if requested
     if args.archive:
         archive_path = archive_output(output_dir)
@@ -122,3 +125,43 @@ def main():
     
     # Get videos
     video_ids = get_extracted_videos(raw_dir)
+    
+    if not video_ids:
+        print("ERROR: No extracted videos found")
+        print("Please run step2_batch_extract.py first")
+        sys.exit(1)
+    
+    print("STEP 5: ALGOSPEAK DETECTION")
+    print(f"Videos: {len(video_ids)} | Algospeak terms: {len(ALGOSPEAK_DICT)}\n")
+    os.makedirs(output_dir, exist_ok=True)
+    all_findings = []
+    video_summaries = []
+    
+    if all_findings:
+        with open(output_path, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=list(all_findings[0].keys()))
+            writer.writeheader()
+            writer.writerows(all_findings)
+        print(f"\nSUCCESS: Detailed findings saved to {output_path}")
+    for video_id in video_ids:
+        print(f"Processing video: {video_id}")
+        transcript_text = load_transcript(raw_dir, video_id)
+        comments = load_comments(raw_dir, video_id)
+        metadata = load_metadata(raw_dir, video_id)
+        
+        # Detect in transcript
+        transcript_findings = detect_algospeak_with_boundaries(transcript_text)
+        for finding in transcript_findings:
+            finding.update({
+                'video_id': video_id,
+                'source': 'transcript'
+            })
+            all_findings.append(finding)
+        
+        total_transcript = sum(v['transcript_instances'] for v in video_summaries)
+    total_comment = sum(v['comment_instances'] for v in video_summaries)
+    total_creator_comment = sum(v['creator_comment_instances'] for v in video_summaries)
+    
+    print(f"\nSummary: {len(video_summaries)} videos | Transcript: {total_transcript} | Comments: {total_comment}")
+    print(f"Creator comments: {total_creator_comment} | Viewer comments: {total_comment - total_creator_comment}")
+    print("Next: Run step6_generate_report.py")
