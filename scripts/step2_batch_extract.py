@@ -59,8 +59,11 @@ def get_video_metadata(youtube, video_id: str) -> dict:
         response = request.execute()
         print(" done", flush=True)
         items = response.get("items", [])
-        if not items:
-            print(f"    WARNING: No metadata found for video ID {video_id}")
+        if response['items']:
+            item = response['items'][0]
+            snippet = item['snippet']
+            stats = item['statistics']
+            content = item['contentDetails']
             return {
                 'video_id': video_id,
                 'title': snippet.get('title', ''),
@@ -94,11 +97,14 @@ def get_transcript_supadata(video_id: str) -> tuple:
     headers = {"x-api-key": SUPADATA_API_KEY}
     try:
         print(f"    Fetching transcript from Supadata API...", end="", flush=True)
-        response = requests.get(f"{SUPADATA_BASE_URL}/transcript", params=params, headers=headers, timeout=10)
-        response.raise_for_status()
-        data = response.json()
+        response = requests.get(SUPADATA_BASE_URL, params=params, headers=headers, timeout=15)
+        print(" done", flush=True)        
         
+        if response.status_code == 200:
+            data = response.json()
+            content = data.get("content", "")
         transcript = data.get("transcript", "")
+        
         print(" done", flush=True)
         return transcript, data
     except Exception as e:
@@ -110,11 +116,11 @@ def get_comments_with_replies(youtube, video_id: str, max_comments: int = 200) -
     # Fetch comments with replies using YouTube Data API.
     comments = []
     next_page_token = None
-
+    
 def load_video_list(input_dir: str) -> list:
     # Load video URLs from CSV.
     csv_path = os.path.join(input_dir, 'video_urls.csv')
-    
+
     if not os.path.exists(csv_path):
         print(f"ERROR: {csv_path} not found!")
         sys.exit(1)
@@ -126,3 +132,9 @@ def main():
     parser = argparse.ArgumentParser(description='Batch extract video data')
     parser.add_argument('--skip-existing', action='store_true', help='Skip videos with existing data')
     parser.add_argument('--transcript-delay', type=int, default=3, help='Delay between transcript fetches (default: 3s)')
+    
+    # Load video list
+    # Stats
+    
+if __name__ == "__main__":
+    main()
