@@ -1,0 +1,5657 @@
+[
+  {
+    "text": "let's talk about the new york times and",
+    "start": 0.08,
+    "duration": 3.599
+  },
+  {
+    "text": "critical thinking",
+    "start": 2.48,
+    "duration": 3.76
+  },
+  {
+    "text": "this is quite an amazing article i",
+    "start": 3.679,
+    "duration": 4.96
+  },
+  {
+    "text": "honestly am surprised",
+    "start": 6.24,
+    "duration": 4.72
+  },
+  {
+    "text": "i mean now there's a part of me that",
+    "start": 8.639,
+    "duration": 3.441
+  },
+  {
+    "text": "wants to",
+    "start": 10.96,
+    "duration": 4.16
+  },
+  {
+    "text": "ascribe some kind of knowledgeable",
+    "start": 12.08,
+    "duration": 3.759
+  },
+  {
+    "text": "intent",
+    "start": 15.12,
+    "duration": 2.64
+  },
+  {
+    "text": "to what's being said but there's another",
+    "start": 15.839,
+    "duration": 3.44
+  },
+  {
+    "text": "part of me that thinks perhaps",
+    "start": 17.76,
+    "duration": 3.679
+  },
+  {
+    "text": "just perhaps they don't really know the",
+    "start": 19.279,
+    "duration": 3.92
+  },
+  {
+    "text": "implications of what they're saying",
+    "start": 21.439,
+    "duration": 5.281
+  },
+  {
+    "text": "and so i think that um excuse me",
+    "start": 23.199,
+    "duration": 7.041
+  },
+  {
+    "text": "it's it's really worth covering uh what",
+    "start": 26.72,
+    "duration": 6.88
+  },
+  {
+    "text": "is being suggested here in some detail",
+    "start": 30.24,
+    "duration": 5.839
+  },
+  {
+    "text": "because this is just read the title yeah",
+    "start": 33.6,
+    "duration": 4.56
+  },
+  {
+    "text": "if the title for anyone just listening",
+    "start": 36.079,
+    "duration": 3.041
+  },
+  {
+    "text": "on apple or",
+    "start": 38.16,
+    "duration": 3.28
+  },
+  {
+    "text": "itunes or wherever else is uh don't go",
+    "start": 39.12,
+    "duration": 3.92
+  },
+  {
+    "text": "down the rabbit hole",
+    "start": 41.44,
+    "duration": 3.439
+  },
+  {
+    "text": "critical thinking as we're taught to do",
+    "start": 43.04,
+    "duration": 3.839
+  },
+  {
+    "text": "it isn't helping in the fight against",
+    "start": 44.879,
+    "duration": 3.121
+  },
+  {
+    "text": "misinformation",
+    "start": 46.879,
+    "duration": 4.241
+  },
+  {
+    "text": "by charlie warzell",
+    "start": 48.0,
+    "duration": 5.36
+  },
+  {
+    "text": "i mean that's mad isn't it thinking",
+    "start": 51.12,
+    "duration": 3.04
+  },
+  {
+    "text": "about things",
+    "start": 53.36,
+    "duration": 3.839
+  },
+  {
+    "text": "yeah is bad yes and what this is is",
+    "start": 54.16,
+    "duration": 4.079
+  },
+  {
+    "text": "essentially a in",
+    "start": 57.199,
+    "duration": 4.401
+  },
+  {
+    "text": "a handbook for online fact checking",
+    "start": 58.239,
+    "duration": 5.841
+  },
+  {
+    "text": "uh which i think which involves no",
+    "start": 61.6,
+    "duration": 3.279
+  },
+  {
+    "text": "critical thinking",
+    "start": 64.08,
+    "duration": 3.76
+  },
+  {
+    "text": "which it explicitly tries to resist the",
+    "start": 64.879,
+    "duration": 4.321
+  },
+  {
+    "text": "idea of critical thinking",
+    "start": 67.84,
+    "duration": 2.959
+  },
+  {
+    "text": "because you might go down a rabbit hole",
+    "start": 69.2,
+    "duration": 3.36
+  },
+  {
+    "text": "and learn something that is outside of",
+    "start": 70.799,
+    "duration": 3.441
+  },
+  {
+    "text": "the pre-approved narrative",
+    "start": 72.56,
+    "duration": 4.16
+  },
+  {
+    "text": "and so it's like right okay the",
+    "start": 74.24,
+    "duration": 4.32
+  },
+  {
+    "text": "essentially what this is is a method for",
+    "start": 76.72,
+    "duration": 3.28
+  },
+  {
+    "text": "resisting paradigm",
+    "start": 78.56,
+    "duration": 4.72
+  },
+  {
+    "text": "shifts because in in any kind of",
+    "start": 80.0,
+    "duration": 5.04
+  },
+  {
+    "text": "intellectual endeavor you have a way of",
+    "start": 83.28,
+    "duration": 3.44
+  },
+  {
+    "text": "thinking about things upon which the",
+    "start": 85.04,
+    "duration": 3.119
+  },
+  {
+    "text": "endeavor is performed",
+    "start": 86.72,
+    "duration": 3.759
+  },
+  {
+    "text": "and that is going to be an imperfect",
+    "start": 88.159,
+    "duration": 3.841
+  },
+  {
+    "text": "method and so any",
+    "start": 90.479,
+    "duration": 3.841
+  },
+  {
+    "text": "imperfections will reveal themselves",
+    "start": 92.0,
+    "duration": 4.479
+  },
+  {
+    "text": "over many numerous iterations in a sort",
+    "start": 94.32,
+    "duration": 3.68
+  },
+  {
+    "text": "of bayesian fashion",
+    "start": 96.479,
+    "duration": 3.121
+  },
+  {
+    "text": "and eventually you'll have enough people",
+    "start": 98.0,
+    "duration": 3.119
+  },
+  {
+    "text": "on the outside of the paradigm",
+    "start": 99.6,
+    "duration": 2.879
+  },
+  {
+    "text": "to say there are things about this",
+    "start": 101.119,
+    "duration": 2.721
+  },
+  {
+    "text": "paradigm that need changing and in fact",
+    "start": 102.479,
+    "duration": 2.64
+  },
+  {
+    "text": "we have a new paradigm that not only",
+    "start": 103.84,
+    "duration": 3.12
+  },
+  {
+    "text": "incorporates the old one but also this",
+    "start": 105.119,
+    "duration": 2.881
+  },
+  {
+    "text": "new information",
+    "start": 106.96,
+    "duration": 3.519
+  },
+  {
+    "text": "that isn't being uh considered and this",
+    "start": 108.0,
+    "duration": 4.24
+  },
+  {
+    "text": "is a this is a handbook of saying well",
+    "start": 110.479,
+    "duration": 2.161
+  },
+  {
+    "text": "look",
+    "start": 112.24,
+    "duration": 2.8
+  },
+  {
+    "text": "what you can do is just never get to the",
+    "start": 112.64,
+    "duration": 4.64
+  },
+  {
+    "text": "point of encountering new information",
+    "start": 115.04,
+    "duration": 4.16
+  },
+  {
+    "text": "that challenged the dominant paradigm",
+    "start": 117.28,
+    "duration": 3.519
+  },
+  {
+    "text": "and maybe you should do that",
+    "start": 119.2,
+    "duration": 3.68
+  },
+  {
+    "text": "it's like the handbook for being an",
+    "start": 120.799,
+    "duration": 3.28
+  },
+  {
+    "text": "intellectual surf",
+    "start": 122.88,
+    "duration": 4.48
+  },
+  {
+    "text": "is what this is right so this this",
+    "start": 124.079,
+    "duration": 5.121
+  },
+  {
+    "text": "references several academics one of them",
+    "start": 127.36,
+    "duration": 3.28
+  },
+  {
+    "text": "is a michael caulfield",
+    "start": 129.2,
+    "duration": 3.92
+  },
+  {
+    "text": "who apparently has an odd request stop",
+    "start": 130.64,
+    "duration": 4.959
+  },
+  {
+    "text": "overthinking what you see online",
+    "start": 133.12,
+    "duration": 4.479
+  },
+  {
+    "text": "he's a digital literacy expert at",
+    "start": 135.599,
+    "duration": 4.0
+  },
+  {
+    "text": "washington state university vancouver",
+    "start": 137.599,
+    "duration": 3.761
+  },
+  {
+    "text": "which is an interesting title because i",
+    "start": 139.599,
+    "duration": 3.761
+  },
+  {
+    "text": "am also a digital literacy expert",
+    "start": 141.36,
+    "duration": 3.519
+  },
+  {
+    "text": "i've been on the internet for many many",
+    "start": 143.36,
+    "duration": 3.36
+  },
+  {
+    "text": "years and i'm literate in using the",
+    "start": 144.879,
+    "duration": 3.521
+  },
+  {
+    "text": "internet and therefore i'm an expert at",
+    "start": 146.72,
+    "duration": 2.0
+  },
+  {
+    "text": "it",
+    "start": 148.4,
+    "duration": 2.4
+  },
+  {
+    "text": "you are too in fact almost everyone who",
+    "start": 148.72,
+    "duration": 4.799
+  },
+  {
+    "text": "has been born after like two year 2000",
+    "start": 150.8,
+    "duration": 5.12
+  },
+  {
+    "text": "is probably innately a digital literacy",
+    "start": 153.519,
+    "duration": 3.121
+  },
+  {
+    "text": "expert",
+    "start": 155.92,
+    "duration": 3.039
+  },
+  {
+    "text": "so it's good that uh mr caulfield has",
+    "start": 156.64,
+    "duration": 3.92
+  },
+  {
+    "text": "taken it upon himself to explain to us",
+    "start": 158.959,
+    "duration": 3.601
+  },
+  {
+    "text": "what we already know",
+    "start": 160.56,
+    "duration": 5.44
+  },
+  {
+    "text": "he says we're taught that uh sorry he",
+    "start": 162.56,
+    "duration": 4.72
+  },
+  {
+    "text": "says that at this very moment",
+    "start": 166.0,
+    "duration": 2.48
+  },
+  {
+    "text": "more people are fighting for the",
+    "start": 167.28,
+    "duration": 3.44
+  },
+  {
+    "text": "opportunity to lie to you",
+    "start": 168.48,
+    "duration": 4.0
+  },
+  {
+    "text": "then perhaps at any other point in human",
+    "start": 170.72,
+    "duration": 4.239
+  },
+  {
+    "text": "history as if fake news is near",
+    "start": 172.48,
+    "duration": 5.759
+  },
+  {
+    "text": "which is not right but the",
+    "start": 174.959,
+    "duration": 5.681
+  },
+  {
+    "text": "presupposition is anything outside of",
+    "start": 178.239,
+    "duration": 4.481
+  },
+  {
+    "text": "the ordained narrative",
+    "start": 180.64,
+    "duration": 5.36
+  },
+  {
+    "text": "is a lie is someone trying to misinform",
+    "start": 182.72,
+    "duration": 4.4
+  },
+  {
+    "text": "you he says",
+    "start": 186.0,
+    "duration": 2.8
+  },
+  {
+    "text": "we're taught that in order to protect",
+    "start": 187.12,
+    "duration": 3.28
+  },
+  {
+    "text": "ourselves from bad information",
+    "start": 188.8,
+    "duration": 3.519
+  },
+  {
+    "text": "we need to deeply engage with the stuff",
+    "start": 190.4,
+    "duration": 3.759
+  },
+  {
+    "text": "that washes up in front of us",
+    "start": 192.319,
+    "duration": 3.761
+  },
+  {
+    "text": "you'll get imperfect information and",
+    "start": 194.159,
+    "duration": 4.0
+  },
+  {
+    "text": "then use reasoning to fix that somehow",
+    "start": 196.08,
+    "duration": 4.239
+  },
+  {
+    "text": "but in reality that strategy can",
+    "start": 198.159,
+    "duration": 3.44
+  },
+  {
+    "text": "completely backfire",
+    "start": 200.319,
+    "duration": 3.28
+  },
+  {
+    "text": "as new york times say in other words",
+    "start": 201.599,
+    "duration": 4.961
+  },
+  {
+    "text": "resist the lure of rabbit holes in part",
+    "start": 203.599,
+    "duration": 5.2
+  },
+  {
+    "text": "by reimagining media literacy for the",
+    "start": 206.56,
+    "duration": 5.92
+  },
+  {
+    "text": "internet hellscape we occupy stay blue",
+    "start": 208.799,
+    "duration": 4.321
+  },
+  {
+    "text": "pills",
+    "start": 212.48,
+    "duration": 2.56
+  },
+  {
+    "text": "and know only the official narrative on",
+    "start": 213.12,
+    "duration": 3.759
+  },
+  {
+    "text": "any subject that's what's being told to",
+    "start": 215.04,
+    "duration": 2.32
+  },
+  {
+    "text": "us",
+    "start": 216.879,
+    "duration": 2.801
+  },
+  {
+    "text": "would the people in power ever lie to",
+    "start": 217.36,
+    "duration": 3.84
+  },
+  {
+    "text": "you would they ever mislead you of",
+    "start": 219.68,
+    "duration": 2.72
+  },
+  {
+    "text": "course they wouldn't",
+    "start": 221.2,
+    "duration": 3.2
+  },
+  {
+    "text": "of course they wouldn't as they say it's",
+    "start": 222.4,
+    "duration": 4.16
+  },
+  {
+    "text": "often counterproductive to direct engage",
+    "start": 224.4,
+    "duration": 3.759
+  },
+  {
+    "text": "directly with content from an unknown",
+    "start": 226.56,
+    "duration": 2.16
+  },
+  {
+    "text": "source",
+    "start": 228.159,
+    "duration": 2.8
+  },
+  {
+    "text": "and people can be led astray by false",
+    "start": 228.72,
+    "duration": 3.28
+  },
+  {
+    "text": "information",
+    "start": 230.959,
+    "duration": 2.56
+  },
+  {
+    "text": "in influenced by the research of sam",
+    "start": 232.0,
+    "duration": 3.68
+  },
+  {
+    "text": "weinberg a professor at stanford",
+    "start": 233.519,
+    "duration": 3.761
+  },
+  {
+    "text": "and sarah mcgrew an assistant professor",
+    "start": 235.68,
+    "duration": 3.04
+  },
+  {
+    "text": "at the university of maryland",
+    "start": 237.28,
+    "duration": 4.48
+  },
+  {
+    "text": "mr caulfield argued that the best way to",
+    "start": 238.72,
+    "duration": 5.599
+  },
+  {
+    "text": "learn about a source of information",
+    "start": 241.76,
+    "duration": 6.32
+  },
+  {
+    "text": "is to leave it and look elsewhere",
+    "start": 244.319,
+    "duration": 7.521
+  },
+  {
+    "text": "this is a concept called lateral reading",
+    "start": 248.08,
+    "duration": 5.92
+  },
+  {
+    "text": "what do you make of that callum the best",
+    "start": 251.84,
+    "duration": 3.679
+  },
+  {
+    "text": "way to learn about something",
+    "start": 254.0,
+    "duration": 3.84
+  },
+  {
+    "text": "is to not look at it yep but instead",
+    "start": 255.519,
+    "duration": 4.72
+  },
+  {
+    "text": "hear what we have to say about it",
+    "start": 257.84,
+    "duration": 4.32
+  },
+  {
+    "text": "yeah i mean that's that's the as anyone",
+    "start": 260.239,
+    "duration": 3.52
+  },
+  {
+    "text": "who operates online that's the worst",
+    "start": 262.16,
+    "duration": 3.2
+  },
+  {
+    "text": "thing possible you can do yep i mean",
+    "start": 263.759,
+    "duration": 2.961
+  },
+  {
+    "text": "endlessly hear about what people say",
+    "start": 265.36,
+    "duration": 2.559
+  },
+  {
+    "text": "about another person",
+    "start": 266.72,
+    "duration": 2.64
+  },
+  {
+    "text": "as if that's ever going to be accurate",
+    "start": 267.919,
+    "duration": 4.081
+  },
+  {
+    "text": "yeah it's it's the worst",
+    "start": 269.36,
+    "duration": 5.279
+  },
+  {
+    "text": "the worst possible uh way of learning",
+    "start": 272.0,
+    "duration": 3.919
+  },
+  {
+    "text": "about something",
+    "start": 274.639,
+    "duration": 3.12
+  },
+  {
+    "text": "lateral reading it's an amazing term for",
+    "start": 275.919,
+    "duration": 3.441
+  },
+  {
+    "text": "received information as well",
+    "start": 277.759,
+    "duration": 3.761
+  },
+  {
+    "text": "it is because you are you are depending",
+    "start": 279.36,
+    "duration": 3.68
+  },
+  {
+    "text": "on an authority source that you are",
+    "start": 281.52,
+    "duration": 3.36
+  },
+  {
+    "text": "trusting as being an authority",
+    "start": 283.04,
+    "duration": 3.52
+  },
+  {
+    "text": "on the information that they are giving",
+    "start": 284.88,
+    "duration": 3.36
+  },
+  {
+    "text": "to you which means that",
+    "start": 286.56,
+    "duration": 3.359
+  },
+  {
+    "text": "you have to know that that person is not",
+    "start": 288.24,
+    "duration": 3.519
+  },
+  {
+    "text": "only competent but also doesn't have a",
+    "start": 289.919,
+    "duration": 3.361
+  },
+  {
+    "text": "malicious intent to try and deceive your",
+    "start": 291.759,
+    "duration": 3.201
+  },
+  {
+    "text": "mislead or anything like this",
+    "start": 293.28,
+    "duration": 3.44
+  },
+  {
+    "text": "but literally do not become",
+    "start": 294.96,
+    "duration": 3.44
+  },
+  {
+    "text": "knowledgeable on a subject",
+    "start": 296.72,
+    "duration": 3.12
+  },
+  {
+    "text": "allow someone who claims to be",
+    "start": 298.4,
+    "duration": 3.2
+  },
+  {
+    "text": "knowledgeable on it to tell you what",
+    "start": 299.84,
+    "duration": 3.04
+  },
+  {
+    "text": "they want you to know",
+    "start": 301.6,
+    "duration": 2.96
+  },
+  {
+    "text": "that's amazing is it because like how do",
+    "start": 302.88,
+    "duration": 3.52
+  },
+  {
+    "text": "you know that person is knowledgeable",
+    "start": 304.56,
+    "duration": 3.359
+  },
+  {
+    "text": "if you haven't read the subject yourself",
+    "start": 306.4,
+    "duration": 2.56
+  },
+  {
+    "text": "how do you know they know what they're",
+    "start": 307.919,
+    "duration": 1.921
+  },
+  {
+    "text": "talking about they could be making",
+    "start": 308.96,
+    "duration": 2.079
+  },
+  {
+    "text": "anything up because they're not",
+    "start": 309.84,
+    "duration": 2.96
+  },
+  {
+    "text": "which they do they've got the the",
+    "start": 311.039,
+    "duration": 3.281
+  },
+  {
+    "text": "official credentials haven't they well",
+    "start": 312.8,
+    "duration": 2.08
+  },
+  {
+    "text": "exactly",
+    "start": 314.32,
+    "duration": 2.719
+  },
+  {
+    "text": "exactly it's all an appeal to authority",
+    "start": 314.88,
+    "duration": 3.039
+  },
+  {
+    "text": "uh but and",
+    "start": 317.039,
+    "duration": 3.041
+  },
+  {
+    "text": "the the great thing about this is like",
+    "start": 317.919,
+    "duration": 3.441
+  },
+  {
+    "text": "the the",
+    "start": 320.08,
+    "duration": 3.36
+  },
+  {
+    "text": "whole thing is couched in the idea that",
+    "start": 321.36,
+    "duration": 4.0
+  },
+  {
+    "text": "you can't trust your own understanding",
+    "start": 323.44,
+    "duration": 2.64
+  },
+  {
+    "text": "of something",
+    "start": 325.36,
+    "duration": 3.839
+  },
+  {
+    "text": "like surely me reading the thing would",
+    "start": 326.08,
+    "duration": 4.48
+  },
+  {
+    "text": "give me the best knowledge of what the",
+    "start": 329.199,
+    "duration": 2.241
+  },
+  {
+    "text": "thing is",
+    "start": 330.56,
+    "duration": 3.12
+  },
+  {
+    "text": "except no and this this comes to a",
+    "start": 331.44,
+    "duration": 3.36
+  },
+  {
+    "text": "problem of perception",
+    "start": 333.68,
+    "duration": 2.64
+  },
+  {
+    "text": "so there's quite a long running",
+    "start": 334.8,
+    "duration": 3.6
+  },
+  {
+    "text": "discussion in philosophy about",
+    "start": 336.32,
+    "duration": 4.879
+  },
+  {
+    "text": "how we know what we know and this is all",
+    "start": 338.4,
+    "duration": 4.32
+  },
+  {
+    "text": "informed by the paradigm in which we're",
+    "start": 341.199,
+    "duration": 2.0
+  },
+  {
+    "text": "in",
+    "start": 342.72,
+    "duration": 2.16
+  },
+  {
+    "text": "and so the things that we perceive are",
+    "start": 343.199,
+    "duration": 3.761
+  },
+  {
+    "text": "informed by our preconceived ideas of",
+    "start": 344.88,
+    "duration": 2.4
+  },
+  {
+    "text": "the",
+    "start": 346.96,
+    "duration": 1.84
+  },
+  {
+    "text": "intellectual landscape we're already in",
+    "start": 347.28,
+    "duration": 3.68
+  },
+  {
+    "text": "so i mean for those there's an example",
+    "start": 348.8,
+    "duration": 2.72
+  },
+  {
+    "text": "of",
+    "start": 350.96,
+    "duration": 3.679
+  },
+  {
+    "text": "uh in western uh thought in western",
+    "start": 351.52,
+    "duration": 4.0
+  },
+  {
+    "text": "science",
+    "start": 354.639,
+    "duration": 4.161
+  },
+  {
+    "text": "the fact that the heavens move",
+    "start": 355.52,
+    "duration": 5.679
+  },
+  {
+    "text": "was actually uh sort of prohibited",
+    "start": 358.8,
+    "duration": 3.679
+  },
+  {
+    "text": "ideologically",
+    "start": 361.199,
+    "duration": 3.041
+  },
+  {
+    "text": "by the church and by the worldview",
+    "start": 362.479,
+    "duration": 3.28
+  },
+  {
+    "text": "presented by the bible so the idea is",
+    "start": 364.24,
+    "duration": 2.56
+  },
+  {
+    "text": "that the earth is the center of the",
+    "start": 365.759,
+    "duration": 2.88
+  },
+  {
+    "text": "universe and the heavens are static",
+    "start": 366.8,
+    "duration": 3.119
+  },
+  {
+    "text": "which actually isn't found in like",
+    "start": 368.639,
+    "duration": 3.201
+  },
+  {
+    "text": "chinese astronomy because they didn't",
+    "start": 369.919,
+    "duration": 3.28
+  },
+  {
+    "text": "have that particular view",
+    "start": 371.84,
+    "duration": 4.079
+  },
+  {
+    "text": "and so they many centuries before the",
+    "start": 373.199,
+    "duration": 3.201
+  },
+  {
+    "text": "west",
+    "start": 375.919,
+    "duration": 2.0
+  },
+  {
+    "text": "realized by just looking at certain",
+    "start": 376.4,
+    "duration": 3.12
+  },
+  {
+    "text": "phenomena actually the heavens are",
+    "start": 377.919,
+    "duration": 3.12
+  },
+  {
+    "text": "moving and because it wasn't",
+    "start": 379.52,
+    "duration": 3.519
+  },
+  {
+    "text": "like verboten for them to say it they",
+    "start": 381.039,
+    "duration": 3.201
+  },
+  {
+    "text": "just incorporated it into their",
+    "start": 383.039,
+    "duration": 2.241
+  },
+  {
+    "text": "worldview of the universe",
+    "start": 384.24,
+    "duration": 3.6
+  },
+  {
+    "text": "and it took western scientists or",
+    "start": 385.28,
+    "duration": 3.84
+  },
+  {
+    "text": "proto-scientists",
+    "start": 387.84,
+    "duration": 2.4
+  },
+  {
+    "text": "centuries to actually come to the",
+    "start": 389.12,
+    "duration": 2.4
+  },
+  {
+    "text": "conclusion actually god the heavens are",
+    "start": 390.24,
+    "duration": 2.64
+  },
+  {
+    "text": "moving and then i think it was galileo",
+    "start": 391.52,
+    "duration": 2.56
+  },
+  {
+    "text": "who pointed this out and obviously",
+    "start": 392.88,
+    "duration": 2.56
+  },
+  {
+    "text": "he was then persecuted for being a",
+    "start": 394.08,
+    "duration": 3.6
+  },
+  {
+    "text": "heretic and it was like okay well",
+    "start": 395.44,
+    "duration": 4.16
+  },
+  {
+    "text": "this is a really great example of how",
+    "start": 397.68,
+    "duration": 3.84
+  },
+  {
+    "text": "perception of the",
+    "start": 399.6,
+    "duration": 4.159
+  },
+  {
+    "text": "the world is directly informed by your",
+    "start": 401.52,
+    "duration": 3.04
+  },
+  {
+    "text": "own paradigm",
+    "start": 403.759,
+    "duration": 4.0
+  },
+  {
+    "text": "and can hold back scientific advancement",
+    "start": 404.56,
+    "duration": 5.12
+  },
+  {
+    "text": "just because you're not allowed to look",
+    "start": 407.759,
+    "duration": 3.44
+  },
+  {
+    "text": "in certain areas so you just don't look",
+    "start": 409.68,
+    "duration": 2.72
+  },
+  {
+    "text": "you just don't think to look i mean the",
+    "start": 411.199,
+    "duration": 2.881
+  },
+  {
+    "text": "catholic church is a perfect example",
+    "start": 412.4,
+    "duration": 3.04
+  },
+  {
+    "text": "that talking about it the fact that",
+    "start": 414.08,
+    "duration": 2.959
+  },
+  {
+    "text": "bibles all used to be in latin",
+    "start": 415.44,
+    "duration": 2.879
+  },
+  {
+    "text": "and then the idea that should be in the",
+    "start": 417.039,
+    "duration": 2.56
+  },
+  {
+    "text": "native tongue so the native people would",
+    "start": 418.319,
+    "duration": 1.841
+  },
+  {
+    "text": "read it",
+    "start": 419.599,
+    "duration": 2.561
+  },
+  {
+    "text": "was verboten and as soon as they did",
+    "start": 420.16,
+    "duration": 3.28
+  },
+  {
+    "text": "they realized the priests were lying to",
+    "start": 422.16,
+    "duration": 2.159
+  },
+  {
+    "text": "them about things yeah",
+    "start": 423.44,
+    "duration": 2.8
+  },
+  {
+    "text": "don't don't learn latin let us tell you",
+    "start": 424.319,
+    "duration": 3.201
+  },
+  {
+    "text": "what to think",
+    "start": 426.24,
+    "duration": 4.0
+  },
+  {
+    "text": "uh anyway yeah so for instance imagine",
+    "start": 427.52,
+    "duration": 4.72
+  },
+  {
+    "text": "you were to visit stormfront a white",
+    "start": 430.24,
+    "duration": 4.079
+  },
+  {
+    "text": "supremacist messaging board as you do",
+    "start": 432.24,
+    "duration": 5.2
+  },
+  {
+    "text": "i mean do people know about this place",
+    "start": 434.319,
+    "duration": 4.561
+  },
+  {
+    "text": "is it just something that's just in the",
+    "start": 437.44,
+    "duration": 3.12
+  },
+  {
+    "text": "common cultural zeitgeist",
+    "start": 438.88,
+    "duration": 3.2
+  },
+  {
+    "text": "yeah i went to the bbc then i went to",
+    "start": 440.56,
+    "duration": 3.52
+  },
+  {
+    "text": "the telegraph then it went to stormfront",
+    "start": 442.08,
+    "duration": 3.6
+  },
+  {
+    "text": "the guardian yeah and then the guardian",
+    "start": 444.08,
+    "duration": 3.04
+  },
+  {
+    "text": "progression yeah yeah",
+    "start": 445.68,
+    "duration": 2.639
+  },
+  {
+    "text": "other way around really guardian then",
+    "start": 447.12,
+    "duration": 3.6
+  },
+  {
+    "text": "stormfront but but that's the thing like",
+    "start": 448.319,
+    "duration": 3.841
+  },
+  {
+    "text": "you're promoting now this white",
+    "start": 450.72,
+    "duration": 3.039
+  },
+  {
+    "text": "supremacist website i mean i've never",
+    "start": 452.16,
+    "duration": 1.92
+  },
+  {
+    "text": "even",
+    "start": 453.759,
+    "duration": 2.72
+  },
+  {
+    "text": "seen but there's a device okay let's say",
+    "start": 454.08,
+    "duration": 3.839
+  },
+  {
+    "text": "i want to go upfront and read what the",
+    "start": 456.479,
+    "duration": 2.801
+  },
+  {
+    "text": "neo-nazis have to actually",
+    "start": 457.919,
+    "duration": 3.68
+  },
+  {
+    "text": "say even though you may see through the",
+    "start": 459.28,
+    "duration": 3.359
+  },
+  {
+    "text": "horrible rhetoric",
+    "start": 461.599,
+    "duration": 2.801
+  },
+  {
+    "text": "at the end of the day you give that",
+    "start": 462.639,
+    "duration": 3.521
+  },
+  {
+    "text": "place many minutes of your time",
+    "start": 464.4,
+    "duration": 4.4
+  },
+  {
+    "text": "even with good intentions you run the",
+    "start": 466.16,
+    "duration": 5.2
+  },
+  {
+    "text": "risk of misunderstanding something",
+    "start": 468.8,
+    "duration": 4.399
+  },
+  {
+    "text": "because stormfront users are way better",
+    "start": 471.36,
+    "duration": 3.2
+  },
+  {
+    "text": "at propaganda than you",
+    "start": 473.199,
+    "duration": 3.44
+  },
+  {
+    "text": "you won't get less racist by reading",
+    "start": 474.56,
+    "duration": 3.44
+  },
+  {
+    "text": "stormfront critically",
+    "start": 476.639,
+    "duration": 3.28
+  },
+  {
+    "text": "but you might be overloaded by",
+    "start": 478.0,
+    "duration": 4.0
+  },
+  {
+    "text": "information and underwhelmed",
+    "start": 479.919,
+    "duration": 4.481
+  },
+  {
+    "text": "overwhelmed sorry so the the idea that i",
+    "start": 482.0,
+    "duration": 3.68
+  },
+  {
+    "text": "mean you re you run the risk of",
+    "start": 484.4,
+    "duration": 2.72
+  },
+  {
+    "text": "misunderstanding something",
+    "start": 485.68,
+    "duration": 4.0
+  },
+  {
+    "text": "that's a risk you run at all times in",
+    "start": 487.12,
+    "duration": 3.6
+  },
+  {
+    "text": "all places whenever",
+    "start": 489.68,
+    "duration": 2.48
+  },
+  {
+    "text": "you are attempting to understand",
+    "start": 490.72,
+    "duration": 3.52
+  },
+  {
+    "text": "anything so the only way to avoid the",
+    "start": 492.16,
+    "duration": 3.92
+  },
+  {
+    "text": "risk of misunderstanding something",
+    "start": 494.24,
+    "duration": 4.399
+  },
+  {
+    "text": "is to avoid attempts at understanding",
+    "start": 496.08,
+    "duration": 3.2
+  },
+  {
+    "text": "anything",
+    "start": 498.639,
+    "duration": 4.081
+  },
+  {
+    "text": "as in just again receive the information",
+    "start": 499.28,
+    "duration": 5.919
+  },
+  {
+    "text": "from the approved sources and you will",
+    "start": 502.72,
+    "duration": 3.28
+  },
+  {
+    "text": "have no problem",
+    "start": 505.199,
+    "duration": 2.4
+  },
+  {
+    "text": "understanding anything because you won't",
+    "start": 506.0,
+    "duration": 3.52
+  },
+  {
+    "text": "be you'll just be given",
+    "start": 507.599,
+    "duration": 3.6
+  },
+  {
+    "text": "just bullet point updates and sort of",
+    "start": 509.52,
+    "duration": 3.519
+  },
+  {
+    "text": "the npc script",
+    "start": 511.199,
+    "duration": 3.361
+  },
+  {
+    "text": "and this is a way of trying to get",
+    "start": 513.039,
+    "duration": 3.44
+  },
+  {
+    "text": "people to commit to that",
+    "start": 514.56,
+    "duration": 3.12
+  },
+  {
+    "text": "i just love some of the points though",
+    "start": 516.479,
+    "duration": 2.641
+  },
+  {
+    "text": "that if you're giving them minutes of",
+    "start": 517.68,
+    "duration": 2.56
+  },
+  {
+    "text": "your time",
+    "start": 519.12,
+    "duration": 3.44
+  },
+  {
+    "text": "as if that's bad yeah like if i want to",
+    "start": 520.24,
+    "duration": 3.279
+  },
+  {
+    "text": "read socialist",
+    "start": 522.56,
+    "duration": 2.719
+  },
+  {
+    "text": "literature well that's probably a",
+    "start": 523.519,
+    "duration": 3.44
+  },
+  {
+    "text": "problem yeah yeah",
+    "start": 525.279,
+    "duration": 3.041
+  },
+  {
+    "text": "the idea that even reading it even",
+    "start": 526.959,
+    "duration": 3.44
+  },
+  {
+    "text": "giving it the time of day is",
+    "start": 528.32,
+    "duration": 3.76
+  },
+  {
+    "text": "evil and of itself like you're agreeing",
+    "start": 530.399,
+    "duration": 3.601
+  },
+  {
+    "text": "with the neo-nazis oh",
+    "start": 532.08,
+    "duration": 5.28
+  },
+  {
+    "text": "without engagement with you by the",
+    "start": 534.0,
+    "duration": 5.76
+  },
+  {
+    "text": "verboten text how else could they do i",
+    "start": 537.36,
+    "duration": 3.76
+  },
+  {
+    "text": "mean you know you'll never run the risk",
+    "start": 539.76,
+    "duration": 2.72
+  },
+  {
+    "text": "of misunderstanding if you never try to",
+    "start": 541.12,
+    "duration": 2.399
+  },
+  {
+    "text": "understand",
+    "start": 542.48,
+    "duration": 4.479
+  },
+  {
+    "text": "i suppose so checkmate",
+    "start": 543.519,
+    "duration": 5.361
+  },
+  {
+    "text": "that's literally what he's saying though",
+    "start": 546.959,
+    "duration": 3.761
+  },
+  {
+    "text": "the goal of disinformation",
+    "start": 548.88,
+    "duration": 4.16
+  },
+  {
+    "text": "is to capture attention and critical",
+    "start": 550.72,
+    "duration": 4.239
+  },
+  {
+    "text": "thinking is deep attention",
+    "start": 553.04,
+    "duration": 3.44
+  },
+  {
+    "text": "people learn to think critically by",
+    "start": 554.959,
+    "duration": 3.121
+  },
+  {
+    "text": "focusing on something and contemplating",
+    "start": 556.48,
+    "duration": 2.479
+  },
+  {
+    "text": "it deeply",
+    "start": 558.08,
+    "duration": 3.12
+  },
+  {
+    "text": "to follow the information's logic and",
+    "start": 558.959,
+    "duration": 3.681
+  },
+  {
+    "text": "the inconsistencies",
+    "start": 561.2,
+    "duration": 3.68
+  },
+  {
+    "text": "and this is what what he's saying here",
+    "start": 562.64,
+    "duration": 3.36
+  },
+  {
+    "text": "or what they're saying here",
+    "start": 564.88,
+    "duration": 2.8
+  },
+  {
+    "text": "people then think critically by focusing",
+    "start": 566.0,
+    "duration": 3.519
+  },
+  {
+    "text": "on something and contemplating it deeply",
+    "start": 567.68,
+    "duration": 3.279
+  },
+  {
+    "text": "to follow the information's logic and",
+    "start": 569.519,
+    "duration": 3.44
+  },
+  {
+    "text": "the inconsistencies we could really just",
+    "start": 570.959,
+    "duration": 4.0
+  },
+  {
+    "text": "describe that as understanding",
+    "start": 572.959,
+    "duration": 3.361
+  },
+  {
+    "text": "that's what you just understand",
+    "start": 574.959,
+    "duration": 3.361
+  },
+  {
+    "text": "something and so the goal of",
+    "start": 576.32,
+    "duration": 3.36
+  },
+  {
+    "text": "disinformation",
+    "start": 578.32,
+    "duration": 5.04
+  },
+  {
+    "text": "is understanding it's interesting isn't",
+    "start": 579.68,
+    "duration": 4.88
+  },
+  {
+    "text": "it",
+    "start": 583.36,
+    "duration": 4.56
+  },
+  {
+    "text": "a weird way but not it's what they're",
+    "start": 584.56,
+    "duration": 6.32
+  },
+  {
+    "text": "teasing out for us from their view that",
+    "start": 587.92,
+    "duration": 4.16
+  },
+  {
+    "text": "the human mindset",
+    "start": 590.88,
+    "duration": 4.16
+  },
+  {
+    "text": "is a liability in the attention comp the",
+    "start": 592.08,
+    "duration": 5.12
+  },
+  {
+    "text": "human mindset is a liability in an",
+    "start": 595.04,
+    "duration": 5.2
+  },
+  {
+    "text": "attention economy",
+    "start": 597.2,
+    "duration": 3.04
+  },
+  {
+    "text": "your view of the world is a liability",
+    "start": 600.8,
+    "duration": 6.64
+  },
+  {
+    "text": "is limited by me being a human how else",
+    "start": 604.88,
+    "duration": 3.6
+  },
+  {
+    "text": "am i meant to",
+    "start": 607.44,
+    "duration": 2.639
+  },
+  {
+    "text": "interact with information the natural",
+    "start": 608.48,
+    "duration": 3.359
+  },
+  {
+    "text": "human mindset is a liability an",
+    "start": 610.079,
+    "duration": 3.041
+  },
+  {
+    "text": "intention economy",
+    "start": 611.839,
+    "duration": 2.801
+  },
+  {
+    "text": "as in there's a there's a perfect",
+    "start": 613.12,
+    "duration": 3.44
+  },
+  {
+    "text": "narrative that serves power",
+    "start": 614.64,
+    "duration": 4.8
+  },
+  {
+    "text": "in this regard and disinformation might",
+    "start": 616.56,
+    "duration": 4.48
+  },
+  {
+    "text": "cause understanding",
+    "start": 619.44,
+    "duration": 4.16
+  },
+  {
+    "text": "and that's a liability so you need to",
+    "start": 621.04,
+    "duration": 3.68
+  },
+  {
+    "text": "train yourself out of it",
+    "start": 623.6,
+    "duration": 3.28
+  },
+  {
+    "text": "it allows grifters conspiracy theorists",
+    "start": 624.72,
+    "duration": 4.4
+  },
+  {
+    "text": "trolls and savvy attention hijackers",
+    "start": 626.88,
+    "duration": 4.399
+  },
+  {
+    "text": "to take advantage of us and steal our",
+    "start": 629.12,
+    "duration": 3.839
+  },
+  {
+    "text": "focus",
+    "start": 631.279,
+    "duration": 3.12
+  },
+  {
+    "text": "whenever you give your attention to a",
+    "start": 632.959,
+    "duration": 3.761
+  },
+  {
+    "text": "bad actor you allow them to steal your",
+    "start": 634.399,
+    "duration": 2.961
+  },
+  {
+    "text": "attention",
+    "start": 636.72,
+    "duration": 3.119
+  },
+  {
+    "text": "from better treatment of an issue and",
+    "start": 637.36,
+    "duration": 3.84
+  },
+  {
+    "text": "give them the opportunity",
+    "start": 639.839,
+    "duration": 4.481
+  },
+  {
+    "text": "to warp your perspective your mind may",
+    "start": 641.2,
+    "duration": 4.72
+  },
+  {
+    "text": "be changed by",
+    "start": 644.32,
+    "duration": 3.68
+  },
+  {
+    "text": "information that allows you to have a",
+    "start": 645.92,
+    "duration": 3.2
+  },
+  {
+    "text": "better understanding",
+    "start": 648.0,
+    "duration": 4.16
+  },
+  {
+    "text": "of what you're being told",
+    "start": 649.12,
+    "duration": 3.04
+  },
+  {
+    "text": "but i mean even if i take him charitably",
+    "start": 652.72,
+    "duration": 3.28
+  },
+  {
+    "text": "there he's saying sort of you're human",
+    "start": 654.24,
+    "duration": 3.2
+  },
+  {
+    "text": "you're subject to clickbait or",
+    "start": 656.0,
+    "duration": 3.2
+  },
+  {
+    "text": "propaganda style things instead of",
+    "start": 657.44,
+    "duration": 5.12
+  },
+  {
+    "text": "long explanations well okay sure",
+    "start": 659.2,
+    "duration": 4.8
+  },
+  {
+    "text": "but what if i actually just want to look",
+    "start": 662.56,
+    "duration": 3.279
+  },
+  {
+    "text": "at it actually that's up to me",
+    "start": 664.0,
+    "duration": 3.76
+  },
+  {
+    "text": "but you risk polluting your own thought",
+    "start": 665.839,
+    "duration": 3.201
+  },
+  {
+    "text": "process",
+    "start": 667.76,
+    "duration": 3.6
+  },
+  {
+    "text": "with uh disinformation that's kind of",
+    "start": 669.04,
+    "duration": 3.039
+  },
+  {
+    "text": "the point",
+    "start": 671.36,
+    "duration": 2.08
+  },
+  {
+    "text": "yeah that's kind of the point that's",
+    "start": 672.079,
+    "duration": 3.361
+  },
+  {
+    "text": "what intellectual growth is yeah this is",
+    "start": 673.44,
+    "duration": 4.32
+  },
+  {
+    "text": "very much end of history thinking here",
+    "start": 675.44,
+    "duration": 4.639
+  },
+  {
+    "text": "as in there will be and what this what",
+    "start": 677.76,
+    "duration": 3.44
+  },
+  {
+    "text": "this kind of is is like",
+    "start": 680.079,
+    "duration": 3.281
+  },
+  {
+    "text": "the you know how we were talking about",
+    "start": 681.2,
+    "duration": 3.92
+  },
+  {
+    "text": "all of the narratives are",
+    "start": 683.36,
+    "duration": 4.08
+  },
+  {
+    "text": "harmonizing into one right and it's the",
+    "start": 685.12,
+    "duration": 3.36
+  },
+  {
+    "text": "kind of",
+    "start": 687.44,
+    "duration": 4.16
+  },
+  {
+    "text": "grand establishment mega narrative right",
+    "start": 688.48,
+    "duration": 3.52
+  },
+  {
+    "text": "i mean",
+    "start": 691.6,
+    "duration": 1.919
+  },
+  {
+    "text": "it's it's the narrative to contain all",
+    "start": 692.0,
+    "duration": 3.76
+  },
+  {
+    "text": "other narratives and what it says is",
+    "start": 693.519,
+    "duration": 3.201
+  },
+  {
+    "text": "most simple",
+    "start": 695.76,
+    "duration": 4.4
+  },
+  {
+    "text": "is anything we didn't say is wrong",
+    "start": 696.72,
+    "duration": 5.2
+  },
+  {
+    "text": "right and so if it comes from us it's",
+    "start": 700.16,
+    "duration": 3.76
+  },
+  {
+    "text": "right it's proved you can believe it you",
+    "start": 701.92,
+    "duration": 3.599
+  },
+  {
+    "text": "can trust it because it's authority",
+    "start": 703.92,
+    "duration": 3.68
+  },
+  {
+    "text": "and we said it's correct and anything we",
+    "start": 705.519,
+    "duration": 3.281
+  },
+  {
+    "text": "didn't say",
+    "start": 707.6,
+    "duration": 2.64
+  },
+  {
+    "text": "is an opportunity to warp your",
+    "start": 708.8,
+    "duration": 3.68
+  },
+  {
+    "text": "perspective is a way of",
+    "start": 710.24,
+    "duration": 4.48
+  },
+  {
+    "text": "disinformation helping you understand",
+    "start": 712.48,
+    "duration": 3.039
+  },
+  {
+    "text": "the subject",
+    "start": 714.72,
+    "duration": 2.32
+  },
+  {
+    "text": "you don't want to understand the subject",
+    "start": 715.519,
+    "duration": 3.12
+  },
+  {
+    "text": "you want to be correct",
+    "start": 717.04,
+    "duration": 3.919
+  },
+  {
+    "text": "and being correct is now a matter of",
+    "start": 718.639,
+    "duration": 4.32
+  },
+  {
+    "text": "power it's not a matter of understanding",
+    "start": 720.959,
+    "duration": 3.281
+  },
+  {
+    "text": "and what this is is the essence of",
+    "start": 722.959,
+    "duration": 3.201
+  },
+  {
+    "text": "totalitarianism everything we didn't say",
+    "start": 724.24,
+    "duration": 2.96
+  },
+  {
+    "text": "is wrong is",
+    "start": 726.16,
+    "duration": 4.88
+  },
+  {
+    "text": "the view of totalitarianism",
+    "start": 727.2,
+    "duration": 5.6
+  },
+  {
+    "text": "one way to combat this dynamic is to",
+    "start": 731.04,
+    "duration": 3.28
+  },
+  {
+    "text": "teach uh change how we teach media",
+    "start": 732.8,
+    "duration": 2.4
+  },
+  {
+    "text": "literacy",
+    "start": 734.32,
+    "duration": 2.639
+  },
+  {
+    "text": "internet users need to learn that our",
+    "start": 735.2,
+    "duration": 3.439
+  },
+  {
+    "text": "attention is a scarce commodity to be",
+    "start": 736.959,
+    "duration": 3.44
+  },
+  {
+    "text": "spent wisely",
+    "start": 738.639,
+    "duration": 3.44
+  },
+  {
+    "text": "uh which is weird because that sounds",
+    "start": 740.399,
+    "duration": 3.041
+  },
+  {
+    "text": "like me it sounds to me like they're",
+    "start": 742.079,
+    "duration": 1.921
+  },
+  {
+    "text": "saying",
+    "start": 743.44,
+    "duration": 2.8
+  },
+  {
+    "text": "become someone who is unable to commit",
+    "start": 744.0,
+    "duration": 5.12
+  },
+  {
+    "text": "time to deep research and study",
+    "start": 746.24,
+    "duration": 6.08
+  },
+  {
+    "text": "i mean why would i want that in 2016 mr",
+    "start": 749.12,
+    "duration": 5.519
+  },
+  {
+    "text": "caulfield met mr weinberg who suggested",
+    "start": 752.32,
+    "duration": 3.44
+  },
+  {
+    "text": "modeling the process",
+    "start": 754.639,
+    "duration": 3.121
+  },
+  {
+    "text": "after the way professional fact checkers",
+    "start": 755.76,
+    "duration": 3.519
+  },
+  {
+    "text": "assess information",
+    "start": 757.76,
+    "duration": 3.84
+  },
+  {
+    "text": "mr caulfield refined the practice into",
+    "start": 759.279,
+    "duration": 4.481
+  },
+  {
+    "text": "sort four simple principles",
+    "start": 761.6,
+    "duration": 4.4
+  },
+  {
+    "text": "these are called sift isn't that a nice",
+    "start": 763.76,
+    "duration": 3.36
+  },
+  {
+    "text": "acronym",
+    "start": 766.0,
+    "duration": 2.72
+  },
+  {
+    "text": "sift through that information right so",
+    "start": 767.12,
+    "duration": 3.04
+  },
+  {
+    "text": "the first one is stop",
+    "start": 768.72,
+    "duration": 3.679
+  },
+  {
+    "text": "the second one is investigate the source",
+    "start": 770.16,
+    "duration": 3.6
+  },
+  {
+    "text": "which means interrogate the source for",
+    "start": 772.399,
+    "duration": 2.481
+  },
+  {
+    "text": "political bias",
+    "start": 773.76,
+    "duration": 3.68
+  },
+  {
+    "text": "the third one is find better coverage",
+    "start": 774.88,
+    "duration": 3.199
+  },
+  {
+    "text": "which means",
+    "start": 777.44,
+    "duration": 2.56
+  },
+  {
+    "text": "find coverage that harmonizes with the",
+    "start": 778.079,
+    "duration": 3.281
+  },
+  {
+    "text": "mega narrative",
+    "start": 780.0,
+    "duration": 3.6
+  },
+  {
+    "text": "and the fourth one is trace claims",
+    "start": 781.36,
+    "duration": 4.08
+  },
+  {
+    "text": "quotes and media to the original context",
+    "start": 783.6,
+    "duration": 2.4
+  },
+  {
+    "text": "which is",
+    "start": 785.44,
+    "duration": 2.56
+  },
+  {
+    "text": "what we've just been advised against",
+    "start": 786.0,
+    "duration": 4.32
+  },
+  {
+    "text": "doing",
+    "start": 788.0,
+    "duration": 3.76
+  },
+  {
+    "text": "we aren't supposed to read the original",
+    "start": 790.32,
+    "duration": 3.04
+  },
+  {
+    "text": "sources because that might corrupt us or",
+    "start": 791.76,
+    "duration": 2.639
+  },
+  {
+    "text": "steal our attention",
+    "start": 793.36,
+    "duration": 4.56
+  },
+  {
+    "text": "i thought if this is not a claim where i",
+    "start": 794.399,
+    "duration": 4.88
+  },
+  {
+    "text": "have depth or understanding",
+    "start": 797.92,
+    "duration": 2.8
+  },
+  {
+    "text": "then i won't stop for a second before",
+    "start": 799.279,
+    "duration": 2.8
+  },
+  {
+    "text": "going further than just investigate the",
+    "start": 800.72,
+    "duration": 2.72
+  },
+  {
+    "text": "source at caulfield",
+    "start": 802.079,
+    "duration": 3.44
+  },
+  {
+    "text": "he copied mr kennedy's name they're",
+    "start": 803.44,
+    "duration": 3.839
+  },
+  {
+    "text": "referring to um a conspiracy theorist",
+    "start": 805.519,
+    "duration": 3.521
+  },
+  {
+    "text": "anti-vaccine conspiracy theorist as they",
+    "start": 807.279,
+    "duration": 3.041
+  },
+  {
+    "text": "describe the person",
+    "start": 809.04,
+    "duration": 5.28
+  },
+  {
+    "text": "um mr robert f kennedy jr i believe",
+    "start": 810.32,
+    "duration": 6.48
+  },
+  {
+    "text": "um he put it into instagram popped up in",
+    "start": 814.32,
+    "duration": 4.56
+  },
+  {
+    "text": "google and he said look how fast that is",
+    "start": 816.8,
+    "duration": 3.52
+  },
+  {
+    "text": "he told me he's accounted the seconds",
+    "start": 818.88,
+    "duration": 3.28
+  },
+  {
+    "text": "out loud in 15 seconds",
+    "start": 820.32,
+    "duration": 4.639
+  },
+  {
+    "text": "he navigated to wikipedia and scrolled",
+    "start": 822.16,
+    "duration": 4.479
+  },
+  {
+    "text": "through the introductory section of the",
+    "start": 824.959,
+    "duration": 2.481
+  },
+  {
+    "text": "page",
+    "start": 826.639,
+    "duration": 2.961
+  },
+  {
+    "text": "highlighting with his cursor the last",
+    "start": 827.44,
+    "duration": 4.24
+  },
+  {
+    "text": "sentence which read that mr kennedy is",
+    "start": 829.6,
+    "duration": 2.32
+  },
+  {
+    "text": "an",
+    "start": 831.68,
+    "duration": 2.56
+  },
+  {
+    "text": "anti-vaccine activist and a conspiracy",
+    "start": 831.92,
+    "duration": 4.159
+  },
+  {
+    "text": "theorist",
+    "start": 834.24,
+    "duration": 6.0
+  },
+  {
+    "text": "wikipedia is truth wasn't that easy",
+    "start": 836.079,
+    "duration": 6.801
+  },
+  {
+    "text": "this is the exact opposite of what any",
+    "start": 840.24,
+    "duration": 4.48
+  },
+  {
+    "text": "educational institution provides you yes",
+    "start": 842.88,
+    "duration": 2.399
+  },
+  {
+    "text": "it is",
+    "start": 844.72,
+    "duration": 2.16
+  },
+  {
+    "text": "or at least anyone that's that's still",
+    "start": 845.279,
+    "duration": 4.081
+  },
+  {
+    "text": "sane i suppose unless of course you",
+    "start": 846.88,
+    "duration": 4.319
+  },
+  {
+    "text": "control the mega narrative",
+    "start": 849.36,
+    "duration": 5.12
+  },
+  {
+    "text": "and wikipedia is a a propaganda piece an",
+    "start": 851.199,
+    "duration": 5.681
+  },
+  {
+    "text": "outlet a megaphone for that narrative",
+    "start": 854.48,
+    "duration": 5.28
+  },
+  {
+    "text": "if wikipedia is this the source of truth",
+    "start": 856.88,
+    "duration": 4.319
+  },
+  {
+    "text": "then the question is who's controlling",
+    "start": 859.76,
+    "duration": 4.639
+  },
+  {
+    "text": "the narratives on wikipedia",
+    "start": 861.199,
+    "duration": 3.2
+  },
+  {
+    "text": "is robert f kennedy the best unbiased",
+    "start": 865.12,
+    "duration": 4.48
+  },
+  {
+    "text": "source for information on a vaccine",
+    "start": 867.68,
+    "duration": 4.159
+  },
+  {
+    "text": "i'd argue no and that's good enough to",
+    "start": 869.6,
+    "duration": 3.52
+  },
+  {
+    "text": "know that we should probably just",
+    "start": 871.839,
+    "duration": 3.521
+  },
+  {
+    "text": "move on i i have a wager even his",
+    "start": 873.12,
+    "duration": 3.44
+  },
+  {
+    "text": "supporters probably think",
+    "start": 875.36,
+    "duration": 2.96
+  },
+  {
+    "text": "no they probably think that he's",
+    "start": 876.56,
+    "duration": 3.519
+  },
+  {
+    "text": "probably this guy i've just met is that",
+    "start": 878.32,
+    "duration": 2.56
+  },
+  {
+    "text": "not the best",
+    "start": 880.079,
+    "duration": 3.44
+  },
+  {
+    "text": "source on vaccines but they might find",
+    "start": 880.88,
+    "duration": 4.079
+  },
+  {
+    "text": "what he has to say interesting",
+    "start": 883.519,
+    "duration": 2.88
+  },
+  {
+    "text": "and that's up to them surely and he",
+    "start": 884.959,
+    "duration": 4.081
+  },
+  {
+    "text": "might be right the question of bias",
+    "start": 886.399,
+    "duration": 4.721
+  },
+  {
+    "text": "is often used as an excuse to",
+    "start": 889.04,
+    "duration": 3.76
+  },
+  {
+    "text": "essentially call someone wrong without",
+    "start": 891.12,
+    "duration": 3.44
+  },
+  {
+    "text": "actually pointing out why they're wrong",
+    "start": 892.8,
+    "duration": 4.8
+  },
+  {
+    "text": "because fundamentally they know that",
+    "start": 894.56,
+    "duration": 4.32
+  },
+  {
+    "text": "bias is a",
+    "start": 897.6,
+    "duration": 3.12
+  },
+  {
+    "text": "facet of human life i mean there's no",
+    "start": 898.88,
+    "duration": 3.68
+  },
+  {
+    "text": "not really any such thing as an unbiased",
+    "start": 900.72,
+    "duration": 3.2
+  },
+  {
+    "text": "source on a vaccine right",
+    "start": 902.56,
+    "duration": 3.2
+  },
+  {
+    "text": "if you're committed to in you know",
+    "start": 903.92,
+    "duration": 3.039
+  },
+  {
+    "text": "promoting it or you're committed to",
+    "start": 905.76,
+    "duration": 2.8
+  },
+  {
+    "text": "opposing it you're going to have a bias",
+    "start": 906.959,
+    "duration": 2.801
+  },
+  {
+    "text": "in either way because you've put effort",
+    "start": 908.56,
+    "duration": 2.8
+  },
+  {
+    "text": "and time and energy and you probably",
+    "start": 909.76,
+    "duration": 3.36
+  },
+  {
+    "text": "financially incentivized into one of",
+    "start": 911.36,
+    "duration": 3.279
+  },
+  {
+    "text": "these directions and even if you're not",
+    "start": 913.12,
+    "duration": 2.0
+  },
+  {
+    "text": "in that",
+    "start": 914.639,
+    "duration": 1.601
+  },
+  {
+    "text": "you've got an interest in whether you",
+    "start": 915.12,
+    "duration": 2.88
+  },
+  {
+    "text": "take a vaccine or not you know is the",
+    "start": 916.24,
+    "duration": 3.2
+  },
+  {
+    "text": "vaccine going to be good for your health",
+    "start": 918.0,
+    "duration": 2.48
+  },
+  {
+    "text": "is it going to protect you from a",
+    "start": 919.44,
+    "duration": 1.519
+  },
+  {
+    "text": "disease",
+    "start": 920.48,
+    "duration": 2.159
+  },
+  {
+    "text": "does it have any side effects you know",
+    "start": 920.959,
+    "duration": 3.12
+  },
+  {
+    "text": "you as a person who would take a vaccine",
+    "start": 922.639,
+    "duration": 2.961
+  },
+  {
+    "text": "you have a bias there too",
+    "start": 924.079,
+    "duration": 2.641
+  },
+  {
+    "text": "you know you know this is true for",
+    "start": 925.6,
+    "duration": 2.32
+  },
+  {
+    "text": "anything it's not just vaccines it's",
+    "start": 926.72,
+    "duration": 2.0
+  },
+  {
+    "text": "true for anything it's",
+    "start": 927.92,
+    "duration": 2.64
+  },
+  {
+    "text": "a topic in existence exactly this is",
+    "start": 928.72,
+    "duration": 4.0
+  },
+  {
+    "text": "just the example they gave",
+    "start": 930.56,
+    "duration": 3.44
+  },
+  {
+    "text": "and so the idea that there's like oh",
+    "start": 932.72,
+    "duration": 3.119
+  },
+  {
+    "text": "well is he the most unbiased source well",
+    "start": 934.0,
+    "duration": 2.48
+  },
+  {
+    "text": "no but",
+    "start": 935.839,
+    "duration": 2.401
+  },
+  {
+    "text": "it's kind of hard to find a source",
+    "start": 936.48,
+    "duration": 3.599
+  },
+  {
+    "text": "that's unbiased but unbiased",
+    "start": 938.24,
+    "duration": 3.92
+  },
+  {
+    "text": "doesn't mean factually inaccurate what",
+    "start": 940.079,
+    "duration": 3.2
+  },
+  {
+    "text": "we're looking for is",
+    "start": 942.16,
+    "duration": 2.96
+  },
+  {
+    "text": "would it be the most factually accurate",
+    "start": 943.279,
+    "duration": 3.761
+  },
+  {
+    "text": "source of information on a vaccine",
+    "start": 945.12,
+    "duration": 4.079
+  },
+  {
+    "text": "and well maybe it is maybe it's not i",
+    "start": 947.04,
+    "duration": 3.44
+  },
+  {
+    "text": "don't know i don't know who robert",
+    "start": 949.199,
+    "duration": 4.56
+  },
+  {
+    "text": "f kennedy jr is but uh but the point is",
+    "start": 950.48,
+    "duration": 4.64
+  },
+  {
+    "text": "we don't need to know because we've",
+    "start": 953.759,
+    "duration": 2.481
+  },
+  {
+    "text": "already established that he's a",
+    "start": 955.12,
+    "duration": 2.639
+  },
+  {
+    "text": "conspiracy theorist because wikipedia",
+    "start": 956.24,
+    "duration": 2.24
+  },
+  {
+    "text": "told us so",
+    "start": 957.759,
+    "duration": 2.241
+  },
+  {
+    "text": "and we don't listen to those people",
+    "start": 958.48,
+    "duration": 3.44
+  },
+  {
+    "text": "because the establishment the power",
+    "start": 960.0,
+    "duration": 3.519
+  },
+  {
+    "text": "have told us that that's wrong so we're",
+    "start": 961.92,
+    "duration": 2.96
+  },
+  {
+    "text": "just going to carry on and he's wrong",
+    "start": 963.519,
+    "duration": 2.481
+  },
+  {
+    "text": "about everything",
+    "start": 964.88,
+    "duration": 2.56
+  },
+  {
+    "text": "i mean this is great great advertising",
+    "start": 966.0,
+    "duration": 2.56
+  },
+  {
+    "text": "for the new york times like what does",
+    "start": 967.44,
+    "duration": 2.319
+  },
+  {
+    "text": "our journalism consist of",
+    "start": 968.56,
+    "duration": 4.079
+  },
+  {
+    "text": "reading wikipedia yeah exactly okay we",
+    "start": 969.759,
+    "duration": 4.0
+  },
+  {
+    "text": "get into that in fact",
+    "start": 972.639,
+    "duration": 2.32
+  },
+  {
+    "text": "right so um like if that's where it",
+    "start": 973.759,
+    "duration": 3.52
+  },
+  {
+    "text": "starts and stops uh well that's",
+    "start": 974.959,
+    "duration": 4.24
+  },
+  {
+    "text": "that's actually something he brings up",
+    "start": 977.279,
+    "duration": 3.36
+  },
+  {
+    "text": "he probed deeper into the method to find",
+    "start": 979.199,
+    "duration": 2.401
+  },
+  {
+    "text": "best coverage by",
+    "start": 980.639,
+    "duration": 2.56
+  },
+  {
+    "text": "copying the main claim in mrs kennedy's",
+    "start": 981.6,
+    "duration": 3.12
+  },
+  {
+    "text": "post and paste it into google search",
+    "start": 983.199,
+    "duration": 2.801
+  },
+  {
+    "text": "and the first two results that came up",
+    "start": 984.72,
+    "duration": 3.2
+  },
+  {
+    "text": "from france's agent press's fact check",
+    "start": 986.0,
+    "duration": 3.36
+  },
+  {
+    "text": "website and the national institutes of",
+    "start": 987.92,
+    "duration": 2.0
+  },
+  {
+    "text": "health",
+    "start": 989.36,
+    "duration": 2.64
+  },
+  {
+    "text": "quick searches showed a pattern mr",
+    "start": 989.92,
+    "duration": 3.919
+  },
+  {
+    "text": "kennedy's claims were outside of the",
+    "start": 992.0,
+    "duration": 2.959
+  },
+  {
+    "text": "consensus",
+    "start": 993.839,
+    "duration": 3.601
+  },
+  {
+    "text": "a sign they were motivated by something",
+    "start": 994.959,
+    "duration": 4.641
+  },
+  {
+    "text": "other than science",
+    "start": 997.44,
+    "duration": 4.319
+  },
+  {
+    "text": "that's not how science works exactly",
+    "start": 999.6,
+    "duration": 4.64
+  },
+  {
+    "text": "science is not based on consensus",
+    "start": 1001.759,
+    "duration": 5.361
+  },
+  {
+    "text": "well it's it's based on consensus in",
+    "start": 1004.24,
+    "duration": 4.24
+  },
+  {
+    "text": "regards to the evidence",
+    "start": 1007.12,
+    "duration": 4.0
+  },
+  {
+    "text": "let's say but it is not absolute ever",
+    "start": 1008.48,
+    "duration": 4.24
+  },
+  {
+    "text": "like it never can be because it wouldn't",
+    "start": 1011.12,
+    "duration": 2.159
+  },
+  {
+    "text": "make any sense",
+    "start": 1012.72,
+    "duration": 1.919
+  },
+  {
+    "text": "it's not even based on consensus to the",
+    "start": 1013.279,
+    "duration": 2.881
+  },
+  {
+    "text": "evidence well like like we were speaking",
+    "start": 1014.639,
+    "duration": 3.281
+  },
+  {
+    "text": "about the paradigms a minute ago",
+    "start": 1016.16,
+    "duration": 4.0
+  },
+  {
+    "text": "um both the catholics and the chinese",
+    "start": 1017.92,
+    "duration": 3.599
+  },
+  {
+    "text": "would look at the stars and see the same",
+    "start": 1020.16,
+    "duration": 2.88
+  },
+  {
+    "text": "thing they'd have the same evidence",
+    "start": 1021.519,
+    "duration": 2.881
+  },
+  {
+    "text": "but take different interpretations",
+    "start": 1023.04,
+    "duration": 2.639
+  },
+  {
+    "text": "because of their own lenses their own",
+    "start": 1024.4,
+    "duration": 2.24
+  },
+  {
+    "text": "paradigms",
+    "start": 1025.679,
+    "duration": 2.481
+  },
+  {
+    "text": "form the way that they interpret the",
+    "start": 1026.64,
+    "duration": 3.919
+  },
+  {
+    "text": "evidence and so",
+    "start": 1028.16,
+    "duration": 4.879
+  },
+  {
+    "text": "it's it's not even that simple and this",
+    "start": 1030.559,
+    "duration": 3.36
+  },
+  {
+    "text": "uh goes",
+    "start": 1033.039,
+    "duration": 3.92
+  },
+  {
+    "text": "goes to a theory by uh kuhn about how",
+    "start": 1033.919,
+    "duration": 4.801
+  },
+  {
+    "text": "scientific paradigms work and i think",
+    "start": 1036.959,
+    "duration": 3.201
+  },
+  {
+    "text": "this theory probably is expandable to",
+    "start": 1038.72,
+    "duration": 3.119
+  },
+  {
+    "text": "any kind of intellectual paradigm at",
+    "start": 1040.16,
+    "duration": 4.639
+  },
+  {
+    "text": "all um certain things simply can't be",
+    "start": 1041.839,
+    "duration": 4.72
+  },
+  {
+    "text": "seen within certain paradigms",
+    "start": 1044.799,
+    "duration": 4.081
+  },
+  {
+    "text": "and you don't actually know what's going",
+    "start": 1046.559,
+    "duration": 3.921
+  },
+  {
+    "text": "to lead on to a paradigm",
+    "start": 1048.88,
+    "duration": 5.039
+  },
+  {
+    "text": "shift because there was a",
+    "start": 1050.48,
+    "duration": 5.199
+  },
+  {
+    "text": "material that was hypothesized called",
+    "start": 1053.919,
+    "duration": 3.441
+  },
+  {
+    "text": "phlogiston",
+    "start": 1055.679,
+    "duration": 3.36
+  },
+  {
+    "text": "and this was meant to be some sort of",
+    "start": 1057.36,
+    "duration": 3.12
+  },
+  {
+    "text": "liquidy gas",
+    "start": 1059.039,
+    "duration": 3.52
+  },
+  {
+    "text": "that would be apparent when i know you",
+    "start": 1060.48,
+    "duration": 3.68
+  },
+  {
+    "text": "put acid on zinc or something like this",
+    "start": 1062.559,
+    "duration": 2.24
+  },
+  {
+    "text": "and it was",
+    "start": 1064.16,
+    "duration": 2.879
+  },
+  {
+    "text": "a load of magical well not magical but",
+    "start": 1064.799,
+    "duration": 3.601
+  },
+  {
+    "text": "scientific properties were ascribed to",
+    "start": 1067.039,
+    "duration": 2.401
+  },
+  {
+    "text": "this substance",
+    "start": 1068.4,
+    "duration": 2.639
+  },
+  {
+    "text": "and lots of people did various",
+    "start": 1069.44,
+    "duration": 3.2
+  },
+  {
+    "text": "experiments based on the idea that this",
+    "start": 1071.039,
+    "duration": 3.121
+  },
+  {
+    "text": "substance existed",
+    "start": 1072.64,
+    "duration": 3.12
+  },
+  {
+    "text": "but the thing is this substance didn't",
+    "start": 1074.16,
+    "duration": 3.759
+  },
+  {
+    "text": "exist but the results of those",
+    "start": 1075.76,
+    "duration": 3.039
+  },
+  {
+    "text": "experiments",
+    "start": 1077.919,
+    "duration": 2.721
+  },
+  {
+    "text": "produced information about things that",
+    "start": 1078.799,
+    "duration": 3.681
+  },
+  {
+    "text": "we now use today",
+    "start": 1080.64,
+    "duration": 3.68
+  },
+  {
+    "text": "and so despite the fact that it was a",
+    "start": 1082.48,
+    "duration": 4.0
+  },
+  {
+    "text": "false paradigm if it wasn't for this",
+    "start": 1084.32,
+    "duration": 3.68
+  },
+  {
+    "text": "false paradigm we wouldn't be in what we",
+    "start": 1086.48,
+    "duration": 3.04
+  },
+  {
+    "text": "believe to be a more accurate paradigm",
+    "start": 1088.0,
+    "duration": 2.4
+  },
+  {
+    "text": "now",
+    "start": 1089.52,
+    "duration": 2.88
+  },
+  {
+    "text": "so the point is consensus actually means",
+    "start": 1090.4,
+    "duration": 4.08
+  },
+  {
+    "text": "nothing people can have a complete",
+    "start": 1092.4,
+    "duration": 5.12
+  },
+  {
+    "text": "and almost universal consensus on",
+    "start": 1094.48,
+    "duration": 4.559
+  },
+  {
+    "text": "an opinion that's totally wrong the",
+    "start": 1097.52,
+    "duration": 3.279
+  },
+  {
+    "text": "catholic church with the heavens moving",
+    "start": 1099.039,
+    "duration": 4.721
+  },
+  {
+    "text": "the existence of flogistan as a as a",
+    "start": 1100.799,
+    "duration": 4.641
+  },
+  {
+    "text": "material that influences the world",
+    "start": 1103.76,
+    "duration": 2.799
+  },
+  {
+    "text": "these things are not true but they were",
+    "start": 1105.44,
+    "duration": 3.44
+  },
+  {
+    "text": "consensus opinions and it was people",
+    "start": 1106.559,
+    "duration": 4.161
+  },
+  {
+    "text": "outside of the consensus that brought us",
+    "start": 1108.88,
+    "duration": 3.52
+  },
+  {
+    "text": "into the paradigm that we're in now",
+    "start": 1110.72,
+    "duration": 2.959
+  },
+  {
+    "text": "where we believe that those things",
+    "start": 1112.4,
+    "duration": 1.92
+  },
+  {
+    "text": "weren't true",
+    "start": 1113.679,
+    "duration": 2.24
+  },
+  {
+    "text": "because the evidence doesn't support it",
+    "start": 1114.32,
+    "duration": 3.44
+  },
+  {
+    "text": "and essentially what they're saying",
+    "start": 1115.919,
+    "duration": 5.201
+  },
+  {
+    "text": "is our paradigm is truth",
+    "start": 1117.76,
+    "duration": 4.72
+  },
+  {
+    "text": "which in and of itself is a very",
+    "start": 1121.12,
+    "duration": 3.6
+  },
+  {
+    "text": "dogmatic and anti-scientific",
+    "start": 1122.48,
+    "duration": 6.96
+  },
+  {
+    "text": "worldview it's unbelievably arrogant",
+    "start": 1124.72,
+    "duration": 6.48
+  },
+  {
+    "text": "the sift method and the instructional",
+    "start": 1129.44,
+    "duration": 3.84
+  },
+  {
+    "text": "teaching unit that accompanies it have",
+    "start": 1131.2,
+    "duration": 2.88
+  },
+  {
+    "text": "been picked up by",
+    "start": 1133.28,
+    "duration": 2.24
+  },
+  {
+    "text": "dozens of universities across the",
+    "start": 1134.08,
+    "duration": 3.36
+  },
+  {
+    "text": "country and some canadian high schools",
+    "start": 1135.52,
+    "duration": 3.039
+  },
+  {
+    "text": "good news your kids are going to be",
+    "start": 1137.44,
+    "duration": 2.96
+  },
+  {
+    "text": "taught this and what's potentially",
+    "start": 1138.559,
+    "duration": 3.201
+  },
+  {
+    "text": "revolutionary about sift",
+    "start": 1140.4,
+    "duration": 3.2
+  },
+  {
+    "text": "is it focuses on making quick judgments",
+    "start": 1141.76,
+    "duration": 4.159
+  },
+  {
+    "text": "a sift fact check should take 30 60",
+    "start": 1143.6,
+    "duration": 4.4
+  },
+  {
+    "text": "90 seconds to evaluate a piece of",
+    "start": 1145.919,
+    "duration": 4.241
+  },
+  {
+    "text": "content so keeping people in a state of",
+    "start": 1148.0,
+    "duration": 3.36
+  },
+  {
+    "text": "momentary suspense",
+    "start": 1150.16,
+    "duration": 3.12
+  },
+  {
+    "text": "never engaging with anything deeply",
+    "start": 1151.36,
+    "duration": 3.679
+  },
+  {
+    "text": "other than with a sort of oppositional",
+    "start": 1153.28,
+    "duration": 2.56
+  },
+  {
+    "text": "position",
+    "start": 1155.039,
+    "duration": 2.961
+  },
+  {
+    "text": "to check its relative position against",
+    "start": 1155.84,
+    "duration": 4.32
+  },
+  {
+    "text": "the the mega narrative so it's",
+    "start": 1158.0,
+    "duration": 3.36
+  },
+  {
+    "text": "effectively turning people",
+    "start": 1160.16,
+    "duration": 3.759
+  },
+  {
+    "text": "into autonomous gatekeepers for this",
+    "start": 1161.36,
+    "duration": 3.439
+  },
+  {
+    "text": "narrative",
+    "start": 1163.919,
+    "duration": 2.961
+  },
+  {
+    "text": "and i think that's just amazing that",
+    "start": 1164.799,
+    "duration": 3.281
+  },
+  {
+    "text": "they come out with this",
+    "start": 1166.88,
+    "duration": 2.72
+  },
+  {
+    "text": "and that people aren't supposed to be",
+    "start": 1168.08,
+    "duration": 3.28
+  },
+  {
+    "text": "aware of that's what's happening and",
+    "start": 1169.6,
+    "duration": 4.319
+  },
+  {
+    "text": "that's what they're trying to promote",
+    "start": 1171.36,
+    "duration": 5.36
+  },
+  {
+    "text": "the four steps are based on the premise",
+    "start": 1173.919,
+    "duration": 4.88
+  },
+  {
+    "text": "that you often make a better decision",
+    "start": 1176.72,
+    "duration": 2.8
+  },
+  {
+    "text": "with less",
+    "start": 1178.799,
+    "duration": 3.841
+  },
+  {
+    "text": "information than you do with more do you",
+    "start": 1179.52,
+    "duration": 4.56
+  },
+  {
+    "text": "agree with that john's already laughing",
+    "start": 1182.64,
+    "duration": 2.08
+  },
+  {
+    "text": "in the corner",
+    "start": 1184.08,
+    "duration": 1.92
+  },
+  {
+    "text": "do you agree with that in any way shape",
+    "start": 1184.72,
+    "duration": 3.92
+  },
+  {
+    "text": "or form why the hell should i",
+    "start": 1186.0,
+    "duration": 6.0
+  },
+  {
+    "text": "exactly like when when has anyone made a",
+    "start": 1188.64,
+    "duration": 4.96
+  },
+  {
+    "text": "better decision with less information",
+    "start": 1192.0,
+    "duration": 3.919
+  },
+  {
+    "text": "than more",
+    "start": 1193.6,
+    "duration": 4.959
+  },
+  {
+    "text": "how does that work i mean if you're",
+    "start": 1195.919,
+    "duration": 5.281
+  },
+  {
+    "text": "lucky i guess",
+    "start": 1198.559,
+    "duration": 5.12
+  },
+  {
+    "text": "we should be relying on luck new",
+    "start": 1201.2,
+    "duration": 3.92
+  },
+  {
+    "text": "frontiers of science are being pushed",
+    "start": 1203.679,
+    "duration": 3.36
+  },
+  {
+    "text": "here get lucky",
+    "start": 1205.12,
+    "duration": 3.36
+  },
+  {
+    "text": "this is like the word the witch theory",
+    "start": 1207.039,
+    "duration": 2.961
+  },
+  {
+    "text": "from that what is it what what",
+    "start": 1208.48,
+    "duration": 2.64
+  },
+  {
+    "text": "university was that she was like you",
+    "start": 1210.0,
+    "duration": 2.72
+  },
+  {
+    "text": "can't explain african science which is",
+    "start": 1211.12,
+    "duration": 2.88
+  },
+  {
+    "text": "black stuff it was a south african",
+    "start": 1212.72,
+    "duration": 2.8
+  },
+  {
+    "text": "university how does the shaman call the",
+    "start": 1214.0,
+    "duration": 2.24
+  },
+  {
+    "text": "lightning",
+    "start": 1215.52,
+    "duration": 3.279
+  },
+  {
+    "text": "yeah but that's the thing how can how",
+    "start": 1216.24,
+    "duration": 4.0
+  },
+  {
+    "text": "can you make a better decision with less",
+    "start": 1218.799,
+    "duration": 3.201
+  },
+  {
+    "text": "information i mean like",
+    "start": 1220.24,
+    "duration": 3.04
+  },
+  {
+    "text": "it just doesn't make sense on any",
+    "start": 1222.0,
+    "duration": 3.36
+  },
+  {
+    "text": "particular level like prudence you know",
+    "start": 1223.28,
+    "duration": 4.24
+  },
+  {
+    "text": "just general day-to-day decision-making",
+    "start": 1225.36,
+    "duration": 3.92
+  },
+  {
+    "text": "like good decision-making requires",
+    "start": 1227.52,
+    "duration": 3.36
+  },
+  {
+    "text": "practical wisdom but that means you have",
+    "start": 1229.28,
+    "duration": 2.639
+  },
+  {
+    "text": "to have a good knowledge of your",
+    "start": 1230.88,
+    "duration": 2.48
+  },
+  {
+    "text": "environment and what's going on",
+    "start": 1231.919,
+    "duration": 3.841
+  },
+  {
+    "text": "within it more knowledge on what's going",
+    "start": 1233.36,
+    "duration": 3.12
+  },
+  {
+    "text": "on around you",
+    "start": 1235.76,
+    "duration": 2.64
+  },
+  {
+    "text": "will enable you to make more informed",
+    "start": 1236.48,
+    "duration": 3.84
+  },
+  {
+    "text": "decisions which we would call better",
+    "start": 1238.4,
+    "duration": 2.639
+  },
+  {
+    "text": "decisions",
+    "start": 1240.32,
+    "duration": 2.0
+  },
+  {
+    "text": "but i suppose it depends on what you",
+    "start": 1241.039,
+    "duration": 3.361
+  },
+  {
+    "text": "mean by better if better means more",
+    "start": 1242.32,
+    "duration": 4.88
+  },
+  {
+    "text": "in line with the mega narrative then",
+    "start": 1244.4,
+    "duration": 3.84
+  },
+  {
+    "text": "sure i mean",
+    "start": 1247.2,
+    "duration": 2.64
+  },
+  {
+    "text": "you know less information might be great",
+    "start": 1248.24,
+    "duration": 2.559
+  },
+  {
+    "text": "in fact you don't want people to have",
+    "start": 1249.84,
+    "duration": 2.56
+  },
+  {
+    "text": "any information really which is",
+    "start": 1250.799,
+    "duration": 4.801
+  },
+  {
+    "text": "presumably the purpose of this piece",
+    "start": 1252.4,
+    "duration": 5.12
+  },
+  {
+    "text": "kind of scary isn't it it's very brave",
+    "start": 1255.6,
+    "duration": 3.6
+  },
+  {
+    "text": "new world to me",
+    "start": 1257.52,
+    "duration": 3.12
+  },
+  {
+    "text": "i mean literally you should not think",
+    "start": 1259.2,
+    "duration": 3.2
+  },
+  {
+    "text": "about things let us do the thinking for",
+    "start": 1260.64,
+    "duration": 3.2
+  },
+  {
+    "text": "you yeah i mean this goes in line with",
+    "start": 1262.4,
+    "duration": 2.88
+  },
+  {
+    "text": "also a couple of topics we've covered",
+    "start": 1263.84,
+    "duration": 3.44
+  },
+  {
+    "text": "i mean the youtubers being accused of",
+    "start": 1265.28,
+    "duration": 3.36
+  },
+  {
+    "text": "abominable thinking",
+    "start": 1267.28,
+    "duration": 3.36
+  },
+  {
+    "text": "you know how are the owl being visited",
+    "start": 1268.64,
+    "duration": 4.0
+  },
+  {
+    "text": "for uh the police to check on his",
+    "start": 1270.64,
+    "duration": 2.56
+  },
+  {
+    "text": "thinking",
+    "start": 1272.64,
+    "duration": 2.64
+  },
+  {
+    "text": "yep you would have thought this kind of",
+    "start": 1273.2,
+    "duration": 3.52
+  },
+  {
+    "text": "stuff would i mean we always talked in",
+    "start": 1275.28,
+    "duration": 2.08
+  },
+  {
+    "text": "terms of like",
+    "start": 1276.72,
+    "duration": 2.56
+  },
+  {
+    "text": "oh it's hates or this kind of speech or",
+    "start": 1277.36,
+    "duration": 3.12
+  },
+  {
+    "text": "something i never thought we'd actually",
+    "start": 1279.28,
+    "duration": 2.72
+  },
+  {
+    "text": "get into the realm of talking about",
+    "start": 1280.48,
+    "duration": 2.88
+  },
+  {
+    "text": "thinking being evil",
+    "start": 1282.0,
+    "duration": 3.12
+  },
+  {
+    "text": "but that's where we are now i guess",
+    "start": 1283.36,
+    "duration": 3.439
+  },
+  {
+    "text": "that's where the new york times is now",
+    "start": 1285.12,
+    "duration": 4.08
+  },
+  {
+    "text": "by this point we go to the 2020s this is",
+    "start": 1286.799,
+    "duration": 3.281
+  },
+  {
+    "text": "this is where we're going",
+    "start": 1289.2,
+    "duration": 4.0
+  },
+  {
+    "text": "yeah yeah absolutely think of crimes",
+    "start": 1290.08,
+    "duration": 6.64
+  },
+  {
+    "text": "no we we are in think crimes spending 15",
+    "start": 1293.2,
+    "duration": 5.04
+  },
+  {
+    "text": "minutes to defend determine a single",
+    "start": 1296.72,
+    "duration": 3.199
+  },
+  {
+    "text": "fact in order to decipher a tweet or",
+    "start": 1298.24,
+    "duration": 2.88
+  },
+  {
+    "text": "piece of news coming from a source",
+    "start": 1299.919,
+    "duration": 2.321
+  },
+  {
+    "text": "you've never seen before",
+    "start": 1301.12,
+    "duration": 2.96
+  },
+  {
+    "text": "will often leave you more confused than",
+    "start": 1302.24,
+    "duration": 4.64
+  },
+  {
+    "text": "you were before",
+    "start": 1304.08,
+    "duration": 2.8
+  },
+  {
+    "text": "finding out the information about",
+    "start": 1307.12,
+    "duration": 3.36
+  },
+  {
+    "text": "something will leave you confused",
+    "start": 1308.559,
+    "duration": 4.161
+  },
+  {
+    "text": "and so we the world controllers will",
+    "start": 1310.48,
+    "duration": 3.36
+  },
+  {
+    "text": "just hand down",
+    "start": 1312.72,
+    "duration": 2.56
+  },
+  {
+    "text": "the information you need we'll take away",
+    "start": 1313.84,
+    "duration": 3.12
+  },
+  {
+    "text": "those inconvenient books",
+    "start": 1315.28,
+    "duration": 3.2
+  },
+  {
+    "text": "that had concepts in that will just",
+    "start": 1316.96,
+    "duration": 3.599
+  },
+  {
+    "text": "leave you confused and we will hand you",
+    "start": 1318.48,
+    "duration": 3.679
+  },
+  {
+    "text": "down the narrative that you need no more",
+    "start": 1320.559,
+    "duration": 2.561
+  },
+  {
+    "text": "thinking required",
+    "start": 1322.159,
+    "duration": 2.561
+  },
+  {
+    "text": "this actually reminds me of the npc meme",
+    "start": 1323.12,
+    "duration": 2.4
+  },
+  {
+    "text": "because i don't know if you've seen the",
+    "start": 1324.72,
+    "duration": 2.079
+  },
+  {
+    "text": "videos like when they read something",
+    "start": 1325.52,
+    "duration": 2.56
+  },
+  {
+    "text": "they don't understand you see a little",
+    "start": 1326.799,
+    "duration": 2.88
+  },
+  {
+    "text": "like wheel turning yeah and they leaves",
+    "start": 1328.08,
+    "duration": 2.959
+  },
+  {
+    "text": "you composed that's what that is that's",
+    "start": 1329.679,
+    "duration": 2.321
+  },
+  {
+    "text": "what that is before you",
+    "start": 1331.039,
+    "duration": 2.561
+  },
+  {
+    "text": "click and realize they're telling you",
+    "start": 1332.0,
+    "duration": 2.96
+  },
+  {
+    "text": "something is a lie it's like they're",
+    "start": 1333.6,
+    "duration": 2.88
+  },
+  {
+    "text": "talking to grandpa or something don't",
+    "start": 1334.96,
+    "duration": 2.48
+  },
+  {
+    "text": "tell grandpa about",
+    "start": 1336.48,
+    "duration": 2.16
+  },
+  {
+    "text": "the internet because it'll just be",
+    "start": 1337.44,
+    "duration": 2.56
+  },
+  {
+    "text": "confusing to him because it's outside of",
+    "start": 1338.64,
+    "duration": 3.36
+  },
+  {
+    "text": "his world he doesn't understand it",
+    "start": 1340.0,
+    "duration": 4.72
+  },
+  {
+    "text": "i don't want that that's awful the",
+    "start": 1342.0,
+    "duration": 4.4
+  },
+  {
+    "text": "question we want students asking is",
+    "start": 1344.72,
+    "duration": 3.52
+  },
+  {
+    "text": "is this a good source for this purpose",
+    "start": 1346.4,
+    "duration": 3.279
+  },
+  {
+    "text": "or could i find something better",
+    "start": 1348.24,
+    "duration": 2.72
+  },
+  {
+    "text": "relatively quickly",
+    "start": 1349.679,
+    "duration": 3.761
+  },
+  {
+    "text": "uh mr corfield said i i've seen i've",
+    "start": 1350.96,
+    "duration": 3.76
+  },
+  {
+    "text": "seen in the classroom",
+    "start": 1353.44,
+    "duration": 2.8
+  },
+  {
+    "text": "where a student finds a great answer in",
+    "start": 1354.72,
+    "duration": 2.8
+  },
+  {
+    "text": "three minutes but then keeps going and",
+    "start": 1356.24,
+    "duration": 1.919
+  },
+  {
+    "text": "is one",
+    "start": 1357.52,
+    "duration": 3.6
+  },
+  {
+    "text": "and and ends up won over by bad",
+    "start": 1358.159,
+    "duration": 4.481
+  },
+  {
+    "text": "information",
+    "start": 1361.12,
+    "duration": 3.919
+  },
+  {
+    "text": "god what i'd love to see the example he",
+    "start": 1362.64,
+    "duration": 3.279
+  },
+  {
+    "text": "said me too",
+    "start": 1365.039,
+    "duration": 2.401
+  },
+  {
+    "text": "but i find it really interesting bad",
+    "start": 1365.919,
+    "duration": 2.961
+  },
+  {
+    "text": "information is to give it a kind of",
+    "start": 1367.44,
+    "duration": 2.56
+  },
+  {
+    "text": "moral dimension",
+    "start": 1368.88,
+    "duration": 3.12
+  },
+  {
+    "text": "this immoral information this",
+    "start": 1370.0,
+    "duration": 3.36
+  },
+  {
+    "text": "disinformation that will give you",
+    "start": 1372.0,
+    "duration": 2.0
+  },
+  {
+    "text": "knowledge about",
+    "start": 1373.36,
+    "duration": 1.92
+  },
+  {
+    "text": "a subject because you looked at the",
+    "start": 1374.0,
+    "duration": 2.4
+  },
+  {
+    "text": "primary source rather than look at the",
+    "start": 1375.28,
+    "duration": 1.84
+  },
+  {
+    "text": "authority",
+    "start": 1376.4,
+    "duration": 3.36
+  },
+  {
+    "text": "you should avoid that okay you know",
+    "start": 1377.12,
+    "duration": 3.039
+  },
+  {
+    "text": "that's",
+    "start": 1379.76,
+    "duration": 2.159
+  },
+  {
+    "text": "what we encouraging students to do yeah",
+    "start": 1380.159,
+    "duration": 3.201
+  },
+  {
+    "text": "exactly that's that's",
+    "start": 1381.919,
+    "duration": 3.521
+  },
+  {
+    "text": "deeply concerning in my view i mean you",
+    "start": 1383.36,
+    "duration": 3.36
+  },
+  {
+    "text": "don't want to get whatever by bad",
+    "start": 1385.44,
+    "duration": 2.96
+  },
+  {
+    "text": "information do you",
+    "start": 1386.72,
+    "duration": 5.6
+  },
+  {
+    "text": "i don't know do i anyway",
+    "start": 1388.4,
+    "duration": 3.92
+  },
+  {
+    "text": "they they say we've been trained to",
+    "start": 1392.4,
+    "duration": 2.8
+  },
+  {
+    "text": "think that googling or just fact",
+    "start": 1393.679,
+    "duration": 3.36
+  },
+  {
+    "text": "checking one resource we trust is almost",
+    "start": 1395.2,
+    "duration": 2.719
+  },
+  {
+    "text": "like cheating",
+    "start": 1397.039,
+    "duration": 2.801
+  },
+  {
+    "text": "but when people use so when people",
+    "start": 1397.919,
+    "duration": 3.76
+  },
+  {
+    "text": "search google the best results must",
+    "start": 1399.84,
+    "duration": 3.68
+  },
+  {
+    "text": "may not always be first but the good",
+    "start": 1401.679,
+    "duration": 3.681
+  },
+  {
+    "text": "information is usually near the top",
+    "start": 1403.52,
+    "duration": 4.56
+  },
+  {
+    "text": "often when you see a patent referring to",
+    "start": 1405.36,
+    "duration": 3.679
+  },
+  {
+    "text": "google",
+    "start": 1408.08,
+    "duration": 2.88
+  },
+  {
+    "text": "just take the first google result you",
+    "start": 1409.039,
+    "duration": 3.281
+  },
+  {
+    "text": "get yeah it'll be something that",
+    "start": 1410.96,
+    "duration": 2.959
+  },
+  {
+    "text": "supports the mega narrative you can",
+    "start": 1412.32,
+    "duration": 3.52
+  },
+  {
+    "text": "trust it it's like cheating but it's not",
+    "start": 1413.919,
+    "duration": 3.361
+  },
+  {
+    "text": "i mean we know from the the",
+    "start": 1415.84,
+    "duration": 3.12
+  },
+  {
+    "text": "whistleblowers at google i mean endless",
+    "start": 1417.28,
+    "duration": 3.68
+  },
+  {
+    "text": "numbers now that google does influence",
+    "start": 1418.96,
+    "duration": 3.12
+  },
+  {
+    "text": "their search results",
+    "start": 1420.96,
+    "duration": 2.8
+  },
+  {
+    "text": "in different ways to promote narratives",
+    "start": 1422.08,
+    "duration": 3.04
+  },
+  {
+    "text": "that they promote i mean even their vice",
+    "start": 1423.76,
+    "duration": 2.399
+  },
+  {
+    "text": "president said this",
+    "start": 1425.12,
+    "duration": 2.0
+  },
+  {
+    "text": "he came to parliament and they were",
+    "start": 1426.159,
+    "duration": 2.321
+  },
+  {
+    "text": "grilling him about this than the other",
+    "start": 1427.12,
+    "duration": 3.2
+  },
+  {
+    "text": "and he says no no we we um",
+    "start": 1428.48,
+    "duration": 4.64
+  },
+  {
+    "text": "we prioritize what was it the the",
+    "start": 1430.32,
+    "duration": 3.599
+  },
+  {
+    "text": "promotion",
+    "start": 1433.12,
+    "duration": 4.08
+  },
+  {
+    "text": "of um homosexual lgbt issues",
+    "start": 1433.919,
+    "duration": 4.961
+  },
+  {
+    "text": "or something like this i have to get the",
+    "start": 1437.2,
+    "duration": 2.88
+  },
+  {
+    "text": "link yeah i'll show you but they",
+    "start": 1438.88,
+    "duration": 2.72
+  },
+  {
+    "text": "manipulate the certainty but he openly",
+    "start": 1440.08,
+    "duration": 3.12
+  },
+  {
+    "text": "said this to the parliament in regards",
+    "start": 1441.6,
+    "duration": 3.04
+  },
+  {
+    "text": "to them saying why would i search like",
+    "start": 1443.2,
+    "duration": 2.4
+  },
+  {
+    "text": "straight couples do you end up with a",
+    "start": 1444.64,
+    "duration": 2.0
+  },
+  {
+    "text": "bunch of gay people",
+    "start": 1445.6,
+    "duration": 4.16
+  },
+  {
+    "text": "and i was like well you know",
+    "start": 1446.64,
+    "duration": 4.399
+  },
+  {
+    "text": "the first result a straight white couple",
+    "start": 1449.76,
+    "duration": 3.919
+  },
+  {
+    "text": "is two gay men",
+    "start": 1451.039,
+    "duration": 2.64
+  },
+  {
+    "text": "but uh but the information you need is",
+    "start": 1454.48,
+    "duration": 3.36
+  },
+  {
+    "text": "usually in the top often you see a",
+    "start": 1455.919,
+    "duration": 3.681
+  },
+  {
+    "text": "pattern in the links of a consensus",
+    "start": 1457.84,
+    "duration": 3.12
+  },
+  {
+    "text": "that's been formed",
+    "start": 1459.6,
+    "duration": 3.36
+  },
+  {
+    "text": "but deeper into the process it often",
+    "start": 1460.96,
+    "duration": 4.079
+  },
+  {
+    "text": "gets weirder it's important to know when",
+    "start": 1462.96,
+    "duration": 3.12
+  },
+  {
+    "text": "to stop",
+    "start": 1465.039,
+    "duration": 3.841
+  },
+  {
+    "text": "literally stop thinking know your limits",
+    "start": 1466.08,
+    "duration": 4.88
+  },
+  {
+    "text": "this is like a harry enfield sketch",
+    "start": 1468.88,
+    "duration": 4.64
+  },
+  {
+    "text": "right like you look it gets too much to",
+    "start": 1470.96,
+    "duration": 3.199
+  },
+  {
+    "text": "think",
+    "start": 1473.52,
+    "duration": 2.48
+  },
+  {
+    "text": "again it's like you know it'll confuse",
+    "start": 1474.159,
+    "duration": 3.441
+  },
+  {
+    "text": "you it gets weird",
+    "start": 1476.0,
+    "duration": 3.039
+  },
+  {
+    "text": "you don't need to know any of these",
+    "start": 1477.6,
+    "duration": 3.199
+  },
+  {
+    "text": "things let us the approved thinkers",
+    "start": 1479.039,
+    "duration": 2.961
+  },
+  {
+    "text": "think this for you",
+    "start": 1480.799,
+    "duration": 2.801
+  },
+  {
+    "text": "you can just take the narrative it's",
+    "start": 1482.0,
+    "duration": 3.679
+  },
+  {
+    "text": "like okay this is just a way of creating",
+    "start": 1483.6,
+    "duration": 4.559
+  },
+  {
+    "text": "sheep you know creating like and the the",
+    "start": 1485.679,
+    "duration": 4.161
+  },
+  {
+    "text": "sheep dogs will bark at them as they go",
+    "start": 1488.159,
+    "duration": 3.361
+  },
+  {
+    "text": "near the edge and they'll be funneled in",
+    "start": 1489.84,
+    "duration": 3.199
+  },
+  {
+    "text": "to whatever field they're supposed to be",
+    "start": 1491.52,
+    "duration": 3.519
+  },
+  {
+    "text": "going into stop at the limits of the",
+    "start": 1493.039,
+    "duration": 4.0
+  },
+  {
+    "text": "mega narrative because you know",
+    "start": 1495.039,
+    "duration": 4.0
+  },
+  {
+    "text": "it gets weird and you don't be weird do",
+    "start": 1497.039,
+    "duration": 3.601
+  },
+  {
+    "text": "you yeah again all this like moral",
+    "start": 1499.039,
+    "duration": 2.401
+  },
+  {
+    "text": "judgment",
+    "start": 1500.64,
+    "duration": 2.88
+  },
+  {
+    "text": "judgmentational language like why are",
+    "start": 1501.44,
+    "duration": 4.0
+  },
+  {
+    "text": "you talking like this",
+    "start": 1503.52,
+    "duration": 3.92
+  },
+  {
+    "text": "uh christine aladdin a political uh",
+    "start": 1505.44,
+    "duration": 3.04
+  },
+  {
+    "text": "assistant political",
+    "start": 1507.44,
+    "duration": 3.04
+  },
+  {
+    "text": "science professor at nevada university",
+    "start": 1508.48,
+    "duration": 3.52
+  },
+  {
+    "text": "uh has seen the damage first",
+    "start": 1510.48,
+    "duration": 6.0
+  },
+  {
+    "text": "hand her students had been checking",
+    "start": 1512.0,
+    "duration": 5.6
+  },
+  {
+    "text": "like reading things without checking",
+    "start": 1516.48,
+    "duration": 2.72
+  },
+  {
+    "text": "sources or looking at fake news it was",
+    "start": 1517.6,
+    "duration": 2.72
+  },
+  {
+    "text": "just uncritical",
+    "start": 1519.2,
+    "duration": 2.8
+  },
+  {
+    "text": "acceptance if it fit with the narrative",
+    "start": 1520.32,
+    "duration": 3.68
+  },
+  {
+    "text": "in their head and complete rejection if",
+    "start": 1522.0,
+    "duration": 2.72
+  },
+  {
+    "text": "it didn't",
+    "start": 1524.0,
+    "duration": 2.08
+  },
+  {
+    "text": "which is a highly ironic statement",
+    "start": 1524.72,
+    "duration": 2.48
+  },
+  {
+    "text": "because that's exactly what the new york",
+    "start": 1526.08,
+    "duration": 1.92
+  },
+  {
+    "text": "times is advocating",
+    "start": 1527.2,
+    "duration": 2.24
+  },
+  {
+    "text": "well you're promoting me that's what",
+    "start": 1528.0,
+    "duration": 4.0
+  },
+  {
+    "text": "they want like the only",
+    "start": 1529.44,
+    "duration": 4.479
+  },
+  {
+    "text": "uncritical acceptance well this is an",
+    "start": 1532.0,
+    "duration": 3.679
+  },
+  {
+    "text": "article arguing for uncritical",
+    "start": 1533.919,
+    "duration": 4.161
+  },
+  {
+    "text": "acceptance of the mega narrative",
+    "start": 1535.679,
+    "duration": 4.0
+  },
+  {
+    "text": "the students are confused when i tell",
+    "start": 1538.08,
+    "duration": 2.64
+  },
+  {
+    "text": "them to try and trace something down",
+    "start": 1539.679,
+    "duration": 2.321
+  },
+  {
+    "text": "with a quick wikipedia search",
+    "start": 1540.72,
+    "duration": 3.36
+  },
+  {
+    "text": "because they've been told not to do it",
+    "start": 1542.0,
+    "duration": 3.52
+  },
+  {
+    "text": "not for research papers but if you're",
+    "start": 1544.08,
+    "duration": 2.4
+  },
+  {
+    "text": "trying to find something",
+    "start": 1545.52,
+    "duration": 2.56
+  },
+  {
+    "text": "finder for sites legitimate or somebody",
+    "start": 1546.48,
+    "duration": 3.28
+  },
+  {
+    "text": "has a history of it as a conspiracy",
+    "start": 1548.08,
+    "duration": 2.4
+  },
+  {
+    "text": "theorist",
+    "start": 1549.76,
+    "duration": 1.919
+  },
+  {
+    "text": "then you show them how to follow the",
+    "start": 1550.48,
+    "duration": 3.199
+  },
+  {
+    "text": "page's citation it's quick and effective",
+    "start": 1551.679,
+    "duration": 3.921
+  },
+  {
+    "text": "which means it's more likely to be used",
+    "start": 1553.679,
+    "duration": 3.041
+  },
+  {
+    "text": "which is interesting because what this",
+    "start": 1555.6,
+    "duration": 2.88
+  },
+  {
+    "text": "implies is that wikipedia wasn't always",
+    "start": 1556.72,
+    "duration": 3.52
+  },
+  {
+    "text": "a tool of the cathedral right",
+    "start": 1558.48,
+    "duration": 4.16
+  },
+  {
+    "text": "it wasn't always just an avenue to prove",
+    "start": 1560.24,
+    "duration": 4.48
+  },
+  {
+    "text": "promote the mega narrative on politics",
+    "start": 1562.64,
+    "duration": 4.0
+  },
+  {
+    "text": "or on science or whatever it was but it",
+    "start": 1564.72,
+    "duration": 3.68
+  },
+  {
+    "text": "seems that this has changed so now",
+    "start": 1566.64,
+    "duration": 3.6
+  },
+  {
+    "text": "usually don't check wikipedia it's not",
+    "start": 1568.4,
+    "duration": 3.04
+  },
+  {
+    "text": "you know verifiable it might be",
+    "start": 1570.24,
+    "duration": 2.88
+  },
+  {
+    "text": "suspicious who knows you know you're",
+    "start": 1571.44,
+    "duration": 2.8
+  },
+  {
+    "text": "supposed to do your own critical",
+    "start": 1573.12,
+    "duration": 1.84
+  },
+  {
+    "text": "research",
+    "start": 1574.24,
+    "duration": 2.559
+  },
+  {
+    "text": "and now it's just like well wikipedia is",
+    "start": 1574.96,
+    "duration": 3.12
+  },
+  {
+    "text": "the thing you can trust this will give",
+    "start": 1576.799,
+    "duration": 3.921
+  },
+  {
+    "text": "you all the information you'll ever need",
+    "start": 1578.08,
+    "duration": 4.88
+  },
+  {
+    "text": "that's it i'm sure you've seen i think",
+    "start": 1580.72,
+    "duration": 3.839
+  },
+  {
+    "text": "was one of the co-founders wikipedia",
+    "start": 1582.96,
+    "duration": 2.64
+  },
+  {
+    "text": "actually came out and said it's now",
+    "start": 1584.559,
+    "duration": 3.12
+  },
+  {
+    "text": "become a vehicle for leftist nonsense",
+    "start": 1585.6,
+    "duration": 4.079
+  },
+  {
+    "text": "oh yeah yeah i remember that it was a",
+    "start": 1587.679,
+    "duration": 3.281
+  },
+  {
+    "text": "couple of years ago wasn't it yeah",
+    "start": 1589.679,
+    "duration": 3.681
+  },
+  {
+    "text": "yeah uh as a journalist who can be a bit",
+    "start": 1590.96,
+    "duration": 4.24
+  },
+  {
+    "text": "of a snob about research methods",
+    "start": 1593.36,
+    "duration": 3.919
+  },
+  {
+    "text": "it makes me anxious to use this type of",
+    "start": 1595.2,
+    "duration": 4.479
+  },
+  {
+    "text": "advice use wikipedia for quick guidance",
+    "start": 1597.279,
+    "duration": 4.081
+  },
+  {
+    "text": "spend less time torturing yourself with",
+    "start": 1599.679,
+    "duration": 2.161
+  },
+  {
+    "text": "reality",
+    "start": 1601.36,
+    "duration": 3.6
+  },
+  {
+    "text": "with complex primary sources a passive",
+    "start": 1601.84,
+    "duration": 5.12
+  },
+  {
+    "text": "hang on like you're a child yeah yeah",
+    "start": 1604.96,
+    "duration": 4.319
+  },
+  {
+    "text": "exactly a part of my brain hears this",
+    "start": 1606.96,
+    "duration": 4.0
+  },
+  {
+    "text": "and reflexively worries that these",
+    "start": 1609.279,
+    "duration": 4.0
+  },
+  {
+    "text": "methods might be exploited by conspiracy",
+    "start": 1610.96,
+    "duration": 4.88
+  },
+  {
+    "text": "theorists",
+    "start": 1613.279,
+    "duration": 2.561
+  },
+  {
+    "text": "i mean my brain hears this and things",
+    "start": 1616.88,
+    "duration": 3.44
+  },
+  {
+    "text": "that might be exploited by tyrants",
+    "start": 1618.24,
+    "duration": 3.679
+  },
+  {
+    "text": "and people who are well actual",
+    "start": 1620.32,
+    "duration": 3.28
+  },
+  {
+    "text": "totalitarians who want control of",
+    "start": 1621.919,
+    "duration": 2.721
+  },
+  {
+    "text": "everything that you think",
+    "start": 1623.6,
+    "duration": 4.16
+  },
+  {
+    "text": "like the new york times but",
+    "start": 1624.64,
+    "duration": 4.88
+  },
+  {
+    "text": "it seems like snobs like me have it",
+    "start": 1627.76,
+    "duration": 3.2
+  },
+  {
+    "text": "backwards which",
+    "start": 1629.52,
+    "duration": 3.36
+  },
+  {
+    "text": "i mean this is a genuinely incredible",
+    "start": 1630.96,
+    "duration": 4.719
+  },
+  {
+    "text": "commitment to submission to authority",
+    "start": 1632.88,
+    "duration": 4.799
+  },
+  {
+    "text": "on display here think about youtube",
+    "start": 1635.679,
+    "duration": 3.921
+  },
+  {
+    "text": "conspiracy theorists or many q anon or",
+    "start": 1637.679,
+    "duration": 3.6
+  },
+  {
+    "text": "anti-vaccine influencers",
+    "start": 1639.6,
+    "duration": 3.92
+  },
+  {
+    "text": "i mean i don't actually i don't spend a",
+    "start": 1641.279,
+    "duration": 3.441
+  },
+  {
+    "text": "lot of time worrying about",
+    "start": 1643.52,
+    "duration": 3.84
+  },
+  {
+    "text": "youtube conspiracy theorists but their",
+    "start": 1644.72,
+    "duration": 3.28
+  },
+  {
+    "text": "tactic",
+    "start": 1647.36,
+    "duration": 2.72
+  },
+  {
+    "text": "is to flatter viewers while overloading",
+    "start": 1648.0,
+    "duration": 3.84
+  },
+  {
+    "text": "them with three-hour videos laced with",
+    "start": 1650.08,
+    "duration": 3.599
+  },
+  {
+    "text": "debunked claims in pseudoscience",
+    "start": 1651.84,
+    "duration": 3.92
+  },
+  {
+    "text": "as well as legitimate information the",
+    "start": 1653.679,
+    "duration": 3.681
+  },
+  {
+    "text": "illusion offers the in",
+    "start": 1655.76,
+    "duration": 3.12
+  },
+  {
+    "text": "the internet offers the illusion of",
+    "start": 1657.36,
+    "duration": 3.12
+  },
+  {
+    "text": "explanatory depth",
+    "start": 1658.88,
+    "duration": 3.279
+  },
+  {
+    "text": "until 20 seconds ago you'd never thought",
+    "start": 1660.48,
+    "duration": 3.28
+  },
+  {
+    "text": "about say race and iq",
+    "start": 1662.159,
+    "duration": 3.441
+  },
+  {
+    "text": "but suddenly somebody is treating you",
+    "start": 1663.76,
+    "duration": 3.12
+  },
+  {
+    "text": "like an expert",
+    "start": 1665.6,
+    "duration": 3.04
+  },
+  {
+    "text": "it's flattering your internet in this",
+    "start": 1666.88,
+    "duration": 3.76
+  },
+  {
+    "text": "intellect so you engage you don't really",
+    "start": 1668.64,
+    "duration": 3.039
+  },
+  {
+    "text": "stand a chance",
+    "start": 1670.64,
+    "duration": 2.72
+  },
+  {
+    "text": "right the core message here is you're",
+    "start": 1671.679,
+    "duration": 4.081
+  },
+  {
+    "text": "not worthy you don't stand a chance you",
+    "start": 1673.36,
+    "duration": 4.24
+  },
+  {
+    "text": "are not worthy this is beyond you",
+    "start": 1675.76,
+    "duration": 3.44
+  },
+  {
+    "text": "you're actually incompetent just do as",
+    "start": 1677.6,
+    "duration": 3.84
+  },
+  {
+    "text": "you're told by the power right",
+    "start": 1679.2,
+    "duration": 3.92
+  },
+  {
+    "text": "but the thing is i don't see how",
+    "start": 1681.44,
+    "duration": 3.839
+  },
+  {
+    "text": "explaining something in detail",
+    "start": 1683.12,
+    "duration": 4.159
+  },
+  {
+    "text": "is treating someone like an expert if",
+    "start": 1685.279,
+    "duration": 3.361
+  },
+  {
+    "text": "anything i would say that's the opposite",
+    "start": 1687.279,
+    "duration": 2.321
+  },
+  {
+    "text": "of treating someone like an expert",
+    "start": 1688.64,
+    "duration": 2.56
+  },
+  {
+    "text": "because if you're an expert in something",
+    "start": 1689.6,
+    "duration": 3.52
+  },
+  {
+    "text": "you use shorthand to refer to something",
+    "start": 1691.2,
+    "duration": 3.52
+  },
+  {
+    "text": "right so i i might say oh well the",
+    "start": 1693.12,
+    "duration": 2.88
+  },
+  {
+    "text": "cooney and relative hypothesis",
+    "start": 1694.72,
+    "duration": 2.64
+  },
+  {
+    "text": "on paradigm shifts means blah blah blah",
+    "start": 1696.0,
+    "duration": 2.48
+  },
+  {
+    "text": "blah blah and you block what the hell is",
+    "start": 1697.36,
+    "duration": 2.0
+  },
+  {
+    "text": "that right",
+    "start": 1698.48,
+    "duration": 2.24
+  },
+  {
+    "text": "and so i have to explain well the",
+    "start": 1699.36,
+    "duration": 3.36
+  },
+  {
+    "text": "paradigm informs the way you view things",
+    "start": 1700.72,
+    "duration": 3.12
+  },
+  {
+    "text": "and so you actually",
+    "start": 1702.72,
+    "duration": 3.76
+  },
+  {
+    "text": "have trouble viewing a new and a foreign",
+    "start": 1703.84,
+    "duration": 3.92
+  },
+  {
+    "text": "paradigm from which and so i've got to",
+    "start": 1706.48,
+    "duration": 1.84
+  },
+  {
+    "text": "explain",
+    "start": 1707.76,
+    "duration": 2.639
+  },
+  {
+    "text": "because you're not experts right you you",
+    "start": 1708.32,
+    "duration": 3.52
+  },
+  {
+    "text": "don't know what that is unless you are",
+    "start": 1710.399,
+    "duration": 2.481
+  },
+  {
+    "text": "an expert in that thing",
+    "start": 1711.84,
+    "duration": 3.04
+  },
+  {
+    "text": "and so someone taking like three hours",
+    "start": 1712.88,
+    "duration": 3.76
+  },
+  {
+    "text": "to lay out a position to you",
+    "start": 1714.88,
+    "duration": 4.399
+  },
+  {
+    "text": "is what you do to amateurs so it's just",
+    "start": 1716.64,
+    "duration": 4.88
+  },
+  {
+    "text": "not not true",
+    "start": 1719.279,
+    "duration": 4.241
+  },
+  {
+    "text": "anyway what he described as a kind of",
+    "start": 1721.52,
+    "duration": 3.44
+  },
+  {
+    "text": "informational hubris",
+    "start": 1723.52,
+    "duration": 4.48
+  },
+  {
+    "text": "that we have we have to that is quite",
+    "start": 1724.96,
+    "duration": 4.0
+  },
+  {
+    "text": "difficult to fight",
+    "start": 1728.0,
+    "duration": 3.2
+  },
+  {
+    "text": "but what sift and mr caulfield's lessons",
+    "start": 1728.96,
+    "duration": 3.92
+  },
+  {
+    "text": "uh seem to do is flatter their students",
+    "start": 1731.2,
+    "duration": 2.56
+  },
+  {
+    "text": "in a different way",
+    "start": 1732.88,
+    "duration": 2.399
+  },
+  {
+    "text": "by reminding us our attention is",
+    "start": 1733.76,
+    "duration": 3.68
+  },
+  {
+    "text": "precious so manipulating students",
+    "start": 1735.279,
+    "duration": 3.361
+  },
+  {
+    "text": "oh they're manipulating them well we're",
+    "start": 1737.44,
+    "duration": 3.28
+  },
+  {
+    "text": "gonna have to manipulate them too",
+    "start": 1738.64,
+    "duration": 3.84
+  },
+  {
+    "text": "so the goal of sift isn't to be an",
+    "start": 1740.72,
+    "duration": 4.48
+  },
+  {
+    "text": "arbiter of truth but to instill a reflex",
+    "start": 1742.48,
+    "duration": 4.079
+  },
+  {
+    "text": "that asks something if",
+    "start": 1745.2,
+    "duration": 2.88
+  },
+  {
+    "text": "it asks if something is worth someone's",
+    "start": 1746.559,
+    "duration": 3.441
+  },
+  {
+    "text": "time and attention and to turn away if",
+    "start": 1748.08,
+    "duration": 2.479
+  },
+  {
+    "text": "not",
+    "start": 1750.0,
+    "duration": 2.24
+  },
+  {
+    "text": "because the method is less interested in",
+    "start": 1750.559,
+    "duration": 3.281
+  },
+  {
+    "text": "political judgments",
+    "start": 1752.24,
+    "duration": 3.12
+  },
+  {
+    "text": "and students across the political",
+    "start": 1753.84,
+    "duration": 3.36
+  },
+  {
+    "text": "spectrum are more likely to embrace it",
+    "start": 1755.36,
+    "duration": 3.36
+  },
+  {
+    "text": "by the end of the two-week course the",
+    "start": 1757.2,
+    "duration": 3.199
+  },
+  {
+    "text": "students are better at finding primary",
+    "start": 1758.72,
+    "duration": 3.12
+  },
+  {
+    "text": "sources for research papers",
+    "start": 1760.399,
+    "duration": 3.28
+  },
+  {
+    "text": "and in discussion they're less likely to",
+    "start": 1761.84,
+    "duration": 4.16
+  },
+  {
+    "text": "fall back on motivated reasoning",
+    "start": 1763.679,
+    "duration": 4.0
+  },
+  {
+    "text": "which is amazing because all of this is",
+    "start": 1766.0,
+    "duration": 3.36
+  },
+  {
+    "text": "motivated reasoning to protect the mega",
+    "start": 1767.679,
+    "duration": 2.561
+  },
+  {
+    "text": "narrative",
+    "start": 1769.36,
+    "duration": 2.799
+  },
+  {
+    "text": "the we have reached the end of history",
+    "start": 1770.24,
+    "duration": 3.679
+  },
+  {
+    "text": "this is the truth",
+    "start": 1772.159,
+    "duration": 3.601
+  },
+  {
+    "text": "right now we are taking the scarcest",
+    "start": 1773.919,
+    "duration": 3.36
+  },
+  {
+    "text": "most valuable resource we have our",
+    "start": 1775.76,
+    "duration": 2.24
+  },
+  {
+    "text": "attention",
+    "start": 1777.279,
+    "duration": 2.0
+  },
+  {
+    "text": "we're trying to use it to repair a",
+    "start": 1778.0,
+    "duration": 3.44
+  },
+  {
+    "text": "horribly broken information ecosystem",
+    "start": 1779.279,
+    "duration": 3.601
+  },
+  {
+    "text": "we're think we're throwing good money",
+    "start": 1781.44,
+    "duration": 3.28
+  },
+  {
+    "text": "after bad so we've arrived at like the",
+    "start": 1782.88,
+    "duration": 2.64
+  },
+  {
+    "text": "end of history",
+    "start": 1784.72,
+    "duration": 2.4
+  },
+  {
+    "text": "right the the truth will always come",
+    "start": 1785.52,
+    "duration": 3.68
+  },
+  {
+    "text": "from one place and that place happens to",
+    "start": 1787.12,
+    "duration": 3.2
+  },
+  {
+    "text": "be wikipedia",
+    "start": 1789.2,
+    "duration": 2.56
+  },
+  {
+    "text": "and you don't need to spend any of your",
+    "start": 1790.32,
+    "duration": 3.359
+  },
+  {
+    "text": "time doing anything else",
+    "start": 1791.76,
+    "duration": 5.2
+  },
+  {
+    "text": "other than consulting that this",
+    "start": 1793.679,
+    "duration": 6.321
+  },
+  {
+    "text": "is kind of reminiscent of a piece that",
+    "start": 1796.96,
+    "duration": 4.959
+  },
+  {
+    "text": "was published on everyday feminism",
+    "start": 1800.0,
+    "duration": 4.08
+  },
+  {
+    "text": "uh like five years ago now now this",
+    "start": 1801.919,
+    "duration": 3.681
+  },
+  {
+    "text": "isn't like this used to be the sort of",
+    "start": 1804.08,
+    "duration": 2.8
+  },
+  {
+    "text": "source we'd make videos on and just",
+    "start": 1805.6,
+    "duration": 2.4
+  },
+  {
+    "text": "laugh at on the internet",
+    "start": 1806.88,
+    "duration": 2.96
+  },
+  {
+    "text": "but this has become sort of mainstream",
+    "start": 1808.0,
+    "duration": 3.44
+  },
+  {
+    "text": "three reasons that it's irrational to",
+    "start": 1809.84,
+    "duration": 3.76
+  },
+  {
+    "text": "demand rationalism and social justice",
+    "start": 1811.44,
+    "duration": 4.64
+  },
+  {
+    "text": "activism",
+    "start": 1813.6,
+    "duration": 4.4
+  },
+  {
+    "text": "what a condemnation of social justice",
+    "start": 1816.08,
+    "duration": 3.839
+  },
+  {
+    "text": "yes well that's the point",
+    "start": 1818.0,
+    "duration": 4.32
+  },
+  {
+    "text": "like what a condemnation of what a",
+    "start": 1819.919,
+    "duration": 3.921
+  },
+  {
+    "text": "condemnation of the new york times it is",
+    "start": 1822.32,
+    "duration": 3.44
+  },
+  {
+    "text": "to promote wikipedia as an article of",
+    "start": 1823.84,
+    "duration": 2.8
+  },
+  {
+    "text": "truth",
+    "start": 1825.76,
+    "duration": 2.88
+  },
+  {
+    "text": "like well it's the same sort of",
+    "start": 1826.64,
+    "duration": 3.2
+  },
+  {
+    "text": "principle and i mean the",
+    "start": 1828.64,
+    "duration": 2.56
+  },
+  {
+    "text": "the i'm not going to go through this but",
+    "start": 1829.84,
+    "duration": 3.199
+  },
+  {
+    "text": "like this is just hilarious right",
+    "start": 1831.2,
+    "duration": 3.44
+  },
+  {
+    "text": "so and i love i love some of the quotes",
+    "start": 1833.039,
+    "duration": 3.201
+  },
+  {
+    "text": "here right the scenario is all",
+    "start": 1834.64,
+    "duration": 3.759
+  },
+  {
+    "text": "always the same i say we should abolish",
+    "start": 1836.24,
+    "duration": 4.159
+  },
+  {
+    "text": "prisons police and the american settler",
+    "start": 1838.399,
+    "duration": 2.801
+  },
+  {
+    "text": "state",
+    "start": 1840.399,
+    "duration": 3.121
+  },
+  {
+    "text": "someone tells me i'm irrational i say we",
+    "start": 1841.2,
+    "duration": 4.16
+  },
+  {
+    "text": "need decolonization of land and someone",
+    "start": 1843.52,
+    "duration": 3.519
+  },
+  {
+    "text": "tells me i'm not being realistic",
+    "start": 1845.36,
+    "duration": 3.6
+  },
+  {
+    "text": "well i mean they're right yeah they're",
+    "start": 1847.039,
+    "duration": 3.201
+  },
+  {
+    "text": "right i just just",
+    "start": 1848.96,
+    "duration": 2.959
+  },
+  {
+    "text": "tell you and so the criticisms why it's",
+    "start": 1850.24,
+    "duration": 3.6
+  },
+  {
+    "text": "a rational say uh that you should be",
+    "start": 1851.919,
+    "duration": 2.801
+  },
+  {
+    "text": "rational",
+    "start": 1853.84,
+    "duration": 2.64
+  },
+  {
+    "text": "is that being rational has no inherent",
+    "start": 1854.72,
+    "duration": 3.12
+  },
+  {
+    "text": "value",
+    "start": 1856.48,
+    "duration": 4.079
+  },
+  {
+    "text": "disagree for many different reasons i",
+    "start": 1857.84,
+    "duration": 3.04
+  },
+  {
+    "text": "mean",
+    "start": 1860.559,
+    "duration": 3.041
+  },
+  {
+    "text": "if something like inherent value is an",
+    "start": 1860.88,
+    "duration": 3.76
+  },
+  {
+    "text": "empty concept",
+    "start": 1863.6,
+    "duration": 3.12
+  },
+  {
+    "text": "because all value is subjective so you",
+    "start": 1864.64,
+    "duration": 3.36
+  },
+  {
+    "text": "can't have something that's inherently",
+    "start": 1866.72,
+    "duration": 1.92
+  },
+  {
+    "text": "valuable",
+    "start": 1868.0,
+    "duration": 2.64
+  },
+  {
+    "text": "because you need an agent who desires it",
+    "start": 1868.64,
+    "duration": 3.36
+  },
+  {
+    "text": "to imbue it with value",
+    "start": 1870.64,
+    "duration": 2.72
+  },
+  {
+    "text": "so there's no point saying that",
+    "start": 1872.0,
+    "duration": 3.2
+  },
+  {
+    "text": "something has no no inherent value",
+    "start": 1873.36,
+    "duration": 3.919
+  },
+  {
+    "text": "because by that by that logic i mean",
+    "start": 1875.2,
+    "duration": 4.479
+  },
+  {
+    "text": "everyday feminism has no inherent value",
+    "start": 1877.279,
+    "duration": 4.88
+  },
+  {
+    "text": "so that's a silly thing the next one is",
+    "start": 1879.679,
+    "duration": 6.801
+  },
+  {
+    "text": "rationalism is a tool made to hurt us",
+    "start": 1882.159,
+    "duration": 4.321
+  },
+  {
+    "text": "who's us i mean who thinks that",
+    "start": 1887.519,
+    "duration": 6.081
+  },
+  {
+    "text": "and then and then the third point is we",
+    "start": 1890.72,
+    "duration": 3.52
+  },
+  {
+    "text": "are enough",
+    "start": 1893.6,
+    "duration": 3.36
+  },
+  {
+    "text": "without rationalism uh which is the",
+    "start": 1894.24,
+    "duration": 4.559
+  },
+  {
+    "text": "opinion of the beasts i think",
+    "start": 1896.96,
+    "duration": 3.199
+  },
+  {
+    "text": "they also agree that they are enough",
+    "start": 1898.799,
+    "duration": 2.72
+  },
+  {
+    "text": "without rationalism if they don't need",
+    "start": 1900.159,
+    "duration": 2.4
+  },
+  {
+    "text": "rational thought",
+    "start": 1901.519,
+    "duration": 3.361
+  },
+  {
+    "text": "then what actually separates you from an",
+    "start": 1902.559,
+    "duration": 4.161
+  },
+  {
+    "text": "animal i mean literally it was it was",
+    "start": 1904.88,
+    "duration": 3.36
+  },
+  {
+    "text": "the fact that you were a rational",
+    "start": 1906.72,
+    "duration": 4.0
+  },
+  {
+    "text": "that separated in aristotle's view man",
+    "start": 1908.24,
+    "duration": 4.4
+  },
+  {
+    "text": "from the rest of the animal kingdom",
+    "start": 1910.72,
+    "duration": 3.679
+  },
+  {
+    "text": "so what is it in in their point of view",
+    "start": 1912.64,
+    "duration": 3.039
+  },
+  {
+    "text": "that separates them",
+    "start": 1914.399,
+    "duration": 3.441
+  },
+  {
+    "text": "the answer is they don't know but um but",
+    "start": 1915.679,
+    "duration": 3.281
+  },
+  {
+    "text": "the point is this kind of",
+    "start": 1917.84,
+    "duration": 4.16
+  },
+  {
+    "text": "anti-uh critical anti-rational",
+    "start": 1918.96,
+    "duration": 6.24
+  },
+  {
+    "text": "uh world view seems to be seeping into",
+    "start": 1922.0,
+    "duration": 5.679
+  },
+  {
+    "text": "mainstream discourse in a major way like",
+    "start": 1925.2,
+    "duration": 3.12
+  },
+  {
+    "text": "the the",
+    "start": 1927.679,
+    "duration": 2.321
+  },
+  {
+    "text": "everyday feminism one is just you know",
+    "start": 1928.32,
+    "duration": 3.12
+  },
+  {
+    "text": "here's the lunatic fringe and they've",
+    "start": 1930.0,
+    "duration": 1.84
+  },
+  {
+    "text": "been",
+    "start": 1931.44,
+    "duration": 2.32
+  },
+  {
+    "text": "you know banging this drum for years but",
+    "start": 1931.84,
+    "duration": 3.36
+  },
+  {
+    "text": "now the new york times is literally",
+    "start": 1933.76,
+    "duration": 2.639
+  },
+  {
+    "text": "saying well don't go down the rabbit",
+    "start": 1935.2,
+    "duration": 2.959
+  },
+  {
+    "text": "don't don't engage in critical thinking",
+    "start": 1936.399,
+    "duration": 3.28
+  },
+  {
+    "text": "you might learn things of which we don't",
+    "start": 1938.159,
+    "duration": 2.88
+  },
+  {
+    "text": "approve and that might change your mind",
+    "start": 1939.679,
+    "duration": 2.72
+  },
+  {
+    "text": "on stuff and you don't want your mind",
+    "start": 1941.039,
+    "duration": 2.48
+  },
+  {
+    "text": "changed do you",
+    "start": 1942.399,
+    "duration": 2.88
+  },
+  {
+    "text": "and it's like okay well i mean if you're",
+    "start": 1943.519,
+    "duration": 3.121
+  },
+  {
+    "text": "telling me a lie",
+    "start": 1945.279,
+    "duration": 3.041
+  },
+  {
+    "text": "then yeah i do i want to know what the",
+    "start": 1946.64,
+    "duration": 4.8
+  },
+  {
+    "text": "truth is but uh anyway",
+    "start": 1948.32,
+    "duration": 4.88
+  },
+  {
+    "text": "that took longer than i expected but uh",
+    "start": 1951.44,
+    "duration": 3.68
+  },
+  {
+    "text": "it was just gold",
+    "start": 1953.2,
+    "duration": 5.04
+  },
+  {
+    "text": "absolute gold yeah it's pretty [ __ ]",
+    "start": 1955.12,
+    "duration": 4.64
+  },
+  {
+    "text": "i'm finding it hard not to swear at such",
+    "start": 1958.24,
+    "duration": 3.76
+  },
+  {
+    "text": "things it's ridiculous isn't it yeah",
+    "start": 1959.76,
+    "duration": 3.12
+  },
+  {
+    "text": "like don't think",
+    "start": 1962.0,
+    "duration": 2.88
+  },
+  {
+    "text": "also by the way rationalism is now the",
+    "start": 1962.88,
+    "duration": 3.039
+  },
+  {
+    "text": "enemy",
+    "start": 1964.88,
+    "duration": 4.159
+  },
+  {
+    "text": "okay okay leftists not my position like",
+    "start": 1965.919,
+    "duration": 4.081
+  },
+  {
+    "text": "this is this is",
+    "start": 1969.039,
+    "duration": 2.0
+  },
+  {
+    "text": "but this is something we've been talking",
+    "start": 1970.0,
+    "duration": 2.08
+  },
+  {
+    "text": "about a lot which is they keep running",
+    "start": 1971.039,
+    "duration": 2.161
+  },
+  {
+    "text": "up against reality",
+    "start": 1972.08,
+    "duration": 2.719
+  },
+  {
+    "text": "you know they kept battering against it",
+    "start": 1973.2,
+    "duration": 2.719
+  },
+  {
+    "text": "and that's their problem as soon as they",
+    "start": 1974.799,
+    "duration": 2.641
+  },
+  {
+    "text": "run into something that they",
+    "start": 1975.919,
+    "duration": 4.0
+  },
+  {
+    "text": "that is in the real world yeah they have",
+    "start": 1977.44,
+    "duration": 4.239
+  },
+  {
+    "text": "to declare that all real world things",
+    "start": 1979.919,
+    "duration": 2.88
+  },
+  {
+    "text": "are the enemy yeah",
+    "start": 1981.679,
+    "duration": 2.641
+  },
+  {
+    "text": "and it's it's easier if you just don't",
+    "start": 1982.799,
+    "duration": 3.6
+  },
+  {
+    "text": "engage with that thing just just think",
+    "start": 1984.32,
+    "duration": 2.959
+  },
+  {
+    "text": "what we want you to say then you can",
+    "start": 1986.399,
+    "duration": 2.481
+  },
+  {
+    "text": "stay in the ideology nothing changes",
+    "start": 1987.279,
+    "duration": 2.88
+  },
+  {
+    "text": "exactly then the real world doesn't",
+    "start": 1988.88,
+    "duration": 3.039
+  },
+  {
+    "text": "affect you and that can carry on",
+    "start": 1990.159,
+    "duration": 13.731
+  },
+  {
+    "text": "indefinitely we promise",
+    "start": 1991.919,
+    "duration": 15.25
+  },
+  {
+    "text": "[Music]",
+    "start": 2003.89,
+    "duration": 3.279
+  },
+  {
+    "text": "you",
+    "start": 2008.0,
+    "duration": 2.08
+  }
+]
