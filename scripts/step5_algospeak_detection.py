@@ -194,17 +194,33 @@ def main():
         comments = load_comments(raw_dir, video_id)
         metadata = load_metadata(raw_dir, video_id)
         channel_id = metadata.get('channel_id', '')
-        creator_comment_instances = 0   
+        
         transcript_instances = 0
         transcript_unique = 0
         comment_instances = 0
         comment_unique = 0
+        creator_comment_instances = 0
         
         # Process transcript for algospeak
         if transcript:
             transcript_findings = detect_algospeak_with_boundaries(transcript)
             transcript_instances = sum(f['count'] for f in transcript_findings)
             transcript_unique = len(transcript_findings)
+            
+            # Save contextual findings for transcript
+            for term_data in transcript_findings:
+                for context in term_data.get('contexts', ['No context']):
+                    all_findings.append({
+                        'video_id': video_id,
+                        'video_title': metadata.get('title', '')[:50],
+                        'source': 'transcript',
+                        'is_creator': True,
+                        'algospeak_term': term_data['term'],
+                        'original_meaning': term_data['meaning'],
+                        'category': term_data['category'],
+                        'occurrences': term_data['count'],
+                        'context': context
+                    })
         
         # Process comments for algospeak
         comment_term_counts = {}
@@ -238,6 +254,19 @@ def main():
         comment_instances = sum(comment_term_counts.values())
         comment_unique = len(comment_term_counts)
         
+        # Summaries for each video
+        video_summaries.append({
+            'video_id': video_id,
+            'title': metadata.get('title', ''),
+            'published_at': metadata.get('published_at', '')[:10] if metadata.get('published_at') else '',
+            'transcript_instances': transcript_instances,
+            'transcript_unique_terms': transcript_unique,
+            'comment_instances': comment_instances,
+            'comment_unique_terms': comment_unique,
+            'creator_comment_instances': creator_comment_instances,
+            'total_instances': transcript_instances + comment_instances
+        })
+        
         print(f"  Transcript: {transcript_instances} instances ({transcript_unique} unique)")
         print(f"  Comments: {comment_instances} instances ({comment_unique} unique, creator: {creator_comment_instances})")
     
@@ -266,6 +295,7 @@ def main():
     print(f"\nSummary: {len(video_summaries)} videos | Transcript: {total_transcript} | Comments: {total_comment}")
     print(f"Creator comments: {total_creator_comment} | Viewer comments: {total_comment - total_creator_comment}")
     print("Next: Run step6_generate_report.py")
+
 
 if __name__ == "__main__":
     # Execute script logic
