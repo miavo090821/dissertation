@@ -91,3 +91,21 @@ def main():
     
     print("STEP 1: EXTRACT SINGLE VIDEO")
     print(f"Video ID: {video_id}\n")
+    
+    youtube = build("youtube", "v3", developerKey=YOUTUBE_API_KEY)
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    video_dir = os.path.join(base_dir, DATA_RAW_DIR, video_id)
+    os.makedirs(video_dir, exist_ok=True) 
+    
+    print("[1/3] Fetching metadata...")
+    metadata = get_video_metadata(youtube, video_id)
+    
+    print("\n[2/3] Fetching transcript...")
+    transcript_text, segments = get_transcript_supadata(video_id)
+
+    print("\n[3/3] Fetching comments...")
+    comments = get_comments_with_replies(youtube, video_id, max_comments=100)
+
+
+if __name__ == "__main__":
+    main()
