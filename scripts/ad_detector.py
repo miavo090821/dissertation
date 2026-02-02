@@ -4,6 +4,18 @@
 # Mitigation: the “no-ads” bucket should be small, and we have a manual verification step
 # to double-check detections quickly.
 
+"""
+Ad Detection Module for YouTube Self-Censorship Research
+
+Implements dual ad detection methodology as per literature review:
+1. HTML/DOM Detection (Paper 1 - Dunna et al., 2022): Check for adTimeOffset and playerAds
+2. Network API Detection: ad_break as evidence; other signals logged
+
+Reference: "This study takes a transcript-level approach, along with HTML/DOM + Network API 
+Ads requests with manual and automated verification to examine associations between 
+language patterns and monetisation status (RQ1)"
+"""
+
 import re
 import asyncio
 import logging
@@ -29,6 +41,27 @@ class DetectionMethod(Enum):
     CONFLICT = "conflict"
     NONE = "none"
 
+
+@dataclass
+class DOMDetectionResult:
+    # Results from HTML/DOM detection (Paper 1 methodology)
+    has_adTimeOffset: bool = False
+    has_playerAds: bool = False
+    loads_with_ads: int = 0  # Out of 5 loads (Paper 1: need 0/5 for non-monetized)
+    total_loads: int = 0
+    raw_findings: list = field(default_factory=list)
+    
+    @property
+    def has_ads(self) -> bool:
+        # Video has ads if either variable found in any load
+        return self.has_adTimeOffset or self.has_playerAds
+    
+    @property
+    def is_conclusive(self) -> bool:
+        # Result is conclusive if we completed all 5 loads
+        return self.total_loads >= 5
+
+
 @dataclass
 class NetworkDetectionResult:
     # Results from Network API detection (network tab / request capture)
@@ -45,6 +78,33 @@ class NetworkDetectionResult:
         # Treat ad_break as the “hard” network evidence for ads
         return self.ad_break_detected
 
+
+@dataclass
+class UIAdDetectionResult:
+    # Stealth method: inspect player UI/UX for ad markers (labels, overlays, skip button, etc.)
+    ad_label: bool = False
+    sponsored_label: bool = False
+    ad_image_view_model: bool = False
+    skip_button: bool = False
+    ad_countdown: bool = False
+    ad_overlay: bool = False
+    ad_showing_class: bool = False
+    raw_markers: list = field(default_factory=list)
+    
+    @property
+    def has_ads(self) -> bool:
+        # UI indicates ads if any marker is present
+        return any([
+            self.ad_label,
+            self.sponsored_label,
+            self.ad_image_view_model,
+            self.skip_button,
+            self.ad_countdown,
+            self.ad_overlay,
+            self.ad_showing_class,
+        ])
+
+
 @dataclass
 class AdDetectionResult:
     # Combined ad detection result from both methods (DOM + Network + UI)
@@ -59,6 +119,33 @@ class AdDetectionResult:
     
     def to_dict(self) -> dict:
         # Convert to dictionary for CSV export
+        return {
+            'video_id': self.video_id,
+            # DOM results
+            'auto_dom_ads': 'Yes' if self.dom_result.has_ads else 'No',
+            'auto_dom_adTimeOffset': 'Yes' if self.dom_result.has_adTimeOffset else 'No',
+            'auto_dom_playerAds': 'Yes' if self.dom_result.has_playerAds else 'No',
+            'auto_dom_loads': f"{self.dom_result.loads_with_ads}/{self.dom_result.total_loads}",
+            # Network results
+            'auto_network_ads': 'Yes' if self.network_result.has_ads else 'No',
+            'auto_network_count': self.network_result.ad_requests_count,
+            'auto_network_ad_break': 'Yes' if self.network_result.ad_break_detected else 'No',
+            # UI results
+            'auto_ui_ads': 'Yes' if self.ui_result.has_ads else 'No',
+            'auto_ui_ad_label': 'Yes' if self.ui_result.ad_label else 'No',
+            'auto_ui_sponsored_label': 'Yes' if self.ui_result.sponsored_label else 'No',
+            'auto_ui_ad_image_view_model': 'Yes' if self.ui_result.ad_image_view_model else 'No',
+            'auto_ui_skip_button': 'Yes' if self.ui_result.skip_button else 'No',
+            'auto_ui_ad_countdown': 'Yes' if self.ui_result.ad_countdown else 'No',
+            'auto_ui_ad_overlay': 'Yes' if self.ui_result.ad_overlay else 'No',
+            'auto_ui_ad_showing_class': 'Yes' if self.ui_result.ad_showing_class else 'No',
+            # Combined verdict
+            'auto_verdict': 'Yes' if self.verdict else ('No' if self.verdict is False else 'Uncertain'),
+            'auto_method': self.method.value,
+            'auto_confidence': self.confidence,
+            'auto_error': self.error or '',
+        }
+
 
 # Network patterns to detect ad-related requests
 NETWORK_AD_PATTERNS = [
@@ -87,6 +174,65 @@ DOM_INDICATORS = {
     'adTimeOffset': re.compile(r'["\']?adTimeOffset["\']?\s*:', re.IGNORECASE),
     'playerAds': re.compile(r'["\']?playerAds["\']?\s*:', re.IGNORECASE),
 }
+
+
+def check_url_for_ads(url: str) -> dict:
+    # Check if a URL matches any ad-related patterns (network capture)
+    result = {
+        'is_ad_related': False,
+        'ad_break': False,
+        'pagead': False,
+        'doubleclick': False,
+        'adunit': False,
+        'activeview': False,
+        'matched_pattern': None,
+    }
+    
+    for pattern in NETWORK_AD_PATTERNS:
+        if pattern.search(url):
+            result['is_ad_related'] = True
+            result['matched_pattern'] = pattern.pattern
+            break
+    
+    # Check specific categories (useful for debugging even if only ad_break is “evidence”)
+    result['ad_break'] = bool(AD_BREAK_PATTERN.search(url))
+    result['pagead'] = bool(PAGEAD_PATTERN.search(url))
+    result['doubleclick'] = bool(DOUBLECLICK_PATTERN.search(url))
+    result['adunit'] = bool(ADUNIT_PATTERN.search(url))
+    result['activeview'] = bool(ACTIVEVIEW_PATTERN.search(url))
+    
+    return result
+
+
+def check_dom_for_ads(page_source: str) -> dict:
+    # Check page source for ad-related DOM variables (Paper 1 methodology)
+    result = {
+        'has_adTimeOffset': False,
+        'has_playerAds': False,
+    }
+    
+    if not page_source:
+        return result
+    
+    result['has_adTimeOffset'] = bool(DOM_INDICATORS['adTimeOffset'].search(page_source))
+    result['has_playerAds'] = bool(DOM_INDICATORS['playerAds'].search(page_source))
+    
+    return result
+
+
+def determine_verdict(dom_result: DOMDetectionResult, 
+                      network_result: NetworkDetectionResult,
+                      ui_result: Optional[UIAdDetectionResult] = None) -> tuple:
+    # Verdict priority (intended): UI “Sponsored” label > network ad_break > DOM variables
+    # Note: current implementation is UI-only placeholder; expand to combine all signals.
+    sponsored_only = ui_result.sponsored_label if ui_result else False
+    
+    # Sponsored label is treated as the single source of truth (stealth UI marker)
+    if sponsored_only:
+        return True, DetectionMethod.UI, "high"
+    return False, DetectionMethod.UI, "high"
+
+
 class AdDetector:
     # YouTube ad detector using dual methodology (DOM + Network) plus stealth UI markers
     # Usage:
@@ -506,7 +652,41 @@ def detect_ads_sync(video_id: str, headless: bool = False) -> AdDetectionResult:
     
     return asyncio.run(_detect())
 
-
 if __name__ == "__main__":
+    # Quick test
+    import sys
+    
+    if len(sys.argv) < 2:
+        print("Usage: python ad_detector.py <video_id>")
+        print("Example: python ad_detector.py a0tD4hmswz4")
+        sys.exit(1)
+    
+    video_id = sys.argv[1]
+    print(f"Detecting ads for video: {video_id}")
+    
+    result = detect_ads_sync(video_id, headless=False)
+    
+    print("\n=== Detection Results ===")
+    print(f"Video ID: {result.video_id}")
+    print(f"\nDOM Detection (Paper 1):")
+    print(f"  adTimeOffset: {result.dom_result.has_adTimeOffset}")
+    print(f"  playerAds: {result.dom_result.has_playerAds}")
+    print(f"  Loads with ads: {result.dom_result.loads_with_ads}/{result.dom_result.total_loads}")
+    print(f"\nNetwork Detection:")
+    print(f"  Ad requests: {result.network_result.ad_requests_count}")
+    print(f"  ad_break: {result.network_result.ad_break_detected}")
+    print(f"  pagead: {result.network_result.pagead_detected}")
+    print(f"  doubleclick: {result.network_result.doubleclick_detected}")
+    print(f"\nUI Detection:")
+    print(f"  ad_label: {result.ui_result.ad_label}")
+    print(f"  sponsored_label: {result.ui_result.sponsored_label}")
+    print(f"  ad_image_view_model: {result.ui_result.ad_image_view_model}")
+    print(f"  skip_button: {result.ui_result.skip_button}")
+    print(f"  ad_countdown: {result.ui_result.ad_countdown}")
+    print(f"  ad_overlay: {result.ui_result.ad_overlay}")
+    print(f"  ad_showing_class: {result.ui_result.ad_showing_class}")
+    print(f"\nVerdict: {'Has Ads' if result.verdict else 'No Ads' if result.verdict is False else 'Uncertain'}")
+    print(f"Method: {result.method.value}")
+    print(f"Confidence: {result.confidence}")
     if result.error:
         print(f"Error: {result.error}")
