@@ -1,4 +1,4 @@
-# dissertation
+# Dissertation
 Investigating YouTube Self-censorship practices
 A computational audit of YouTube’s algorithmic moderation, monetisation, and creator self-censorship.
 
