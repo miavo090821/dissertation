@@ -7,6 +7,12 @@
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import Optional, List, Dict
+import re
+
+AD_BREAK_PATTERN = re.compile(r"ad_break", re.IGNORECASE)
+DOM_ADTIME_PATTERN = re.compile(r'["\']?adTimeOffset["\']?\s*:', re.IGNORECASE)
+DOM_PLAYERADS_PATTERN = re.compile(r'["\']?playerAds["\']?\s*:', re.IGNORECASE)
+
 
 #  we set up the method by using enum
 class DetectionMethod(Enum):
@@ -64,6 +70,16 @@ class AdDetectionResult:
     confidence: str = "low"
     error: str = ""
 
+def determine_verdict(dom: DOMDetectionResult, net: NetworkDetectionResult, ui: UIAdDetectionResult) -> Tuple[Optional[bool], DetectionMethod, str]:
+    # UI sponsored is “truth”, then network ad_break, then DOM
+    if ui.sponsored_label:
+        return True, DetectionMethod.UI, "high"
+    if net.ad_break_detected:
+        return True, DetectionMethod.NETWORK, "high"
+    if dom.has_ads:
+        return True, DetectionMethod.DOM, "medium"
+    # Assume no ads if nothing detected 
+    return False, DetectionMethod.NONE, "medium"
 
 class AdDetector:
     async def setup(self): ...
@@ -75,6 +91,21 @@ class AdDetector:
         net = NetworkDetectionResult()
         ui = UIAdDetectionResult()
         return AdDetectionResult(video_id=video_id, dom=dom, net=net, ui=ui)
+
+
+def check_dom_for_ads(page_source: str) -> dict:
+    if not page_source:
+        return {"has_adTimeOffset": False, "has_playerAds": False}
+
+    return {
+        "has_adTimeOffset": bool(DOM_ADTIME_PATTERN.search(page_source)),
+        "has_playerAds": bool(DOM_PLAYERADS_PATTERN.search(page_source)),
+    }
+
+
+def check_url_for_ads(url: str) -> dict:
+    # only ad_break for now; later we categorise pagead/doubleclick etc.
+    return {"ad_break": bool(AD_BREAK_PATTERN.search(url))}
 
 
 def main():
