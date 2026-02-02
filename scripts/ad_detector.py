@@ -9,7 +9,6 @@ from enum import Enum
 from typing import Optional, List, Dict
 import re
 import asyncio
-
 class AdDetector:
     def __init__(self, headless: bool = False):
         self.headless = headless  # Store launch mode
@@ -40,14 +39,35 @@ class AdDetector:
         print("Playwright closed")
 
     async def detect(self, video_id: str) -> AdDetectionResult:
-        # DOM-first for now (net/ui placeholders)
+        # DOM + basic network capture (net/ui placeholders)
         dom, net, ui = DOMDetectionResult(), NetworkDetectionResult(), UIAdDetectionResult()
         url = f"https://www.youtube.com/watch?v={video_id}"
-        
-         # Create an isolated browser context for this run (fresh cookies/storage)
+
+        # Create an isolated browser context for this run (fresh cookies/storage)
         # This helps reduce cross-test contamination when running many videos.
         context = await self.browser.new_context()
         page = await context.new_page()
+
+        captured_urls = []
+
+        async def temp_ui_scan(page) -> dict:
+            
+            html = await page.content()
+            html_lower = html.lower()
+            return {
+                "sponsored_label": ("sponsored" in html_lower),
+                "ad_label": ('">ad<' in html_lower or " ad " in html_lower),
+            }
+
+                        ui_markers = await temp_ui_scan(page)
+            ui.sponsored_label |= ui_markers["sponsored_label"]
+            ui.ad_label |= ui_markers["ad_label"]
+            ui.raw_markers.append({"context": "temp_html_scan", **ui_markers})
+
+        async def on_request(req):
+            captured_urls.append(req.url)
+
+        page.on("request", on_request)
 
         try:
             # Navigate to the page and wait for network to become idle.
@@ -57,29 +77,15 @@ class AdDetector:
             # small additional delay to allow late-rendered player state to appear in HTML.
             await asyncio.sleep(2)
 
-            # grab the fully rendered HTML at this point in time
-            page_source = await page.content()
-
-            # Run DOM-based heuristic function over the HTML
-            # expected shape example: {"has_adTimeOffset": bool, "has_playerAds": bool, ...}
-            dom_check = check_dom_for_ads(page_source)
-
-            # update aggregate counters + store raw finding for auditing/debugging
+            # DOM
+            dom_check = check_dom_for_ads(await page.content())
             dom.total_loads += 1
             dom.raw_findings.append(dom_check)
-
-            # merge booleans across loads (OR accumulation)
-            dom.has_adTimeOffset = dom.has_adTimeOffset or dom_check["has_adTimeOffset"]
-            dom.has_playerAds = dom.has_playerAds or dom_check["has_playerAds"]
+            dom.has_adTimeOffset |= dom_check["has_adTimeOffset"]
+            dom.has_playerAds |= dom_check["has_playerAds"]
 
         except Exception as e:
-            err = str(e)
             await context.close()
-
-            # Return a "failed" detection result with safe defaults:
-            # - verdict None (unknown)
-            # - method NONE (no reliable signal)
-            # - confidence low
             return AdDetectionResult(
                 video_id=video_id,
                 dom=dom,
@@ -88,8 +94,16 @@ class AdDetector:
                 verdict=None,
                 method=DetectionMethod.NONE,
                 confidence="low",
-                error=err,
+                error=str(e),
             )
+
+        # Network analysis (TEMP minimal)
+        for u in captured_urls:
+            chk = check_url_for_ads(u)
+            if chk["ad_break"]:
+                net.ad_break_detected = True
+                net.ad_requests_count += 1
+                net.matched_urls.append(u)
 
         await context.close()
 
