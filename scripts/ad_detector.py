@@ -16,11 +16,9 @@ class AdDetector:
         self.playwright = None    # Will hold the Playwright controller once started
         self.browser = None       # Will hold the launched browser instance
 
-
-# initialise Playwright and launch a Chromium browser.
-# his should be called once before running any detection to avoid repeatedly
-# starting/stopping the browser (which is slow and can be flaky).
-
+    # initialise Playwright and launch a Chromium browser.
+    # this should be called once before running any detection to avoid repeatedly
+    # starting/stopping the browser (which is slow and can be flaky).
     async def setup(self):
         # import here to keep module import lightweight until setup is actually invoked.
         from playwright.async_api import async_playwright
@@ -32,7 +30,7 @@ class AdDetector:
         self.browser = await self.playwright.chromium.launch(headless=self.headless)
 
         # logging for debugging; consider replacing with a proper logger later.
-        print(" Playwright launched")
+        print("Playwright launched")
 
     async def cleanup(self):
         if self.browser:
@@ -42,10 +40,69 @@ class AdDetector:
         print("Playwright closed")
 
     async def detect(self, video_id: str) -> AdDetectionResult:
-        # no browsing yet
+        # DOM-first for now (net/ui placeholders)
         dom, net, ui = DOMDetectionResult(), NetworkDetectionResult(), UIAdDetectionResult()
+        url = f"https://www.youtube.com/watch?v={video_id}"
+        
+         # Create an isolated browser context for this run (fresh cookies/storage)
+        # This helps reduce cross-test contamination when running many videos.
+        context = await self.browser.new_context()
+        page = await context.new_page()
+
+        try:
+            # Navigate to the page and wait for network to become idle.
+            # note: YouTube can keep background requests going; adjust strategy if needed.
+            await page.goto(url, wait_until="networkidle", timeout=30_000)
+
+            # small additional delay to allow late-rendered player state to appear in HTML.
+            await asyncio.sleep(2)
+
+            # grab the fully rendered HTML at this point in time
+            page_source = await page.content()
+
+            # Run DOM-based heuristic function over the HTML
+            # expected shape example: {"has_adTimeOffset": bool, "has_playerAds": bool, ...}
+            dom_check = check_dom_for_ads(page_source)
+
+            # update aggregate counters + store raw finding for auditing/debugging
+            dom.total_loads += 1
+            dom.raw_findings.append(dom_check)
+
+            # merge booleans across loads (OR accumulation)
+            dom.has_adTimeOffset = dom.has_adTimeOffset or dom_check["has_adTimeOffset"]
+            dom.has_playerAds = dom.has_playerAds or dom_check["has_playerAds"]
+
+        except Exception as e:
+            err = str(e)
+            await context.close()
+
+            # Return a "failed" detection result with safe defaults:
+            # - verdict None (unknown)
+            # - method NONE (no reliable signal)
+            # - confidence low
+            return AdDetectionResult(
+                video_id=video_id,
+                dom=dom,
+                net=net,
+                ui=ui,
+                verdict=None,
+                method=DetectionMethod.NONE,
+                confidence="low",
+                error=err,
+            )
+
+        await context.close()
+
         verdict, method, confidence = determine_verdict(dom, net, ui)
-        return AdDetectionResult(video_id=video_id, dom=dom, net=net, ui=ui, verdict=verdict, method=method, confidence=confidence)
+        return AdDetectionResult(
+            video_id=video_id,
+            dom=dom,
+            net=net,
+            ui=ui,
+            verdict=verdict,
+            method=method,
+            confidence=confidence,
+        )
 
 AD_BREAK_PATTERN = re.compile(r"ad_break", re.IGNORECASE)
 DOM_ADTIME_PATTERN = re.compile(r'["\']?adTimeOffset["\']?\s*:', re.IGNORECASE)
