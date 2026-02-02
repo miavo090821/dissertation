@@ -9,29 +9,26 @@ from typing import Optional
 from enum import Enum
 
 
+class DetectionMethod(Enum):
+    NONE = "none"
+    DOM = "dom"
+    NETWORK = "network"
+    UI = "ui"
+    BOTH = "both"
+    CONFLICT = "conflict"
+
+
+@dataclass
+class AdDetectionResult:
+    video_id: str
+    verdict: Optional[bool] = None
+    method: DetectionMethod = DetectionMethod.NONE
+    confidence: str = "low"
+    error: str = ""
+
+
 def main():
-    print("[TEMP] ad_detector running - skeleton only")
-
-
-def check_url_for_ads(url: str) -> dict:
-    """
-    Check if a URL matches any ad-related patterns.
-    
-    Args:
-        url: The URL to check
-        
-    Returns:
-        dict with match results
-    """
-    result = {
-        'is_ad_related': False,
-        'ad_break': False,
-        'pagead': False,
-        'doubleclick': False,
-        'adunit': False,
-        'activeview': False,
-        'matched_pattern': None,
-    }
+    print("[TEMP] models loaded OK")
 
 if __name__ == "__main__":
     main()
