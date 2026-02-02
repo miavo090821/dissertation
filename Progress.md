@@ -1,6 +1,6 @@
 # Dissertation Pipeline Enhancement - Progress Log
 
-This document tracks all changes, implementations, and progress for the YouTube Self-Censorship Research project enhancements.
+This document tracks all changes from thhe day we realised HTML and Network API is not consistent and we need to go with another layer of detecting ads which is using Stealth method to detect ads via UI. This doc is for my own use to keep track of implementations, and progress for the YouTube Self-Censorship Research project enhancements.
 
 ---
 
@@ -8,7 +8,7 @@ This document tracks all changes, implementations, and progress for the YouTube 
 
 **Goal:** Enhance the dissertation pipeline with:
 1. Main orchestrator for 7-step pipeline
-2. Automated ad detection (HTML/DOM + Network API)
+2. Automated ad detection (HTML/DOM + Network API + Stealth)
 3. Expanded video dataset support
 
 
@@ -54,15 +54,7 @@ Video `oNHuEdy6cZM` demonstrated probabilistic ad serving:
 3. **Multiple runs increase confidence** - For uncertain videos, repeated observations reduce false negatives
 4. **Mid-roll ads require seeking** - The detection system's seek strategy (25%, 50%, 75%) is essential for catching mid-roll ads
 
-#### Documentation Updates
-
-- Added "Probabilistic Ad Serving" section to `docs/methodology_ad_detection.md`
-- Added finding paragraph to `docs/email_methodology_update.md`
-- Updated this progress log
-
----
-
-### 02-01-2026: Created Main Pipeline Orchestrator
+### 02-01-2026: Update Main Pipeline Orchestrator
 
 #### What We Did
 
@@ -107,7 +99,7 @@ python main.py --skip-existing
 
 ---
 
-### 30-01-2026: Added Methodology Section to README
+### 01-01-2026: Added Methodology Section to README
 
 #### What We Did
 
