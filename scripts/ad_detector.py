@@ -50,19 +50,28 @@ class AdDetector:
 
         captured_urls = []
 
-        async def temp_ui_scan(page) -> dict:
-            
-            html = await page.content()
-            html_lower = html.lower()
-            return {
-                "sponsored_label": ("sponsored" in html_lower),
-                "ad_label": ('">ad<' in html_lower or " ad " in html_lower),
-            }
+        async def update_ui_markers(page, ui: UIAdDetectionResult, context: str = ""):
+    markers = await page.evaluate('''() => {
+        const player = document.querySelector('.html5-video-player');
+        const adShowing = !!(player && player.classList.contains('ad-showing'));
 
-                        ui_markers = await temp_ui_scan(page)
-            ui.sponsored_label |= ui_markers["sponsored_label"]
-            ui.ad_label |= ui_markers["ad_label"]
-            ui.raw_markers.append({"context": "temp_html_scan", **ui_markers})
+        const badgeTexts = Array.from(document.querySelectorAll('.ytp-ad-badge__text'))
+            .map(el => (el.textContent || '').trim().toLowerCase());
+
+        const hasAdLabel = badgeTexts.some(t => t === 'ad');
+        const hasSponsored = badgeTexts.some(t => t.includes('sponsored'));
+
+        return { adShowing, hasAdLabel, hasSponsored, badgeTexts };
+    }''')
+
+    newly = []
+    if markers["hasSponsored"] and not ui.sponsored_label:
+        ui.sponsored_label = True; newly.append("sponsored_label")
+    if markers["hasAdLabel"] and not ui.ad_label:
+        ui.ad_label = True; newly.append("ad_label")
+
+    if newly:
+        ui.raw_markers.append({"context": context, "new": newly, "badgeTexts": markers.get("badgeTexts", [])})
 
         async def on_request(req):
             captured_urls.append(req.url)
@@ -205,9 +214,29 @@ def check_url_for_ads(url: str) -> dict:
     # only ad_break for now; later we categorise pagead/doubleclick etc.
     return {"ad_break": bool(AD_BREAK_PATTERN.search(url))}
 
+def detect_ads_sync(video_id: str, headless: bool = False):
+    async def _run():
+        detector = AdDetector(headless=headless)
+        await detector.setup()
+        try:
+            return await detector.detect(video_id)
+        finally:
+            await detector.cleanup()
 
-def main():
-    print("_")
+    return asyncio.run(_run())
+
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) < 2:
+        print("Usage: python ad_detector.py <video_id>")
+        raise SystemExit(1)
+
+    vid = sys.argv[1]
+    res = detect_ads_sync(vid, headless=False)
+
+    print("video_id:", res.video_id)
+    print("dom:", res.dom.has_ads, res.dom.has_adTimeOffset, res.dom.has_playerAds)
+    print("net:", res.net.has_ads, "ad_break=", res.net.ad_break_detected, "count=", res.net.ad_requests_count)
+    print("ui:", res.ui.has_ads, "sponsored=", res.ui.sponsored_label, "ad_label=", res.ui.ad_label)
+    print("verdict:", res.verdict, "method:", res.method.value, "confidence:", res.confidence, "error:", res.error)
+
