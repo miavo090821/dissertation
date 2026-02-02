@@ -119,78 +119,87 @@ python scripts/step1_extract_single_video.py "VIDEO_URL"
 
 Tests extraction pipeline on one video before batch processing.
 
-## Manual Ad Status Classification (Critical Step)
+## Automated Monetisation Detection
 
-This stage provides the ground truth for monetisation status in my dataset. Because YouTube does not expose monetisation information through any API, I must determine it manually before running the analysis.
+This study employs automated browser-based detection to determine whether advertisements appear on YouTube videos. While prior computational audits have used DOM-based heuristics—specifically checking for the presence of `adTimeOffset` and `playerAds` variables in page source (Dunna et al., 2022)—pilot testing revealed limitations with this approach that necessitated methodological refinement.
 
-### Why I Needed to Classify Ads Manually
+### Refinement of DOM-Based Detection
 
-I observed that YouTube’s ad delivery is highly personalised and cannot be reliably inferred through automated means. Specifically:
+Dunna et al.'s DOM-based method checks whether YouTube's page source contains variables indicating ad configuration. However, pilot testing on 19 videos revealed that these variables indicate *ad infrastructure availability* rather than *actual ad delivery*. Videos classified manually as non-monetised frequently contained these DOM variables, producing false positives. This aligns with YouTube's November 2020 policy change permitting advertisements on non-monetised content, where the platform—not the creator—receives revenue.
 
-- YouTube does not return monetisation status via the public API.
-- I found that automated detection methods vary due to:
-  - regional differences in ad availability,
-  - personalised targeting based on watch history,
-  - interference from browser extensions or ad blockers,
-  - dynamic changes in YouTube’s ad insertion logic.
-- Using incognito mode allowed me to eliminate personalisation as much as possible.
-- This manual verification became the dependent variable for RQ1.
+Similarly, network-level signals (requests to `pagead`, `doubleclick.net`, and ad tracking endpoints) reflect the presence of advertising infrastructure but do not confirm that an advertisement was rendered to the viewer.
 
-Because of these limitations, I manually checked each video to establish a consistent and unbiased ground truth.
+### UI-Based Detection as Ground Truth - using Stealth 
+
+To address these limitations, this study adopts player UI detection as the primary indicator of ad presence. Specifically, automated detection checks for the "Sponsored" label that YouTube displays within the video player during advertisement playback. This label appears only when an advertisement is actively rendered, providing a reliable signal that distinguishes between ad infrastructure (which may exist on any video) and actual ad delivery (which indicates monetisation status at the time of observation).
+
+The detection system supplements UI verification with DOM and network signals for logging purposes, but the presence of the "Sponsored" label serves as the determinative criterion for classifying a video as showing advertisements.
+
+### Technical Constraints: Headed Browser Requirement
+
+A significant technical constraint emerged during implementation: YouTube's advertising systems employ bot detection that suppresses ad delivery to automated browsers. Standard browser automation tools set `navigator.webdriver=true`, which advertising fraud prevention systems use to identify non-human traffic. When detected, YouTube loads videos normally but withholds advertisements entirely—producing systematic false negatives in headless automation.
+
+To obtain valid observations, detection must occur in headed (visible) browser mode with countermeasures that present the browser as a standard user session. This constraint limits throughput compared to headless automation but ensures that observed ad presence reflects actual platform behaviour rather than bot-specific treatment.
+
+### Detection Methods Summary
+
+| Method | Implementation | Role in Verdict |
+|--------|---------------|-----------------|
+| **UI Detection** | "Sponsored" label in video player | **Primary (determinative)** |
+| **DOM Detection** | `adTimeOffset`, `playerAds` variables | Supplementary logging |
+| **Network Detection** | `ad_break`, `pagead`, `doubleclick` requests | Supplementary logging |
+
+### Implications for Interpretation
+
+This methodological approach means the study observes *ad delivery at time of measurement* rather than creator monetisation status. Following YouTube's 2020 policy change, ad presence indicates that the video is serving advertisements but does not confirm whether revenue flows to the creator. The study therefore examines associations between transcript language patterns and ad presence, interpreted within the context that ad presence is a necessary but not sufficient condition for creator monetisation.
 
 ---
 
-### How I Classified Ads for Each Video
+## Manual Ad Status Classification (Validation)
 
-1. I cleared browsing history and cookies  
-   This removed stored preferences that could influence ad delivery.
+Manual classification provides ground truth validation for the automated detection system. Because YouTube does not expose monetisation information through any API, manual verification establishes baseline accuracy.
 
-2. I opened the YouTube link in a new incognito/private window  
-   This ensured no extensions or account data affected the results.
+### Why Manual Verification Remains Important
 
-3. I visited the video URL and accepted all cookies  
-   This allowed ads to load normally.
+Automated detection is supplemented with manual verification to:
 
-4. I checked the video for ads by observing:
-   - **Starting ads** – I watched for ads that appear before playback.
-   - **Mid-roll ads** – I looked for ad markers on the timeline during playback.
-   - **Network-level ad insertion** – I opened Developer Tools → Network → filtered for `ad_break` requests.
-     - When I saw `ad_break` events, I recorded mid-roll ads as detected.
+- Validate automated detection accuracy against human observation
+- Establish ground truth for videos where automated detection may be uncertain
+- Account for regional differences in ad availability
+- Control for personalised targeting based on watch history
 
-5. I recorded my findings in `video_urls.csv`:
+### Manual Classification Protocol
+
+1. Clear browsing history and cookies to remove stored preferences
+2. Open the YouTube link in a new incognito/private window
+3. Visit the video URL and accept all cookies
+4. Observe for ads:
+   - **Starting ads** – Ads that appear before playback
+   - **Mid-roll ads** – Ad markers on the timeline during playback
+   - **Network-level ad insertion** – Developer Tools → Network → filter for `ad_break` requests
+
+5. Record findings in `video_urls.csv`:
    - `starting_ads`: Yes/No
    - `mid_roll_ads`: Yes/No
    - `ad_breaks_detected`: Yes/No
 
-On average, it took me about **2–3 minutes** to classify each video.
+### Empirical Observation
 
----
+Across the pilot study of 20 videos, a consistent pattern emerged:
 
-### What I Observed During Classification
+- Videos with **starting ads** also showed **mid-roll `ad_break` requests** in the network tab
+- Videos **without** starting ads never showed `ad_break` events
 
-As I analysed the first 20 videos, I noticed a consistent pattern:
+This relationship held across the full dataset, supporting the use of starting ad presence as a reliable indicator.
 
-- Whenever I saw **starting ads**, I also observed **mid-roll `ad_break` requests** in the network tab.
-- Whenever I did **not** see starting ads, I never observed any mid-roll `ad_break` events.
+### Channels Classified
 
-This relationship held across the rest of the dataset. I therefore treated the presence of starting ads as a strong indicator that the video is monetised.
+- **Actual Justice Warrior** — Video IDs 1–51
+- **The Podcast of the Lotus Eaters** — Video IDs 52–71+
 
-This empirical observation allowed me to classify videos more confidently and ensured that the monetisation variable used in RQ1 was grounded in direct observation.
+### Protocol for New Videos
 
----
-
-### Channels I Classified
-
-- **Actual Justice Warrior** — Video IDs 1–51  
-- **The Podcast of the Lotus Eaters** — Video IDs 52–71+  
-
-I manually classified every video from these channels before running the extraction scripts.
-
----
-
-### Reminder for Future Additions
-
-Whenever I add new videos to the dataset, I will repeat this exact classification process before extracting transcripts, comments, or metadata.
+New videos added to the dataset undergo both automated detection and manual verification before analysis.
 
 
 ### Step 2: Batch Extract All Videos
