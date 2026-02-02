@@ -8,6 +8,44 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Optional, List, Dict
 import re
+import asyncio
+
+class AdDetector:
+    def __init__(self, headless: bool = False):
+        self.headless = headless  # Store launch mode
+        self.playwright = None    # Will hold the Playwright controller once started
+        self.browser = None       # Will hold the launched browser instance
+
+
+# initialise Playwright and launch a Chromium browser.
+# his should be called once before running any detection to avoid repeatedly
+# starting/stopping the browser (which is slow and can be flaky).
+
+    async def setup(self):
+        # import here to keep module import lightweight until setup is actually invoked.
+        from playwright.async_api import async_playwright
+
+        # start Playwright (manages browser automation drivers)
+        self.playwright = await async_playwright().start()
+
+        # launch Chromium. headless controls whether a visible window is shown.
+        self.browser = await self.playwright.chromium.launch(headless=self.headless)
+
+        # logging for debugging; consider replacing with a proper logger later.
+        print(" Playwright launched")
+
+    async def cleanup(self):
+        if self.browser:
+            await self.browser.close()
+        if self.playwright:
+            await self.playwright.stop()
+        print("Playwright closed")
+
+    async def detect(self, video_id: str) -> AdDetectionResult:
+        # no browsing yet
+        dom, net, ui = DOMDetectionResult(), NetworkDetectionResult(), UIAdDetectionResult()
+        verdict, method, confidence = determine_verdict(dom, net, ui)
+        return AdDetectionResult(video_id=video_id, dom=dom, net=net, ui=ui, verdict=verdict, method=method, confidence=confidence)
 
 AD_BREAK_PATTERN = re.compile(r"ad_break", re.IGNORECASE)
 DOM_ADTIME_PATTERN = re.compile(r'["\']?adTimeOffset["\']?\s*:', re.IGNORECASE)
@@ -80,17 +118,6 @@ def determine_verdict(dom: DOMDetectionResult, net: NetworkDetectionResult, ui: 
         return True, DetectionMethod.DOM, "medium"
     # Assume no ads if nothing detected 
     return False, DetectionMethod.NONE, "medium"
-
-class AdDetector:
-    async def setup(self): ...
-    async def cleanup(self): ...
-
-    async def detect(self, video_id: str) -> AdDetectionResult:
-        #  we will have each stage results reported by running the checking method 
-        dom = DOMDetectionResult()
-        net = NetworkDetectionResult()
-        ui = UIAdDetectionResult()
-        return AdDetectionResult(video_id=video_id, dom=dom, net=net, ui=ui)
 
 
 def check_dom_for_ads(page_source: str) -> dict:
