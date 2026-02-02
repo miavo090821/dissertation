@@ -1,3 +1,11 @@
+# # Unit Tests for Ad Detection Module
+#
+# Tests both detection methods:
+# 1) DOM Detection (Paper 1 - Dunna et al., 2022): adTimeOffset and playerAds
+# 2) Network API Detection: ad_break as evidence; other patterns logged only
+#
+# Test videos selected from video_urls.csv with known manual classification.
+
 import json
 import os
 import sys
@@ -7,7 +15,7 @@ import pytest
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, PROJECT_ROOT)
 
-from scripts.ad_detector import (  
+from scripts.ad_detector import (  # noqa: E402
     check_url_for_ads,
     check_dom_for_ads,
     determine_verdict,
@@ -16,7 +24,9 @@ from scripts.ad_detector import (
     UIAdDetectionResult,
     DetectionMethod,
 )
-# Fixtures
+
+ # Fixtures
+ 
 @pytest.fixture
 def test_videos():
     # Load test video fixtures with known ad status.
@@ -48,7 +58,8 @@ def playwright_available():
         return False
 
 
-# Unit Tests: Network Pattern Matching
+ # Unit Tests: Network Pattern Matching
+ 
 class TestNetworkPatternMatching:
     # Test network URL pattern matching logic.
 
@@ -74,7 +85,38 @@ class TestNetworkPatternMatching:
             result = check_url_for_ads(url)
             assert result["pagead"], f"Failed to detect pagead in: {url}"
             assert result["is_ad_related"], f"Should be marked as ad-related: {url}"
-    
+
+    def test_doubleclick_detection(self):
+        # doubleclick pattern is detected and logged as ad-related (not definitive evidence).
+        test_urls = [
+            "https://ad.doubleclick.net/ddm/trackclk/xyz",
+            "https://googleads.g.doubleclick.net/pagead/id",
+            "https://pubads.g.doubleclick.net/gampad/ads",
+        ]
+        for url in test_urls:
+            result = check_url_for_ads(url)
+            assert result["doubleclick"], f"Failed to detect doubleclick in: {url}"
+            assert result["is_ad_related"], f"Should be marked as ad-related: {url}"
+
+    def test_googlevideo_ad_format(self):
+        # googlevideo adformat pattern is detected as ad-related.
+        url = "https://rr1---sn-abc.googlevideo.com/videoplayback?adformat=15"
+        result = check_url_for_ads(url)
+        assert result["is_ad_related"], "Should detect adformat in googlevideo URL"
+
+    def test_non_ad_urls_not_detected(self):
+        # Regular YouTube URLs are not flagged as ad-related.
+        test_urls = [
+            "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "https://www.youtube.com/channel/UC12345",
+            "https://i.ytimg.com/vi/abc/maxresdefault.jpg",
+            "https://rr1---sn-abc.googlevideo.com/videoplayback?mime=video/mp4",
+            "https://www.google.com/search?q=test",
+        ]
+        for url in test_urls:
+            result = check_url_for_ads(url)
+            assert not result["is_ad_related"], f"Should NOT be ad-related: {url}"
+
     def test_case_insensitive_matching(self):
         # Pattern matching should be case-insensitive.
         urls = [
@@ -87,7 +129,9 @@ class TestNetworkPatternMatching:
             result = check_url_for_ads(url)
             assert result["is_ad_related"], f"Case-insensitive match failed: {url}"
 
-# Unit Tests: DOM Detection (Paper 1 Methodology)
+
+ # Unit Tests: DOM Detection (Paper 1 Methodology)
+ 
 class TestDOMDetection:
     # Test DOM-based ad detection (Paper 1 - Dunna et al.).
 
@@ -136,7 +180,9 @@ class TestDOMDetection:
         assert not result["has_adTimeOffset"]
         assert not result["has_playerAds"]
 
-# Unit Tests: Verdict Determination
+
+ # Unit Tests: Verdict Determination
+ 
 class TestVerdictDetermination:
     # Test combined verdict logic.
 
@@ -151,6 +197,31 @@ class TestVerdictDetermination:
         assert verdict is True
         assert method == DetectionMethod.UI
         assert confidence == "high"
+
+    def test_sponsored_label_false(self):
+        # If sponsored label is absent, verdict is No Ads.
+        dom = DOMDetectionResult(has_adTimeOffset=True, loads_with_ads=1, total_loads=1)
+        network = NetworkDetectionResult(ad_requests_count=5, ad_break_detected=True)
+        ui = UIAdDetectionResult(sponsored_label=False)
+
+        verdict, method, confidence = determine_verdict(dom, network, ui)
+
+        assert verdict is False
+        assert method == DetectionMethod.UI
+        assert confidence == "high"
+
+class TestNetworkDetectionResultProperties:
+    # Test NetworkDetectionResult dataclass properties.
+
+    def test_has_ads_with_ad_break(self):
+        result = NetworkDetectionResult(ad_break_detected=True)
+        assert result.has_ads is True
+
+    def test_has_ads_without_ad_break(self):
+        result = NetworkDetectionResult(ad_break_detected=False, ad_requests_count=10)
+        assert result.has_ads is False
+
+ # Integration Tests (Require Playwright - Skip unless enabled)
 class TestIntegrationWithPlaywright:
     @pytest.mark.skipif(
         not os.environ.get("RUN_BROWSER_TESTS"),
@@ -194,8 +265,10 @@ class TestIntegrationWithPlaywright:
             ), f"Expected no ads for video {video['video_id']}"
         finally:
             await detector.cleanup()
-# Accuracy Tests (Require Playwright and all test videos)
 
+
+ # Accuracy Tests (Require Playwright and all test videos)
+ 
 class TestAccuracyMetrics:
     @pytest.mark.skipif(
         not os.environ.get("RUN_ACCURACY_TESTS"),
@@ -214,11 +287,15 @@ class TestAccuracyMetrics:
             "combined": {"tp": 0, "tn": 0, "fp": 0, "fn": 0},
         }
 
-        try:
-        finally:
-            await detector.cleanup()
+        for method, counts in results.items():
+            total = counts["tp"] + counts["tn"] + counts["fp"] + counts["fn"]
+            if total > 0:
+                accuracy = (counts["tp"] + counts["tn"]) / total
+                assert accuracy >= 0.8, f"{method} accuracy {accuracy:.1%} below 80% threshold"
 
-# Test Fixtures Validation
+
+ # Test Fixtures Validation
+ 
 class TestFixturesValidation:
     def test_fixtures_exist(self):
         fixtures_path = os.path.join(os.path.dirname(__file__), "fixtures", "test_videos.json")
@@ -230,5 +307,11 @@ class TestFixturesValidation:
         assert "test_videos" in data
         assert len(data["test_videos"]) == 10
 
+    def test_fixtures_have_required_fields(self, test_videos):
+        required_fields = ["video_id", "expected_ads", "channel"]
+        for video in test_videos:
+            for field in required_fields:
+                assert field in video, f"Missing field '{field}' in video {video.get('video_id', 'unknown')}"
+                
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])
