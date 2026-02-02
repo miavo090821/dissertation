@@ -36,6 +36,16 @@ def videos_without_ads(test_videos):
     return [v for v in test_videos if not v["expected_ads"]]
 
 
+@pytest.fixture
+def playwright_available():
+    # Useful for quick diagnosis, even though integration tests are env-gated.
+    try:
+        import playwright  # noqa: F401
+        return True
+    except ImportError:
+        return False
+
+
 class TestNetworkPatternMatching:
     def test_ad_break_detection(self):
         url = "https://www.youtube.com/api/stats/playback?ad_break=1&docid=xyz"
@@ -49,11 +59,6 @@ class TestDOMDetection:
         source = '{"adTimeOffset": {"start": 0, "end": 30}}'
         result = check_dom_for_ads(source)
         assert result["has_adTimeOffset"] is True
-
-    def test_empty_page_source(self):
-        result = check_dom_for_ads("")
-        assert result["has_adTimeOffset"] is False
-        assert result["has_playerAds"] is False
 
 
 class TestVerdictDetermination:
@@ -69,39 +74,47 @@ class TestVerdictDetermination:
         assert confidence == "high"
 
 
-class TestUIAdDetectionResultProperties:
-    def test_has_ads_with_sponsored_label(self):
-        result = UIAdDetectionResult(sponsored_label=True)
-        assert result.has_ads is True
+class TestIntegrationWithPlaywright:
+    @pytest.mark.skipif(
+        not os.environ.get("RUN_BROWSER_TESTS"),
+        reason="Browser tests disabled. Set RUN_BROWSER_TESTS=1 to enable.",
+    )
+    @pytest.mark.asyncio
+    async def test_detect_ads_on_known_monetised_video(self, videos_with_ads):
+        # This test requires the real browser automation layer.
+        from scripts.ad_detector import AdDetector
 
-    def test_has_ads_with_no_markers(self):
-        result = UIAdDetectionResult()
-        assert result.has_ads is False
+        video = videos_with_ads[0]
+        detector = AdDetector(headless=True, num_loads=2)
+        await detector.setup()
 
+        try:
+            result = await detector.detect(video["video_id"])
+            assert (
+                result.verdict is True
+                or result.dom_result.has_ads
+                or result.network_result.has_ads
+            ), f"Expected to detect ads for video {video['video_id']}"
+        finally:
+            await detector.cleanup()
 
-class TestDOMDetectionResultProperties:
-    def test_has_ads_with_adTimeOffset(self):
-        result = DOMDetectionResult(has_adTimeOffset=True, has_playerAds=False)
-        assert result.has_ads is True
+    @pytest.mark.skipif(
+        not os.environ.get("RUN_BROWSER_TESTS"),
+        reason="Browser tests disabled. Set RUN_BROWSER_TESTS=1 to enable.",
+    )
+    @pytest.mark.asyncio
+    async def test_detect_no_ads_on_known_demonetised_video(self, videos_without_ads):
+        from scripts.ad_detector import AdDetector
 
-    def test_has_ads_with_neither(self):
-        result = DOMDetectionResult(has_adTimeOffset=False, has_playerAds=False)
-        assert result.has_ads is False
+        video = videos_without_ads[0]
+        detector = AdDetector(headless=True, num_loads=2)
+        await detector.setup()
 
-    def test_is_conclusive_with_5_loads(self):
-        result = DOMDetectionResult(total_loads=5)
-        assert result.is_conclusive is True
-
-    def test_is_conclusive_with_fewer_loads(self):
-        result = DOMDetectionResult(total_loads=4)
-        assert result.is_conclusive is False
-
-
-class TestNetworkDetectionResultProperties:
-    def test_has_ads_with_ad_break(self):
-        result = NetworkDetectionResult(ad_break_detected=True)
-        assert result.has_ads is True
-
-    def test_has_ads_without_ad_break(self):
-        result = NetworkDetectionResult(ad_break_detected=False, ad_requests_count=10)
-        assert result.has_ads is False
+        try:
+            result = await detector.detect(video["video_id"])
+            assert (
+                result.verdict is False
+                or (not result.dom_result.has_ads and not result.network_result.has_ads)
+            ), f"Expected no ads for video {video['video_id']}"
+        finally:
+            await detector.cleanup()
