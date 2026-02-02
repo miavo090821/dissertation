@@ -9,13 +9,14 @@
 import json
 import os
 import sys
-
 import pytest
 
+# Add project root to path so "from scripts..." works reliably.
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, PROJECT_ROOT)
 
-from scripts.ad_detector import (  # noqa: E402
+from scripts.ad_detector import (  
+
     check_url_for_ads,
     check_dom_for_ads,
     determine_verdict,
@@ -25,7 +26,7 @@ from scripts.ad_detector import (  # noqa: E402
     DetectionMethod,
 )
 
- # Fixtures
+# Fixtures
  
 @pytest.fixture
 def test_videos():
@@ -130,7 +131,7 @@ class TestNetworkPatternMatching:
             assert result["is_ad_related"], f"Case-insensitive match failed: {url}"
 
 
- # Unit Tests: DOM Detection (Paper 1 Methodology)
+# Unit Tests: DOM Detection (Paper 1 Methodology)
  
 class TestDOMDetection:
     # Test DOM-based ad detection (Paper 1 - Dunna et al.).
@@ -165,6 +166,7 @@ class TestDOMDetection:
             '{"videoDetails": {"videoId": "abc"}}',
             'ytInitialPlayerResponse = {"playabilityStatus": {"status": "OK"}}',
         ]
+
         for source in page_sources:
             result = check_dom_for_ads(source)
             assert not result["has_adTimeOffset"], f"False positive adTimeOffset: {source[:50]}"
@@ -210,6 +212,53 @@ class TestVerdictDetermination:
         assert method == DetectionMethod.UI
         assert confidence == "high"
 
+ # Unit Tests: Dataclass Properties
+
+class TestUIAdDetectionResultProperties:
+    # Test UIAdDetectionResult dataclass properties. 
+
+    def test_has_ads_with_sponsored_label(self):
+        result = UIAdDetectionResult(sponsored_label=True)
+        assert result.has_ads is True
+
+    def test_has_ads_with_ad_image_view_model(self):
+        result = UIAdDetectionResult(ad_image_view_model=True)
+        assert result.has_ads is True
+
+    def test_has_ads_with_no_markers(self):
+        result = UIAdDetectionResult()
+        assert result.has_ads is False
+
+class TestDOMDetectionResultProperties:
+    # Test DOMDetectionResult dataclass properties.
+
+    def test_has_ads_with_adTimeOffset(self):
+        result = DOMDetectionResult(has_adTimeOffset=True, has_playerAds=False)
+        assert result.has_ads is True
+
+    def test_has_ads_with_playerAds(self):
+        result = DOMDetectionResult(has_adTimeOffset=False, has_playerAds=True)
+        assert result.has_ads is True
+
+    def test_has_ads_with_both(self):
+        result = DOMDetectionResult(has_adTimeOffset=True, has_playerAds=True)
+        assert result.has_ads is True
+
+    def test_has_ads_with_neither(self):
+        result = DOMDetectionResult(has_adTimeOffset=False, has_playerAds=False)
+        assert result.has_ads is False
+
+    def test_is_conclusive_with_5_loads(self):
+        result = DOMDetectionResult(total_loads=5)
+        assert result.is_conclusive is True
+
+        result = DOMDetectionResult(total_loads=6)
+        assert result.is_conclusive is True
+
+    def test_is_conclusive_with_fewer_loads(self):
+        result = DOMDetectionResult(total_loads=4)
+        assert result.is_conclusive is False
+
 class TestNetworkDetectionResultProperties:
     # Test NetworkDetectionResult dataclass properties.
 
@@ -221,7 +270,9 @@ class TestNetworkDetectionResultProperties:
         result = NetworkDetectionResult(ad_break_detected=False, ad_requests_count=10)
         assert result.has_ads is False
 
+
  # Integration Tests (Require Playwright - Skip unless enabled)
+ 
 class TestIntegrationWithPlaywright:
     @pytest.mark.skipif(
         not os.environ.get("RUN_BROWSER_TESTS"),
@@ -287,6 +338,44 @@ class TestAccuracyMetrics:
             "combined": {"tp": 0, "tn": 0, "fp": 0, "fn": 0},
         }
 
+        try:
+            for video in test_videos:
+                result = await detector.detect(video["video_id"])
+                expected = video["expected_ads"]
+
+                dom_detected = result.dom_result.has_ads
+                if dom_detected and expected:
+                    results["dom"]["tp"] += 1
+                elif (not dom_detected) and (not expected):
+                    results["dom"]["tn"] += 1
+                elif dom_detected and (not expected):
+                    results["dom"]["fp"] += 1
+                else:
+                    results["dom"]["fn"] += 1
+
+                net_detected = result.network_result.has_ads
+                if net_detected and expected:
+                    results["network"]["tp"] += 1
+                elif (not net_detected) and (not expected):
+                    results["network"]["tn"] += 1
+                elif net_detected and (not expected):
+                    results["network"]["fp"] += 1
+                else:
+                    results["network"]["fn"] += 1
+
+                combined = result.verdict
+                if combined and expected:
+                    results["combined"]["tp"] += 1
+                elif combined is False and (not expected):
+                    results["combined"]["tn"] += 1
+                elif combined and (not expected):
+                    results["combined"]["fp"] += 1
+                elif combined is False and expected:
+                    results["combined"]["fn"] += 1
+                # Uncertain results not counted.
+        finally:
+            await detector.cleanup()
+
         for method, counts in results.items():
             total = counts["tp"] + counts["tn"] + counts["fp"] + counts["fn"]
             if total > 0:
@@ -312,6 +401,12 @@ class TestFixturesValidation:
         for video in test_videos:
             for field in required_fields:
                 assert field in video, f"Missing field '{field}' in video {video.get('video_id', 'unknown')}"
-                
+
+    def test_fixtures_balanced(self, test_videos):
+        with_ads = sum(1 for v in test_videos if v["expected_ads"])
+        without_ads = sum(1 for v in test_videos if not v["expected_ads"])
+        assert with_ads == 5, f"Expected 5 videos with ads, got {with_ads}"
+        assert without_ads == 5, f"Expected 5 videos without ads, got {without_ads}"
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])
