@@ -4,10 +4,11 @@
 # the good news is the number of "no ads video" is small and we have the manual verification step to double check 
 # the dectection, which should take little time. 
 
-from dataclasses import dataclass, field
-from typing import Optional
-from enum import Enum
+# ad_detector.py (Iteration 2)
 
+from dataclasses import dataclass
+from enum import Enum
+from typing import Optional
 
 class DetectionMethod(Enum):
     NONE = "none"
@@ -27,8 +28,25 @@ class AdDetectionResult:
     error: str = ""
 
 
+class AdDetector:
+    def __init__(self):
+        # TEMP: nothing here yet
+        pass
+
+    async def setup(self):
+        # TEMP: later we start Playwright here
+        return
+
+    async def cleanup(self):
+        return
+
+    async def detect(self, video_id: str) -> AdDetectionResult:
+        print(f"[TEMP] detect({video_id}) called")
+        return AdDetectionResult(video_id=video_id, verdict=None, method=DetectionMethod.NONE, confidence="low")
+
+
 def main():
-    print("[TEMP] models loaded OK")
+    print("[TEMP] AdDetector class ok")
 
 if __name__ == "__main__":
     main()
