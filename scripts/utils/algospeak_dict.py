@@ -7,7 +7,7 @@
 
 # Algospeak substitutions: algospeak_term -> original_meaning
 # Organized by category for easier maintenance
-
+#  for step 5 
 ALGOSPEAK_DICT = {
     #   Violence & Death  
     "unalive": "kill/suicide/dead",

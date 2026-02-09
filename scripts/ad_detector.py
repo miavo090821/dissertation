@@ -16,6 +16,7 @@ ad delivery, producing false positives on non-monetised content.
 
 Reference: YouTube Self-Censorship Research Project (RQ1 Methodology)
 """
+#  work with video urls in input folder. 
 
 import asyncio
 import logging
