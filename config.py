@@ -24,21 +24,21 @@ load_dotenv()
 
 # YouTube Data API v3 Key
 # Loads from .env file or environment variable
+# Note: Only required for extraction (Step 2). Analysis steps work without it.
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
 if not YOUTUBE_API_KEY:
-    print("ERROR: YOUTUBE_API_KEY not found!")
-    print("Create a .env file with: YOUTUBE_API_KEY=your_key_here")
-    print("Or set environment variable: export YOUTUBE_API_KEY='your_key_here'")
-    sys.exit(1)
+    print("WARNING: YOUTUBE_API_KEY not found - extraction will not work")
+    print("To enable extraction, create a .env file with: YOUTUBE_API_KEY=your_key_here")
+    YOUTUBE_API_KEY = None  # Allow analysis steps to proceed
 
 # Supadata API Key (for transcript fetching)
 # Loads from .env file or environment variable
+# Note: Only required for extraction (Step 2). Analysis steps work without it.
 SUPADATA_API_KEY = os.getenv("SUPADATA_API_KEY")
 if not SUPADATA_API_KEY:
-    print("ERROR: SUPADATA_API_KEY not found!")
-    print("Create a .env file with: SUPADATA_API_KEY=your_key_here")
-    print("Or set environment variable: export SUPADATA_API_KEY='your_key_here'")
-    sys.exit(1)
+    print("WARNING: SUPADATA_API_KEY not found - transcript extraction will not work")
+    print("To enable extraction, create a .env file with: SUPADATA_API_KEY=your_key_here")
+    SUPADATA_API_KEY = None  # Allow analysis steps to proceed
 
 SUPADATA_BASE_URL = "https://api.supadata.ai/v1/transcript"
 
@@ -61,3 +61,4 @@ SENSITIVITY_SCORES_FILE = "sensitivity_scores.csv"
 COMMENTS_ANALYSIS_FILE = "comments_perception.csv"
 ALGOSPEAK_FINDINGS_FILE = "algospeak_findings.csv"
 FINAL_REPORT_FILE = "analysis_results.xlsx"
+AD_DETECTION_FILE = "ad_detection_results.csv"

@@ -1,16 +1,16 @@
-"""
-Main Pipeline Orchestrator
+# Main Pipeline Orchestrator
+# ==========================
+# Runs the full dissertation analysis pipeline for YouTube self-censorship research.
 
-Runs the full dissertation analysis pipeline for YouTube self-censorship research.
+# This script coordinates all 7 steps of the analysis:
+# - Step 1: Detect ads on videos (requires visible browser)
+# - Step 2: Extract video data (metadata, transcripts, comments) via APIs
+# - Step 3: Analyse transcript sensitivity (RQ1)
+# - Step 4: Analyse comment perception keywords (RQ2)
+# - Step 5: Detect algospeak in transcripts and comments (RQ3)
+# - Step 6: Generate combined Excel report
+# - Step 7: Generate visualisation charts
 
-This script coordinates all 7 steps of the analysis:
-- Step 2: Extract video data (metadata, transcripts, comments) via APIs
-- Step 3: Analyse transcript sensitivity (RQ1)
-- Step 4: Analyse comment perception keywords (RQ2)
-- Step 5: Detect algospeak in transcripts and comments (RQ3)
-- Step 6: Generate combined Excel report
-- Step 7: Generate visualisation charts
-"""
 import argparse
 import sys
 import time
@@ -18,6 +18,7 @@ from datetime import datetime
 
 # Step name mapping for display
 STEP_NAMES = {
+    1: "Ad Detection",
     2: "Batch Extract",
     3: "Sensitivity Analysis",
     4: "Comments Perception",
@@ -28,18 +29,18 @@ STEP_NAMES = {
 
 
 def run_step(step_num: int, step_name: str, step_func, **kwargs) -> bool:
-    
-    # Execute a single pipeline step with timing and error handling.
+    """
+    Execute a single pipeline step with timing and error handling.
 
-    # Args:
-    #     step_num: Step number (2-7)
-    #     step_name: Human-readable step name
-    #     step_func: The step's main() function to call
-    #     **kwargs: Arguments to pass to the step function
+    Args:
+        step_num: Step number (2-7)
+        step_name: Human-readable step name
+        step_func: The step's main() function to call
+        **kwargs: Arguments to pass to the step function
 
-    # Returns:
-    #     True if step succeeded, False if it failed
-    
+    Returns:
+        True if step succeeded, False if it failed
+    """
     print(f"\n{'='*60}")
     print(f"STEP {step_num}: {step_name}")
     print(f"Started: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -58,11 +59,11 @@ def run_step(step_num: int, step_name: str, step_func, **kwargs) -> bool:
 
 
 def archive_previous_output():
-    
-    # Move existing output folder to timestamped archive.
+    """
+    Move existing output folder to timestamped archive.
 
-    # Creates data/output_archive_YYYYMMDD_HHMMSS/ containing previous results.
-    
+    Creates data/output_archive_YYYYMMDD_HHMMSS/ containing previous results.
+    """
     import shutil
     from pathlib import Path
 
@@ -78,7 +79,7 @@ def archive_previous_output():
 
 
 def main():
-    # Main entry point - parse arguments and run selected pipeline steps."""
+    """Main entry point - parse arguments and run selected pipeline steps."""
 
     # Parse command-line arguments
     parser = argparse.ArgumentParser(
@@ -108,6 +109,7 @@ Examples:
     print('='*60)
 
     # Import step modules (deferred to avoid import errors if not all deps installed)
+    from scripts import step1_ad_detector
     from scripts import step2_batch_extract
     from scripts import step3_sensitivity_analysis
     from scripts import step4_comments_analysis
@@ -116,12 +118,16 @@ Examples:
     from scripts import step7_visualizations
 
     # Determine which steps to run
-    steps_to_run = args.steps or [2, 3, 4, 5, 6, 7]
+    steps_to_run = args.steps or [1, 2, 3, 4, 5, 6, 7]
     results = {}
 
     # Archive previous output if requested
     if args.archive:
         archive_previous_output()
+
+    # Step 1: Ad Detection
+    if 1 in steps_to_run:
+        results[1] = run_step(1, "Ad Detection", step1_ad_detector.main)
 
     # Step 2: Batch extraction (skippable)
     if 2 in steps_to_run and not args.skip_extraction:
