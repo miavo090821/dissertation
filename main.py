@@ -10,7 +10,6 @@
 # - Step 5: Detect algospeak in transcripts and comments (RQ3)
 # - Step 6: Generate combined Excel report
 # - Step 7: Generate visualisation charts
-
 import argparse
 import sys
 import time

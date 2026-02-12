@@ -1,19 +1,26 @@
-# Detects advertisements on YouTube videos using stealth browser automation
-# and UI-based detection (checking for "Sponsored" label in video player).
+"""
+Ad Detection Module for YouTube Self-Censorship Research
+=========================================================
 
-# Methodology:
-# - Uses headed browser with stealth settings to avoid bot detection
-# - Checks for "Sponsored" label which only appears when an ad is actually rendered
-# - This approach detects ad DELIVERY, not just ad INFRASTRUCTURE
+Detects advertisements on YouTube videos using stealth browser automation
+and UI-based detection (checking for "Sponsored" label in video player).
 
-# Note: DOM variables (adTimeOffset, playerAds) and Network signals (ad_break, pagead)
-# were evaluated but removed as they indicate infrastructure availability, not actual
-# ad delivery, producing false positives on non-monetised content.
+Methodology:
+- Uses headed browser with stealth settings to avoid bot detection
+- Checks for "Sponsored" label which only appears when an ad is actually rendered
+- This approach detects ad DELIVERY, not just ad INFRASTRUCTURE
 
+Note: DOM variables (adTimeOffset, playerAds) and Network signals (ad_break, pagead)
+were evaluated but removed as they indicate infrastructure availability, not actual
+ad delivery, producing false positives on non-monetised content.
+
+Reference: YouTube Self-Censorship Research Project (RQ1 Methodology)
+"""
 
 import asyncio
 import logging
 import os
+import random
 import re
 import sys
 from dataclasses import dataclass, field
@@ -129,6 +136,16 @@ class AdDetector:
         self.playwright = None
         self.logger = self._setup_logger(log_level)
 
+        # macOS Chrome user agents for rotation
+        self._user_agents = [
+            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36',
+            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36',
+            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+        ]
+
         if headless:
             self.logger.warning("Headless mode may not detect ads due to bot detection!")
 
@@ -142,6 +159,16 @@ class AdDetector:
             logger.addHandler(handler)
         logger.setLevel(log_level)
         return logger
+
+    def _random_user_agent(self) -> str:
+        """Return a random macOS Chrome user agent string."""
+        return random.choice(self._user_agents)
+
+    def _random_viewport(self) -> dict:
+        """Return a slightly randomized viewport size."""
+        width = random.randint(1250, 1400)
+        height = random.randint(700, 800)
+        return {'width': width, 'height': height}
 
     async def setup(self):
         """
@@ -376,11 +403,11 @@ class AdDetector:
         error = None
 
         try:
-            # Create fresh browser context (like incognito)
-            context = await self.browser.new_context(
-                viewport={'width': 1280, 'height': 720},
-                user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-            )
+            # Create fresh browser context with randomized fingerprint
+            ua = self._random_user_agent()
+            vp = self._random_viewport()
+            self.logger.info("Using viewport %dx%d", vp['width'], vp['height'])
+            context = await self.browser.new_context(viewport=vp, user_agent=ua)
 
             # Override navigator.webdriver to avoid detection
             await context.add_init_script("""
@@ -469,8 +496,16 @@ class AdDetector:
             if progress_callback:
                 progress_callback(i + 1, len(video_ids), result)
 
+            # Restart browser every 5 videos to get a fresh fingerprint
+            if (i + 1) % 5 == 0 and i < len(video_ids) - 1:
+                self.logger.info("Restarting browser to avoid detection...")
+                await self.cleanup()
+                await self.setup()
+
             if i < len(video_ids) - 1:
-                await asyncio.sleep(delay)
+                wait_time = random.uniform(5.0, 12.0)
+                self.logger.info("Waiting %.1f seconds before next video...", wait_time)
+                await asyncio.sleep(wait_time)
 
         return results
 
@@ -543,9 +578,26 @@ def main():
         print("ERROR: 'url' column not found in CSV")
         sys.exit(1)
 
-    # Extract video IDs from URLs
-    video_ids = [extract_video_id(url) for url in df['url']]
-    print(f"Found {len(video_ids)} videos to process")
+    # Determine which videos need processing (skip already-processed ones)
+    ads_column = df.get('Ads (Yes / No)', pd.Series([''] * len(df)))
+    videos_to_process = []
+    video_indices = []
+
+    for i, (url, existing_ad) in enumerate(zip(df['url'], ads_column)):
+        existing_str = str(existing_ad).strip().lower()
+        if existing_str not in ['yes', 'no']:
+            videos_to_process.append(extract_video_id(url))
+            video_indices.append(i)
+
+    skipped = len(df) - len(videos_to_process)
+    print(f"Found {len(df)} total videos")
+    if skipped > 0:
+        print(f"Skipping {skipped} already-processed videos")
+    print(f"Processing {len(videos_to_process)} videos")
+
+    if not videos_to_process:
+        print("All videos already processed. Nothing to do.")
+        return
 
     # Run detection
     print("\nStarting ad detection...")
@@ -562,7 +614,7 @@ def main():
                 print(f"[{current}/{total}] {result.video_id}: {verdict}")
 
             results = await detector.detect_batch(
-                video_ids,
+                videos_to_process,
                 delay=1.0,
                 progress_callback=progress_callback
             )
@@ -575,16 +627,13 @@ def main():
     # Create results mapping
     results_map = {r.video_id: r for r in results}
 
-    # Update the Ads column in the DataFrame
-    ads_values = []
-    for url in df['url']:
-        video_id = extract_video_id(url)
-        if video_id in results_map:
-            ads_values.append('Yes' if results_map[video_id].verdict else 'No')
-        else:
-            ads_values.append('')
+    # Update only the processed videos, preserve existing values
+    if 'Ads (Yes / No)' not in df.columns:
+        df['Ads (Yes / No)'] = ''
 
-    df['Ads (Yes / No)'] = ads_values
+    for idx, video_id in zip(video_indices, videos_to_process):
+        if video_id in results_map:
+            df.at[idx, 'Ads (Yes / No)'] = 'Yes' if results_map[video_id].verdict else 'No'
 
     # Save updated CSV back to input
     df.to_csv(input_csv, index=False)
