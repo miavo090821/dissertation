@@ -478,14 +478,14 @@ def main():
         # Small pause between videos to be gentle with the APIs
         time.sleep(0.5)
     
-    # Print final summary of batch extraction results
+    # print final summary of batch extraction results
     print("\nCOMPLETE")
     print(f"{'Component':<15} {'Success':>10} {'Failed':>10} {'Skipped':>10}")
     print("-" * 45)
     for component, counts in stats.items():
         print(f"{component.capitalize():<15} {counts['success']:>10} {counts['failed']:>10} {counts['skipped']:>10}")
     
-    # Show where all raw data has been saved
+    # show where all raw data has been saved
     print(f"\nOutput: {raw_dir}")
     print("Next: Run step3_sensitivity_analysis.py")
 
