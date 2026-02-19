@@ -79,40 +79,34 @@ def chart1_risk_vs_ads_scatter(df: pd.DataFrame, charts_dir: str):
     
     fig, ax = plt.subplots(figsize=FIGSIZE)
     
-    # Detect which ad status column is present
-    ad_col = None
-    for col in ['starting_ads', 'manual_starting_ads']:
-        if col in df.columns:
-            ad_col = col
-            break
-    
-    if ad_col is None:
-        print("      SKIP: No ad status column")
+    # Check for ad_status column
+    if 'ad_status' not in df.columns:
+        print("      SKIP: No ad_status column")
         return
-    
+
     # Clean dataset
-    plot_df = df[['sensitive_ratio', ad_col]].dropna()
-    plot_df[ad_col] = plot_df[ad_col].astype(str).str.strip().str.lower()
-    plot_df = plot_df[plot_df[ad_col].isin(['yes', 'no'])]
-    
+    plot_df = df[['sensitive_ratio', 'ad_status']].dropna()
+    plot_df['ad_status'] = plot_df['ad_status'].astype(str).str.strip().str.lower()
+    plot_df = plot_df[plot_df['ad_status'].isin(['yes', 'no'])]
+
     if plot_df.empty:
         print("      SKIP: No valid data")
         return
-    
+
     # Colour mapping
-    colors = plot_df[ad_col].map({'yes': '#2ecc71', 'no': '#e74c3c'})
-    
+    colors = plot_df['ad_status'].map({'yes': '#2ecc71', 'no': '#e74c3c'})
+
     # Scatter plot
-    ax.scatter(plot_df[ad_col].map({'yes': 1, 'no': 0}), 
-               plot_df['sensitive_ratio'], 
+    ax.scatter(plot_df['ad_status'].map({'yes': 1, 'no': 0}),
+               plot_df['sensitive_ratio'],
                c=colors, alpha=0.7, s=100, edgecolors='white', linewidth=1)
-    
+
     # Labels and formatting
     ax.set_xticks([0, 1])
     ax.set_xticklabels(['No Ads', 'Has Ads'])
     ax.set_ylabel('Sensitive Ratio (%)')
-    ax.set_xlabel('Starting Ads')
-    ax.set_title('Risk % vs Starting Ad Status')
+    ax.set_xlabel('Ad Status')
+    ax.set_title('Risk % vs Ad Status')
     
     # Add threshold lines
     ax.axhline(y=2.0, color='orange', linestyle='--', alpha=0.7, label='T2 2%')
@@ -130,38 +124,35 @@ def chart2_risk_by_ads_boxplot(df: pd.DataFrame, charts_dir: str):
     
     fig, ax = plt.subplots(figsize=FIGSIZE)
     
-    # Determine ad status column
-    ad_col = None
-    for col in ['starting_ads', 'manual_starting_ads']:
-        if col in df.columns:
-            ad_col = col
-            break
-    
-    if ad_col is None:
-        print("      SKIP: No ad status column")
+    # Check for ad_status column
+    if 'ad_status' not in df.columns:
+        print("      SKIP: No ad_status column")
         return
-    
+
     # Clean dataset
-    plot_df = df[['sensitive_ratio', ad_col]].dropna()
-    plot_df[ad_col] = plot_df[ad_col].astype(str).str.strip().str.lower()
-    plot_df = plot_df[plot_df[ad_col].isin(['yes', 'no'])]
-    
+    plot_df = df[['sensitive_ratio', 'ad_status']].dropna()
+    plot_df['ad_status'] = plot_df['ad_status'].astype(str).str.strip().str.lower()
+    plot_df = plot_df[plot_df['ad_status'].isin(['yes', 'no'])]
+
     if plot_df.empty:
         print("      SKIP: No valid data")
         return
-    
+
     # Draw boxplot
-    sns.boxplot(data=plot_df, x=ad_col, y='sensitive_ratio', 
-                hue=ad_col, palette={'yes': '#2ecc71', 'no': '#e74c3c'}, 
-                ax=ax, legend=False)
-    
+    sns.boxplot(data=plot_df, x='ad_status', y='sensitive_ratio',
+                order=['no', 'yes'], ax=ax)
+    # Manually color boxes to match charts 1 & 4
+    box_colors = ['#e74c3c', '#2ecc71']  # red=no, green=yes
+    for patch, color in zip(ax.patches, box_colors):
+        patch.set_facecolor(color)
+
     # Labels
-    ax.set_xlabel('Starting Ads')
+    ax.set_xlabel('Ad Status')
     ax.set_ylabel('Sensitive Ratio (%)')
     ax.set_title('Distribution of Risk % by Ad Status')
     ax.set_xticks([0, 1])
     ax.set_xticklabels(['No Ads', 'Has Ads'])
-    
+
     plt.tight_layout()
     plt.savefig(os.path.join(charts_dir, '02_risk_by_ads_boxplot.png'), dpi=DPI)
     plt.close()
@@ -212,34 +203,28 @@ def chart4_avg_risk_by_ads_bar(df: pd.DataFrame, charts_dir: str):
     
     fig, ax = plt.subplots(figsize=(8, 6))
     
-    # Detect ad status column
-    ad_col = None
-    for col in ['starting_ads', 'manual_starting_ads']:
-        if col in df.columns:
-            ad_col = col
-            break
-    
-    if ad_col is None:
-        print("      SKIP: No ad status column")
+    # Check for ad_status column
+    if 'ad_status' not in df.columns:
+        print("      SKIP: No ad_status column")
         return
-    
+
     # Clean dataset
-    plot_df = df[['sensitive_ratio', ad_col]].dropna()
-    plot_df[ad_col] = plot_df[ad_col].astype(str).str.strip().str.lower()
-    plot_df = plot_df[plot_df[ad_col].isin(['yes', 'no'])]
-    
+    plot_df = df[['sensitive_ratio', 'ad_status']].dropna()
+    plot_df['ad_status'] = plot_df['ad_status'].astype(str).str.strip().str.lower()
+    plot_df = plot_df[plot_df['ad_status'].isin(['yes', 'no'])]
+
     if plot_df.empty:
         print("      SKIP: No valid data")
         return
-    
+
     # Compute mean values
-    avg_risk = plot_df.groupby(ad_col)['sensitive_ratio'].mean()
-    
+    avg_risk = plot_df.groupby('ad_status')['sensitive_ratio'].mean()
+
     # Colour mapping
     colors = ['#e74c3c' if idx == 'no' else '#2ecc71' for idx in avg_risk.index]
     bars = ax.bar(avg_risk.index, avg_risk.values, color=colors, edgecolor='white', linewidth=2)
-    
-    ax.set_xlabel('Starting Ads')
+
+    ax.set_xlabel('Ad Status')
     ax.set_ylabel('Average Sensitive Ratio (%)')
     ax.set_title('Average Risk % by Ad Status')
     ax.set_xticks([0, 1])

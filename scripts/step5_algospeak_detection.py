@@ -158,6 +158,8 @@ def main():
     # Set up command line arguments
     parser = argparse.ArgumentParser(description='Detect algospeak in transcripts and comments')
     parser.add_argument('--archive', action='store_true', help='Archive previous output before running')
+    parser.add_argument('--skip-existing', action='store_true',
+                        help='Skip videos already in existing output')
     args = parser.parse_args()
     
     # Prepare directory paths
@@ -174,8 +176,29 @@ def main():
     
     # Collect all videos that have transcripts or comments
     video_ids = get_extracted_videos(raw_dir)
-    
-    if not video_ids:
+
+    # Skip already-processed videos if flag is set
+    existing_findings = []
+    existing_summaries = []
+    if args.skip_existing:
+        summary_path = output_path.replace('.csv', '_summary.csv')
+        if os.path.exists(summary_path):
+            with open(summary_path, 'r', encoding='utf-8') as f:
+                reader = csv.DictReader(f)
+                existing_summaries = list(reader)
+            existing_ids = {row['video_id'] for row in existing_summaries}
+
+            # Also load existing detailed findings
+            if os.path.exists(output_path):
+                with open(output_path, 'r', encoding='utf-8') as f:
+                    reader = csv.DictReader(f)
+                    existing_findings = list(reader)
+
+            before = len(video_ids)
+            video_ids = [v for v in video_ids if v not in existing_ids]
+            print(f"  Skip-existing: {before - len(video_ids)} already processed, {len(video_ids)} new")
+
+    if not video_ids and not existing_summaries:
         print("ERROR: No extracted videos found")
         print("Please run step2_batch_extract.py first")
         sys.exit(1)
@@ -270,6 +293,10 @@ def main():
         print(f"  Transcript: {transcript_instances} instances ({transcript_unique} unique)")
         print(f"  Comments: {comment_instances} instances ({comment_unique} unique, creator: {creator_comment_instances})")
     
+    # Merge with existing data if skip-existing was used
+    all_findings = existing_findings + all_findings
+    video_summaries = existing_summaries + video_summaries
+
     # Write detailed findings to CSV
     if all_findings:
         with open(output_path, 'w', newline='', encoding='utf-8') as f:
@@ -287,10 +314,10 @@ def main():
             writer.writerows(video_summaries)
         print(f"SUCCESS: Video summary saved to {summary_path}")
     
-    # Compute totals across all videos
-    total_transcript = sum(v['transcript_instances'] for v in video_summaries)
-    total_comment = sum(v['comment_instances'] for v in video_summaries)
-    total_creator_comment = sum(v['creator_comment_instances'] for v in video_summaries)
+    # Compute totals across all videos (int() handles string values from CSV merge)
+    total_transcript = sum(int(v['transcript_instances']) for v in video_summaries)
+    total_comment = sum(int(v['comment_instances']) for v in video_summaries)
+    total_creator_comment = sum(int(v['creator_comment_instances']) for v in video_summaries)
     
     print(f"\nSummary: {len(video_summaries)} videos | Transcript: {total_transcript} | Comments: {total_comment}")
     print(f"Creator comments: {total_creator_comment} | Viewer comments: {total_comment - total_creator_comment}")

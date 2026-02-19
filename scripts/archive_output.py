@@ -97,8 +97,8 @@ def archive_all(custom_name: str = None, clear_after: bool = True) -> str:
             # Reset the Ads column to empty in original
             try:
                 df = pd.read_csv(input_csv)
-                if 'Ads (Yes / No)' in df.columns:
-                    df['Ads (Yes / No)'] = ''
+                if 'ad_status' in df.columns:
+                    df['ad_status'] = ''
                     df.to_csv(input_csv, index=False)
             except Exception as e:
                 print(f"  Warning: Could not reset Ads column: {e}")

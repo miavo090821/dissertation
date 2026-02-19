@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 try:
     # Import required configuration paths and filenames
-    from config import DATA_RAW_DIR, DATA_OUTPUT_DIR, DICTIONARIES_DIR, SENSITIVITY_SCORES_FILE
+    from config import DATA_RAW_DIR, DATA_OUTPUT_DIR, DATA_INPUT_DIR, DICTIONARIES_DIR, SENSITIVITY_SCORES_FILE
 except ImportError:
     # Stop execution if config is missing
     print("ERROR: config.py not found!")
@@ -92,6 +92,19 @@ def main():
         print("Please ensure dictionaries/sensitive_words.json exists")
         sys.exit(1)
     
+    # Load ad_status from input CSV for lookup by video_id
+    import re
+    ad_status_lookup = {}
+    input_csv_path = os.path.join(base_dir, DATA_INPUT_DIR, 'video_urls.csv')
+    if os.path.exists(input_csv_path):
+        with open(input_csv_path, 'r', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                url = row.get('url', '')
+                match = re.search(r'(?:v=|youtu\.be/)([a-zA-Z0-9_-]{11})', url)
+                if match:
+                    ad_status_lookup[match.group(1)] = row.get('ad_status', '')
+
     # Collect list of extracted videos to analyse
     video_ids = get_extracted_videos(raw_dir)
     
@@ -142,9 +155,7 @@ def main():
             'sensitive_ratio': analysis['sensitive_ratio'],
             'classification': classification,
             'found_terms': ', '.join(analysis['found_terms'][:10]),
-            'manual_starting_ads': metadata.get('manual_starting_ads', ''),
-            'manual_mid_roll_ads': metadata.get('manual_mid_roll_ads', ''),
-            'manual_ad_breaks': metadata.get('manual_ad_breaks_detected', '')
+            'ad_status': ad_status_lookup.get(video_id, '')
         }
         
         results.append(result)

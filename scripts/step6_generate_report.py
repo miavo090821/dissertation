@@ -151,10 +151,10 @@ def main():
                 how='left'
             )
     
-    # Merge manual ad status and ad break detection from the input csv
-    if not input_df.empty and 'url' in input_df.columns:
+    # Merge ad status from input csv if not already present from sensitivity scores
+    if 'ad_status' not in master_df.columns and not input_df.empty and 'url' in input_df.columns:
         input_df['video_id'] = input_df['url'].apply(extract_video_id_from_url)
-        input_cols = ['video_id', 'starting_ads', 'mid_roll_ads', 'ad_breaks_detected']
+        input_cols = ['video_id', 'ad_status']
         available_cols = [c for c in input_cols if c in input_df.columns]
         # Only merge if there is at least one metric besides id
         if len(available_cols) > 1:
@@ -188,8 +188,7 @@ def main():
         'duration_formatted', 'upload_age', 'upload_age_type',
         'view_count', 'like_count', 'comment_count',
         'total_words', 'sensitive_count', 'sensitive_ratio', 'classification',
-        'starting_ads', 'mid_roll_ads', 'ad_breaks_detected',
-        'manual_starting_ads', 'manual_mid_roll_ads', 'manual_ad_breaks'
+        'ad_status'
     ]
     
     # Build final column order by adding remaining columns after priority group

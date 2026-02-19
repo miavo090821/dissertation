@@ -17,6 +17,8 @@ ad delivery, producing false positives on non-monetised content.
 Reference: YouTube Self-Censorship Research Project (RQ1 Methodology)
 """
 
+# Standard library imports
+import argparse
 import asyncio
 import logging
 import os
@@ -26,11 +28,13 @@ import sys
 from dataclasses import dataclass, field
 from typing import Optional
 
+# Third-party imports
 import pandas as pd
 
 # Add project root to path for imports
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+# Import project configuration paths
 try:
     from config import DATA_INPUT_DIR, DATA_OUTPUT_DIR, AD_DETECTION_FILE
 except ImportError:
@@ -39,7 +43,7 @@ except ImportError:
     DATA_OUTPUT_DIR = "data/output"
     AD_DETECTION_FILE = "ad_detection_results.csv"
 
-# Check for stealth library
+# Check for optional stealth library (improves bot evasion)
 try:
     from playwright_stealth import Stealth
     STEALTH_AVAILABLE = True
@@ -47,6 +51,7 @@ except ImportError:
     STEALTH_AVAILABLE = False
 
 
+# Dataclass holding individual UI ad marker flags
 @dataclass
 class UIAdDetectionResult:
     """
@@ -69,12 +74,14 @@ class UIAdDetectionResult:
     ad_showing_class: bool = False
     raw_markers: list = field(default_factory=list)
 
+    # Check if any ad marker was detected (sponsored label is primary)
     @property
     def has_ads(self) -> bool:
         """Returns True if any ad marker was detected."""
-        return self.sponsored_label  # Sponsored label is the primary indicator
+        return self.sponsored_label
 
 
+# Dataclass holding final detection verdict for a video
 @dataclass
 class AdDetectionResult:
     """
@@ -93,8 +100,8 @@ class AdDetectionResult:
     confidence: str = "high"
     error: Optional[str] = None
 
+    # Convert result fields to a flat dictionary for CSV export
     def to_dict(self) -> dict:
-        """Convert result to dictionary for CSV export."""
         return {
             'video_id': self.video_id,
             'auto_verdict': 'Yes' if self.verdict else 'No',
@@ -109,6 +116,7 @@ class AdDetectionResult:
         }
 
 
+# Main detector class using stealth Playwright browser
 class AdDetector:
     """
     YouTube ad detector using stealth browser automation.
@@ -123,14 +131,8 @@ class AdDetector:
         await detector.cleanup()
     """
 
+    # Initialise detector with browser mode and logging config
     def __init__(self, headless: bool = False, log_level: int = logging.INFO):
-        """
-        Initialize ad detector.
-
-        Args:
-            headless: Run browser in headless mode (NOT RECOMMENDED - ads not served)
-            log_level: Logging level (default INFO)
-        """
         self.headless = headless
         self.browser = None
         self.playwright = None
@@ -149,8 +151,8 @@ class AdDetector:
         if headless:
             self.logger.warning("Headless mode may not detect ads due to bot detection!")
 
+    # Configure stdout logger with timestamp format
     def _setup_logger(self, log_level: int) -> logging.Logger:
-        """Configure logger for this detector instance."""
         logger = logging.getLogger("ad_detector")
         if not logger.handlers:
             handler = logging.StreamHandler(sys.stdout)
@@ -160,25 +162,18 @@ class AdDetector:
         logger.setLevel(log_level)
         return logger
 
+    # Pick a random user agent from the rotation list
     def _random_user_agent(self) -> str:
-        """Return a random macOS Chrome user agent string."""
         return random.choice(self._user_agents)
 
+    # Generate a randomised viewport to vary browser fingerprint
     def _random_viewport(self) -> dict:
-        """Return a slightly randomized viewport size."""
         width = random.randint(1250, 1400)
         height = random.randint(700, 800)
         return {'width': width, 'height': height}
 
+    # Launch Chromium with anti-detection arguments and stealth patches
     async def setup(self):
-        """
-        Initialize Playwright browser with stealth settings.
-
-        Launches Chromium with arguments to avoid bot detection:
-        - Disables AutomationControlled blink feature
-        - Opens in incognito mode
-        - Applies playwright-stealth patches if available
-        """
         try:
             from playwright.async_api import async_playwright
 
@@ -205,16 +200,16 @@ class AdDetector:
                 "Playwright not installed. Run: pip install playwright && playwright install chromium"
             )
 
+    # Close browser and release Playwright resources
     async def cleanup(self):
-        """Close browser and release resources."""
         if self.browser:
             self.logger.info("Closing browser")
             await self.browser.close()
         if self.playwright:
             await self.playwright.stop()
 
+    # Dismiss Google/YouTube cookie consent banner if present
     async def _dismiss_consent(self, page):
-        """Click 'Accept all' on Google/YouTube cookie consent banner if present."""
         try:
             await asyncio.sleep(1)
 
@@ -237,23 +232,8 @@ class AdDetector:
         except Exception as e:
             self.logger.debug("Consent handling: %s", e)
 
+    # Check player UI for ad markers (sponsored label, skip button, etc.)
     async def _check_ui_markers(self, page, ui_result: UIAdDetectionResult, context: str = ""):
-        """
-        Check player UI for ad markers and update result.
-
-        Looks for:
-        - "Sponsored" text in player (primary indicator)
-        - Ad badge text
-        - Skip button
-        - Ad countdown timer
-        - Ad overlay container
-        - ad-showing CSS class on player
-
-        Args:
-            page: Playwright page object
-            ui_result: Result object to update
-            context: Description of when this check is happening
-        """
         try:
             markers = await page.evaluate('''() => {
                 const player = document.querySelector('.html5-video-player');
@@ -328,20 +308,8 @@ class AdDetector:
             self.logger.warning("UI marker check failed: %s", str(e))
             return None
 
+    # Play video and seek to 25/50/75% to trigger mid-roll ads
     async def _play_and_seek(self, page, ui_result: UIAdDetectionResult):
-        """
-        Play video and seek to different positions to trigger mid-roll ads.
-
-        Strategy:
-        1. Start video playback (triggers pre-roll ads)
-        2. Wait and check for ad markers
-        3. Seek to 25%, 50%, 75% positions (triggers mid-roll ads)
-        4. Check for markers after each seek
-
-        Args:
-            page: Playwright page object
-            ui_result: Result object to update with findings
-        """
         try:
             self.logger.info("Starting playback and seek sequence")
 
@@ -386,16 +354,8 @@ class AdDetector:
         except Exception as e:
             self.logger.warning("Playback/seek failed: %s", str(e))
 
+    # Run full ad detection for a single video (navigate, poll, seek)
     async def detect(self, video_id: str) -> AdDetectionResult:
-        """
-        Detect ads for a YouTube video.
-
-        Args:
-            video_id: YouTube video ID (e.g., "dQw4w9WgXcQ")
-
-        Returns:
-            AdDetectionResult with verdict and detection details
-        """
         url = f"https://www.youtube.com/watch?v={video_id}"
         self.logger.info("Detecting ads for: %s", video_id)
 
@@ -474,19 +434,9 @@ class AdDetector:
             error=error,
         )
 
+    # Detect ads for a list of videos with progress reporting
     async def detect_batch(self, video_ids: list, delay: float = 1.0,
                            progress_callback=None) -> list:
-        """
-        Detect ads for multiple videos.
-
-        Args:
-            video_ids: List of YouTube video IDs
-            delay: Delay between videos in seconds (default 1.0)
-            progress_callback: Optional callback(current, total, result)
-
-        Returns:
-            List of AdDetectionResult objects
-        """
         results = []
 
         for i, video_id in enumerate(video_ids):
@@ -510,19 +460,8 @@ class AdDetector:
         return results
 
 
+# Synchronous wrapper for single-video ad detection
 def detect_ads_sync(video_id: str, headless: bool = False) -> AdDetectionResult:
-    """
-    Synchronous wrapper for ad detection.
-
-    Convenience function for non-async code.
-
-    Args:
-        video_id: YouTube video ID
-        headless: Run browser in headless mode (not recommended)
-
-    Returns:
-        AdDetectionResult with verdict and details
-    """
     async def _detect():
         detector = AdDetector(headless=headless)
         await detector.setup()
@@ -534,8 +473,8 @@ def detect_ads_sync(video_id: str, headless: bool = False) -> AdDetectionResult:
     return asyncio.run(_detect())
 
 
+# Extract the 11-character video ID from a YouTube URL
 def extract_video_id(url: str) -> str:
-    """Extract YouTube video ID from URL."""
     patterns = [
         r'(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})',
         r'^([a-zA-Z0-9_-]{11})$'
@@ -547,13 +486,8 @@ def extract_video_id(url: str) -> str:
     return url
 
 
+# Batch ad detection on video_urls.csv with optional --recheck-no mode
 def main():
-    """
-    Run ad detection on all videos in video_urls.csv.
-
-    Reads the input CSV, extracts video IDs, runs ad detection on each,
-    updates the 'Ads (Yes / No)' column, and saves detailed results.
-    """
     # Get base directory
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -578,21 +512,37 @@ def main():
         print("ERROR: 'url' column not found in CSV")
         sys.exit(1)
 
-    # Determine which videos need processing (skip already-processed ones)
-    ads_column = df.get('Ads (Yes / No)', pd.Series([''] * len(df)))
+    # Parse CLI arguments for recheck mode
+    parser = argparse.ArgumentParser(description='Detect ads on YouTube videos')
+    parser.add_argument('--recheck-no', action='store_true',
+                        help='Re-check only videos where ad_status is No')
+    args = parser.parse_args()
+
+    # Determine which videos need processing
+    ads_column = df.get('ad_status', pd.Series([''] * len(df)))
     videos_to_process = []
     video_indices = []
 
-    for i, (url, existing_ad) in enumerate(zip(df['url'], ads_column)):
-        existing_str = str(existing_ad).strip().lower()
-        if existing_str not in ['yes', 'no']:
-            videos_to_process.append(extract_video_id(url))
-            video_indices.append(i)
+    if args.recheck_no:
+        # Re-check mode: only process videos currently marked as "No"
+        for i, (url, existing_ad) in enumerate(zip(df['url'], ads_column)):
+            if str(existing_ad).strip().lower() == 'no':
+                videos_to_process.append(extract_video_id(url))
+                video_indices.append(i)
+    else:
+        # Default mode: process videos with no ad_status yet
+        for i, (url, existing_ad) in enumerate(zip(df['url'], ads_column)):
+            existing_str = str(existing_ad).strip().lower()
+            if existing_str not in ['yes', 'no']:
+                videos_to_process.append(extract_video_id(url))
+                video_indices.append(i)
 
     skipped = len(df) - len(videos_to_process)
     print(f"Found {len(df)} total videos")
+    if args.recheck_no:
+        print(f"Re-check mode: processing videos with ad_status = No")
     if skipped > 0:
-        print(f"Skipping {skipped} already-processed videos")
+        print(f"Skipping {skipped} videos")
     print(f"Processing {len(videos_to_process)} videos")
 
     if not videos_to_process:
@@ -628,12 +578,12 @@ def main():
     results_map = {r.video_id: r for r in results}
 
     # Update only the processed videos, preserve existing values
-    if 'Ads (Yes / No)' not in df.columns:
-        df['Ads (Yes / No)'] = ''
+    if 'ad_status' not in df.columns:
+        df['ad_status'] = ''
 
     for idx, video_id in zip(video_indices, videos_to_process):
         if video_id in results_map:
-            df.at[idx, 'Ads (Yes / No)'] = 'Yes' if results_map[video_id].verdict else 'No'
+            df.at[idx, 'ad_status'] = 'Yes' if results_map[video_id].verdict else 'No'
 
     # Save updated CSV back to input
     df.to_csv(input_csv, index=False)
@@ -661,8 +611,8 @@ def main():
 
 
 if __name__ == "__main__":
-    # If a video ID is provided as argument, run single detection (legacy behavior)
-    if len(sys.argv) >= 2:
+    # Single video mode: pass a video ID as argument (not a flag)
+    if len(sys.argv) == 2 and not sys.argv[1].startswith('--'):
         video_id = sys.argv[1]
         print(f"Detecting ads for video: {video_id}")
         print("(This requires a visible browser window)")
@@ -684,5 +634,5 @@ if __name__ == "__main__":
         if result.error:
             print(f"Error: {result.error}")
     else:
-        # Run batch processing on video_urls.csv
+        # Batch processing on video_urls.csv (supports --recheck-no flag)
         main()
