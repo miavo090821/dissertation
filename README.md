@@ -1,6 +1,7 @@
-# Dissertation
+# dissertation
 Investigating YouTube Self-censorship practices
-A computational audit of YouTube’s algorithmic moderation, monetisation, and creator self-censorship.
+
+A computational audit of YouTube's algorithmic moderation, monetisation, and creator self-censorship.
 
 ## Table of Contents
 1. [Research Questions](#1-research-questions)
@@ -21,11 +22,9 @@ A computational audit of YouTube’s algorithmic moderation, monetisation, and c
 
 | RQ | Question | Analysis Step |
 |----|----------|---------------|
-| **RQ1** | How does the monetisation process influence creators’ language, tone, and audience engagement? | Step 3: Sensitivity Analysis |
-| **RQ2** | How do these linguistic and monetisation patterns reflect public and creator perceptions of YouTube’s demonetisation policies?
- | Step 4: Comments Perception |
-| **RQ3** | To what extent do demonetisation practices occur within the sampled channel(s), and how consistently are they applied?
- | Step 5: Algospeak Detection |
+| **RQ1** | How does sensitive content correlate with monetisation status? | Step 3: Sensitivity Analysis |
+| **RQ2** | How do viewers perceive creator speech alteration? | Step 4: Comments Perception |
+| **RQ3** | What algospeak substitutions do creators use? | Step 5: Algospeak Detection |
 
 ---
 
@@ -165,7 +164,7 @@ python main.py --steps 3 6 7
 # Archive previous output before running
 python main.py --archive
 
-# Skip already extracted videos in Step 2
+# Skip already-processed videos in Steps 2 and 5
 python main.py --skip-existing
 ```
 
@@ -255,6 +254,26 @@ Step 1 produces two outputs:
 ### Implications for Interpretation
 
 This methodological approach means the study observes *ad delivery at time of measurement* rather than creator monetisation status. Following YouTube's 2020 policy change, ad presence indicates that the video is serving advertisements but does not confirm whether revenue flows to the creator. The study therefore examines associations between transcript language patterns and ad presence, interpreted within the context that ad presence is a necessary but not sufficient condition for creator monetisation.
+
+### Limitations
+
+**Geographic Variation (Critical)**
+
+Ad delivery varies significantly by geographic region. YouTube serves different advertisements (or no advertisements) based on:
+
+- **Viewer location** - The country/region where the detection is run
+- **Regional advertiser demand** - Some markets have fewer advertisers willing to pay for ad placements
+- **Regional monetisation policies** - YouTube's monetisation thresholds and policies differ by country
+
+**Example:** A video that shows ads when viewed from the UK may show no ads when viewed from Vietnam, due to differences in regional advertiser demand and monetisation rates.
+
+**Implication for this study:** All ad detection observations in this study were conducted from a single geographic location (UK). Results may not generalise to other regions. Researchers replicating this study in different countries may observe different ad presence patterns for the same videos.
+
+**Other Limitations:**
+
+- **Temporal variation** - Ad status can change over time as advertisers adjust campaigns
+- **Probabilistic ad serving** - YouTube does not serve ads on every view; multiple observations increase confidence
+- **User profile effects** - Even in incognito mode, IP-based targeting may influence ad delivery
 
 ### Manual Verification (Validation)
 
@@ -385,7 +404,7 @@ Manual classification provides ground truth validation for the automated detecti
    # Full pipeline (ad detection + extraction + analysis)
    python main.py
 
-   # Or skip already processed videos
+   # Or skip already-processed videos (Steps 2 and 5)
    python main.py --skip-existing
    ```
 3. **Archive previous output before re-running** (optional):
