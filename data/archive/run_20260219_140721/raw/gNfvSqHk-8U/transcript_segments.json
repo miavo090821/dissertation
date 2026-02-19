@@ -1,0 +1,7277 @@
+[
+  {
+    "text": "hello everyone and welcome back to the",
+    "start": 0.08,
+    "duration": 3.52
+  },
+  {
+    "text": "probably cancelled podcast in",
+    "start": 1.88,
+    "duration": 3.479
+  },
+  {
+    "text": "association with the midwestern marks",
+    "start": 3.6,
+    "duration": 3.96
+  },
+  {
+    "text": "Institute my name is Bridget and I am",
+    "start": 5.359,
+    "duration": 4.721
+  },
+  {
+    "text": "your host and today I am back again with",
+    "start": 7.56,
+    "duration": 5.48
+  },
+  {
+    "text": "friend of the Pod John podes he's an",
+    "start": 10.08,
+    "duration": 4.16
+  },
+  {
+    "text": "author a",
+    "start": 13.04,
+    "duration": 3.48
+  },
+  {
+    "text": "documentarian and is known for his books",
+    "start": 14.24,
+    "duration": 5.16
+  },
+  {
+    "text": "including drugs As Weapons against us as",
+    "start": 16.52,
+    "duration": 5.56
+  },
+  {
+    "text": "well as the FBI's war on Tupac Shakur",
+    "start": 19.4,
+    "duration": 5.08
+  },
+  {
+    "text": "and black leaders he's been on the",
+    "start": 22.08,
+    "duration": 4.279
+  },
+  {
+    "text": "podcast a few times in the past to talk",
+    "start": 24.48,
+    "duration": 3.559
+  },
+  {
+    "text": "about his work exposing the US",
+    "start": 26.359,
+    "duration": 4.521
+  },
+  {
+    "text": "government's involvement with coel Pro",
+    "start": 28.039,
+    "duration": 5.561
+  },
+  {
+    "text": "as well as their dabbling in biological",
+    "start": 30.88,
+    "duration": 5.64
+  },
+  {
+    "text": "warfare by pushing drugs on various",
+    "start": 33.6,
+    "duration": 5.56
+  },
+  {
+    "text": "segments of the population and today he",
+    "start": 36.52,
+    "duration": 4.84
+  },
+  {
+    "text": "is back to talk about his newest",
+    "start": 39.16,
+    "duration": 6.04
+  },
+  {
+    "text": "documentary titled CIA drugs R Us which",
+    "start": 41.36,
+    "duration": 6.56
+  },
+  {
+    "text": "is a sequel to his previous documentary",
+    "start": 45.2,
+    "duration": 5.48
+  },
+  {
+    "text": "drugs As Weapons against us so I'm super",
+    "start": 47.92,
+    "duration": 4.76
+  },
+  {
+    "text": "happy to have you back John how are you",
+    "start": 50.68,
+    "duration": 4.76
+  },
+  {
+    "text": "doing good thanks for having me on again",
+    "start": 52.68,
+    "duration": 6.08
+  },
+  {
+    "text": "Bridget good yeah always happy to have",
+    "start": 55.44,
+    "duration": 6.24
+  },
+  {
+    "text": "you uh I watched your most recent",
+    "start": 58.76,
+    "duration": 5.16
+  },
+  {
+    "text": "documentary and it was super super great",
+    "start": 61.68,
+    "duration": 4.479
+  },
+  {
+    "text": "you added on a lot of new information",
+    "start": 63.92,
+    "duration": 5.08
+  },
+  {
+    "text": "that hadn't been previously explored",
+    "start": 66.159,
+    "duration": 4.561
+  },
+  {
+    "text": "before in your previous",
+    "start": 69.0,
+    "duration": 3.52
+  },
+  {
+    "text": "works all",
+    "start": 70.72,
+    "duration": 5.84
+  },
+  {
+    "text": "about government influence and how",
+    "start": 72.52,
+    "duration": 5.599
+  },
+  {
+    "text": "they're really messing us up with these",
+    "start": 76.56,
+    "duration": 4.12
+  },
+  {
+    "text": "drugs so I'm excited to have you go even",
+    "start": 78.119,
+    "duration": 5.881
+  },
+  {
+    "text": "deeper into this subject uh during this",
+    "start": 80.68,
+    "duration": 6.88
+  },
+  {
+    "text": "interview today so just to start because",
+    "start": 84.0,
+    "duration": 6.0
+  },
+  {
+    "text": "some of my listeners have heard your",
+    "start": 87.56,
+    "duration": 4.4
+  },
+  {
+    "text": "previous episodes that you were on which",
+    "start": 90.0,
+    "duration": 3.399
+  },
+  {
+    "text": "I'll I'll link in the show notes so",
+    "start": 91.96,
+    "duration": 3.799
+  },
+  {
+    "text": "people can find those easily but for",
+    "start": 93.399,
+    "duration": 4.641
+  },
+  {
+    "text": "those who are new and new to your work",
+    "start": 95.759,
+    "duration": 5.561
+  },
+  {
+    "text": "can you just explain uh like an overview",
+    "start": 98.04,
+    "duration": 5.64
+  },
+  {
+    "text": "of your research and what you've",
+    "start": 101.32,
+    "duration": 6.72
+  },
+  {
+    "text": "dedicated your life to doing sure so my",
+    "start": 103.68,
+    "duration": 6.96
+  },
+  {
+    "text": "day job is as a psychotherapist and I",
+    "start": 108.04,
+    "duration": 6.48
+  },
+  {
+    "text": "started out uh 1989 in Baltimore city",
+    "start": 110.64,
+    "duration": 7.159
+  },
+  {
+    "text": "after getting a psychology degree",
+    "start": 114.52,
+    "duration": 5.959
+  },
+  {
+    "text": "started out in addictions counseling I I",
+    "start": 117.799,
+    "duration": 4.401
+  },
+  {
+    "text": "further did addictions counseling over",
+    "start": 120.479,
+    "duration": 5.24
+  },
+  {
+    "text": "the next say 10 years in Washington DC",
+    "start": 122.2,
+    "duration": 7.8
+  },
+  {
+    "text": "and New York City and then started uh",
+    "start": 125.719,
+    "duration": 6.081
+  },
+  {
+    "text": "after graduate school in New York I",
+    "start": 130.0,
+    "duration": 4.56
+  },
+  {
+    "text": "started transitioning more to uh mental",
+    "start": 131.8,
+    "duration": 4.519
+  },
+  {
+    "text": "health counseling along with addictions",
+    "start": 134.56,
+    "duration": 4.12
+  },
+  {
+    "text": "counseling and for the last 10 years",
+    "start": 136.319,
+    "duration": 5.481
+  },
+  {
+    "text": "I've been um more of a trauma therapist",
+    "start": 138.68,
+    "duration": 5.04
+  },
+  {
+    "text": "uh most exclusively in the last five",
+    "start": 141.8,
+    "duration": 5.439
+  },
+  {
+    "text": "years as a trauma therapist using EMDR",
+    "start": 143.72,
+    "duration": 6.2
+  },
+  {
+    "text": "iov desensitization reprocessing and",
+    "start": 147.239,
+    "duration": 6.121
+  },
+  {
+    "text": "along the way uh from around 1990",
+    "start": 149.92,
+    "duration": 6.399
+  },
+  {
+    "text": "onwards I was researching the subject of",
+    "start": 153.36,
+    "duration": 5.64
+  },
+  {
+    "text": "this book drugs As Weapons against us um",
+    "start": 156.319,
+    "duration": 4.681
+  },
+  {
+    "text": "I only the CIA war on musicians and",
+    "start": 159.0,
+    "duration": 4.64
+  },
+  {
+    "text": "activists and I only took a tangent from",
+    "start": 161.0,
+    "duration": 5.0
+  },
+  {
+    "text": "that to first publish the book the FBI",
+    "start": 163.64,
+    "duration": 5.519
+  },
+  {
+    "text": "war on txor and black leaders and made a",
+    "start": 166.0,
+    "duration": 4.44
+  },
+  {
+    "text": "film on",
+    "start": 169.159,
+    "duration": 4.281
+  },
+  {
+    "text": "that um and then uh worked then",
+    "start": 170.44,
+    "duration": 5.2
+  },
+  {
+    "text": "published drugs As Weapons against us",
+    "start": 173.44,
+    "duration": 4.12
+  },
+  {
+    "text": "then made a film on that in 2019 I",
+    "start": 175.64,
+    "duration": 4.8
+  },
+  {
+    "text": "published the book in 2015 the film in",
+    "start": 177.56,
+    "duration": 6.8
+  },
+  {
+    "text": "2019 and took a tangent from that to uh",
+    "start": 180.44,
+    "duration": 6.28
+  },
+  {
+    "text": "because of the you know pandemic",
+    "start": 184.36,
+    "duration": 5.28
+  },
+  {
+    "text": "situation I uh put out the film shots",
+    "start": 186.72,
+    "duration": 5.239
+  },
+  {
+    "text": "genics the pandemics and then came back",
+    "start": 189.64,
+    "duration": 4.56
+  },
+  {
+    "text": "to the original subject of I while I was",
+    "start": 191.959,
+    "duration": 4.28
+  },
+  {
+    "text": "filming that I actually had originally",
+    "start": 194.2,
+    "duration": 5.0
+  },
+  {
+    "text": "been uh working on the the sequel CIA",
+    "start": 196.239,
+    "duration": 6.321
+  },
+  {
+    "text": "drugs are us um and so I finished the",
+    "start": 199.2,
+    "duration": 8.399
+  },
+  {
+    "text": "sequel after that and after you know uh",
+    "start": 202.56,
+    "duration": 6.8
+  },
+  {
+    "text": "the first film that came out with the",
+    "start": 207.599,
+    "duration": 2.681
+  },
+  {
+    "text": "2019",
+    "start": 209.36,
+    "duration": 5.36
+  },
+  {
+    "text": "I came to find uh Tom O'Neal a author um",
+    "start": 210.28,
+    "duration": 7.2
+  },
+  {
+    "text": "award-winning author had uh published a",
+    "start": 214.72,
+    "duration": 6.12
+  },
+  {
+    "text": "book on the Manson family and found that",
+    "start": 217.48,
+    "duration": 6.679
+  },
+  {
+    "text": "um this CIA basically used project chaos",
+    "start": 220.84,
+    "duration": 8.24
+  },
+  {
+    "text": "and MK Ultra uh to create Manson and his",
+    "start": 224.159,
+    "duration": 7.681
+  },
+  {
+    "text": "family and I show all the evidence of",
+    "start": 229.08,
+    "duration": 4.32
+  },
+  {
+    "text": "that I have him talking in the film and",
+    "start": 231.84,
+    "duration": 3.84
+  },
+  {
+    "text": "showing the evidence of that in the film",
+    "start": 233.4,
+    "duration": 4.96
+  },
+  {
+    "text": "of how he uh he basically found the",
+    "start": 235.68,
+    "duration": 4.479
+  },
+  {
+    "text": "letters that went back and forth between",
+    "start": 238.36,
+    "duration": 5.48
+  },
+  {
+    "text": "the CIA um director CIA project MK",
+    "start": 240.159,
+    "duration": 7.321
+  },
+  {
+    "text": "ulture director Dr Sydney gotle and the",
+    "start": 243.84,
+    "duration": 7.52
+  },
+  {
+    "text": "doc Dr Lewis jolian West who was in the",
+    "start": 247.48,
+    "duration": 6.72
+  },
+  {
+    "text": "H asbery free medical clinic at an",
+    "start": 251.36,
+    "duration": 4.839
+  },
+  {
+    "text": "office there while Manson and his family",
+    "start": 254.2,
+    "duration": 4.92
+  },
+  {
+    "text": "were visiting there regularly and he was",
+    "start": 256.199,
+    "duration": 5.16
+  },
+  {
+    "text": "giving them according to a CIA",
+    "start": 259.12,
+    "duration": 5.76
+  },
+  {
+    "text": "whistleblower he was giving them uh LSD",
+    "start": 261.359,
+    "duration": 7.241
+  },
+  {
+    "text": "regularly and um and using what he",
+    "start": 264.88,
+    "duration": 5.56
+  },
+  {
+    "text": "professed in his own documents to be",
+    "start": 268.6,
+    "duration": 6.72
+  },
+  {
+    "text": "hypnosis and drugs to um to to gain to",
+    "start": 270.44,
+    "duration": 6.8
+  },
+  {
+    "text": "gain control of their minds to turn",
+    "start": 275.32,
+    "duration": 5.08
+  },
+  {
+    "text": "these young runaway women as young as 13",
+    "start": 277.24,
+    "duration": 6.88
+  },
+  {
+    "text": "sadly enough into uh mind controlled you",
+    "start": 280.4,
+    "duration": 6.2
+  },
+  {
+    "text": "know like assassins which is what they",
+    "start": 284.12,
+    "duration": 4.68
+  },
+  {
+    "text": "you know end up doing is committing",
+    "start": 286.6,
+    "duration": 6.12
+  },
+  {
+    "text": "murder so um and so this was you know a",
+    "start": 288.8,
+    "duration": 6.44
+  },
+  {
+    "text": "CIA project and that's a large part of",
+    "start": 292.72,
+    "duration": 5.479
+  },
+  {
+    "text": "of the film in the middle of the film um",
+    "start": 295.24,
+    "duration": 4.88
+  },
+  {
+    "text": "and I show how that was used used also",
+    "start": 298.199,
+    "duration": 3.321
+  },
+  {
+    "text": "against the Black Panthers because",
+    "start": 300.12,
+    "duration": 3.84
+  },
+  {
+    "text": "originally these murders were to try to",
+    "start": 301.52,
+    "duration": 5.36
+  },
+  {
+    "text": "frame the Black Panthers because the",
+    "start": 303.96,
+    "duration": 6.32
+  },
+  {
+    "text": "murders took place in a key part of um",
+    "start": 306.88,
+    "duration": 6.24
+  },
+  {
+    "text": "of Hollywood uh at a woman named Sharon",
+    "start": 310.28,
+    "duration": 6.479
+  },
+  {
+    "text": "Tate's house who was a it was a top",
+    "start": 313.12,
+    "duration": 6.4
+  },
+  {
+    "text": "actress at the time Roman pansy's wife",
+    "start": 316.759,
+    "duration": 5.72
+  },
+  {
+    "text": "she also was an activist organizer and",
+    "start": 319.52,
+    "duration": 5.88
+  },
+  {
+    "text": "had loads of top uh actors meeting at",
+    "start": 322.479,
+    "duration": 6.201
+  },
+  {
+    "text": "her house like Donald suwin Jane Fonda",
+    "start": 325.4,
+    "duration": 5.44
+  },
+  {
+    "text": "and many others who considered them who",
+    "start": 328.68,
+    "duration": 4.239
+  },
+  {
+    "text": "called themselves the white panthers in",
+    "start": 330.84,
+    "duration": 5.32
+  },
+  {
+    "text": "their um you solidarity with the Black",
+    "start": 332.919,
+    "duration": 4.681
+  },
+  {
+    "text": "Panthers and support of the Black",
+    "start": 336.16,
+    "duration": 3.24
+  },
+  {
+    "text": "Panthers they also were very anti-war",
+    "start": 337.6,
+    "duration": 3.8
+  },
+  {
+    "text": "and doing some great anti-war activism",
+    "start": 339.4,
+    "duration": 4.76
+  },
+  {
+    "text": "there and so the murders at that house",
+    "start": 341.4,
+    "duration": 5.32
+  },
+  {
+    "text": "was to scare away that all these actors",
+    "start": 344.16,
+    "duration": 4.44
+  },
+  {
+    "text": "from that that continued activism as",
+    "start": 346.72,
+    "duration": 3.919
+  },
+  {
+    "text": "well as killing the one of the top you",
+    "start": 348.6,
+    "duration": 4.4
+  },
+  {
+    "text": "know activists uh actor organizers",
+    "start": 350.639,
+    "duration": 4.68
+  },
+  {
+    "text": "Sharon Tate along with others in the",
+    "start": 353.0,
+    "duration": 7.28
+  },
+  {
+    "text": "house at the time and so um this was you",
+    "start": 355.319,
+    "duration": 7.88
+  },
+  {
+    "text": "know a major new finding I had to put on",
+    "start": 360.28,
+    "duration": 6.56
+  },
+  {
+    "text": "film um I review the uh first film a bit",
+    "start": 363.199,
+    "duration": 7.28
+  },
+  {
+    "text": "in the first part of of my of CI drugs R",
+    "start": 366.84,
+    "duration": 6.199
+  },
+  {
+    "text": "Us because I wanted to put in a little",
+    "start": 370.479,
+    "duration": 5.361
+  },
+  {
+    "text": "more of a comic light also and I wanted",
+    "start": 373.039,
+    "duration": 5.56
+  },
+  {
+    "text": "to to show the New Evidence I found",
+    "start": 375.84,
+    "duration": 6.16
+  },
+  {
+    "text": "about uh the murder of John Lenin you",
+    "start": 378.599,
+    "duration": 6.281
+  },
+  {
+    "text": "know the uh manipulation of John lennin",
+    "start": 382.0,
+    "duration": 5.4
+  },
+  {
+    "text": "and and his murder along with the",
+    "start": 384.88,
+    "duration": 5.2
+  },
+  {
+    "text": "manipulation of Kurt Cobain and I found",
+    "start": 387.4,
+    "duration": 6.28
+  },
+  {
+    "text": "was his murder and um and so that's you",
+    "start": 390.08,
+    "duration": 6.28
+  },
+  {
+    "text": "know rounds out the uh kind of",
+    "start": 393.68,
+    "duration": 4.76
+  },
+  {
+    "text": "encapsulation of that of the original",
+    "start": 396.36,
+    "duration": 5.88
+  },
+  {
+    "text": "film but um then the last third of this",
+    "start": 398.44,
+    "duration": 8.92
+  },
+  {
+    "text": "film I um I basically uh had uncovered",
+    "start": 402.24,
+    "duration": 8.88
+  },
+  {
+    "text": "the fact that um the the subject of the",
+    "start": 407.36,
+    "duration": 7.399
+  },
+  {
+    "text": "keepers uh award-winning Emmy you know",
+    "start": 411.12,
+    "duration": 5.72
+  },
+  {
+    "text": "War nominated I'm sorry documentary",
+    "start": 414.759,
+    "duration": 3.401
+  },
+  {
+    "text": "series on",
+    "start": 416.84,
+    "duration": 3.52
+  },
+  {
+    "text": "Netflix um",
+    "start": 418.16,
+    "duration": 4.96
+  },
+  {
+    "text": "actually he worked I mean he worked and",
+    "start": 420.36,
+    "duration": 5.36
+  },
+  {
+    "text": "lived in a neighborhood adjacent to mine",
+    "start": 423.12,
+    "duration": 5.96
+  },
+  {
+    "text": "literally within five miles of me and uh",
+    "start": 425.72,
+    "duration": 6.64
+  },
+  {
+    "text": "Gemma Hoskins uh the star of the of the",
+    "start": 429.08,
+    "duration": 6.48
+  },
+  {
+    "text": "keepers um lived in my lives in my",
+    "start": 432.36,
+    "duration": 4.76
+  },
+  {
+    "text": "neighborhood and so I basically just",
+    "start": 435.56,
+    "duration": 4.359
+  },
+  {
+    "text": "sent her information about why I",
+    "start": 437.12,
+    "duration": 5.919
+  },
+  {
+    "text": "believed that what uh this was all about",
+    "start": 439.919,
+    "duration": 5.801
+  },
+  {
+    "text": "was something was connection to M Ci's",
+    "start": 443.039,
+    "duration": 5.84
+  },
+  {
+    "text": "MK ulture program and uh sent her a",
+    "start": 445.72,
+    "duration": 5.52
+  },
+  {
+    "text": "bunch of docu doents and papers and so",
+    "start": 448.879,
+    "duration": 4.88
+  },
+  {
+    "text": "she reinterviewed a lot of the victims",
+    "start": 451.24,
+    "duration": 5.6
+  },
+  {
+    "text": "that were in the keepers and for a",
+    "start": 453.759,
+    "duration": 5.761
+  },
+  {
+    "text": "podcast she had and found that they were",
+    "start": 456.84,
+    "duration": 4.68
+  },
+  {
+    "text": "saying that yes we think we were",
+    "start": 459.52,
+    "duration": 5.04
+  },
+  {
+    "text": "programmed we thought that he hyp Joseph",
+    "start": 461.52,
+    "duration": 6.44
+  },
+  {
+    "text": "mascal hypnotized us he um you know he",
+    "start": 464.56,
+    "duration": 7.28
+  },
+  {
+    "text": "gave us drugs and we were worried that",
+    "start": 467.96,
+    "duration": 6.519
+  },
+  {
+    "text": "we were had you know might have killed",
+    "start": 471.84,
+    "duration": 5.44
+  },
+  {
+    "text": "someone you one woman said uh other",
+    "start": 474.479,
+    "duration": 5.12
+  },
+  {
+    "text": "women said that they felt like uh they",
+    "start": 477.28,
+    "duration": 3.919
+  },
+  {
+    "text": "they never touched a gun before and all",
+    "start": 479.599,
+    "duration": 3.32
+  },
+  {
+    "text": "of a sudden they were marksmen and",
+    "start": 481.199,
+    "duration": 5.28
+  },
+  {
+    "text": "shooting and you know presented a lot of",
+    "start": 482.919,
+    "duration": 7.96
+  },
+  {
+    "text": "other evidence that they in fact were uh",
+    "start": 486.479,
+    "duration": 7.4
+  },
+  {
+    "text": "possibly hypnotized and when drugs were",
+    "start": 490.879,
+    "duration": 5.201
+  },
+  {
+    "text": "used on them along with the trauma they",
+    "start": 493.879,
+    "duration": 5.16
+  },
+  {
+    "text": "were created into dissociative um kind",
+    "start": 496.08,
+    "duration": 4.6
+  },
+  {
+    "text": "of assets for the",
+    "start": 499.039,
+    "duration": 6.28
+  },
+  {
+    "text": "CIA and so um I personally also counsel",
+    "start": 500.68,
+    "duration": 6.4
+  },
+  {
+    "text": "someone who was a victim of Father",
+    "start": 505.319,
+    "duration": 4.28
+  },
+  {
+    "text": "Joseph mascal and I've counseled others",
+    "start": 507.08,
+    "duration": 4.399
+  },
+  {
+    "text": "have been victims of this church sex",
+    "start": 509.599,
+    "duration": 4.721
+  },
+  {
+    "text": "abuse Scandal so I just have some inside",
+    "start": 511.479,
+    "duration": 5.321
+  },
+  {
+    "text": "knowledge on some of this stuff and um",
+    "start": 514.32,
+    "duration": 4.839
+  },
+  {
+    "text": "some you know expertise knowledge one",
+    "start": 516.8,
+    "duration": 4.52
+  },
+  {
+    "text": "dissociation and dissociative identity",
+    "start": 519.159,
+    "duration": 3.961
+  },
+  {
+    "text": "disorder dissociative disorder and for",
+    "start": 521.32,
+    "duration": 4.28
+  },
+  {
+    "text": "those who don't know uh dissociative",
+    "start": 523.12,
+    "duration": 6.159
+  },
+  {
+    "text": "identity disorder is the uh new term new",
+    "start": 525.6,
+    "duration": 6.359
+  },
+  {
+    "text": "kind of a name for what used to be",
+    "start": 529.279,
+    "duration": 5.881
+  },
+  {
+    "text": "called multiple personality disorder and",
+    "start": 531.959,
+    "duration": 7.681
+  },
+  {
+    "text": "um so trauma um Can itself split with",
+    "start": 535.16,
+    "duration": 7.88
+  },
+  {
+    "text": "the mind and cause split personality but",
+    "start": 539.64,
+    "duration": 5.439
+  },
+  {
+    "text": "that kind of trauma plus hypnosis and",
+    "start": 543.04,
+    "duration": 4.359
+  },
+  {
+    "text": "drugs can cause uh you know someone to",
+    "start": 545.079,
+    "duration": 5.081
+  },
+  {
+    "text": "be controlled in that",
+    "start": 547.399,
+    "duration": 5.921
+  },
+  {
+    "text": "way it's so crazy and I want to get more",
+    "start": 550.16,
+    "duration": 5.679
+  },
+  {
+    "text": "into the the keepers related stuff",
+    "start": 553.32,
+    "duration": 5.4
+  },
+  {
+    "text": "later but going back to the subject of",
+    "start": 555.839,
+    "duration": 6.481
+  },
+  {
+    "text": "the 1960s it's so interesting because I",
+    "start": 558.72,
+    "duration": 6.799
+  },
+  {
+    "text": "always growing up my parents listen to",
+    "start": 562.32,
+    "duration": 4.959
+  },
+  {
+    "text": "the music that came out of the 60s some",
+    "start": 565.519,
+    "duration": 4.681
+  },
+  {
+    "text": "really amazing music and",
+    "start": 567.279,
+    "duration": 6.0
+  },
+  {
+    "text": "I like a lot of it I love the fashion I",
+    "start": 570.2,
+    "duration": 5.68
+  },
+  {
+    "text": "I always thought like what a crazy time",
+    "start": 573.279,
+    "duration": 6.321
+  },
+  {
+    "text": "you like what a crazy time and how how",
+    "start": 575.88,
+    "duration": 5.88
+  },
+  {
+    "text": "was it possible that that even came out",
+    "start": 579.6,
+    "duration": 4.919
+  },
+  {
+    "text": "of nowhere and happened I always looked",
+    "start": 581.76,
+    "duration": 5.4
+  },
+  {
+    "text": "at it like that like what an anomaly",
+    "start": 584.519,
+    "duration": 5.88
+  },
+  {
+    "text": "bizarre like Fantastical",
+    "start": 587.16,
+    "duration": 5.4
+  },
+  {
+    "text": "time and",
+    "start": 590.399,
+    "duration": 3.801
+  },
+  {
+    "text": "uh",
+    "start": 592.56,
+    "duration": 5.12
+  },
+  {
+    "text": "then in my 20s when I realized when I",
+    "start": 594.2,
+    "duration": 6.28
+  },
+  {
+    "text": "learned about how the CIA had basically",
+    "start": 597.68,
+    "duration": 5.56
+  },
+  {
+    "text": "created that subculture and kind of",
+    "start": 600.48,
+    "duration": 5.96
+  },
+  {
+    "text": "pushed it onto the masses and um pushed",
+    "start": 603.24,
+    "duration": 6.12
+  },
+  {
+    "text": "drugs onto the masses especially the",
+    "start": 606.44,
+    "duration": 5.48
+  },
+  {
+    "text": "youth particularly the the politically",
+    "start": 609.36,
+    "duration": 6.24
+  },
+  {
+    "text": "aware youth uh during the Vietnam",
+    "start": 611.92,
+    "duration": 7.44
+  },
+  {
+    "text": "War I was like oh [ __ ] that's how",
+    "start": 615.6,
+    "duration": 6.2
+  },
+  {
+    "text": "something that Fantastical and crazy can",
+    "start": 619.36,
+    "duration": 5.64
+  },
+  {
+    "text": "come about is because it was largely",
+    "start": 621.8,
+    "duration": 4.24
+  },
+  {
+    "text": "socially",
+    "start": 625.0,
+    "duration": 3.64
+  },
+  {
+    "text": "engineered right and when I bring this",
+    "start": 626.04,
+    "duration": 5.039
+  },
+  {
+    "text": "up to people on the left they have a",
+    "start": 628.64,
+    "duration": 4.24
+  },
+  {
+    "text": "huge resistance",
+    "start": 631.079,
+    "duration": 5.241
+  },
+  {
+    "text": "towards this area of study you know your",
+    "start": 632.88,
+    "duration": 5.88
+  },
+  {
+    "text": "your particular expertise there's a huge",
+    "start": 636.32,
+    "duration": 5.24
+  },
+  {
+    "text": "push back because people are like no",
+    "start": 638.76,
+    "duration": 4.639
+  },
+  {
+    "text": "these drug they take the drugs really",
+    "start": 641.56,
+    "duration": 4.16
+  },
+  {
+    "text": "personally and like the personal",
+    "start": 643.399,
+    "duration": 3.481
+  },
+  {
+    "text": "experiences they've had through",
+    "start": 645.72,
+    "duration": 4.0
+  },
+  {
+    "text": "psychedelics and",
+    "start": 646.88,
+    "duration": 6.28
+  },
+  {
+    "text": "um just something that appears to be",
+    "start": 649.72,
+    "duration": 5.96
+  },
+  {
+    "text": "organic I think a lot of people cannot",
+    "start": 653.16,
+    "duration": 5.28
+  },
+  {
+    "text": "fathom how much of our culture is",
+    "start": 655.68,
+    "duration": 5.12
+  },
+  {
+    "text": "inorganic and is socially",
+    "start": 658.44,
+    "duration": 4.32
+  },
+  {
+    "text": "engineered so could you talk a little",
+    "start": 660.8,
+    "duration": 5.039
+  },
+  {
+    "text": "bit about the amount of",
+    "start": 662.76,
+    "duration": 6.6
+  },
+  {
+    "text": "experimentation that was going on um",
+    "start": 665.839,
+    "duration": 7.081
+  },
+  {
+    "text": "particularly in that era and why like",
+    "start": 669.36,
+    "duration": 6.0
+  },
+  {
+    "text": "why why did that why were they pushing",
+    "start": 672.92,
+    "duration": 6.52
+  },
+  {
+    "text": "this on us at that time right so this so",
+    "start": 675.36,
+    "duration": 6.719
+  },
+  {
+    "text": "my film is my film in the previous film",
+    "start": 679.44,
+    "duration": 6.639
+  },
+  {
+    "text": "the prequel uh were was the majority was",
+    "start": 682.079,
+    "duration": 7.88
+  },
+  {
+    "text": "about you know operation MK Ultra now um",
+    "start": 686.079,
+    "duration": 6.841
+  },
+  {
+    "text": "the oligarchs and drugs started way back",
+    "start": 689.959,
+    "duration": 5.761
+  },
+  {
+    "text": "when with the uh wealthiest families",
+    "start": 692.92,
+    "duration": 4.159
+  },
+  {
+    "text": "being involved with the British East",
+    "start": 695.72,
+    "duration": 3.359
+  },
+  {
+    "text": "India Company the British company",
+    "start": 697.079,
+    "duration": 5.721
+  },
+  {
+    "text": "involved in you know uh in opium trading",
+    "start": 699.079,
+    "duration": 6.2
+  },
+  {
+    "text": "and they I tell in the beginning of the",
+    "start": 702.8,
+    "duration": 4.36
+  },
+  {
+    "text": "film how they founded the Ivy League",
+    "start": 705.279,
+    "duration": 5.081
+  },
+  {
+    "text": "colleges with with their opium fortunes",
+    "start": 707.16,
+    "duration": 6.64
+  },
+  {
+    "text": "and then um you bring it up to the",
+    "start": 710.36,
+    "duration": 5.96
+  },
+  {
+    "text": "current times like after World War II",
+    "start": 713.8,
+    "duration": 3.88
+  },
+  {
+    "text": "and and they brought in from World War",
+    "start": 716.32,
+    "duration": 2.92
+  },
+  {
+    "text": "II they brought in these German science",
+    "start": 717.68,
+    "duration": 3.88
+  },
+  {
+    "text": "SST to help out with",
+    "start": 719.24,
+    "duration": 6.039
+  },
+  {
+    "text": "mkra and uh in 1953 they brought a bunch",
+    "start": 721.56,
+    "duration": 6.48
+  },
+  {
+    "text": "of projects that they were working on uh",
+    "start": 725.279,
+    "duration": 4.521
+  },
+  {
+    "text": "some of them brought in from the you",
+    "start": 728.04,
+    "duration": 5.2
+  },
+  {
+    "text": "know the op the experiments on um Jewish",
+    "start": 729.8,
+    "duration": 5.96
+  },
+  {
+    "text": "uh and other you know Gypsy and gay and",
+    "start": 733.24,
+    "duration": 5.56
+  },
+  {
+    "text": "all victims and communist victims uh of",
+    "start": 735.76,
+    "duration": 5.8
+  },
+  {
+    "text": "the you know Nazi experiments these Nazi",
+    "start": 738.8,
+    "duration": 4.479
+  },
+  {
+    "text": "scientists had these different",
+    "start": 741.56,
+    "duration": 4.839
+  },
+  {
+    "text": "experiments going on under the CIA U",
+    "start": 743.279,
+    "duration": 5.36
+  },
+  {
+    "text": "umbrella and uh they brought them all",
+    "start": 746.399,
+    "duration": 6.281
+  },
+  {
+    "text": "together in this MK Ultra in 1953 and MK",
+    "start": 748.639,
+    "duration": 8.0
+  },
+  {
+    "text": "Ultra had 1 about 149 actually sub",
+    "start": 752.68,
+    "duration": 9.24
+  },
+  {
+    "text": "projects and so these uh were they were",
+    "start": 756.639,
+    "duration": 7.64
+  },
+  {
+    "text": "using that these sub projects and they",
+    "start": 761.92,
+    "duration": 5.159
+  },
+  {
+    "text": "were funding uh colleges and hospitals",
+    "start": 764.279,
+    "duration": 5.441
+  },
+  {
+    "text": "and prisons around the country um",
+    "start": 767.079,
+    "duration": 4.44
+  },
+  {
+    "text": "through uh a group called the human",
+    "start": 769.72,
+    "duration": 4.0
+  },
+  {
+    "text": "ecology fund and I showed an through an",
+    "start": 771.519,
+    "duration": 4.601
+  },
+  {
+    "text": "anthropology today article about that",
+    "start": 773.72,
+    "duration": 4.679
+  },
+  {
+    "text": "how human ecology fund was this front",
+    "start": 776.12,
+    "duration": 4.959
+  },
+  {
+    "text": "company CH you know channeling this uh",
+    "start": 778.399,
+    "duration": 5.481
+  },
+  {
+    "text": "CIA money through from M MK Ultra into",
+    "start": 781.079,
+    "duration": 5.281
+  },
+  {
+    "text": "all these groups and when when",
+    "start": 783.88,
+    "duration": 4.8
+  },
+  {
+    "text": "Government funding was cut at any point",
+    "start": 786.36,
+    "duration": 4.52
+  },
+  {
+    "text": "the Rockefeller Foundation Ford",
+    "start": 788.68,
+    "duration": 4.44
+  },
+  {
+    "text": "foundation and all them would step in",
+    "start": 790.88,
+    "duration": 4.28
+  },
+  {
+    "text": "the carnegies would step in and and",
+    "start": 793.12,
+    "duration": 2.959
+  },
+  {
+    "text": "provide",
+    "start": 795.16,
+    "duration": 5.4
+  },
+  {
+    "text": "funds but um so these these this money",
+    "start": 796.079,
+    "duration": 7.081
+  },
+  {
+    "text": "going to these colleges went to Harvard",
+    "start": 800.56,
+    "duration": 6.639
+  },
+  {
+    "text": "Stanford John's Hopkins Columbia Etc and",
+    "start": 803.16,
+    "duration": 6.0
+  },
+  {
+    "text": "you know one of the most famous uh",
+    "start": 807.199,
+    "duration": 3.721
+  },
+  {
+    "text": "professors involved in that was Timothy",
+    "start": 809.16,
+    "duration": 3.84
+  },
+  {
+    "text": "ly who was the biggest Pusher of acid",
+    "start": 810.92,
+    "duration": 3.8
+  },
+  {
+    "text": "and Timothy lry in an art in an",
+    "start": 813.0,
+    "duration": 4.24
+  },
+  {
+    "text": "interview later in life admitted that he",
+    "start": 814.72,
+    "duration": 5.4
+  },
+  {
+    "text": "knew he was working for the CIA since",
+    "start": 817.24,
+    "duration": 6.88
+  },
+  {
+    "text": "1962 and so um this MK was trying in",
+    "start": 820.12,
+    "duration": 6.92
+  },
+  {
+    "text": "their own documents say they were using",
+    "start": 824.12,
+    "duration": 4.719
+  },
+  {
+    "text": "drugs for unconventional warfare and we",
+    "start": 827.04,
+    "duration": 4.08
+  },
+  {
+    "text": "think of that as Warfare overseas with",
+    "start": 828.839,
+    "duration": 5.0
+  },
+  {
+    "text": "soldiers and all that but what I found",
+    "start": 831.12,
+    "duration": 4.6
+  },
+  {
+    "text": "is that the best evidence shows that",
+    "start": 833.839,
+    "duration": 4.601
+  },
+  {
+    "text": "they were using it uh against anyone who",
+    "start": 835.72,
+    "duration": 5.76
+  },
+  {
+    "text": "dissented from their racist proar agenda",
+    "start": 838.44,
+    "duration": 5.24
+  },
+  {
+    "text": "and so they're using on American and",
+    "start": 841.48,
+    "duration": 4.64
+  },
+  {
+    "text": "British and other activists you know",
+    "start": 843.68,
+    "duration": 4.88
+  },
+  {
+    "text": "worldwide and you know other Western",
+    "start": 846.12,
+    "duration": 3.839
+  },
+  {
+    "text": "countries activists that were involved",
+    "start": 848.56,
+    "duration": 3.719
+  },
+  {
+    "text": "in more you know that were you know",
+    "start": 849.959,
+    "duration": 4.56
+  },
+  {
+    "text": "involved in sorry anti-war protests and",
+    "start": 852.279,
+    "duration": 4.841
+  },
+  {
+    "text": "racial um you know uh civil rights",
+    "start": 854.519,
+    "duration": 5.32
+  },
+  {
+    "text": "protests and so that's why Paul Robison",
+    "start": 857.12,
+    "duration": 5.12
+  },
+  {
+    "text": "was a victim because he was a great",
+    "start": 859.839,
+    "duration": 5.68
+  },
+  {
+    "text": "civil rights leader um before he was the",
+    "start": 862.24,
+    "duration": 6.48
+  },
+  {
+    "text": "the um target of of MK Ultra sadly",
+    "start": 865.519,
+    "duration": 4.081
+  },
+  {
+    "text": "enough",
+    "start": 868.72,
+    "duration": 4.32
+  },
+  {
+    "text": "brilliant uh lawyer and uh incredible",
+    "start": 869.6,
+    "duration": 6.52
+  },
+  {
+    "text": "singer and you know all that could speak",
+    "start": 873.04,
+    "duration": 5.12
+  },
+  {
+    "text": "20 different languages showed that more",
+    "start": 876.12,
+    "duration": 5.079
+  },
+  {
+    "text": "in my last film in this film I show how",
+    "start": 878.16,
+    "duration": 6.96
+  },
+  {
+    "text": "they they funded uh this this Timothy ly",
+    "start": 881.199,
+    "duration": 6.241
+  },
+  {
+    "text": "he got kicked out of Harvard and he",
+    "start": 885.12,
+    "duration": 3.8
+  },
+  {
+    "text": "brought his other professors working",
+    "start": 887.44,
+    "duration": 5.0
+  },
+  {
+    "text": "with him over to um this Mansion uh the",
+    "start": 888.92,
+    "duration": 6.159
+  },
+  {
+    "text": "milbrook Manion where Peggy and Billy",
+    "start": 892.44,
+    "duration": 5.36
+  },
+  {
+    "text": "Mel and Hitchcock of the uh Mel and",
+    "start": 895.079,
+    "duration": 5.801
+  },
+  {
+    "text": "Hitchcock's own golf oil and melon Bank",
+    "start": 897.8,
+    "duration": 4.959
+  },
+  {
+    "text": "Etc they were some of the wealthiest in",
+    "start": 900.88,
+    "duration": 4.199
+  },
+  {
+    "text": "the world family in the world who had",
+    "start": 902.759,
+    "duration": 5.32
+  },
+  {
+    "text": "major uh you know agents in US",
+    "start": 905.079,
+    "duration": 6.0
+  },
+  {
+    "text": "intelligence um you working for the CIA",
+    "start": 908.079,
+    "duration": 6.721
+  },
+  {
+    "text": "and OSS before that and so they they",
+    "start": 911.079,
+    "duration": 6.641
+  },
+  {
+    "text": "give uh their mansion to liri for",
+    "start": 914.8,
+    "duration": 5.92
+  },
+  {
+    "text": "pennies he lures um great artists and",
+    "start": 917.72,
+    "duration": 4.6
+  },
+  {
+    "text": "writers and other and political",
+    "start": 920.72,
+    "duration": 3.479
+  },
+  {
+    "text": "activists up from New York to this",
+    "start": 922.32,
+    "duration": 4.04
+  },
+  {
+    "text": "constant party meanwhile there's MK",
+    "start": 924.199,
+    "duration": 3.961
+  },
+  {
+    "text": "Ultra scientists just hang just",
+    "start": 926.36,
+    "duration": 3.959
+  },
+  {
+    "text": "stationed there experimenting on the",
+    "start": 928.16,
+    "duration": 4.039
+  },
+  {
+    "text": "people that came to these parties with",
+    "start": 930.319,
+    "duration": 4.2
+  },
+  {
+    "text": "all kinds of super psychedelics and",
+    "start": 932.199,
+    "duration": 5.481
+  },
+  {
+    "text": "different things like that and um and",
+    "start": 934.519,
+    "duration": 6.161
+  },
+  {
+    "text": "and and it it tried to lure a number of",
+    "start": 937.68,
+    "duration": 4.76
+  },
+  {
+    "text": "uh civil rights activists up to those",
+    "start": 940.68,
+    "duration": 4.04
+  },
+  {
+    "text": "parties they did the same thing and",
+    "start": 942.44,
+    "duration": 5.199
+  },
+  {
+    "text": "according to the top psychologist from K",
+    "start": 944.72,
+    "duration": 6.119
+  },
+  {
+    "text": "John gure in a legal testimony he said",
+    "start": 947.639,
+    "duration": 5.12
+  },
+  {
+    "text": "uh he was present at the same kind of",
+    "start": 950.839,
+    "duration": 3.521
+  },
+  {
+    "text": "parties that were happening in in",
+    "start": 952.759,
+    "duration": 5.2
+  },
+  {
+    "text": "Stanford on the west coast and they had",
+    "start": 954.36,
+    "duration": 4.839
+  },
+  {
+    "text": "this group they formed this group the",
+    "start": 957.959,
+    "duration": 3.961
+  },
+  {
+    "text": "Mary pranksters who were uh most many of",
+    "start": 959.199,
+    "duration": 4.241
+  },
+  {
+    "text": "them were Military",
+    "start": 961.92,
+    "duration": 4.76
+  },
+  {
+    "text": "Officers came out and uh had constant",
+    "start": 963.44,
+    "duration": 5.0
+  },
+  {
+    "text": "parties there The Grateful Dead were",
+    "start": 966.68,
+    "duration": 3.519
+  },
+  {
+    "text": "performing for parties they called acid",
+    "start": 968.44,
+    "duration": 3.92
+  },
+  {
+    "text": "tests some people knew they were they",
+    "start": 970.199,
+    "duration": 5.12
+  },
+  {
+    "text": "were taking acid when they uh D you know",
+    "start": 972.36,
+    "duration": 6.52
+  },
+  {
+    "text": "had a cup of punch um they call electri",
+    "start": 975.319,
+    "duration": 6.161
+  },
+  {
+    "text": "covid um and others didn't though many",
+    "start": 978.88,
+    "duration": 4.12
+  },
+  {
+    "text": "that attended their parties didn't know",
+    "start": 981.48,
+    "duration": 3.479
+  },
+  {
+    "text": "they were being dosed and those acid",
+    "start": 983.0,
+    "duration": 4.0
+  },
+  {
+    "text": "tests got larger and larger they became",
+    "start": 984.959,
+    "duration": 4.761
+  },
+  {
+    "text": "the beans and that were kind of made",
+    "start": 987.0,
+    "duration": 5.199
+  },
+  {
+    "text": "popularized by these fake underground",
+    "start": 989.72,
+    "duration": 5.239
+  },
+  {
+    "text": "newspapers around the country that um I",
+    "start": 992.199,
+    "duration": 4.961
+  },
+  {
+    "text": "call as part of an AST Turf campaign",
+    "start": 994.959,
+    "duration": 4.8
+  },
+  {
+    "text": "that's a public relations term for fake",
+    "start": 997.16,
+    "duration": 6.479
+  },
+  {
+    "text": "Grassroots and um and so the parties got",
+    "start": 999.759,
+    "duration": 6.32
+  },
+  {
+    "text": "bigger to be the trips festival and then",
+    "start": 1003.639,
+    "duration": 4.76
+  },
+  {
+    "text": "the um and then to be some of the",
+    "start": 1006.079,
+    "duration": 5.401
+  },
+  {
+    "text": "biggest concerts and um and so these",
+    "start": 1008.399,
+    "duration": 5.44
+  },
+  {
+    "text": "undercover agents CI agents who were",
+    "start": 1011.48,
+    "duration": 3.96
+  },
+  {
+    "text": "present at these concerts all over the",
+    "start": 1013.839,
+    "duration": 5.12
+  },
+  {
+    "text": "country pushing acid pushing speed",
+    "start": 1015.44,
+    "duration": 5.68
+  },
+  {
+    "text": "pushing all kinds of drugs experimenting",
+    "start": 1018.959,
+    "duration": 3.56
+  },
+  {
+    "text": "these drugs on the people that didn't",
+    "start": 1021.12,
+    "duration": 3.4
+  },
+  {
+    "text": "know what they were taking uh Timothy",
+    "start": 1022.519,
+    "duration": 4.8
+  },
+  {
+    "text": "lry was on stage at these beings pushing",
+    "start": 1024.52,
+    "duration": 3.799
+  },
+  {
+    "text": "you know the",
+    "start": 1027.319,
+    "duration": 3.401
+  },
+  {
+    "text": "drugs to people think pretending like",
+    "start": 1028.319,
+    "duration": 5.12
+  },
+  {
+    "text": "it's uh mind expanding they had you know",
+    "start": 1030.72,
+    "duration": 5.4
+  },
+  {
+    "text": "cooperating journalists that that used",
+    "start": 1033.439,
+    "duration": 5.201
+  },
+  {
+    "text": "you know that wrote books that the CI",
+    "start": 1036.12,
+    "duration": 4.959
+  },
+  {
+    "text": "basically put out but where you know the",
+    "start": 1038.64,
+    "duration": 3.919
+  },
+  {
+    "text": "CI also owns a lot of publishing",
+    "start": 1041.079,
+    "duration": 3.681
+  },
+  {
+    "text": "companies and we get these books out you",
+    "start": 1042.559,
+    "duration": 4.601
+  },
+  {
+    "text": "know about supposed mind expansion from",
+    "start": 1044.76,
+    "duration": 5.36
+  },
+  {
+    "text": "acid and really what best studies found",
+    "start": 1047.16,
+    "duration": 5.8
+  },
+  {
+    "text": "were that they were um however you felt",
+    "start": 1050.12,
+    "duration": 4.52
+  },
+  {
+    "text": "about mind expansion at the moment you",
+    "start": 1052.96,
+    "duration": 3.28
+  },
+  {
+    "text": "were tripping you were really hurting",
+    "start": 1054.64,
+    "duration": 3.76
+  },
+  {
+    "text": "your mind in a big way and I found I",
+    "start": 1056.24,
+    "duration": 5.0
+  },
+  {
+    "text": "show four um articles saying that",
+    "start": 1058.4,
+    "duration": 4.519
+  },
+  {
+    "text": "there's some kind of cerebral damage",
+    "start": 1061.24,
+    "duration": 4.319
+  },
+  {
+    "text": "going on from the acid and I say this",
+    "start": 1062.919,
+    "duration": 4.841
+  },
+  {
+    "text": "after tripping about half a dozen times",
+    "start": 1065.559,
+    "duration": 4.801
+  },
+  {
+    "text": "myself and sadly I mean at the time I",
+    "start": 1067.76,
+    "duration": 4.799
+  },
+  {
+    "text": "was the first year of college you know",
+    "start": 1070.36,
+    "duration": 4.4
+  },
+  {
+    "text": "it kind of spread from last year year of",
+    "start": 1072.559,
+    "duration": 4.721
+  },
+  {
+    "text": "high school first year of college and um",
+    "start": 1074.76,
+    "duration": 4.48
+  },
+  {
+    "text": "just saw my grades drop drastic ically",
+    "start": 1077.28,
+    "duration": 3.519
+  },
+  {
+    "text": "after tripping you know college seemed",
+    "start": 1079.24,
+    "duration": 4.2
+  },
+  {
+    "text": "so easy to me uh before tripping and",
+    "start": 1080.799,
+    "duration": 4.24
+  },
+  {
+    "text": "after tripping I saw my grades dropped",
+    "start": 1083.44,
+    "duration": 4.16
+  },
+  {
+    "text": "drastically everything got harder uh",
+    "start": 1085.039,
+    "duration": 4.921
+  },
+  {
+    "text": "well you know what lry says is turn on",
+    "start": 1087.6,
+    "duration": 6.04
+  },
+  {
+    "text": "tune in and drop out so right right yeah",
+    "start": 1089.96,
+    "duration": 5.8
+  },
+  {
+    "text": "he spreads and it's like drop out of",
+    "start": 1093.64,
+    "duration": 4.919
+  },
+  {
+    "text": "society but also drop out of activism",
+    "start": 1095.76,
+    "duration": 4.52
+  },
+  {
+    "text": "yeah you know just it's just turned you",
+    "start": 1098.559,
+    "duration": 4.801
+  },
+  {
+    "text": "know him and um other agents of the CIA",
+    "start": 1100.28,
+    "duration": 4.72
+  },
+  {
+    "text": "would just say you turn your back on it",
+    "start": 1103.36,
+    "duration": 3.799
+  },
+  {
+    "text": "all as if it would just go away as if",
+    "start": 1105.0,
+    "duration": 4.44
+  },
+  {
+    "text": "it'll magically go away the war you know",
+    "start": 1107.159,
+    "duration": 4.481
+  },
+  {
+    "text": "versus protesting the war and trying to",
+    "start": 1109.44,
+    "duration": 5.119
+  },
+  {
+    "text": "stop it and so meanwhile there's there's",
+    "start": 1111.64,
+    "duration": 5.56
+  },
+  {
+    "text": "great activists that are rising up that",
+    "start": 1114.559,
+    "duration": 4.48
+  },
+  {
+    "text": "had nothing to do with drugs at the time",
+    "start": 1117.2,
+    "duration": 3.44
+  },
+  {
+    "text": "and that was the students for Democratic",
+    "start": 1119.039,
+    "duration": 4.841
+  },
+  {
+    "text": "Society and the Black Panthers um those",
+    "start": 1120.64,
+    "duration": 4.919
+  },
+  {
+    "text": "are two you know great activist",
+    "start": 1123.88,
+    "duration": 4.0
+  },
+  {
+    "text": "organizations are rising up for civil",
+    "start": 1125.559,
+    "duration": 6.801
+  },
+  {
+    "text": "rights and and anti-war activism and um",
+    "start": 1127.88,
+    "duration": 7.919
+  },
+  {
+    "text": "and they were doing great work but so",
+    "start": 1132.36,
+    "duration": 5.679
+  },
+  {
+    "text": "they got infiltrated in a major way even",
+    "start": 1135.799,
+    "duration": 4.12
+  },
+  {
+    "text": "the New York Times admitted that we had",
+    "start": 1138.039,
+    "duration": 4.401
+  },
+  {
+    "text": "that the uh FBI and CIA boast of having",
+    "start": 1139.919,
+    "duration": 4.481
+  },
+  {
+    "text": "an agent in every you know chapter in",
+    "start": 1142.44,
+    "duration": 5.119
+  },
+  {
+    "text": "the country um and so I showed that in",
+    "start": 1144.4,
+    "duration": 6.36
+  },
+  {
+    "text": "in my film uh but black panthers will he",
+    "start": 1147.559,
+    "duration": 5.521
+  },
+  {
+    "text": "were heavily infiltrated also though",
+    "start": 1150.76,
+    "duration": 4.0
+  },
+  {
+    "text": "they you know they tried to continue to",
+    "start": 1153.08,
+    "duration": 3.56
+  },
+  {
+    "text": "do great work despite the infiltration",
+    "start": 1154.76,
+    "duration": 4.72
+  },
+  {
+    "text": "and so did SDS but by the time I show",
+    "start": 1156.64,
+    "duration": 5.2
+  },
+  {
+    "text": "the evidence that that by the time uh",
+    "start": 1159.48,
+    "duration": 4.52
+  },
+  {
+    "text": "1969 came around with a National",
+    "start": 1161.84,
+    "duration": 3.28
+  },
+  {
+    "text": "Conference in",
+    "start": 1164.0,
+    "duration": 6.64
+  },
+  {
+    "text": "SDS um you had basically a a a guy whose",
+    "start": 1165.12,
+    "duration": 8.72
+  },
+  {
+    "text": "group whose SDS group had been",
+    "start": 1170.64,
+    "duration": 5.84
+  },
+  {
+    "text": "completely infiltrated and controlled",
+    "start": 1173.84,
+    "duration": 5.44
+  },
+  {
+    "text": "and his father was one of the wealthiest",
+    "start": 1176.48,
+    "duration": 6.52
+  },
+  {
+    "text": "men in in America um and that that would",
+    "start": 1179.28,
+    "duration": 7.399
+  },
+  {
+    "text": "be uh you know uh just skipped on his",
+    "start": 1183.0,
+    "duration": 6.679
+  },
+  {
+    "text": "name all of a sudden but um the uh Bill",
+    "start": 1186.679,
+    "duration": 6.0
+  },
+  {
+    "text": "SS whose father Tom SS owned Chicago",
+    "start": 1189.679,
+    "duration": 6.24
+  },
+  {
+    "text": "Tribune he owned Sears he was a board of",
+    "start": 1192.679,
+    "duration": 7.041
+  },
+  {
+    "text": "directors uh for um ener Dynamics one of",
+    "start": 1195.919,
+    "duration": 5.721
+  },
+  {
+    "text": "the top defense contractors in the",
+    "start": 1199.72,
+    "duration": 5.319
+  },
+  {
+    "text": "country um you know and uh Tribune's",
+    "start": 1201.64,
+    "duration": 6.2
+  },
+  {
+    "text": "huge he also was on the board of uh the",
+    "start": 1205.039,
+    "duration": 5.321
+  },
+  {
+    "text": "gas and electric for Chicago and most of",
+    "start": 1207.84,
+    "duration": 6.12
+  },
+  {
+    "text": "Illinois and uh so he was incredibly",
+    "start": 1210.36,
+    "duration": 6.439
+  },
+  {
+    "text": "wealthy and here is his son coming in",
+    "start": 1213.96,
+    "duration": 5.959
+  },
+  {
+    "text": "and and being the leader of Michigan SS",
+    "start": 1216.799,
+    "duration": 4.681
+  },
+  {
+    "text": "where SS started started at the",
+    "start": 1219.919,
+    "duration": 3.401
+  },
+  {
+    "text": "University of Michigan his son becomes",
+    "start": 1221.48,
+    "duration": 5.16
+  },
+  {
+    "text": "the leader of Michigan SDS and doesn't",
+    "start": 1223.32,
+    "duration": 6.839
+  },
+  {
+    "text": "do any uh civil rights activism is his",
+    "start": 1226.64,
+    "duration": 5.36
+  },
+  {
+    "text": "only civil rights activism is supposedly",
+    "start": 1230.159,
+    "duration": 5.201
+  },
+  {
+    "text": "is uh creating a school that was um that",
+    "start": 1232.0,
+    "duration": 5.159
+  },
+  {
+    "text": "was you know both black and white but",
+    "start": 1235.36,
+    "duration": 4.439
+  },
+  {
+    "text": "the but black and white parents of of",
+    "start": 1237.159,
+    "duration": 4.801
+  },
+  {
+    "text": "the kids that went to that school",
+    "start": 1239.799,
+    "duration": 4.36
+  },
+  {
+    "text": "withdrew their kids because they said",
+    "start": 1241.96,
+    "duration": 4.48
+  },
+  {
+    "text": "this this man this guy's making our kids",
+    "start": 1244.159,
+    "duration": 5.601
+  },
+  {
+    "text": "racist and Uh something's wrong going",
+    "start": 1246.44,
+    "duration": 5.359
+  },
+  {
+    "text": "wrong at the school and oppos any grants",
+    "start": 1249.76,
+    "duration": 4.0
+  },
+  {
+    "text": "going to the school because it was a a",
+    "start": 1251.799,
+    "duration": 6.961
+  },
+  {
+    "text": "bizarre situation there and so um and so",
+    "start": 1253.76,
+    "duration": 8.84
+  },
+  {
+    "text": "he takes over SDS he you know the puls a",
+    "start": 1258.76,
+    "duration": 7.96
+  },
+  {
+    "text": "prizewinning article about um a woman",
+    "start": 1262.6,
+    "duration": 6.48
+  },
+  {
+    "text": "who was part of SDS at that time Diana",
+    "start": 1266.72,
+    "duration": 6.319
+  },
+  {
+    "text": "Alton said that um that this bill SS and",
+    "start": 1269.08,
+    "duration": 6.44
+  },
+  {
+    "text": "this other guy who they say most people",
+    "start": 1273.039,
+    "duration": 5.0
+  },
+  {
+    "text": "suspected was a CIA undercover agent who",
+    "start": 1275.52,
+    "duration": 3.72
+  },
+  {
+    "text": "they didn't know where he came from and",
+    "start": 1278.039,
+    "duration": 4.12
+  },
+  {
+    "text": "what he was doing at Michigan um they",
+    "start": 1279.24,
+    "duration": 5.559
+  },
+  {
+    "text": "said that he that those two you know",
+    "start": 1282.159,
+    "duration": 4.721
+  },
+  {
+    "text": "brutalize anyone who opposed anything",
+    "start": 1284.799,
+    "duration": 5.041
+  },
+  {
+    "text": "they wanted to say or do and that SDS",
+    "start": 1286.88,
+    "duration": 6.64
+  },
+  {
+    "text": "had uh dozens of thugs inside uh you",
+    "start": 1289.84,
+    "duration": 5.839
+  },
+  {
+    "text": "know inside SDS beating people who",
+    "start": 1293.52,
+    "duration": 5.24
+  },
+  {
+    "text": "opposed them and created a really scary",
+    "start": 1295.679,
+    "duration": 4.88
+  },
+  {
+    "text": "atmosphere in SDS and they took that to",
+    "start": 1298.76,
+    "duration": 6.039
+  },
+  {
+    "text": "the National SDS and um they influenced",
+    "start": 1300.559,
+    "duration": 5.961
+  },
+  {
+    "text": "I I show the evidence they influenced",
+    "start": 1304.799,
+    "duration": 4.681
+  },
+  {
+    "text": "berine Dorne to start tripping uh often",
+    "start": 1306.52,
+    "duration": 5.88
+  },
+  {
+    "text": "in her her best judgment berin Dorne was",
+    "start": 1309.48,
+    "duration": 5.52
+  },
+  {
+    "text": "a law student in Chicago at the",
+    "start": 1312.4,
+    "duration": 4.48
+  },
+  {
+    "text": "University of Chicago who I believe Was",
+    "start": 1315.0,
+    "duration": 4.76
+  },
+  {
+    "text": "northwestern actually who was um who had",
+    "start": 1316.88,
+    "duration": 4.76
+  },
+  {
+    "text": "become the leader one of the top two",
+    "start": 1319.76,
+    "duration": 4.279
+  },
+  {
+    "text": "leaders top three I'm sorry leaders of",
+    "start": 1321.64,
+    "duration": 7.36
+  },
+  {
+    "text": "SDS and um so he influence her to um at",
+    "start": 1324.039,
+    "duration": 6.721
+  },
+  {
+    "text": "the National Convention to break up the",
+    "start": 1329.0,
+    "duration": 3.159
+  },
+  {
+    "text": "con you know to just leave the",
+    "start": 1330.76,
+    "duration": 4.0
+  },
+  {
+    "text": "convention with a lot of others you know",
+    "start": 1332.159,
+    "duration": 4.64
+  },
+  {
+    "text": "just LED them out of the convention and",
+    "start": 1334.76,
+    "duration": 4.32
+  },
+  {
+    "text": "officially you know in effect broke up",
+    "start": 1336.799,
+    "duration": 5.88
+  },
+  {
+    "text": "STDs FBI you know just boasted of their",
+    "start": 1339.08,
+    "duration": 5.88
+  },
+  {
+    "text": "success you know the fact that SDS was",
+    "start": 1342.679,
+    "duration": 6.12
+  },
+  {
+    "text": "broken up at that point and so um you",
+    "start": 1344.96,
+    "duration": 6.48
+  },
+  {
+    "text": "know and then he ends up becoming uh the",
+    "start": 1348.799,
+    "duration": 5.48
+  },
+  {
+    "text": "new leader of the split SDS and so it's",
+    "start": 1351.44,
+    "duration": 6.28
+  },
+  {
+    "text": "just a really real travesty what the CIA",
+    "start": 1354.279,
+    "duration": 5.721
+  },
+  {
+    "text": "was able to do to this uh organization",
+    "start": 1357.72,
+    "duration": 5.52
+  },
+  {
+    "text": "that went from a handful of organizers",
+    "start": 1360.0,
+    "duration": 6.279
+  },
+  {
+    "text": "in 1960 to 100,000 members in",
+    "start": 1363.24,
+    "duration": 6.48
+  },
+  {
+    "text": "1969 and then these infiltrators um you",
+    "start": 1366.279,
+    "duration": 7.52
+  },
+  {
+    "text": "know end up just doing away with it and",
+    "start": 1369.72,
+    "duration": 7.6
+  },
+  {
+    "text": "um so it's um you know these are some of",
+    "start": 1373.799,
+    "duration": 5.88
+  },
+  {
+    "text": "the stories that need be told in the way",
+    "start": 1377.32,
+    "duration": 5.2
+  },
+  {
+    "text": "drugs were used to hurt the best and",
+    "start": 1379.679,
+    "duration": 5.561
+  },
+  {
+    "text": "brightest minds of of Our Generation",
+    "start": 1382.52,
+    "duration": 5.159
+  },
+  {
+    "text": "that we doing this great anti-war",
+    "start": 1385.24,
+    "duration": 4.6
+  },
+  {
+    "text": "organizing and and they were doing life",
+    "start": 1387.679,
+    "duration": 4.081
+  },
+  {
+    "text": "or death organizing obviously it was you",
+    "start": 1389.84,
+    "duration": 3.68
+  },
+  {
+    "text": "know around the time of the Vietnam War",
+    "start": 1391.76,
+    "duration": 4.32
+  },
+  {
+    "text": "when the draft was going one and you",
+    "start": 1393.52,
+    "duration": 4.96
+  },
+  {
+    "text": "know young college students were college",
+    "start": 1396.08,
+    "duration": 4.0
+  },
+  {
+    "text": "students were being drafted left and",
+    "start": 1398.48,
+    "duration": 4.52
+  },
+  {
+    "text": "right and um you know dying in the",
+    "start": 1400.08,
+    "duration": 5.0
+  },
+  {
+    "text": "Vietnam War not not to mention the",
+    "start": 1403.0,
+    "duration": 4.4
+  },
+  {
+    "text": "million or so that were dying on the",
+    "start": 1405.08,
+    "duration": 5.92
+  },
+  {
+    "text": "Viet Vietnamese side of of things and so",
+    "start": 1407.4,
+    "duration": 5.72
+  },
+  {
+    "text": "these are just examples of what went on",
+    "start": 1411.0,
+    "duration": 4.24
+  },
+  {
+    "text": "history that best evidence shows are",
+    "start": 1413.12,
+    "duration": 3.96
+  },
+  {
+    "text": "still going on today because these",
+    "start": 1415.24,
+    "duration": 4.0
+  },
+  {
+    "text": "operations The Counter Intelligence",
+    "start": 1417.08,
+    "duration": 5.44
+  },
+  {
+    "text": "program and and MK Ultra still go on",
+    "start": 1419.24,
+    "duration": 6.28
+  },
+  {
+    "text": "today best EV shows and whistleblowers",
+    "start": 1422.52,
+    "duration": 5.12
+  },
+  {
+    "text": "say um they're just hidden under",
+    "start": 1425.52,
+    "duration": 4.24
+  },
+  {
+    "text": "different names you know whistleblower",
+    "start": 1427.64,
+    "duration": 5.8
+  },
+  {
+    "text": "Phil AG uh said that MKUltra continues",
+    "start": 1429.76,
+    "duration": 6.56
+  },
+  {
+    "text": "just under different names and former um",
+    "start": 1433.44,
+    "duration": 5.68
+  },
+  {
+    "text": "MK Ultra Agent Wes swearing came out",
+    "start": 1436.32,
+    "duration": 5.4
+  },
+  {
+    "text": "with a memoir in the mid 90s saying you",
+    "start": 1439.12,
+    "duration": 6.12
+  },
+  {
+    "text": "know it continues kelln telpro continues",
+    "start": 1441.72,
+    "duration": 5.92
+  },
+  {
+    "text": "uh today according to his fellow agents",
+    "start": 1445.24,
+    "duration": 4.64
+  },
+  {
+    "text": "but they just use different names for it",
+    "start": 1447.64,
+    "duration": 5.68
+  },
+  {
+    "text": "and that's why I show I focused on the",
+    "start": 1449.88,
+    "duration": 6.279
+  },
+  {
+    "text": "Shakur family uh because the fact that",
+    "start": 1453.32,
+    "duration": 4.359
+  },
+  {
+    "text": "when Tupac",
+    "start": 1456.159,
+    "duration": 4.4
+  },
+  {
+    "text": "Shakur went from being a 17-year-old",
+    "start": 1457.679,
+    "duration": 4.6
+  },
+  {
+    "text": "leader of a group called the new African",
+    "start": 1460.559,
+    "duration": 6.521
+  },
+  {
+    "text": "Panthers in 1989 and 90 um to being you",
+    "start": 1462.279,
+    "duration": 8.681
+  },
+  {
+    "text": "know this this rap icon and and acting",
+    "start": 1467.08,
+    "duration": 7.56
+  },
+  {
+    "text": "icon um the best evidence is that they",
+    "start": 1470.96,
+    "duration": 6.36
+  },
+  {
+    "text": "of course with K and Tel Pro still going",
+    "start": 1474.64,
+    "duration": 4.639
+  },
+  {
+    "text": "they would Target him and mously",
+    "start": 1477.32,
+    "duration": 4.28
+  },
+  {
+    "text": "targeted him and I show the evidence of",
+    "start": 1479.279,
+    "duration": 4.88
+  },
+  {
+    "text": "how they tried to kill him about four or",
+    "start": 1481.6,
+    "duration": 5.12
+  },
+  {
+    "text": "five times before they were successful",
+    "start": 1484.159,
+    "duration": 3.961
+  },
+  {
+    "text": "and show the evidence of police",
+    "start": 1486.72,
+    "duration": 4.24
+  },
+  {
+    "text": "involvement in those attempted murders",
+    "start": 1488.12,
+    "duration": 6.6
+  },
+  {
+    "text": "and um and how uh you know the FBI were",
+    "start": 1490.96,
+    "duration": 6.719
+  },
+  {
+    "text": "watching when he was finally uh done",
+    "start": 1494.72,
+    "duration": 4.839
+  },
+  {
+    "text": "away with when he was finally murdered",
+    "start": 1497.679,
+    "duration": 4.041
+  },
+  {
+    "text": "and um failed to stop it according to",
+    "start": 1499.559,
+    "duration": 5.401
+  },
+  {
+    "text": "award-winning Las Vegas reporter Kathy",
+    "start": 1501.72,
+    "duration": 7.12
+  },
+  {
+    "text": "Scott so this is um the way they did",
+    "start": 1504.96,
+    "duration": 6.64
+  },
+  {
+    "text": "things and they used that modus op",
+    "start": 1508.84,
+    "duration": 6.28
+  },
+  {
+    "text": "brendi against um John Lenin because",
+    "start": 1511.6,
+    "duration": 6.76
+  },
+  {
+    "text": "Johan lenon become so activist uh he was",
+    "start": 1515.12,
+    "duration": 6.6
+  },
+  {
+    "text": "dosed the first time they you know uh",
+    "start": 1518.36,
+    "duration": 5.96
+  },
+  {
+    "text": "introduced ass it to him they put in his",
+    "start": 1521.72,
+    "duration": 5.24
+  },
+  {
+    "text": "coffee without his knowledge a dentist",
+    "start": 1524.32,
+    "duration": 4.719
+  },
+  {
+    "text": "actually George Hon's dentist",
+    "start": 1526.96,
+    "duration": 5.12
+  },
+  {
+    "text": "and then uh just like they did with",
+    "start": 1529.039,
+    "duration": 6.161
+  },
+  {
+    "text": "berine Dorne to get um Bill Aris you",
+    "start": 1532.08,
+    "duration": 4.64
+  },
+  {
+    "text": "know close to her and getting her",
+    "start": 1535.2,
+    "duration": 4.079
+  },
+  {
+    "text": "tripping and then marrying her sadly",
+    "start": 1536.72,
+    "duration": 5.199
+  },
+  {
+    "text": "enough um they did the same with Yoko",
+    "start": 1539.279,
+    "duration": 5.721
+  },
+  {
+    "text": "Ono and John lenon I argue because a",
+    "start": 1541.919,
+    "duration": 6.161
+  },
+  {
+    "text": "memoir came out in 2019 uh like just",
+    "start": 1545.0,
+    "duration": 5.48
+  },
+  {
+    "text": "after my film came out a memoir came out",
+    "start": 1548.08,
+    "duration": 3.76
+  },
+  {
+    "text": "of a journalist who was friends with",
+    "start": 1550.48,
+    "duration": 3.88
+  },
+  {
+    "text": "John Len Yoko and who said that Yoko",
+    "start": 1551.84,
+    "duration": 4.48
+  },
+  {
+    "text": "introduced him to heroin and had",
+    "start": 1554.36,
+    "duration": 4.16
+  },
+  {
+    "text": "originally introduced he got him Tri",
+    "start": 1556.32,
+    "duration": 3.359
+  },
+  {
+    "text": "again when he thought he was losing his",
+    "start": 1558.52,
+    "duration": 2.92
+  },
+  {
+    "text": "mind on acid and stopped for a year a",
+    "start": 1559.679,
+    "duration": 3.841
+  },
+  {
+    "text": "year and a half actually about two years",
+    "start": 1561.44,
+    "duration": 4.04
+  },
+  {
+    "text": "he said from 1967 to",
+    "start": 1563.52,
+    "duration": 5.24
+  },
+  {
+    "text": "69 and um so this is the way they do",
+    "start": 1565.48,
+    "duration": 5.679
+  },
+  {
+    "text": "things and um and you know at the end of",
+    "start": 1568.76,
+    "duration": 3.84
+  },
+  {
+    "text": "his life he was getting more activists",
+    "start": 1571.159,
+    "duration": 3.361
+  },
+  {
+    "text": "he was getting away from hard any hard",
+    "start": 1572.6,
+    "duration": 7.559
+  },
+  {
+    "text": "drugs and they um used apparently a uh",
+    "start": 1574.52,
+    "duration": 7.84
+  },
+  {
+    "text": "kind of mind controlled Mark David",
+    "start": 1580.159,
+    "duration": 4.681
+  },
+  {
+    "text": "Chapman to shoot at him and either he",
+    "start": 1582.36,
+    "duration": 5.48
+  },
+  {
+    "text": "killed him or the undercover CI agent",
+    "start": 1584.84,
+    "duration": 4.0
+  },
+  {
+    "text": "want",
+    "start": 1587.84,
+    "duration": 5.719
+  },
+  {
+    "text": "uh per San jares Perdomo who was the um",
+    "start": 1588.84,
+    "duration": 7.0
+  },
+  {
+    "text": "working at John lenn's apartment house",
+    "start": 1593.559,
+    "duration": 5.081
+  },
+  {
+    "text": "that night uh you know murdered John",
+    "start": 1595.84,
+    "duration": 4.8
+  },
+  {
+    "text": "Lenin uh in",
+    "start": 1598.64,
+    "duration": 5.0
+  },
+  {
+    "text": "1980 and so these these are some of the",
+    "start": 1600.64,
+    "duration": 6.039
+  },
+  {
+    "text": "stories that just need to be told sure",
+    "start": 1603.64,
+    "duration": 5.759
+  },
+  {
+    "text": "it's so crazy How Deep The Rabbit Hole",
+    "start": 1606.679,
+    "duration": 5.161
+  },
+  {
+    "text": "goes in so many different directions all",
+    "start": 1609.399,
+    "duration": 4.681
+  },
+  {
+    "text": "these wormholes like the Grateful Dead",
+    "start": 1611.84,
+    "duration": 3.719
+  },
+  {
+    "text": "people Bob",
+    "start": 1614.08,
+    "duration": 5.04
+  },
+  {
+    "text": "Weir of the Grateful Dead is is a",
+    "start": 1615.559,
+    "duration": 6.681
+  },
+  {
+    "text": "frequent Bohemian Grove attendee and",
+    "start": 1619.12,
+    "duration": 4.799
+  },
+  {
+    "text": "he's been in interviews talking about",
+    "start": 1622.24,
+    "duration": 4.159
+  },
+  {
+    "text": "how he sits down with the head of the",
+    "start": 1623.919,
+    "duration": 4.601
+  },
+  {
+    "text": "CIA and they have like a great chat and",
+    "start": 1626.399,
+    "duration": 5.64
+  },
+  {
+    "text": "their buddies and and then so you know",
+    "start": 1628.52,
+    "duration": 5.399
+  },
+  {
+    "text": "you mentioned the Grateful Dead tours",
+    "start": 1632.039,
+    "duration": 2.721
+  },
+  {
+    "text": "where",
+    "start": 1633.919,
+    "duration": 3.12
+  },
+  {
+    "text": "people I mean there's a whole subculture",
+    "start": 1634.76,
+    "duration": 4.039
+  },
+  {
+    "text": "of people who spend their entire life",
+    "start": 1637.039,
+    "duration": 4.081
+  },
+  {
+    "text": "following the Grateful Dead on their",
+    "start": 1638.799,
+    "duration": 5.161
+  },
+  {
+    "text": "tour and taking acid or mushrooms or",
+    "start": 1641.12,
+    "duration": 5.32
+  },
+  {
+    "text": "whatever every night yeah and this is",
+    "start": 1643.96,
+    "duration": 5.0
+  },
+  {
+    "text": "like another form of I swear to God it's",
+    "start": 1646.44,
+    "duration": 6.04
+  },
+  {
+    "text": "some sort of MK Ultra experiment that",
+    "start": 1648.96,
+    "duration": 5.92
+  },
+  {
+    "text": "these people are being observed and that",
+    "start": 1652.48,
+    "duration": 4.72
+  },
+  {
+    "text": "brings me to what are your thoughts on",
+    "start": 1654.88,
+    "duration": 4.039
+  },
+  {
+    "text": "burning man because I've been thinking",
+    "start": 1657.2,
+    "duration": 3.8
+  },
+  {
+    "text": "about this regarding Burning Man for",
+    "start": 1658.919,
+    "duration": 6.24
+  },
+  {
+    "text": "years now it's so suspicious and twisted",
+    "start": 1661.0,
+    "duration": 5.159
+  },
+  {
+    "text": "I don't know what are your thoughts on",
+    "start": 1665.159,
+    "duration": 2.88
+  },
+  {
+    "text": "burning man yeah so I have a section of",
+    "start": 1666.159,
+    "duration": 6.681
+  },
+  {
+    "text": "my book on Burning Man and um so it's",
+    "start": 1668.039,
+    "duration": 6.24
+  },
+  {
+    "text": "just you",
+    "start": 1672.84,
+    "duration": 3.839
+  },
+  {
+    "text": "know they they're dosing I mean there's",
+    "start": 1674.279,
+    "duration": 4.88
+  },
+  {
+    "text": "people going around I have an interview",
+    "start": 1676.679,
+    "duration": 6.0
+  },
+  {
+    "text": "in my that you I quote in my book of uh",
+    "start": 1679.159,
+    "duration": 5.64
+  },
+  {
+    "text": "someone just saying that people were",
+    "start": 1682.679,
+    "duration": 4.441
+  },
+  {
+    "text": "going around with with water bottles",
+    "start": 1684.799,
+    "duration": 4.921
+  },
+  {
+    "text": "that they spray spraying people with and",
+    "start": 1687.12,
+    "duration": 4.36
+  },
+  {
+    "text": "you think they're just cooling you off",
+    "start": 1689.72,
+    "duration": 3.559
+  },
+  {
+    "text": "with that water bottle but they're",
+    "start": 1691.48,
+    "duration": 3.72
+  },
+  {
+    "text": "actually uh there's actually loads of",
+    "start": 1693.279,
+    "duration": 5.161
+  },
+  {
+    "text": "hits of of psychedelics in there and so",
+    "start": 1695.2,
+    "duration": 5.8
+  },
+  {
+    "text": "they're they're involuntarily making you",
+    "start": 1698.44,
+    "duration": 5.16
+  },
+  {
+    "text": "trip because uh acid can be just",
+    "start": 1701.0,
+    "duration": 4.799
+  },
+  {
+    "text": "absorbed through the skin to have you",
+    "start": 1703.6,
+    "duration": 6.079
+  },
+  {
+    "text": "trip like that and um and so that's",
+    "start": 1705.799,
+    "duration": 5.6
+  },
+  {
+    "text": "really ugly stuff that's you know the",
+    "start": 1709.679,
+    "duration": 5.641
+  },
+  {
+    "text": "same thing that cia's assistant director",
+    "start": 1711.399,
+    "duration": 7.28
+  },
+  {
+    "text": "Robert Lashbrook was doing back in the",
+    "start": 1715.32,
+    "duration": 6.0
+  },
+  {
+    "text": "60s coming he went to um you know",
+    "start": 1718.679,
+    "duration": 5.84
+  },
+  {
+    "text": "England with loads of acid and and loads",
+    "start": 1721.32,
+    "duration": 5.32
+  },
+  {
+    "text": "of money in agents and just instructed",
+    "start": 1724.519,
+    "duration": 4.16
+  },
+  {
+    "text": "the agents to get asset in as many",
+    "start": 1726.64,
+    "duration": 4.519
+  },
+  {
+    "text": "musicians hands as possible and that's",
+    "start": 1728.679,
+    "duration": 4.401
+  },
+  {
+    "text": "when John lenon right a few months later",
+    "start": 1731.159,
+    "duration": 3.681
+  },
+  {
+    "text": "John lenon was voluntarily dosed by",
+    "start": 1733.08,
+    "duration": 3.839
+  },
+  {
+    "text": "George Harrison's dentist then but so at",
+    "start": 1734.84,
+    "duration": 3.6
+  },
+  {
+    "text": "Burning Man that's what they were doing",
+    "start": 1736.919,
+    "duration": 3.441
+  },
+  {
+    "text": "they're they're getting people tripping",
+    "start": 1738.44,
+    "duration": 4.88
+  },
+  {
+    "text": "against their will and uh so yeah",
+    "start": 1740.36,
+    "duration": 5.76
+  },
+  {
+    "text": "there's lots of evidence in my mind and",
+    "start": 1743.32,
+    "duration": 5.32
+  },
+  {
+    "text": "I show right about my book about it's",
+    "start": 1746.12,
+    "duration": 5.919
+  },
+  {
+    "text": "just this uh fake Grassroots situation",
+    "start": 1748.64,
+    "duration": 6.68
+  },
+  {
+    "text": "again where there's people promoting it",
+    "start": 1752.039,
+    "duration": 5.961
+  },
+  {
+    "text": "all over the world um this Burning Man",
+    "start": 1755.32,
+    "duration": 5.44
+  },
+  {
+    "text": "and uh promoting psychedelics like crazy",
+    "start": 1758.0,
+    "duration": 5.159
+  },
+  {
+    "text": "and trying to divert the uh youth",
+    "start": 1760.76,
+    "duration": 4.6
+  },
+  {
+    "text": "movement to that as if that's some kind",
+    "start": 1763.159,
+    "duration": 5.801
+  },
+  {
+    "text": "of um you know Revolution of itself it's",
+    "start": 1765.36,
+    "duration": 5.48
+  },
+  {
+    "text": "just you know just to burn out your",
+    "start": 1768.96,
+    "duration": 4.64
+  },
+  {
+    "text": "brain one ass and other psychedelics at",
+    "start": 1770.84,
+    "duration": 5.319
+  },
+  {
+    "text": "this thing where um you know it's nice",
+    "start": 1773.6,
+    "duration": 4.679
+  },
+  {
+    "text": "if you like the party and that's fine",
+    "start": 1776.159,
+    "duration": 4.801
+  },
+  {
+    "text": "and um that's no no problem with that",
+    "start": 1778.279,
+    "duration": 4.64
+  },
+  {
+    "text": "it's just hurting our minds at a time",
+    "start": 1780.96,
+    "duration": 4.439
+  },
+  {
+    "text": "when the oligarchs can just so so much",
+    "start": 1782.919,
+    "duration": 5.12
+  },
+  {
+    "text": "easier you know roll over us while we're",
+    "start": 1785.399,
+    "duration": 4.841
+  },
+  {
+    "text": "burning our brains out and we just have",
+    "start": 1788.039,
+    "duration": 5.321
+  },
+  {
+    "text": "to have our best wits about us to to uh",
+    "start": 1790.24,
+    "duration": 4.679
+  },
+  {
+    "text": "oppose the oligarchs you know because",
+    "start": 1793.36,
+    "duration": 2.76
+  },
+  {
+    "text": "they've got the money we've got the",
+    "start": 1794.919,
+    "duration": 3.561
+  },
+  {
+    "text": "numbers but we also have to have the",
+    "start": 1796.12,
+    "duration": 6.919
+  },
+  {
+    "text": "creativity to uh stop them yeah yeah and",
+    "start": 1798.48,
+    "duration": 6.88
+  },
+  {
+    "text": "I mean the and I also have done my share",
+    "start": 1803.039,
+    "duration": 4.841
+  },
+  {
+    "text": "of psychedelics probably I mean even the",
+    "start": 1805.36,
+    "duration": 5.679
+  },
+  {
+    "text": "most obscure ones I've managed to get my",
+    "start": 1807.88,
+    "duration": 4.6
+  },
+  {
+    "text": "hands on and",
+    "start": 1811.039,
+    "duration": 6.681
+  },
+  {
+    "text": "do and I mean I have no problem with",
+    "start": 1812.48,
+    "duration": 8.16
+  },
+  {
+    "text": "iasa or you I don't know as much I mean",
+    "start": 1817.72,
+    "duration": 5.64
+  },
+  {
+    "text": "I've tried I I don't know you know know",
+    "start": 1820.64,
+    "duration": 5.48
+  },
+  {
+    "text": "how bad shrooms are for you or not but I",
+    "start": 1823.36,
+    "duration": 5.159
+  },
+  {
+    "text": "do think that when it comes to MDM it's",
+    "start": 1826.12,
+    "duration": 4.72
+  },
+  {
+    "text": "clearcut that it's so many Studies have",
+    "start": 1828.519,
+    "duration": 4.76
+  },
+  {
+    "text": "found that even just a little bit of",
+    "start": 1830.84,
+    "duration": 4.88
+  },
+  {
+    "text": "MDMA use can hurt our memory in a big",
+    "start": 1833.279,
+    "duration": 4.28
+  },
+  {
+    "text": "way I think it fried my brain I think",
+    "start": 1835.72,
+    "duration": 3.959
+  },
+  {
+    "text": "MDMA totally fried my brain yeah it's",
+    "start": 1837.559,
+    "duration": 4.561
+  },
+  {
+    "text": "just it's just bad news yeah I tried",
+    "start": 1839.679,
+    "duration": 5.401
+  },
+  {
+    "text": "twice but it's like definitely found",
+    "start": 1842.12,
+    "duration": 5.159
+  },
+  {
+    "text": "major memory problems after the acid and",
+    "start": 1845.08,
+    "duration": 5.92
+  },
+  {
+    "text": "then the MDMA no didn't help either um",
+    "start": 1847.279,
+    "duration": 5.88
+  },
+  {
+    "text": "and so you know I lost just some skills",
+    "start": 1851.0,
+    "duration": 3.679
+  },
+  {
+    "text": "I used to be able to write a whole page",
+    "start": 1853.159,
+    "duration": 3.48
+  },
+  {
+    "text": "of a paper in my head easily just see",
+    "start": 1854.679,
+    "duration": 3.801
+  },
+  {
+    "text": "every word you know for a whole page and",
+    "start": 1856.639,
+    "duration": 3.52
+  },
+  {
+    "text": "then I I just pick up the pen and write",
+    "start": 1858.48,
+    "duration": 3.72
+  },
+  {
+    "text": "it out in the old days before computers",
+    "start": 1860.159,
+    "duration": 4.36
+  },
+  {
+    "text": "were as big for writing papers but I",
+    "start": 1862.2,
+    "duration": 5.24
+  },
+  {
+    "text": "just think that yeah these you know all",
+    "start": 1864.519,
+    "duration": 7.52
+  },
+  {
+    "text": "these synthetic drugs like MDMA acid DMZ",
+    "start": 1867.44,
+    "duration": 7.359
+  },
+  {
+    "text": "you know DMT and bz and all these things",
+    "start": 1872.039,
+    "duration": 5.921
+  },
+  {
+    "text": "are really dangerous stuff um iasa might",
+    "start": 1874.799,
+    "duration": 5.88
+  },
+  {
+    "text": "be more okay um I don't know enough",
+    "start": 1877.96,
+    "duration": 4.319
+  },
+  {
+    "text": "about it but",
+    "start": 1880.679,
+    "duration": 4.681
+  },
+  {
+    "text": "um you know shrooms I can't say a whole",
+    "start": 1882.279,
+    "duration": 6.0
+  },
+  {
+    "text": "lot about it just the the concern is is",
+    "start": 1885.36,
+    "duration": 4.88
+  },
+  {
+    "text": "that young people will you they try the",
+    "start": 1888.279,
+    "duration": 3.601
+  },
+  {
+    "text": "shrooms and they'll think well I want to",
+    "start": 1890.24,
+    "duration": 3.559
+  },
+  {
+    "text": "try something more you know I'll open",
+    "start": 1891.88,
+    "duration": 4.399
+  },
+  {
+    "text": "the door to taking acid and messing up",
+    "start": 1893.799,
+    "duration": 5.321
+  },
+  {
+    "text": "their head yeah and it's just a shame",
+    "start": 1896.279,
+    "duration": 8.4
+  },
+  {
+    "text": "but yeah it's um we go we just got to uh",
+    "start": 1899.12,
+    "duration": 8.399
+  },
+  {
+    "text": "do things in a more sober way just to uh",
+    "start": 1904.679,
+    "duration": 5.201
+  },
+  {
+    "text": "do the best work we can you know toh",
+    "start": 1907.519,
+    "duration": 5.201
+  },
+  {
+    "text": "stop what's going on well it's it's the",
+    "start": 1909.88,
+    "duration": 5.519
+  },
+  {
+    "text": "perfect tool to ward off of",
+    "start": 1912.72,
+    "duration": 5.52
+  },
+  {
+    "text": "materialism and like actual concrete",
+    "start": 1915.399,
+    "duration": 5.28
+  },
+  {
+    "text": "analysis of reality and like a concrete",
+    "start": 1918.24,
+    "duration": 4.799
+  },
+  {
+    "text": "way of fighting back against our",
+    "start": 1920.679,
+    "duration": 4.96
+  },
+  {
+    "text": "overlords and the whole subculture",
+    "start": 1923.039,
+    "duration": 4.64
+  },
+  {
+    "text": "revolves around personal",
+    "start": 1925.639,
+    "duration": 4.0
+  },
+  {
+    "text": "self-improvement and turning in on",
+    "start": 1927.679,
+    "duration": 4.12
+  },
+  {
+    "text": "oneself and focusing on yourself instead",
+    "start": 1929.639,
+    "duration": 4.481
+  },
+  {
+    "text": "of like focusing on the people around",
+    "start": 1931.799,
+    "duration": 4.321
+  },
+  {
+    "text": "you so it's the perfect it's a perfect",
+    "start": 1934.12,
+    "duration": 5.679
+  },
+  {
+    "text": "anti-communist tool weapon in my opinion",
+    "start": 1936.12,
+    "duration": 6.919
+  },
+  {
+    "text": "and I have been personally victimized by",
+    "start": 1939.799,
+    "duration": 4.801
+  },
+  {
+    "text": "this by these",
+    "start": 1943.039,
+    "duration": 4.88
+  },
+  {
+    "text": "drugs and uh I mean it's just crazy with",
+    "start": 1944.6,
+    "duration": 5.079
+  },
+  {
+    "text": "Burning Man for example you know they",
+    "start": 1947.919,
+    "duration": 4.161
+  },
+  {
+    "text": "they Pride themselves on personal",
+    "start": 1949.679,
+    "duration": 4.081
+  },
+  {
+    "text": "self-responsibility that's the whole",
+    "start": 1952.08,
+    "duration": 3.76
+  },
+  {
+    "text": "thing you have to bring all of your own",
+    "start": 1953.76,
+    "duration": 4.44
+  },
+  {
+    "text": "supplies uh nothing's supposed to really",
+    "start": 1955.84,
+    "duration": 5.52
+  },
+  {
+    "text": "be like shared in you're supposed to",
+    "start": 1958.2,
+    "duration": 5.52
+  },
+  {
+    "text": "bring everything for yourself um and",
+    "start": 1961.36,
+    "duration": 6.039
+  },
+  {
+    "text": "then you go to Black Rock City there the",
+    "start": 1963.72,
+    "duration": 5.199
+  },
+  {
+    "text": "place where they bring you to is called",
+    "start": 1967.399,
+    "duration": 5.601
+  },
+  {
+    "text": "Black Rock City like Black Rock I mean",
+    "start": 1968.919,
+    "duration": 6.88
+  },
+  {
+    "text": "that's a little odd and then most people",
+    "start": 1973.0,
+    "duration": 4.84
+  },
+  {
+    "text": "are unaware that it's now a corporate",
+    "start": 1975.799,
+    "duration": 4.48
+  },
+  {
+    "text": "coration um Burning Man Corporation and",
+    "start": 1977.84,
+    "duration": 4.719
+  },
+  {
+    "text": "they're making like a ton of money a ton",
+    "start": 1980.279,
+    "duration": 7.0
+  },
+  {
+    "text": "of money off these people and another",
+    "start": 1982.559,
+    "duration": 7.561
+  },
+  {
+    "text": "burning man's secret is that they don't",
+    "start": 1987.279,
+    "duration": 5.0
+  },
+  {
+    "text": "publish it's never made public the",
+    "start": 1990.12,
+    "duration": 4.519
+  },
+  {
+    "text": "amount of deaths that happen at Burning",
+    "start": 1992.279,
+    "duration": 4.841
+  },
+  {
+    "text": "Man because if somebody overdoses or if",
+    "start": 1994.639,
+    "duration": 5.0
+  },
+  {
+    "text": "they fall off of a art car and",
+    "start": 1997.12,
+    "duration": 5.12
+  },
+  {
+    "text": "die what's done is they put you in an",
+    "start": 1999.639,
+    "duration": 5.201
+  },
+  {
+    "text": "ambulance and take you to the nearest",
+    "start": 2002.24,
+    "duration": 5.12
+  },
+  {
+    "text": "town in Nevada and declare you deceased",
+    "start": 2004.84,
+    "duration": 4.48
+  },
+  {
+    "text": "at the Hospital in a nearby town so",
+    "start": 2007.36,
+    "duration": 3.84
+  },
+  {
+    "text": "we'll never have the actual numbers of",
+    "start": 2009.32,
+    "duration": 3.52
+  },
+  {
+    "text": "the amount of deaths that happen at",
+    "start": 2011.2,
+    "duration": 3.92
+  },
+  {
+    "text": "Burning Man but I am absolutely certain",
+    "start": 2012.84,
+    "duration": 5.839
+  },
+  {
+    "text": "that there's some federal agency doing",
+    "start": 2015.12,
+    "duration": 6.439
+  },
+  {
+    "text": "experiments on people there I I swear to",
+    "start": 2018.679,
+    "duration": 6.12
+  },
+  {
+    "text": "God it's like the prime site to do that",
+    "start": 2021.559,
+    "duration": 5.08
+  },
+  {
+    "text": "right and then so okay another thing",
+    "start": 2024.799,
+    "duration": 3.441
+  },
+  {
+    "text": "that I've been thinking about for years",
+    "start": 2026.639,
+    "duration": 3.16
+  },
+  {
+    "text": "that you mentioned in this documentary",
+    "start": 2028.24,
+    "duration": 4.08
+  },
+  {
+    "text": "and when I saw it I was like oh finally",
+    "start": 2029.799,
+    "duration": 6.641
+  },
+  {
+    "text": "somebody is bringing this up is Maps",
+    "start": 2032.32,
+    "duration": 7.12
+  },
+  {
+    "text": "Okay so it's I there are",
+    "start": 2036.44,
+    "duration": 5.599
+  },
+  {
+    "text": "multiple",
+    "start": 2039.44,
+    "duration": 5.76
+  },
+  {
+    "text": "uh it's not minor attracted persons Maps",
+    "start": 2042.039,
+    "duration": 6.001
+  },
+  {
+    "text": "it's uh what is it called multipl multi",
+    "start": 2045.2,
+    "duration": 5.0
+  },
+  {
+    "text": "it's the multidisciplinary association",
+    "start": 2048.04,
+    "duration": 4.52
+  },
+  {
+    "text": "of psychedelic studies and there's",
+    "start": 2050.2,
+    "duration": 5.04
+  },
+  {
+    "text": "multiple links between Rick doblin and",
+    "start": 2052.56,
+    "duration": 5.119
+  },
+  {
+    "text": "maps and the human ecology fund of the",
+    "start": 2055.24,
+    "duration": 5.2
+  },
+  {
+    "text": "1960s and 70s you know where basically",
+    "start": 2057.679,
+    "duration": 6.72
+  },
+  {
+    "text": "the 60s had the the human ecology fund",
+    "start": 2060.44,
+    "duration": 5.56
+  },
+  {
+    "text": "and loads of people that were involved",
+    "start": 2064.399,
+    "duration": 4.72
+  },
+  {
+    "text": "in that along with with um the",
+    "start": 2066.0,
+    "duration": 4.72
+  },
+  {
+    "text": "Brotherhood of eternal love which was",
+    "start": 2069.119,
+    "duration": 3.601
+  },
+  {
+    "text": "the group that the melon Hitchcock and",
+    "start": 2070.72,
+    "duration": 6.119
+  },
+  {
+    "text": "Timothy ly created um some of the same",
+    "start": 2072.72,
+    "duration": 7.56
+  },
+  {
+    "text": "scientists then uh helped out with maps",
+    "start": 2076.839,
+    "duration": 5.0
+  },
+  {
+    "text": "and what is Maps can you tell our",
+    "start": 2080.28,
+    "duration": 4.04
+  },
+  {
+    "text": "listeners who don't know so Maps is",
+    "start": 2081.839,
+    "duration": 4.201
+  },
+  {
+    "text": "again the multi-disciplinary association",
+    "start": 2084.32,
+    "duration": 4.599
+  },
+  {
+    "text": "of psychedelic studies is funded by The",
+    "start": 2086.04,
+    "duration": 5.039
+  },
+  {
+    "text": "Rockefellers the billionaire Rockefeller",
+    "start": 2088.919,
+    "duration": 4.801
+  },
+  {
+    "text": "family and and other billionaire",
+    "start": 2091.079,
+    "duration": 6.0
+  },
+  {
+    "text": "families um and they Supply endless",
+    "start": 2093.72,
+    "duration": 5.2
+  },
+  {
+    "text": "amounts of money to universities all",
+    "start": 2097.079,
+    "duration": 5.961
+  },
+  {
+    "text": "over the world to uh to basically to",
+    "start": 2098.92,
+    "duration": 7.48
+  },
+  {
+    "text": "promote use of psychedelics for therapy",
+    "start": 2103.04,
+    "duration": 5.6
+  },
+  {
+    "text": "and all kinds of other things they say",
+    "start": 2106.4,
+    "duration": 4.88
+  },
+  {
+    "text": "it's good for for in some way good for",
+    "start": 2108.64,
+    "duration": 4.199
+  },
+  {
+    "text": "our health they say they drug",
+    "start": 2111.28,
+    "duration": 3.72
+  },
+  {
+    "text": "legalization they're involved in like",
+    "start": 2112.839,
+    "duration": 4.121
+  },
+  {
+    "text": "pushing for drug legalization they push",
+    "start": 2115.0,
+    "duration": 5.64
+  },
+  {
+    "text": "for you know LSD uh legalization and use",
+    "start": 2116.96,
+    "duration": 7.48
+  },
+  {
+    "text": "for for therapy again and you shrooms",
+    "start": 2120.64,
+    "duration": 7.8
+  },
+  {
+    "text": "psychedelic mushrooms MD yeah MDMA",
+    "start": 2124.44,
+    "duration": 6.679
+  },
+  {
+    "text": "uh you know XC or Molly is",
+    "start": 2128.44,
+    "duration": 5.84
+  },
+  {
+    "text": "MDMA ketamine and we just saw you know",
+    "start": 2131.119,
+    "duration": 5.48
+  },
+  {
+    "text": "that guy from that actor from Friends uh",
+    "start": 2134.28,
+    "duration": 5.44
+  },
+  {
+    "text": "die Matthew Perry die after ecstasy use",
+    "start": 2136.599,
+    "duration": 5.121
+  },
+  {
+    "text": "developing an ecstasy problem and I I",
+    "start": 2139.72,
+    "duration": 4.68
+  },
+  {
+    "text": "mean yeah he died he he I mean I'm sorry",
+    "start": 2141.72,
+    "duration": 5.32
+  },
+  {
+    "text": "from ketamin us he died while he was on",
+    "start": 2144.4,
+    "duration": 6.199
+  },
+  {
+    "text": "ketamine therapy with a Maps funded uh",
+    "start": 2147.04,
+    "duration": 5.88
+  },
+  {
+    "text": "you know experim a group of some sort",
+    "start": 2150.599,
+    "duration": 4.681
+  },
+  {
+    "text": "some kind of group that was doing K",
+    "start": 2152.92,
+    "duration": 5.04
+  },
+  {
+    "text": "supposed ketamine therapy he died oh God",
+    "start": 2155.28,
+    "duration": 5.4
+  },
+  {
+    "text": "in the middle of that and um and so this",
+    "start": 2157.96,
+    "duration": 5.52
+  },
+  {
+    "text": "is just some of what's going on there",
+    "start": 2160.68,
+    "duration": 4.12
+  },
+  {
+    "text": "and so they're doing they're they're",
+    "start": 2163.48,
+    "duration": 2.96
+  },
+  {
+    "text": "funding all these experiments with this",
+    "start": 2164.8,
+    "duration": 4.4
+  },
+  {
+    "text": "stuff and places like Columbia",
+    "start": 2166.44,
+    "duration": 5.399
+  },
+  {
+    "text": "University where I went to grad school",
+    "start": 2169.2,
+    "duration": 5.84
+  },
+  {
+    "text": "and uh just show that these people are",
+    "start": 2171.839,
+    "duration": 5.841
+  },
+  {
+    "text": "uh promoting this as if it's about to be",
+    "start": 2175.04,
+    "duration": 6.16
+  },
+  {
+    "text": "legalized and it hasn't the FDA actually",
+    "start": 2177.68,
+    "duration": 5.96
+  },
+  {
+    "text": "despite the massive money and that are",
+    "start": 2181.2,
+    "duration": 5.48
+  },
+  {
+    "text": "going to trying to legalize it and uh",
+    "start": 2183.64,
+    "duration": 4.679
+  },
+  {
+    "text": "they found it's just it just shouldn't",
+    "start": 2186.68,
+    "duration": 5.2
+  },
+  {
+    "text": "be legalized uh because yeah it's causes",
+    "start": 2188.319,
+    "duration": 5.641
+  },
+  {
+    "text": "for all kinds of reasons causing brain",
+    "start": 2191.88,
+    "duration": 4.68
+  },
+  {
+    "text": "damage but also the experimenters having",
+    "start": 2193.96,
+    "duration": 5.119
+  },
+  {
+    "text": "sex with experimental subjects and",
+    "start": 2196.56,
+    "duration": 4.039
+  },
+  {
+    "text": "different things like that they they",
+    "start": 2199.079,
+    "duration": 3.24
+  },
+  {
+    "text": "just said about you know in The Advisory",
+    "start": 2200.599,
+    "duration": 5.041
+  },
+  {
+    "text": "panel turning it down and personally I",
+    "start": 2202.319,
+    "duration": 5.681
+  },
+  {
+    "text": "don't care if drugs are legal or illegal",
+    "start": 2205.64,
+    "duration": 4.52
+  },
+  {
+    "text": "I care about them promoting you the CIA",
+    "start": 2208.0,
+    "duration": 4.359
+  },
+  {
+    "text": "pushing on everyone and acting like it's",
+    "start": 2210.16,
+    "duration": 4.48
+  },
+  {
+    "text": "therapeutic and lying to people about it",
+    "start": 2212.359,
+    "duration": 4.96
+  },
+  {
+    "text": "this sorry to interrupt you but okay I",
+    "start": 2214.64,
+    "duration": 5.92
+  },
+  {
+    "text": "got an ad on Instagram last year and it",
+    "start": 2217.319,
+    "duration": 5.881
+  },
+  {
+    "text": "was literally an ad for",
+    "start": 2220.56,
+    "duration": 5.96
+  },
+  {
+    "text": "atome like virtual ketamine therapy for",
+    "start": 2223.2,
+    "duration": 6.04
+  },
+  {
+    "text": "your PTSD or whatever that was an ad a",
+    "start": 2226.52,
+    "duration": 5.52
+  },
+  {
+    "text": "targeted ad towards me on Instagram so",
+    "start": 2229.24,
+    "duration": 5.32
+  },
+  {
+    "text": "now they're they're mail I don't know",
+    "start": 2232.04,
+    "duration": 4.16
+  },
+  {
+    "text": "how it works but I'm assuming they're",
+    "start": 2234.56,
+    "duration": 4.279
+  },
+  {
+    "text": "mailing people the ketamine so that they",
+    "start": 2236.2,
+    "duration": 5.04
+  },
+  {
+    "text": "can sit on a webcam with a with a",
+    "start": 2238.839,
+    "duration": 5.081
+  },
+  {
+    "text": "therapist and do this ketamine therapy",
+    "start": 2241.24,
+    "duration": 5.2
+  },
+  {
+    "text": "over the computer like essentially",
+    "start": 2243.92,
+    "duration": 5.48
+  },
+  {
+    "text": "unsupervised like no there's no medical",
+    "start": 2246.44,
+    "duration": 5.879
+  },
+  {
+    "text": "assistance if you need it at your house",
+    "start": 2249.4,
+    "duration": 5.959
+  },
+  {
+    "text": "like I I couldn't believe my eyes when",
+    "start": 2252.319,
+    "duration": 4.841
+  },
+  {
+    "text": "that was marketed to me so that like",
+    "start": 2255.359,
+    "duration": 3.521
+  },
+  {
+    "text": "that's the level that they're pushing",
+    "start": 2257.16,
+    "duration": 6.12
+  },
+  {
+    "text": "this now is it's on Instagram ads yeah",
+    "start": 2258.88,
+    "duration": 6.68
+  },
+  {
+    "text": "it's it's ridiculous and so they're",
+    "start": 2263.28,
+    "duration": 4.0
+  },
+  {
+    "text": "they're joined by Maps is joined by",
+    "start": 2265.56,
+    "duration": 4.2
+  },
+  {
+    "text": "another group called hefter which is the",
+    "start": 2267.28,
+    "duration": 5.92
+  },
+  {
+    "text": "the same uh mission same donate donors",
+    "start": 2269.76,
+    "duration": 5.079
+  },
+  {
+    "text": "like the Rockefellers and others and",
+    "start": 2273.2,
+    "duration": 4.56
+  },
+  {
+    "text": "pritsker family and people like that and",
+    "start": 2274.839,
+    "duration": 5.52
+  },
+  {
+    "text": "uh a third group is a British group um",
+    "start": 2277.76,
+    "duration": 5.72
+  },
+  {
+    "text": "called the um Beckley Foundation which",
+    "start": 2280.359,
+    "duration": 5.041
+  },
+  {
+    "text": "was found by a member of the royalty",
+    "start": 2283.48,
+    "duration": 5.0
+  },
+  {
+    "text": "Amanda Fielding who was pushing I said",
+    "start": 2285.4,
+    "duration": 6.16
+  },
+  {
+    "text": "my you know film Tre traning which is",
+    "start": 2288.48,
+    "duration": 5.4
+  },
+  {
+    "text": "drilling a hole in your skull to expand",
+    "start": 2291.56,
+    "duration": 4.6
+  },
+  {
+    "text": "your mind and it should be you know you",
+    "start": 2293.88,
+    "duration": 4.0
+  },
+  {
+    "text": "think it'd be a sanate Liv skit or",
+    "start": 2296.16,
+    "duration": 3.32
+  },
+  {
+    "text": "something but they they they're pushing",
+    "start": 2297.88,
+    "duration": 5.239
+  },
+  {
+    "text": "that as normal and uh sadly enough they",
+    "start": 2299.48,
+    "duration": 6.16
+  },
+  {
+    "text": "almost um convinced John Lennon to",
+    "start": 2303.119,
+    "duration": 4.561
+  },
+  {
+    "text": "Chapan himself to drill hold in a score",
+    "start": 2305.64,
+    "duration": 5.24
+  },
+  {
+    "text": "but he you thankfully thought better but",
+    "start": 2307.68,
+    "duration": 8.04
+  },
+  {
+    "text": "he his taking acid again with yokono um",
+    "start": 2310.88,
+    "duration": 6.88
+  },
+  {
+    "text": "made him think that maybe he he should",
+    "start": 2315.72,
+    "duration": 5.56
+  },
+  {
+    "text": "try it so he was um you know hurting his",
+    "start": 2317.76,
+    "duration": 6.12
+  },
+  {
+    "text": "mind at that time but this this Manda",
+    "start": 2321.28,
+    "duration": 4.76
+  },
+  {
+    "text": "fielding's still around today and her",
+    "start": 2323.88,
+    "duration": 4.32
+  },
+  {
+    "text": "Beckley Foundation has joined",
+    "start": 2326.04,
+    "duration": 5.44
+  },
+  {
+    "text": "conferences with maps and hefter and",
+    "start": 2328.2,
+    "duration": 4.36
+  },
+  {
+    "text": "they're the ones pushing the",
+    "start": 2331.48,
+    "duration": 3.4
+  },
+  {
+    "text": "psychedelics all all over the world",
+    "start": 2332.56,
+    "duration": 6.32
+  },
+  {
+    "text": "right now and it's it's sad it's uh sad",
+    "start": 2334.88,
+    "duration": 5.84
+  },
+  {
+    "text": "fact that these you know IV Le schools",
+    "start": 2338.88,
+    "duration": 4.36
+  },
+  {
+    "text": "all these schools uh just need the money",
+    "start": 2340.72,
+    "duration": 5.16
+  },
+  {
+    "text": "and and they're being offered this huge",
+    "start": 2343.24,
+    "duration": 4.879
+  },
+  {
+    "text": "amount of money to just do these",
+    "start": 2345.88,
+    "duration": 4.439
+  },
+  {
+    "text": "experiments and you know schools have a",
+    "start": 2348.119,
+    "duration": 6.0
+  },
+  {
+    "text": "hard time turning down money so sad but",
+    "start": 2350.319,
+    "duration": 6.481
+  },
+  {
+    "text": "true it's crazy that they've taken they",
+    "start": 2354.119,
+    "duration": 6.281
+  },
+  {
+    "text": "took MK Ultra told us that they we",
+    "start": 2356.8,
+    "duration": 5.88
+  },
+  {
+    "text": "stopped doing that actually you guys but",
+    "start": 2360.4,
+    "duration": 4.76
+  },
+  {
+    "text": "then they just continued it under like a",
+    "start": 2362.68,
+    "duration": 8.08
+  },
+  {
+    "text": "woke NGO like hyper liberal cloak of",
+    "start": 2365.16,
+    "duration": 7.919
+  },
+  {
+    "text": "these organization organizations such as",
+    "start": 2370.76,
+    "duration": 5.359
+  },
+  {
+    "text": "Maps so Maps will like push like oh look",
+    "start": 2373.079,
+    "duration": 5.201
+  },
+  {
+    "text": "we have trans people working for us we",
+    "start": 2376.119,
+    "duration": 4.281
+  },
+  {
+    "text": "have indigenous people working for us",
+    "start": 2378.28,
+    "duration": 5.72
+  },
+  {
+    "text": "we're so we're so great and open-minded",
+    "start": 2380.4,
+    "duration": 6.28
+  },
+  {
+    "text": "and you should take these drugs it's",
+    "start": 2384.0,
+    "duration": 5.92
+  },
+  {
+    "text": "just I mean I'm very impressed by",
+    "start": 2386.68,
+    "duration": 7.04
+  },
+  {
+    "text": "how they're just continuing on under a",
+    "start": 2389.92,
+    "duration": 5.96
+  },
+  {
+    "text": "completely new cloak and people are I",
+    "start": 2393.72,
+    "duration": 4.32
+  },
+  {
+    "text": "mean I used to think Maps was good",
+    "start": 2395.88,
+    "duration": 4.239
+  },
+  {
+    "text": "before I knew like the true history of",
+    "start": 2398.04,
+    "duration": 5.0
+  },
+  {
+    "text": "all this yeah well I'm glad you you've",
+    "start": 2400.119,
+    "duration": 7.841
+  },
+  {
+    "text": "uh seen seen their ugly background and",
+    "start": 2403.04,
+    "duration": 7.36
+  },
+  {
+    "text": "yeah so it's it's incredible how they",
+    "start": 2407.96,
+    "duration": 4.399
+  },
+  {
+    "text": "have they just have these think tanks",
+    "start": 2410.4,
+    "duration": 3.84
+  },
+  {
+    "text": "that are getting paid to come up with",
+    "start": 2412.359,
+    "duration": 4.521
+  },
+  {
+    "text": "all kinds of angles to convince us of",
+    "start": 2414.24,
+    "duration": 5.68
+  },
+  {
+    "text": "these things and so we have to just",
+    "start": 2416.88,
+    "duration": 5.56
+  },
+  {
+    "text": "really be independent minded thinkers",
+    "start": 2419.92,
+    "duration": 4.36
+  },
+  {
+    "text": "and sort through all this propaganda",
+    "start": 2422.44,
+    "duration": 4.6
+  },
+  {
+    "text": "they come up with to push it on us and",
+    "start": 2424.28,
+    "duration": 5.88
+  },
+  {
+    "text": "and try to figure out what's best for us",
+    "start": 2427.04,
+    "duration": 6.92
+  },
+  {
+    "text": "but uh keeping a a clear mind and a you",
+    "start": 2430.16,
+    "duration": 5.959
+  },
+  {
+    "text": "know a sane mind is something that's not",
+    "start": 2433.96,
+    "duration": 4.879
+  },
+  {
+    "text": "easy to do when when we're constantly",
+    "start": 2436.119,
+    "duration": 4.921
+  },
+  {
+    "text": "being bombarded with try this drug try",
+    "start": 2438.839,
+    "duration": 5.041
+  },
+  {
+    "text": "that drug whether it be the psychedelics",
+    "start": 2441.04,
+    "duration": 5.2
+  },
+  {
+    "text": "or the pharmaceutical you know company's",
+    "start": 2443.88,
+    "duration": 5.64
+  },
+  {
+    "text": "newest thing for you know relieving you",
+    "start": 2446.24,
+    "duration": 5.52
+  },
+  {
+    "text": "of depression or anxiety or whatever",
+    "start": 2449.52,
+    "duration": 5.12
+  },
+  {
+    "text": "else while you know things uh new",
+    "start": 2451.76,
+    "duration": 4.16
+  },
+  {
+    "text": "techniques like eye movement",
+    "start": 2454.64,
+    "duration": 3.12
+  },
+  {
+    "text": "desensitization and",
+    "start": 2455.92,
+    "duration": 4.159
+  },
+  {
+    "text": "processing is just a completely",
+    "start": 2457.76,
+    "duration": 6.8
+  },
+  {
+    "text": "non-invasive way of of of NE we call it",
+    "start": 2460.079,
+    "duration": 6.721
+  },
+  {
+    "text": "neutralizing processing and neutralizing",
+    "start": 2464.56,
+    "duration": 5.68
+  },
+  {
+    "text": "traumas in your life and these can be",
+    "start": 2466.8,
+    "duration": 5.319
+  },
+  {
+    "text": "you know sexual or physical abuse kind",
+    "start": 2470.24,
+    "duration": 4.56
+  },
+  {
+    "text": "of traumas or they could be uh just even",
+    "start": 2472.119,
+    "duration": 6.561
+  },
+  {
+    "text": "emotional traumas and I've come to find",
+    "start": 2474.8,
+    "duration": 6.0
+  },
+  {
+    "text": "and many therapists have come to find",
+    "start": 2478.68,
+    "duration": 4.0
+  },
+  {
+    "text": "psychiatrists that or alternative",
+    "start": 2480.8,
+    "duration": 5.08
+  },
+  {
+    "text": "psychiatrists have come to find that uh",
+    "start": 2482.68,
+    "duration": 5.32
+  },
+  {
+    "text": "that these emotional tra AAS and other",
+    "start": 2485.88,
+    "duration": 5.68
+  },
+  {
+    "text": "kinds of traumas is what tends to cause",
+    "start": 2488.0,
+    "duration": 6.44
+  },
+  {
+    "text": "uh these you know depression anxiety and",
+    "start": 2491.56,
+    "duration": 5.12
+  },
+  {
+    "text": "and other mental health issues that's",
+    "start": 2494.44,
+    "duration": 5.159
+  },
+  {
+    "text": "that psychiatrist pushing drugs try to",
+    "start": 2496.68,
+    "duration": 5.919
+  },
+  {
+    "text": "say is genetic Andor and you know and",
+    "start": 2499.599,
+    "duration": 5.0
+  },
+  {
+    "text": "trying to get you to use their latest",
+    "start": 2502.599,
+    "duration": 3.321
+  },
+  {
+    "text": "pharmaceutical",
+    "start": 2504.599,
+    "duration": 4.52
+  },
+  {
+    "text": "for well they've uh well I always grew",
+    "start": 2505.92,
+    "duration": 4.6
+  },
+  {
+    "text": "up hearing that it's a chemical",
+    "start": 2509.119,
+    "duration": 4.761
+  },
+  {
+    "text": "imbalance in the brain and you have to",
+    "start": 2510.52,
+    "duration": 6.92
+  },
+  {
+    "text": "IM they I mean it was just revealed this",
+    "start": 2513.88,
+    "duration": 5.719
+  },
+  {
+    "text": "past year that there there's no such",
+    "start": 2517.44,
+    "duration": 3.6
+  },
+  {
+    "text": "thing as a chemical imbalance in the",
+    "start": 2519.599,
+    "duration": 2.881
+  },
+  {
+    "text": "brain and that was just something that",
+    "start": 2521.04,
+    "duration": 5.2
+  },
+  {
+    "text": "they made up to sell the drugs so yeah I",
+    "start": 2522.48,
+    "duration": 6.04
+  },
+  {
+    "text": "mean you know in England where they have",
+    "start": 2526.24,
+    "duration": 4.48
+  },
+  {
+    "text": "National Health Care they've looked at",
+    "start": 2528.52,
+    "duration": 4.799
+  },
+  {
+    "text": "the meta studies for these an",
+    "start": 2530.72,
+    "duration": 4.2
+  },
+  {
+    "text": "depressants and they basically found",
+    "start": 2533.319,
+    "duration": 3.241
+  },
+  {
+    "text": "that they in the long term they don't",
+    "start": 2534.92,
+    "duration": 4.36
+  },
+  {
+    "text": "work better than Placebo and they they",
+    "start": 2536.56,
+    "duration": 4.32
+  },
+  {
+    "text": "obviously work a lot worse because they",
+    "start": 2539.28,
+    "duration": 4.4
+  },
+  {
+    "text": "have all kinds of side effects from",
+    "start": 2540.88,
+    "duration": 7.12
+  },
+  {
+    "text": "major weight gain to uh Lexapro causing",
+    "start": 2543.68,
+    "duration": 7.2
+  },
+  {
+    "text": "major sexual dysfunction to all kind",
+    "start": 2548.0,
+    "duration": 5.839
+  },
+  {
+    "text": "permanent permanent sexual dysfunction",
+    "start": 2550.88,
+    "duration": 5.28
+  },
+  {
+    "text": "and uh",
+    "start": 2553.839,
+    "duration": 4.48
+  },
+  {
+    "text": "suicide yeah there's all kinds of",
+    "start": 2556.16,
+    "duration": 4.36
+  },
+  {
+    "text": "horrible side effects like that so and",
+    "start": 2558.319,
+    "duration": 4.561
+  },
+  {
+    "text": "you can see it in their um pharmac you",
+    "start": 2560.52,
+    "duration": 4.839
+  },
+  {
+    "text": "know their pharmaceutical ads on TV here",
+    "start": 2562.88,
+    "duration": 5.199
+  },
+  {
+    "text": "they just lists loads of these side",
+    "start": 2565.359,
+    "duration": 5.521
+  },
+  {
+    "text": "effects uh that are just so ugly and",
+    "start": 2568.079,
+    "duration": 4.881
+  },
+  {
+    "text": "scary and people you know I don't know",
+    "start": 2570.88,
+    "duration": 4.56
+  },
+  {
+    "text": "how people take these drugs after",
+    "start": 2572.96,
+    "duration": 4.84
+  },
+  {
+    "text": "hearing these side effects but um the",
+    "start": 2575.44,
+    "duration": 4.119
+  },
+  {
+    "text": "advertisements I hear actually aren't",
+    "start": 2577.8,
+    "duration": 3.799
+  },
+  {
+    "text": "even to sell the drugs they sell the",
+    "start": 2579.559,
+    "duration": 4.161
+  },
+  {
+    "text": "drugs no matter what but they the",
+    "start": 2581.599,
+    "duration": 4.441
+  },
+  {
+    "text": "advertisements are to control TV and",
+    "start": 2583.72,
+    "duration": 5.639
+  },
+  {
+    "text": "control TV stations and control their",
+    "start": 2586.04,
+    "duration": 5.96
+  },
+  {
+    "text": "content yeah and it's also interesting",
+    "start": 2589.359,
+    "duration": 5.24
+  },
+  {
+    "text": "because I haven't I haven't really owned",
+    "start": 2592.0,
+    "duration": 7.48
+  },
+  {
+    "text": "my own TV in many years and I remember a",
+    "start": 2594.599,
+    "duration": 6.641
+  },
+  {
+    "text": "couple years ago visiting my parents",
+    "start": 2599.48,
+    "duration": 3.68
+  },
+  {
+    "text": "house during the holidays and you know",
+    "start": 2601.24,
+    "duration": 3.839
+  },
+  {
+    "text": "they have the TV on and I was shocked",
+    "start": 2603.16,
+    "duration": 3.679
+  },
+  {
+    "text": "that almost every single commercial that",
+    "start": 2605.079,
+    "duration": 4.121
+  },
+  {
+    "text": "I saw was for a pharmaceutical drug and",
+    "start": 2606.839,
+    "duration": 4.681
+  },
+  {
+    "text": "I did not remember it being that way",
+    "start": 2609.2,
+    "duration": 4.56
+  },
+  {
+    "text": "know 10 years ago but now I mean every",
+    "start": 2611.52,
+    "duration": 5.16
+  },
+  {
+    "text": "other commercial is for drugs and it",
+    "start": 2613.76,
+    "duration": 6.48
+  },
+  {
+    "text": "just struck me like wow that's that's a",
+    "start": 2616.68,
+    "duration": 6.879
+  },
+  {
+    "text": "sign of the times I think that um yeah",
+    "start": 2620.24,
+    "duration": 6.48
+  },
+  {
+    "text": "things have changed to that degree yeah",
+    "start": 2623.559,
+    "duration": 8.241
+  },
+  {
+    "text": "yeah no doubt and so um that's why uh",
+    "start": 2626.72,
+    "duration": 7.879
+  },
+  {
+    "text": "RFK Jr is onon this crusade to to get",
+    "start": 2631.8,
+    "duration": 5.72
+  },
+  {
+    "text": "them off of TV because United States and",
+    "start": 2634.599,
+    "duration": 5.0
+  },
+  {
+    "text": "New Zealand are the only Western",
+    "start": 2637.52,
+    "duration": 4.48
+  },
+  {
+    "text": "countries in the world that allow",
+    "start": 2639.599,
+    "duration": 4.361
+  },
+  {
+    "text": "pharmaceutical companies to advertise on",
+    "start": 2642.0,
+    "duration": 6.92
+  },
+  {
+    "text": "TV wow and um so you know he um and it's",
+    "start": 2643.96,
+    "duration": 6.76
+  },
+  {
+    "text": "you know I know people might be upset of",
+    "start": 2648.92,
+    "duration": 5.04
+  },
+  {
+    "text": "course with him um be getting to be part",
+    "start": 2650.72,
+    "duration": 7.599
+  },
+  {
+    "text": "of Trump's campaign uh but he RFK Jr did",
+    "start": 2653.96,
+    "duration": 7.04
+  },
+  {
+    "text": "everything to try to run as a Democrat",
+    "start": 2658.319,
+    "duration": 5.401
+  },
+  {
+    "text": "and tell the Democrats look you know",
+    "start": 2661.0,
+    "duration": 4.76
+  },
+  {
+    "text": "then run is an independent but the",
+    "start": 2663.72,
+    "duration": 3.92
+  },
+  {
+    "text": "Democrats sued him and everything State",
+    "start": 2665.76,
+    "duration": 4.16
+  },
+  {
+    "text": "around the country that uh they they",
+    "start": 2667.64,
+    "duration": 5.88
+  },
+  {
+    "text": "could and then he um he he offered just",
+    "start": 2669.92,
+    "duration": 6.639
+  },
+  {
+    "text": "said look I'll I'll back you to Cal",
+    "start": 2673.52,
+    "duration": 5.24
+  },
+  {
+    "text": "Harris if you just allow me to head you",
+    "start": 2676.559,
+    "duration": 4.201
+  },
+  {
+    "text": "know Health and Human Services or be",
+    "start": 2678.76,
+    "duration": 3.72
+  },
+  {
+    "text": "part of your cabinet she completely",
+    "start": 2680.76,
+    "duration": 4.72
+  },
+  {
+    "text": "refused him and Trump said okay I'll let",
+    "start": 2682.48,
+    "duration": 5.52
+  },
+  {
+    "text": "you be head of human you know Health and",
+    "start": 2685.48,
+    "duration": 5.16
+  },
+  {
+    "text": "Human Services um if you if you back me",
+    "start": 2688.0,
+    "duration": 5.119
+  },
+  {
+    "text": "and he just wanted to get in there to",
+    "start": 2690.64,
+    "duration": 5.199
+  },
+  {
+    "text": "try to change things to try to take all",
+    "start": 2693.119,
+    "duration": 6.2
+  },
+  {
+    "text": "these toxins out food you know that you",
+    "start": 2695.839,
+    "duration": 5.201
+  },
+  {
+    "text": "he just shows that you know and just",
+    "start": 2699.319,
+    "duration": 3.24
+  },
+  {
+    "text": "change things for the better and he's",
+    "start": 2701.04,
+    "duration": 3.559
+  },
+  {
+    "text": "just he's very interesting for the fact",
+    "start": 2702.559,
+    "duration": 4.28
+  },
+  {
+    "text": "that he's been studying the CIA all his",
+    "start": 2704.599,
+    "duration": 6.681
+  },
+  {
+    "text": "life and um because his grandfather uh",
+    "start": 2706.839,
+    "duration": 8.561
+  },
+  {
+    "text": "actually had had pushed hard against the",
+    "start": 2711.28,
+    "duration": 8.079
+  },
+  {
+    "text": "CIA um in a big way in around 1955 or so",
+    "start": 2715.4,
+    "duration": 8.4
+  },
+  {
+    "text": "and um and they attacked his grandfather",
+    "start": 2719.359,
+    "duration": 6.121
+  },
+  {
+    "text": "then they of course killed his uncle and",
+    "start": 2723.8,
+    "duration": 4.559
+  },
+  {
+    "text": "his father and and um of course they're",
+    "start": 2725.48,
+    "duration": 5.079
+  },
+  {
+    "text": "now trying to smear him too but he's",
+    "start": 2728.359,
+    "duration": 4.281
+  },
+  {
+    "text": "he's brilliant about MK Ultra he's",
+    "start": 2730.559,
+    "duration": 4.52
+  },
+  {
+    "text": "brilliant about the cia's history and",
+    "start": 2732.64,
+    "duration": 5.36
+  },
+  {
+    "text": "got all their nefarious um activities",
+    "start": 2735.079,
+    "duration": 5.561
+  },
+  {
+    "text": "and so um we'll see I mean they probably",
+    "start": 2738.0,
+    "duration": 4.48
+  },
+  {
+    "text": "won't let him you know be in Health and",
+    "start": 2740.64,
+    "duration": 4.04
+  },
+  {
+    "text": "Human Services but at least he's getting",
+    "start": 2742.48,
+    "duration": 4.24
+  },
+  {
+    "text": "the word out about about all these you",
+    "start": 2744.68,
+    "duration": 4.96
+  },
+  {
+    "text": "know the danger of all these Cals and",
+    "start": 2746.72,
+    "duration": 5.16
+  },
+  {
+    "text": "stuff yeah definitely we'll see what",
+    "start": 2749.64,
+    "duration": 4.199
+  },
+  {
+    "text": "he's able to do because I mean he's up",
+    "start": 2751.88,
+    "duration": 4.8
+  },
+  {
+    "text": "against the biggest industries in the",
+    "start": 2753.839,
+    "duration": 4.961
+  },
+  {
+    "text": "world in trillions and trillions of",
+    "start": 2756.68,
+    "duration": 5.24
+  },
+  {
+    "text": "dollars against him you know against our",
+    "start": 2758.8,
+    "duration": 7.72
+  },
+  {
+    "text": "interests right we'll see yeah yeah so",
+    "start": 2761.92,
+    "duration": 8.0
+  },
+  {
+    "text": "but um so I I appreciate you uh talking",
+    "start": 2766.52,
+    "duration": 5.64
+  },
+  {
+    "text": "to me about all this Bridges good I",
+    "start": 2769.92,
+    "duration": 4.32
+  },
+  {
+    "text": "think in Mexico it's very interesting",
+    "start": 2772.16,
+    "duration": 4.52
+  },
+  {
+    "text": "because I heard from doctors in Mexico",
+    "start": 2774.24,
+    "duration": 5.119
+  },
+  {
+    "text": "that that during the pandemic they",
+    "start": 2776.68,
+    "duration": 5.08
+  },
+  {
+    "text": "actually had uh hydroxy chloroquin and",
+    "start": 2779.359,
+    "duration": 5.441
+  },
+  {
+    "text": "Ivor mechon in all the airports just in",
+    "start": 2781.76,
+    "duration": 5.44
+  },
+  {
+    "text": "you know when the shelves for every for",
+    "start": 2784.8,
+    "duration": 4.08
+  },
+  {
+    "text": "the public to get gain access to",
+    "start": 2787.2,
+    "duration": 4.6
+  },
+  {
+    "text": "whenever they wanted uh to",
+    "start": 2788.88,
+    "duration": 6.239
+  },
+  {
+    "text": "cter yeah they it was really wild how",
+    "start": 2791.8,
+    "duration": 6.4
+  },
+  {
+    "text": "Mexico did things completely differently",
+    "start": 2795.119,
+    "duration": 5.641
+  },
+  {
+    "text": "and many countries did that um we're in",
+    "start": 2798.2,
+    "duration": 4.04
+  },
+  {
+    "text": "our little bubble here in the United",
+    "start": 2800.76,
+    "duration": 3.559
+  },
+  {
+    "text": "States and just don't where they where",
+    "start": 2802.24,
+    "duration": 4.079
+  },
+  {
+    "text": "the media just vilify anything that's",
+    "start": 2804.319,
+    "duration": 5.361
+  },
+  {
+    "text": "not um the you know the very expensive",
+    "start": 2806.319,
+    "duration": 5.881
+  },
+  {
+    "text": "vaccines the very expensive other other",
+    "start": 2809.68,
+    "duration": 3.399
+  },
+  {
+    "text": "kinds of",
+    "start": 2812.2,
+    "duration": 4.359
+  },
+  {
+    "text": "drugs but yeah it's it's really crazy uh",
+    "start": 2813.079,
+    "duration": 5.52
+  },
+  {
+    "text": "how expensive things are in the United",
+    "start": 2816.559,
+    "duration": 5.681
+  },
+  {
+    "text": "States and yeah you know I appreciate uh",
+    "start": 2818.599,
+    "duration": 4.261
+  },
+  {
+    "text": "RFK",
+    "start": 2822.24,
+    "duration": 2.72
+  },
+  {
+    "text": "[Music]",
+    "start": 2822.86,
+    "duration": 4.739
+  },
+  {
+    "text": "Jr I mean he I do think he's compromised",
+    "start": 2824.96,
+    "duration": 4.399
+  },
+  {
+    "text": "with the whole Zionism thing that's a",
+    "start": 2827.599,
+    "duration": 4.48
+  },
+  {
+    "text": "shame that's really unfortunate um I",
+    "start": 2829.359,
+    "duration": 5.24
+  },
+  {
+    "text": "wonder and also the the Epstein like him",
+    "start": 2832.079,
+    "duration": 5.361
+  },
+  {
+    "text": "being on Epstein's plane three times",
+    "start": 2834.599,
+    "duration": 5.401
+  },
+  {
+    "text": "that's unfortunate but you know I think",
+    "start": 2837.44,
+    "duration": 6.56
+  },
+  {
+    "text": "that he is at least enlightening people",
+    "start": 2840.0,
+    "duration": 5.839
+  },
+  {
+    "text": "to the truth of how these industries",
+    "start": 2844.0,
+    "duration": 3.4
+  },
+  {
+    "text": "work and I've come across",
+    "start": 2845.839,
+    "duration": 3.361
+  },
+  {
+    "text": "just like just people that I meet",
+    "start": 2847.4,
+    "duration": 3.56
+  },
+  {
+    "text": "especially older people like especially",
+    "start": 2849.2,
+    "duration": 4.84
+  },
+  {
+    "text": "older people they really really like him",
+    "start": 2850.96,
+    "duration": 7.119
+  },
+  {
+    "text": "and they they I feel like he has",
+    "start": 2854.04,
+    "duration": 6.24
+  },
+  {
+    "text": "unveiled a lot of truths for a lot of",
+    "start": 2858.079,
+    "duration": 3.921
+  },
+  {
+    "text": "people and he has a lot of popular",
+    "start": 2860.28,
+    "duration": 3.96
+  },
+  {
+    "text": "support on both sides like Democrats and",
+    "start": 2862.0,
+    "duration": 6.2
+  },
+  {
+    "text": "Republicans so I",
+    "start": 2864.24,
+    "duration": 7.839
+  },
+  {
+    "text": "mean the other oh one more thing sure do",
+    "start": 2868.2,
+    "duration": 5.159
+  },
+  {
+    "text": "you have any thoughts it's kind of",
+    "start": 2872.079,
+    "duration": 3.04
+  },
+  {
+    "text": "related do you have any thoughts about",
+    "start": 2873.359,
+    "duration": 5.281
+  },
+  {
+    "text": "the recent uh shooting of the United",
+    "start": 2875.119,
+    "duration": 6.361
+  },
+  {
+    "text": "healthc Care CEO do you think that",
+    "start": 2878.64,
+    "duration": 4.6
+  },
+  {
+    "text": "because people are claiming some people",
+    "start": 2881.48,
+    "duration": 5.68
+  },
+  {
+    "text": "are speculating that Luigi mangion is uh",
+    "start": 2883.24,
+    "duration": 5.879
+  },
+  {
+    "text": "mkl tread what what do you have to say",
+    "start": 2887.16,
+    "duration": 5.08
+  },
+  {
+    "text": "about that yeah I just I just think that",
+    "start": 2889.119,
+    "duration": 6.921
+  },
+  {
+    "text": "he um you know he he did Herald um Ted",
+    "start": 2892.24,
+    "duration": 6.44
+  },
+  {
+    "text": "kazinski in in some kind of notes of his",
+    "start": 2896.04,
+    "duration": 5.92
+  },
+  {
+    "text": "or something but um and in doing that he",
+    "start": 2898.68,
+    "duration": 6.28
+  },
+  {
+    "text": "was you know he was uh promoting a guy",
+    "start": 2901.96,
+    "duration": 5.68
+  },
+  {
+    "text": "who who was an MKUltra victim T kazinski",
+    "start": 2904.96,
+    "duration": 5.52
+  },
+  {
+    "text": "at Harvard um kazinski apparently was",
+    "start": 2907.64,
+    "duration": 5.64
+  },
+  {
+    "text": "you know they tortured him with uh",
+    "start": 2910.48,
+    "duration": 4.4
+  },
+  {
+    "text": "psychologically while they gave him",
+    "start": 2913.28,
+    "duration": 4.6
+  },
+  {
+    "text": "psychedelics at Harvard and um and",
+    "start": 2914.88,
+    "duration": 6.12
+  },
+  {
+    "text": "that's why he was so intensely against",
+    "start": 2917.88,
+    "duration": 5.16
+  },
+  {
+    "text": "you know the United States government um",
+    "start": 2921.0,
+    "duration": 4.2
+  },
+  {
+    "text": "because of horrible things they did to",
+    "start": 2923.04,
+    "duration": 6.0
+  },
+  {
+    "text": "him um so uh but with",
+    "start": 2925.2,
+    "duration": 6.48
+  },
+  {
+    "text": "mangion my I don't think he's I don't",
+    "start": 2929.04,
+    "duration": 4.72
+  },
+  {
+    "text": "think he's MK Ultra subject I think he",
+    "start": 2931.68,
+    "duration": 6.08
+  },
+  {
+    "text": "just uh He did apparently some sources",
+    "start": 2933.76,
+    "duration": 5.359
+  },
+  {
+    "text": "they're not good sources I haven't",
+    "start": 2937.76,
+    "duration": 3.92
+  },
+  {
+    "text": "studied it carefully but but I hear that",
+    "start": 2939.119,
+    "duration": 5.401
+  },
+  {
+    "text": "he was uh sending out um psychedelic",
+    "start": 2941.68,
+    "duration": 4.879
+  },
+  {
+    "text": "mushrooms to people also I don't know if",
+    "start": 2944.52,
+    "duration": 4.72
+  },
+  {
+    "text": "that's true or not but if so is a good",
+    "start": 2946.559,
+    "duration": 4.721
+  },
+  {
+    "text": "chance he did a lot of psychedelics and",
+    "start": 2949.24,
+    "duration": 4.4
+  },
+  {
+    "text": "maybe he just acted a little rashley",
+    "start": 2951.28,
+    "duration": 4.48
+  },
+  {
+    "text": "about what were you know rightful",
+    "start": 2953.64,
+    "duration": 4.32
+  },
+  {
+    "text": "concerns that he hates National Health",
+    "start": 2955.76,
+    "duration": 4.359
+  },
+  {
+    "text": "Care I mean mean he hates the the Health",
+    "start": 2957.96,
+    "duration": 3.8
+  },
+  {
+    "text": "Care System the United States and hates",
+    "start": 2960.119,
+    "duration": 4.72
+  },
+  {
+    "text": "these you know guy making a head of a",
+    "start": 2961.76,
+    "duration": 5.88
+  },
+  {
+    "text": "you CEO of uh Health Plan making $10",
+    "start": 2964.839,
+    "duration": 5.96
+  },
+  {
+    "text": "million when they're denying services",
+    "start": 2967.64,
+    "duration": 5.679
+  },
+  {
+    "text": "for people all over the country that are",
+    "start": 2970.799,
+    "duration": 4.921
+  },
+  {
+    "text": "you know going into poverty in order to",
+    "start": 2973.319,
+    "duration": 6.401
+  },
+  {
+    "text": "try to pay for um you know a procedure a",
+    "start": 2975.72,
+    "duration": 6.839
+  },
+  {
+    "text": "life- saving procedure and so he was",
+    "start": 2979.72,
+    "duration": 5.52
+  },
+  {
+    "text": "just to me he was just acting more rash",
+    "start": 2982.559,
+    "duration": 5.641
+  },
+  {
+    "text": "you know just more impetuously about in",
+    "start": 2985.24,
+    "duration": 5.68
+  },
+  {
+    "text": "the way he he countered that and and you",
+    "start": 2988.2,
+    "duration": 6.56
+  },
+  {
+    "text": "know in shooting the head of a you know",
+    "start": 2990.92,
+    "duration": 6.52
+  },
+  {
+    "text": "insurance company but it's you know he's",
+    "start": 2994.76,
+    "duration": 5.12
+  },
+  {
+    "text": "become a folk hero and I think for for",
+    "start": 2997.44,
+    "duration": 3.96
+  },
+  {
+    "text": "pretty good reason I mean I don't agree",
+    "start": 2999.88,
+    "duration": 4.56
+  },
+  {
+    "text": "with murder but I do think that he at",
+    "start": 3001.4,
+    "duration": 4.84
+  },
+  {
+    "text": "least you know brought the issue to",
+    "start": 3004.44,
+    "duration": 4.2
+  },
+  {
+    "text": "light in in a bigger way for everyone",
+    "start": 3006.24,
+    "duration": 5.44
+  },
+  {
+    "text": "and said this is our systems out is just",
+    "start": 3008.64,
+    "duration": 6.36
+  },
+  {
+    "text": "totally out of control and and is so um",
+    "start": 3011.68,
+    "duration": 5.919
+  },
+  {
+    "text": "inhumane to people and we're the only",
+    "start": 3015.0,
+    "duration": 3.76
+  },
+  {
+    "text": "industrialized country in the world that",
+    "start": 3017.599,
+    "duration": 2.96
+  },
+  {
+    "text": "doesn't have National Health Care and",
+    "start": 3018.76,
+    "duration": 6.079
+  },
+  {
+    "text": "it's absolutely inhumane so yeah yeah",
+    "start": 3020.559,
+    "duration": 7.0
+  },
+  {
+    "text": "maybe you're right I mean I saw that his",
+    "start": 3024.839,
+    "duration": 4.921
+  },
+  {
+    "text": "Goodreads account that was it's public",
+    "start": 3027.559,
+    "duration": 3.841
+  },
+  {
+    "text": "and you could see all his reviews of the",
+    "start": 3029.76,
+    "duration": 3.4
+  },
+  {
+    "text": "books that he's read cuz he's an Avid",
+    "start": 3031.4,
+    "duration": 4.159
+  },
+  {
+    "text": "Reader and he was reviewing a lot of",
+    "start": 3033.16,
+    "duration": 5.6
+  },
+  {
+    "text": "books about psychedelics particularly so",
+    "start": 3035.559,
+    "duration": 5.28
+  },
+  {
+    "text": "I wonder if that did play a role in his",
+    "start": 3038.76,
+    "duration": 5.0
+  },
+  {
+    "text": "kind of spiral if he actually was the",
+    "start": 3040.839,
+    "duration": 5.401
+  },
+  {
+    "text": "shooter you know it's all alleged but",
+    "start": 3043.76,
+    "duration": 4.359
+  },
+  {
+    "text": "yeah and and they say there was there",
+    "start": 3046.24,
+    "duration": 3.8
+  },
+  {
+    "text": "was usually in these kinds of situation",
+    "start": 3048.119,
+    "duration": 4.2
+  },
+  {
+    "text": "there is a group of people working with",
+    "start": 3050.04,
+    "duration": 4.48
+  },
+  {
+    "text": "a guy they always you know claim it's a",
+    "start": 3052.319,
+    "duration": 5.04
+  },
+  {
+    "text": "solo shooter and all but",
+    "start": 3054.52,
+    "duration": 6.799
+  },
+  {
+    "text": "best intelligence agent um that that",
+    "start": 3057.359,
+    "duration": 7.161
+  },
+  {
+    "text": "actually partnered with Naomi wolf who",
+    "start": 3061.319,
+    "duration": 7.04
+  },
+  {
+    "text": "um is an interesting writer you know uh",
+    "start": 3064.52,
+    "duration": 7.76
+  },
+  {
+    "text": "you know uh she wrote some uh letters",
+    "start": 3068.359,
+    "duration": 6.96
+  },
+  {
+    "text": "some really interesting anti- U us",
+    "start": 3072.28,
+    "duration": 6.16
+  },
+  {
+    "text": "fascist you know books",
+    "start": 3075.319,
+    "duration": 6.441
+  },
+  {
+    "text": "um he he basically said that when when",
+    "start": 3078.44,
+    "duration": 5.919
+  },
+  {
+    "text": "you have a situation like this where you",
+    "start": 3081.76,
+    "duration": 5.599
+  },
+  {
+    "text": "shoot someone like this to to come upon",
+    "start": 3084.359,
+    "duration": 5.521
+  },
+  {
+    "text": "them at the exact time you want to you",
+    "start": 3087.359,
+    "duration": 5.361
+  },
+  {
+    "text": "need like a a team of people surveying",
+    "start": 3089.88,
+    "duration": 5.08
+  },
+  {
+    "text": "the situation you can't just do it alone",
+    "start": 3092.72,
+    "duration": 4.2
+  },
+  {
+    "text": "it's incredibly hard to do something",
+    "start": 3094.96,
+    "duration": 5.04
+  },
+  {
+    "text": "like that alone now I'm not saying I I",
+    "start": 3096.92,
+    "duration": 4.72
+  },
+  {
+    "text": "totally trust this intelligence agent",
+    "start": 3100.0,
+    "duration": 4.0
+  },
+  {
+    "text": "who wrote this but it makes sense I mean",
+    "start": 3101.64,
+    "duration": 6.04
+  },
+  {
+    "text": "why why would he you know write this in",
+    "start": 3104.0,
+    "duration": 6.079
+  },
+  {
+    "text": "a way that you know what's his motive",
+    "start": 3107.68,
+    "duration": 4.0
+  },
+  {
+    "text": "otherwise but so there's probably people",
+    "start": 3110.079,
+    "duration": 3.921
+  },
+  {
+    "text": "helping n and I don't know why I don't",
+    "start": 3111.68,
+    "duration": 5.24
+  },
+  {
+    "text": "know what it's all about but um it's",
+    "start": 3114.0,
+    "duration": 4.76
+  },
+  {
+    "text": "interesting I I don't know enough more",
+    "start": 3116.92,
+    "duration": 4.159
+  },
+  {
+    "text": "about the story than that but it's it's",
+    "start": 3118.76,
+    "duration": 4.52
+  },
+  {
+    "text": "an interesting uh new development and I",
+    "start": 3121.079,
+    "duration": 4.161
+  },
+  {
+    "text": "I just hope that something good comes of",
+    "start": 3123.28,
+    "duration": 4.079
+  },
+  {
+    "text": "the fact that people are talking about",
+    "start": 3125.24,
+    "duration": 4.119
+  },
+  {
+    "text": "how horrible um these insurance",
+    "start": 3127.359,
+    "duration": 4.601
+  },
+  {
+    "text": "companies can be for for healthcare in",
+    "start": 3129.359,
+    "duration": 6.48
+  },
+  {
+    "text": "the US yeah oh and oh I almost forgot",
+    "start": 3131.96,
+    "duration": 6.2
+  },
+  {
+    "text": "the um another drug reference for him is",
+    "start": 3135.839,
+    "duration": 4.72
+  },
+  {
+    "text": "that on his Twitter header the image",
+    "start": 3138.16,
+    "duration": 5.12
+  },
+  {
+    "text": "that he chose to upload for his Twitter",
+    "start": 3140.559,
+    "duration": 5.481
+  },
+  {
+    "text": "header it uh it was a picture of a",
+    "start": 3143.28,
+    "duration": 5.92
+  },
+  {
+    "text": "Pokemon on and then the picture of his",
+    "start": 3146.04,
+    "duration": 6.0
+  },
+  {
+    "text": "spinal X-ray with with the metal bolts",
+    "start": 3149.2,
+    "duration": 5.96
+  },
+  {
+    "text": "put in his spine and then a picture of",
+    "start": 3152.04,
+    "duration": 5.6
+  },
+  {
+    "text": "him like at his physical prime but the",
+    "start": 3155.16,
+    "duration": 5.159
+  },
+  {
+    "text": "first image of the Pokemon was is",
+    "start": 3157.64,
+    "duration": 6.04
+  },
+  {
+    "text": "specifically the mushroom Pokemon so I'm",
+    "start": 3160.319,
+    "duration": 5.361
+  },
+  {
+    "text": "like okay he was into mushroom like he's",
+    "start": 3163.68,
+    "duration": 4.639
+  },
+  {
+    "text": "into psychedelics like psychedelics",
+    "start": 3165.68,
+    "duration": 5.919
+  },
+  {
+    "text": "signs are there but I really do wonder",
+    "start": 3168.319,
+    "duration": 5.201
+  },
+  {
+    "text": "if people were helping him it also seems",
+    "start": 3171.599,
+    "duration": 3.76
+  },
+  {
+    "text": "like he wanted to get caught because he",
+    "start": 3173.52,
+    "duration": 4.48
+  },
+  {
+    "text": "I the whole thing I'm surprised he got",
+    "start": 3175.359,
+    "duration": 5.2
+  },
+  {
+    "text": "away at all but then it seems like he",
+    "start": 3178.0,
+    "duration": 4.16
+  },
+  {
+    "text": "wanted to get caught and was leaving",
+    "start": 3180.559,
+    "duration": 4.481
+  },
+  {
+    "text": "like a trail and going into public",
+    "start": 3182.16,
+    "duration": 5.159
+  },
+  {
+    "text": "and I'm curious to see what will happen",
+    "start": 3185.04,
+    "duration": 4.68
+  },
+  {
+    "text": "with this case and what information will",
+    "start": 3187.319,
+    "duration": 6.0
+  },
+  {
+    "text": "even be disclosed to us but yeah we'll",
+    "start": 3189.72,
+    "duration": 5.92
+  },
+  {
+    "text": "see um do you want to wrap up now or do",
+    "start": 3193.319,
+    "duration": 4.04
+  },
+  {
+    "text": "you have time for one more question what",
+    "start": 3195.64,
+    "duration": 2.88
+  },
+  {
+    "text": "do you think I have time for another",
+    "start": 3197.359,
+    "duration": 5.48
+  },
+  {
+    "text": "question sure okay going back to uh the",
+    "start": 3198.52,
+    "duration": 7.64
+  },
+  {
+    "text": "SDS in your documentary you talk about",
+    "start": 3202.839,
+    "duration": 5.921
+  },
+  {
+    "text": "the Weather Underground and their",
+    "start": 3206.16,
+    "duration": 7.08
+  },
+  {
+    "text": "involvement in various uh sabotage",
+    "start": 3208.76,
+    "duration": 8.0
+  },
+  {
+    "text": "sabotage operations of leftist movements",
+    "start": 3213.24,
+    "duration": 5.359
+  },
+  {
+    "text": "can you just talk a little bit about the",
+    "start": 3216.76,
+    "duration": 3.359
+  },
+  {
+    "text": "Weather Underground because when I used",
+    "start": 3218.599,
+    "duration": 4.2
+  },
+  {
+    "text": "to be a drugged out Anarchist I thought",
+    "start": 3220.119,
+    "duration": 4.521
+  },
+  {
+    "text": "Weather Underground was so cool and I",
+    "start": 3222.799,
+    "duration": 4.241
+  },
+  {
+    "text": "wanted to be just like them not",
+    "start": 3224.64,
+    "duration": 7.08
+  },
+  {
+    "text": "realizing um the true history of how",
+    "start": 3227.04,
+    "duration": 6.36
+  },
+  {
+    "text": "they were created and what their purpose",
+    "start": 3231.72,
+    "duration": 3.52
+  },
+  {
+    "text": "was so you want to just talk a little",
+    "start": 3233.4,
+    "duration": 4.48
+  },
+  {
+    "text": "bit about that well to me they're",
+    "start": 3235.24,
+    "duration": 4.839
+  },
+  {
+    "text": "they're a mixed bag I think overall",
+    "start": 3237.88,
+    "duration": 5.0
+  },
+  {
+    "text": "though that they're that a lot of people",
+    "start": 3240.079,
+    "duration": 4.52
+  },
+  {
+    "text": "involved in the Weather Underground that",
+    "start": 3242.88,
+    "duration": 5.04
+  },
+  {
+    "text": "had sincere intentions did did very",
+    "start": 3244.599,
+    "duration": 7.441
+  },
+  {
+    "text": "courageous work at fighting uh the",
+    "start": 3247.92,
+    "duration": 7.639
+  },
+  {
+    "text": "fascist of the you know uh War mongers",
+    "start": 3252.04,
+    "duration": 6.92
+  },
+  {
+    "text": "and the uh anti you know the anti-il",
+    "start": 3255.559,
+    "duration": 6.601
+  },
+  {
+    "text": "rights uh people and all that like it",
+    "start": 3258.96,
+    "duration": 4.119
+  },
+  {
+    "text": "the Weather",
+    "start": 3262.16,
+    "duration": 4.48
+  },
+  {
+    "text": "Underground was just one grouping of",
+    "start": 3263.079,
+    "duration": 6.76
+  },
+  {
+    "text": "many different uh groups from my",
+    "start": 3266.64,
+    "duration": 6.36
+  },
+  {
+    "text": "readings of it all that were conducting",
+    "start": 3269.839,
+    "duration": 7.0
+  },
+  {
+    "text": "these bombings to uh protest the you",
+    "start": 3273.0,
+    "duration": 8.16
+  },
+  {
+    "text": "know Vietnam War and to protest the uh",
+    "start": 3276.839,
+    "duration": 7.161
+  },
+  {
+    "text": "unfair incarceration of leading black",
+    "start": 3281.16,
+    "duration": 5.399
+  },
+  {
+    "text": "panthers I mean they you know certain",
+    "start": 3284.0,
+    "duration": 3.76
+  },
+  {
+    "text": "it's not known if it was the weather",
+    "start": 3286.559,
+    "duration": 2.881
+  },
+  {
+    "text": "underground or if it was some other you",
+    "start": 3287.76,
+    "duration": 4.52
+  },
+  {
+    "text": "know uh revolutionary faction that",
+    "start": 3289.44,
+    "duration": 7.0
+  },
+  {
+    "text": "bombed the um the judges home at Le at",
+    "start": 3292.28,
+    "duration": 6.799
+  },
+  {
+    "text": "least once if not twice of uh when they",
+    "start": 3296.44,
+    "duration": 5.96
+  },
+  {
+    "text": "were put um Tupac's mother and the uh",
+    "start": 3299.079,
+    "duration": 6.081
+  },
+  {
+    "text": "New York City black panthers on trial",
+    "start": 3302.4,
+    "duration": 5.64
+  },
+  {
+    "text": "you know and um so there's just bombings",
+    "start": 3305.16,
+    "duration": 6.32
+  },
+  {
+    "text": "all over for so many different reasons",
+    "start": 3308.04,
+    "duration": 5.16
+  },
+  {
+    "text": "that it's you know but the weather on",
+    "start": 3311.48,
+    "duration": 3.48
+  },
+  {
+    "text": "the ground was just one formation that",
+    "start": 3313.2,
+    "duration": 4.599
+  },
+  {
+    "text": "was doing this and um even though they",
+    "start": 3314.96,
+    "duration": 4.879
+  },
+  {
+    "text": "were infiltrated and even though they",
+    "start": 3317.799,
+    "duration": 5.0
+  },
+  {
+    "text": "were split off from SDS I I do think you",
+    "start": 3319.839,
+    "duration": 5.041
+  },
+  {
+    "text": "know and and they weren't you know maybe",
+    "start": 3322.799,
+    "duration": 4.641
+  },
+  {
+    "text": "the uh most was clear-minded what they",
+    "start": 3324.88,
+    "duration": 4.0
+  },
+  {
+    "text": "were doing I do think they were sobering",
+    "start": 3327.44,
+    "duration": 4.919
+  },
+  {
+    "text": "up they put out some books when when um",
+    "start": 3328.88,
+    "duration": 5.04
+  },
+  {
+    "text": "you know telling why they were doing",
+    "start": 3332.359,
+    "duration": 3.641
+  },
+  {
+    "text": "what they were doing um I one of the",
+    "start": 3333.92,
+    "duration": 4.0
+  },
+  {
+    "text": "books Prairie Fire it's not the best",
+    "start": 3336.0,
+    "duration": 4.4
+  },
+  {
+    "text": "book but I think it's it's got some good",
+    "start": 3337.92,
+    "duration": 4.8
+  },
+  {
+    "text": "essays on this kind of kind of work they",
+    "start": 3340.4,
+    "duration": 5.32
+  },
+  {
+    "text": "were doing and I think they did help I",
+    "start": 3342.72,
+    "duration": 4.96
+  },
+  {
+    "text": "mean they just used they tried every",
+    "start": 3345.72,
+    "duration": 5.48
+  },
+  {
+    "text": "other tactic to stop the Vietnam War and",
+    "start": 3347.68,
+    "duration": 7.119
+  },
+  {
+    "text": "to Pro protest for civil rights um that",
+    "start": 3351.2,
+    "duration": 5.68
+  },
+  {
+    "text": "they could and then following they you",
+    "start": 3354.799,
+    "duration": 3.8
+  },
+  {
+    "text": "know when nothing else worked they did",
+    "start": 3356.88,
+    "duration": 3.159
+  },
+  {
+    "text": "go to bombings but they weren't the",
+    "start": 3358.599,
+    "duration": 4.0
+  },
+  {
+    "text": "first to go to bombings uh other groups",
+    "start": 3360.039,
+    "duration": 4.841
+  },
+  {
+    "text": "did it before them and they just merely",
+    "start": 3362.599,
+    "duration": 3.76
+  },
+  {
+    "text": "took off from there with from what other",
+    "start": 3364.88,
+    "duration": 5.32
+  },
+  {
+    "text": "groups had already started and so um",
+    "start": 3366.359,
+    "duration": 5.801
+  },
+  {
+    "text": "there was there was a group for example",
+    "start": 3370.2,
+    "duration": 4.879
+  },
+  {
+    "text": "uh led by a woman that went to my um",
+    "start": 3372.16,
+    "duration": 5.959
+  },
+  {
+    "text": "undergrad at swore College um that also",
+    "start": 3375.079,
+    "duration": 4.921
+  },
+  {
+    "text": "was involved in bombings before the",
+    "start": 3378.119,
+    "duration": 4.521
+  },
+  {
+    "text": "Weather Underground even started it so",
+    "start": 3380.0,
+    "duration": 4.799
+  },
+  {
+    "text": "um yeah know so I just think it was just",
+    "start": 3382.64,
+    "duration": 4.28
+  },
+  {
+    "text": "a a tactic and I think",
+    "start": 3384.799,
+    "duration": 4.04
+  },
+  {
+    "text": "I think they they did some good stuff",
+    "start": 3386.92,
+    "duration": 3.36
+  },
+  {
+    "text": "there there were a lot of cells all",
+    "start": 3388.839,
+    "duration": 4.681
+  },
+  {
+    "text": "around the country doing this so um not",
+    "start": 3390.28,
+    "duration": 5.839
+  },
+  {
+    "text": "every cell could be you know was",
+    "start": 3393.52,
+    "duration": 4.799
+  },
+  {
+    "text": "infiltrated I think it was just some",
+    "start": 3396.119,
+    "duration": 5.281
+  },
+  {
+    "text": "some you know well-meaning folks that",
+    "start": 3398.319,
+    "duration": 4.961
+  },
+  {
+    "text": "had enough of being of having so many",
+    "start": 3401.4,
+    "duration": 4.399
+  },
+  {
+    "text": "Americans Vietnamese people killed for",
+    "start": 3403.28,
+    "duration": 6.0
+  },
+  {
+    "text": "no reason for the oligarchs and so",
+    "start": 3405.799,
+    "duration": 6.24
+  },
+  {
+    "text": "that's my take on it even though I say",
+    "start": 3409.28,
+    "duration": 5.48
+  },
+  {
+    "text": "that um the splitting up of SDS was",
+    "start": 3412.039,
+    "duration": 5.921
+  },
+  {
+    "text": "terrible um The Weather Underground you",
+    "start": 3414.76,
+    "duration": 5.319
+  },
+  {
+    "text": "know it was say it was probably a mixed",
+    "start": 3417.96,
+    "duration": 3.52
+  },
+  {
+    "text": "bag but overall I do think they were",
+    "start": 3420.079,
+    "duration": 3.201
+  },
+  {
+    "text": "courageous and did some some good work",
+    "start": 3421.48,
+    "duration": 4.359
+  },
+  {
+    "text": "despite some of the the bad stuff that",
+    "start": 3423.28,
+    "duration": 5.88
+  },
+  {
+    "text": "that um happened with you know these uh",
+    "start": 3425.839,
+    "duration": 6.081
+  },
+  {
+    "text": "I mean there's reports of their orgies",
+    "start": 3429.16,
+    "duration": 5.8
+  },
+  {
+    "text": "weren't all voluntary necessarily and so",
+    "start": 3431.92,
+    "duration": 4.6
+  },
+  {
+    "text": "some people you know some people might",
+    "start": 3434.96,
+    "duration": 4.079
+  },
+  {
+    "text": "have been traumatized from from from",
+    "start": 3436.52,
+    "duration": 5.24
+  },
+  {
+    "text": "some of the supposed free love and stuff",
+    "start": 3439.039,
+    "duration": 5.32
+  },
+  {
+    "text": "and but but generally speaking I think",
+    "start": 3441.76,
+    "duration": 5.079
+  },
+  {
+    "text": "it was a well you know like majority of",
+    "start": 3444.359,
+    "duration": 3.921
+  },
+  {
+    "text": "the people in the group were more",
+    "start": 3446.839,
+    "duration": 2.681
+  },
+  {
+    "text": "well-meaning",
+    "start": 3448.28,
+    "duration": 3.839
+  },
+  {
+    "text": "yeah I think well I'm sure some of the",
+    "start": 3449.52,
+    "duration": 4.039
+  },
+  {
+    "text": "people were well-meaning I have a",
+    "start": 3452.119,
+    "duration": 4.321
+  },
+  {
+    "text": "different I have a different Outlook to",
+    "start": 3453.559,
+    "duration": 4.721
+  },
+  {
+    "text": "groups like The Weather Underground and",
+    "start": 3456.44,
+    "duration": 4.04
+  },
+  {
+    "text": "their like the Federal in",
+    "start": 3458.28,
+    "duration": 4.759
+  },
+  {
+    "text": "infiltration yeah and being egged on by",
+    "start": 3460.48,
+    "duration": 5.92
+  },
+  {
+    "text": "the feds to commit these bombings I view",
+    "start": 3463.039,
+    "duration": 6.56
+  },
+  {
+    "text": "them similarly in their adventurism to",
+    "start": 3466.4,
+    "duration": 4.439
+  },
+  {
+    "text": "uh Luigi",
+    "start": 3469.599,
+    "duration": 3.96
+  },
+  {
+    "text": "Manion where you know you have you do",
+    "start": 3470.839,
+    "duration": 5.801
+  },
+  {
+    "text": "these extreme acts of violence but what",
+    "start": 3473.559,
+    "duration": 5.24
+  },
+  {
+    "text": "does it really get you like does does it",
+    "start": 3476.64,
+    "duration": 4.12
+  },
+  {
+    "text": "actually get us anywhere to do things",
+    "start": 3478.799,
+    "duration": 4.0
+  },
+  {
+    "text": "like that in that circumstance where you",
+    "start": 3480.76,
+    "duration": 5.52
+  },
+  {
+    "text": "don't have mass popular support or like",
+    "start": 3482.799,
+    "duration": 7.32
+  },
+  {
+    "text": "or a mass party or or any long-term plan",
+    "start": 3486.28,
+    "duration": 5.6
+  },
+  {
+    "text": "of how you're going to you don't you",
+    "start": 3490.119,
+    "duration": 3.081
+  },
+  {
+    "text": "don't have anybody on your side except",
+    "start": 3491.88,
+    "duration": 3.52
+  },
+  {
+    "text": "your little click and there's a really",
+    "start": 3493.2,
+    "duration": 4.32
+  },
+  {
+    "text": "good interview of Fred Hampton of the",
+    "start": 3495.4,
+    "duration": 4.439
+  },
+  {
+    "text": "Black Panthers talking about his",
+    "start": 3497.52,
+    "duration": 4.079
+  },
+  {
+    "text": "opposition to the Weather Underground",
+    "start": 3499.839,
+    "duration": 3.801
+  },
+  {
+    "text": "and he's like these they they're",
+    "start": 3501.599,
+    "duration": 4.52
+  },
+  {
+    "text": "committing Folly they're they're irresp",
+    "start": 3503.64,
+    "duration": 5.24
+  },
+  {
+    "text": "responsible and the work that we're",
+    "start": 3506.119,
+    "duration": 5.761
+  },
+  {
+    "text": "trying to get done yeah in that time",
+    "start": 3508.88,
+    "duration": 5.36
+  },
+  {
+    "text": "yeah in that time in my film I have that",
+    "start": 3511.88,
+    "duration": 4.64
+  },
+  {
+    "text": "that that Fred Hampton there saying they",
+    "start": 3514.24,
+    "duration": 5.04
+  },
+  {
+    "text": "muddle heads and Scatter brains for sure",
+    "start": 3516.52,
+    "duration": 4.44
+  },
+  {
+    "text": "at that time they were at their worst",
+    "start": 3519.28,
+    "duration": 3.12
+  },
+  {
+    "text": "they were the most scatterbrain and",
+    "start": 3520.96,
+    "duration": 3.359
+  },
+  {
+    "text": "muddlehead because they were tripping up",
+    "start": 3522.4,
+    "duration": 4.719
+  },
+  {
+    "text": "a storm and that's what really hurt",
+    "start": 3524.319,
+    "duration": 4.841
+  },
+  {
+    "text": "their best you know their presentation",
+    "start": 3527.119,
+    "duration": 3.321
+  },
+  {
+    "text": "in the beginning and their planning in",
+    "start": 3529.16,
+    "duration": 4.32
+  },
+  {
+    "text": "the beginning with this you know Chicago",
+    "start": 3530.44,
+    "duration": 4.639
+  },
+  {
+    "text": "you know raid like they were going to",
+    "start": 3533.48,
+    "duration": 3.16
+  },
+  {
+    "text": "just fight the police and",
+    "start": 3535.079,
+    "duration": 4.201
+  },
+  {
+    "text": "Chicago uh and it was it makes the left",
+    "start": 3536.64,
+    "duration": 4.479
+  },
+  {
+    "text": "look nuts it makes everybody turn",
+    "start": 3539.28,
+    "duration": 3.319
+  },
+  {
+    "text": "against us you know it totally it",
+    "start": 3541.119,
+    "duration": 3.361
+  },
+  {
+    "text": "totally does and at that time they were",
+    "start": 3542.599,
+    "duration": 3.321
+  },
+  {
+    "text": "at their worst and they were just and",
+    "start": 3544.48,
+    "duration": 3.839
+  },
+  {
+    "text": "they were a big turnoff and they and",
+    "start": 3545.92,
+    "duration": 4.6
+  },
+  {
+    "text": "their promotion of acid was totally",
+    "start": 3548.319,
+    "duration": 5.601
+  },
+  {
+    "text": "federally manipulated and Bill SS type",
+    "start": 3550.52,
+    "duration": 6.24
+  },
+  {
+    "text": "of person manipulated and it hurt a lot",
+    "start": 3553.92,
+    "duration": 4.48
+  },
+  {
+    "text": "of brains around the country when they",
+    "start": 3556.76,
+    "duration": 4.559
+  },
+  {
+    "text": "did that promoted AET to to like loads",
+    "start": 3558.4,
+    "duration": 5.36
+  },
+  {
+    "text": "of activists and that's horrible but",
+    "start": 3561.319,
+    "duration": 4.361
+  },
+  {
+    "text": "later when they sober it up more I do",
+    "start": 3563.76,
+    "duration": 4.44
+  },
+  {
+    "text": "think they they did better work than",
+    "start": 3565.68,
+    "duration": 4.72
+  },
+  {
+    "text": "that but you know again it's just a an",
+    "start": 3568.2,
+    "duration": 4.119
+  },
+  {
+    "text": "argument you know it's it's a healthy",
+    "start": 3570.4,
+    "duration": 6.12
+  },
+  {
+    "text": "debate about tactics and um you know I",
+    "start": 3572.319,
+    "duration": 6.321
+  },
+  {
+    "text": "think this was some of their last tactic",
+    "start": 3576.52,
+    "duration": 3.44
+  },
+  {
+    "text": "and I don't think they were completely",
+    "start": 3578.64,
+    "duration": 3.12
+  },
+  {
+    "text": "federally manipulated I think it was",
+    "start": 3579.96,
+    "duration": 4.079
+  },
+  {
+    "text": "just partially federally manipulated to",
+    "start": 3581.76,
+    "duration": 5.64
+  },
+  {
+    "text": "to split up SDS and that was terrible",
+    "start": 3584.039,
+    "duration": 4.841
+  },
+  {
+    "text": "but then all the people that got",
+    "start": 3587.4,
+    "duration": 4.88
+  },
+  {
+    "text": "involved um were i t I tend to think you",
+    "start": 3588.88,
+    "duration": 5.12
+  },
+  {
+    "text": "know I think a majority not all of",
+    "start": 3592.28,
+    "duration": 3.279
+  },
+  {
+    "text": "course because some were federal agents",
+    "start": 3594.0,
+    "duration": 3.44
+  },
+  {
+    "text": "Undercover agents but a majority I think",
+    "start": 3595.559,
+    "duration": 5.081
+  },
+  {
+    "text": "were well-meaning and just picked a the",
+    "start": 3597.44,
+    "duration": 5.639
+  },
+  {
+    "text": "most uh violent tactic after all the",
+    "start": 3600.64,
+    "duration": 5.28
+  },
+  {
+    "text": "other tactics didn't work anymore yeah",
+    "start": 3603.079,
+    "duration": 4.52
+  },
+  {
+    "text": "it's crazy how the Black Panthers were",
+    "start": 3605.92,
+    "duration": 3.48
+  },
+  {
+    "text": "fighting everybody off I",
+    "start": 3607.599,
+    "duration": 5.841
+  },
+  {
+    "text": "mean everyone was coming at them even um",
+    "start": 3609.4,
+    "duration": 5.88
+  },
+  {
+    "text": "Timothy liry was going after the Black",
+    "start": 3613.44,
+    "duration": 3.48
+  },
+  {
+    "text": "Panthers trying to get them to take acid",
+    "start": 3615.28,
+    "duration": 3.24
+  },
+  {
+    "text": "and he was getting kicked he got kicked",
+    "start": 3616.92,
+    "duration": 3.119
+  },
+  {
+    "text": "out of their headquarters and they were",
+    "start": 3618.52,
+    "duration": 3.079
+  },
+  {
+    "text": "like what the [ __ ] are you doing dude",
+    "start": 3620.039,
+    "duration": 3.841
+  },
+  {
+    "text": "like why are you trying to get us on",
+    "start": 3621.599,
+    "duration": 4.881
+  },
+  {
+    "text": "these drugs we don't want this what the",
+    "start": 3623.88,
+    "duration": 4.32
+  },
+  {
+    "text": "hell are you doing and then later it",
+    "start": 3626.48,
+    "duration": 4.119
+  },
+  {
+    "text": "came out why he was doing that but they",
+    "start": 3628.2,
+    "duration": 4.72
+  },
+  {
+    "text": "had everybody com yeah I definitely",
+    "start": 3630.599,
+    "duration": 4.081
+  },
+  {
+    "text": "detailed that my first film and then",
+    "start": 3632.92,
+    "duration": 4.76
+  },
+  {
+    "text": "detailed that also in my book what what",
+    "start": 3634.68,
+    "duration": 5.8
+  },
+  {
+    "text": "he how Timothy Larry uh tried to do that",
+    "start": 3637.68,
+    "duration": 5.119
+  },
+  {
+    "text": "tried to push it on Aldridge Cleaver and",
+    "start": 3640.48,
+    "duration": 5.119
+  },
+  {
+    "text": "the back black panthers in Exile and",
+    "start": 3642.799,
+    "duration": 6.481
+  },
+  {
+    "text": "yeah yeah it's it's ugly yeah so crazy",
+    "start": 3645.599,
+    "duration": 6.96
+  },
+  {
+    "text": "oh my God okay well I highly recommend",
+    "start": 3649.28,
+    "duration": 5.44
+  },
+  {
+    "text": "everybody to watch this new documentary",
+    "start": 3652.559,
+    "duration": 3.641
+  },
+  {
+    "text": "as well as your other documentaries and",
+    "start": 3654.72,
+    "duration": 3.96
+  },
+  {
+    "text": "read your books uh do you want to go",
+    "start": 3656.2,
+    "duration": 4.56
+  },
+  {
+    "text": "ahead and tell our listeners how they",
+    "start": 3658.68,
+    "duration": 4.56
+  },
+  {
+    "text": "can find you how they can find your work",
+    "start": 3660.76,
+    "duration": 5.64
+  },
+  {
+    "text": "and yeah thanks it's uh you can find you",
+    "start": 3663.24,
+    "duration": 5.799
+  },
+  {
+    "text": "know all my work and all the links to my",
+    "start": 3666.4,
+    "duration": 6.639
+  },
+  {
+    "text": "work at johnp dash.com but the film uh",
+    "start": 3669.039,
+    "duration": 7.8
+  },
+  {
+    "text": "is for free on tub right now and um you",
+    "start": 3673.039,
+    "duration": 7.08
+  },
+  {
+    "text": "could it's got uh 18 plus uh bonus SC",
+    "start": 3676.839,
+    "duration": 6.441
+  },
+  {
+    "text": "minutes as a DVD that you can buy on",
+    "start": 3680.119,
+    "duration": 5.121
+  },
+  {
+    "text": "Amazon or Barnes & Noble or even",
+    "start": 3683.28,
+    "duration": 4.039
+  },
+  {
+    "text": "actually believe or not Target selling",
+    "start": 3685.24,
+    "duration": 7.319
+  },
+  {
+    "text": "it um and uh so I uh there's a number of",
+    "start": 3687.319,
+    "duration": 7.441
+  },
+  {
+    "text": "platforms digital platforms it's on now",
+    "start": 3692.559,
+    "duration": 3.921
+  },
+  {
+    "text": "though and if you want to see it with",
+    "start": 3694.76,
+    "duration": 5.16
+  },
+  {
+    "text": "without ads for $1.99 on Google Play and",
+    "start": 3696.48,
+    "duration": 5.8
+  },
+  {
+    "text": "YouTube movie rentals you can uh see it",
+    "start": 3699.92,
+    "duration": 4.24
+  },
+  {
+    "text": "there but",
+    "start": 3702.28,
+    "duration": 5.559
+  },
+  {
+    "text": "um uh you know it free free on tub is",
+    "start": 3704.16,
+    "duration": 8.159
+  },
+  {
+    "text": "still uh supports uh me in terms of you",
+    "start": 3707.839,
+    "duration": 6.321
+  },
+  {
+    "text": "give me just a little bit of AD revenue",
+    "start": 3712.319,
+    "duration": 4.441
+  },
+  {
+    "text": "from that but it's uh um if you want to",
+    "start": 3714.16,
+    "duration": 4.879
+  },
+  {
+    "text": "buy it directly from me also I have the",
+    "start": 3716.76,
+    "duration": 5.839
+  },
+  {
+    "text": "DVDs too I have a distributor but I get",
+    "start": 3719.039,
+    "duration": 5.641
+  },
+  {
+    "text": "a certain amount that I can send to",
+    "start": 3722.599,
+    "duration": 6.0
+  },
+  {
+    "text": "people too um and uh so I hope people",
+    "start": 3724.68,
+    "duration": 6.52
+  },
+  {
+    "text": "look it up and and see all the evidence",
+    "start": 3728.599,
+    "duration": 5.161
+  },
+  {
+    "text": "uh the books got both my books have over",
+    "start": 3731.2,
+    "duration": 6.04
+  },
+  {
+    "text": "a thousand endnotes and uh the DVD has",
+    "start": 3733.76,
+    "duration": 5.039
+  },
+  {
+    "text": "most of those you know a good amount of",
+    "start": 3737.24,
+    "duration": 4.359
+  },
+  {
+    "text": "sources saying what um you know we're",
+    "start": 3738.799,
+    "duration": 5.601
+  },
+  {
+    "text": "talking about in this film I mean this",
+    "start": 3741.599,
+    "duration": 5.0
+  },
+  {
+    "text": "interview that's awesome yeah I'm going",
+    "start": 3744.4,
+    "duration": 4.08
+  },
+  {
+    "text": "to link all of that below so people can",
+    "start": 3746.599,
+    "duration": 3.68
+  },
+  {
+    "text": "easily find it and find you if they want",
+    "start": 3748.48,
+    "duration": 4.2
+  },
+  {
+    "text": "to get an actual physical copy mail to",
+    "start": 3750.279,
+    "duration": 6.08
+  },
+  {
+    "text": "them and I highly recommend everybody to",
+    "start": 3752.68,
+    "duration": 6.359
+  },
+  {
+    "text": "dive into John's work because it there's",
+    "start": 3756.359,
+    "duration": 4.72
+  },
+  {
+    "text": "so much to learn it's like it's almost",
+    "start": 3759.039,
+    "duration": 4.601
+  },
+  {
+    "text": "endless and that and it helps you make",
+    "start": 3761.079,
+    "duration": 5.601
+  },
+  {
+    "text": "sense of our culture and history and why",
+    "start": 3763.64,
+    "duration": 5.04
+  },
+  {
+    "text": "things are the way that they are and",
+    "start": 3766.68,
+    "duration": 3.359
+  },
+  {
+    "text": "could even help you make sense of your",
+    "start": 3768.68,
+    "duration": 3.919
+  },
+  {
+    "text": "own personal experiences and your own",
+    "start": 3770.039,
+    "duration": 5.441
+  },
+  {
+    "text": "personal relationship with with the left",
+    "start": 3772.599,
+    "duration": 5.801
+  },
+  {
+    "text": "or with drugs I mean there's a lot to",
+    "start": 3775.48,
+    "duration": 6.44
+  },
+  {
+    "text": "learn um culturally and personally so",
+    "start": 3778.4,
+    "duration": 5.32
+  },
+  {
+    "text": "thank you so much for coming back John",
+    "start": 3781.92,
+    "duration": 5.159
+  },
+  {
+    "text": "and you're welcome anytime as usual",
+    "start": 3783.72,
+    "duration": 9.44
+  },
+  {
+    "text": "thanks so much all right time take",
+    "start": 3787.079,
+    "duration": 6.081
+  }
+]
