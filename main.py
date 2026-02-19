@@ -26,7 +26,6 @@ STEP_NAMES = {
     7: "Visualizations"
 }
 
-
 def run_step(step_num: int, step_name: str, step_func, **kwargs) -> bool:
     """
     Execute a single pipeline step with timing and error handling.
@@ -99,7 +98,12 @@ Examples:
                         help='Run specific steps only (e.g., --steps 3 6 7)')
     parser.add_argument('--archive', action='store_true',
                         help='Archive previous output before running')
+    parser.add_argument('--recheck-no', action='store_true',
+                        help='In Step 1, re-check videos where ad_status is No')
     args = parser.parse_args()
+
+    # Clean sys.argv so child scripts' argparse won't see main.py's flags
+    clean_argv = [sys.argv[0]]
 
     # Print header
     print(f"\n{'='*60}")
@@ -126,32 +130,42 @@ Examples:
 
     # Step 1: Ad Detection
     if 1 in steps_to_run:
+        sys.argv = ['step1_ad_detector.py']
+        if args.recheck_no:
+            sys.argv.append('--recheck-no')
         results[1] = run_step(1, "Ad Detection", step1_ad_detector.main)
+        sys.argv = clean_argv
 
     # Step 2: Batch extraction (skippable)
     if 2 in steps_to_run and not args.skip_extraction:
-        # Temporarily modify sys.argv for step2's argparse
-        original_argv = sys.argv
         sys.argv = ['step2_batch_extract.py']
         if args.skip_existing:
             sys.argv.append('--skip-existing')
         results[2] = run_step(2, "Batch Extract", step2_batch_extract.main)
-        sys.argv = original_argv
+        sys.argv = clean_argv
 
     # Steps 3-5: Analysis (run sequentially)
     if 3 in steps_to_run:
+        sys.argv = clean_argv
         results[3] = run_step(3, "Sensitivity Analysis", step3_sensitivity_analysis.main)
     if 4 in steps_to_run:
+        sys.argv = clean_argv
         results[4] = run_step(4, "Comments Perception", step4_comments_analysis.main)
     if 5 in steps_to_run:
+        sys.argv = ['step5_algospeak_detection.py']
+        if args.skip_existing:
+            sys.argv.append('--skip-existing')
         results[5] = run_step(5, "Algospeak Detection", step5_algospeak_detection.main)
+        sys.argv = clean_argv
 
     # Step 6: Generate report
     if 6 in steps_to_run:
+        sys.argv = clean_argv
         results[6] = run_step(6, "Generate Report", step6_generate_report.main)
 
     # Step 7: Generate visualizations
     if 7 in steps_to_run:
+        sys.argv = clean_argv
         results[7] = run_step(7, "Generate Visualizations", step7_visualizations.main)
 
     # Print summary
