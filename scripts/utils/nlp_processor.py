@@ -74,12 +74,12 @@ def load_sensitive_words(filepath: str) -> tuple:
     # Load sensitive words from JSON file and separate single words from multi-word phrases
     with open(filepath, 'r', encoding='utf-8') as f:
         data = json.load(f)
-    
+
     words = data.get('words', [])
-    
+
     singles = set()
     phrases = []
-    
+
     # Distinguish between single terms and phrases
     for term in words:
         term_lower = term.lower()
@@ -87,8 +87,53 @@ def load_sensitive_words(filepath: str) -> tuple:
             phrases.append(term_lower)
         else:
             singles.add(term_lower)
-    
+
     return singles, phrases
+
+
+def load_sensitive_words_by_category(filepath: str) -> dict:
+    """Load sensitive words grouped by category.
+
+    Returns dict mapping category_name -> (singles_set, phrases_list)
+    """
+    with open(filepath, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    categories = data.get('categories', {})
+    result = {}
+
+    for cat_name, cat_data in categories.items():
+        words = cat_data.get('words', [])
+        singles = set()
+        phrases = []
+        for term in words:
+            term_lower = term.lower()
+            if ' ' in term_lower or '-' in term_lower:
+                phrases.append(term_lower)
+            else:
+                singles.add(term_lower)
+        result[cat_name] = (singles, phrases)
+
+    return result
+
+
+def analyze_transcript_by_category(transcript_text: str, sensitive_words_path: str) -> dict:
+    """Analyse transcript and return per-category sensitive word counts."""
+    if not transcript_text:
+        return {}
+
+    categories = load_sensitive_words_by_category(sensitive_words_path)
+    tokens = clean_and_lemmatize(transcript_text)
+
+    result = {}
+    for cat_name, (singles, phrases) in categories.items():
+        count, found = count_sensitive_matches(transcript_text, tokens, singles, phrases)
+        result[cat_name] = {
+            'count': count,
+            'found_terms': found
+        }
+
+    return result
 
 
 def clean_and_lemmatize(text: str) -> list:

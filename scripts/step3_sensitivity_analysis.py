@@ -23,6 +23,7 @@ except ImportError:
 # Import helper functions for transcript analysis and monetisation classification
 from scripts.utils.nlp_processor import (
     analyze_transcript,
+    analyze_transcript_by_category,
     classify_monetization
 )
 
@@ -137,9 +138,11 @@ def main():
         
         # Analyse transcript to identify sensitive content
         analysis = analyze_transcript(transcript, sensitive_words_path)
+        # Per-category breakdown
+        category_counts = analyze_transcript_by_category(transcript, sensitive_words_path)
         # Classify monetisation likelihood based on ratio score
         classification = classify_monetization(analysis['sensitive_ratio'])
-        
+
         # Prepare structured result row for CSV
         result = {
             'video_id': video_id,
@@ -155,8 +158,11 @@ def main():
             'sensitive_ratio': analysis['sensitive_ratio'],
             'classification': classification,
             'found_terms': ', '.join(analysis['found_terms'][:10]),
-            'ad_status': ad_status_lookup.get(video_id, '')
+            'ad_status': ad_status_lookup.get(video_id, ''),
         }
+        # Add per-category counts, cat here stands for category
+        for cat_name, cat_data in category_counts.items():
+            result[f'{cat_name}_count'] = cat_data['count']
         
         results.append(result)
         

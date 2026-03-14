@@ -40,6 +40,15 @@ if not SUPADATA_API_KEY:
     print("To enable extraction, create a .env file with: SUPADATA_API_KEY=your_key_here")
     SUPADATA_API_KEY = None  # Allow analysis steps to proceed
 
+# Anthropic API Key (for LLM transcript analysis - Step 3c)
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
+if not ANTHROPIC_API_KEY:
+    print("WARNING: ANTHROPIC_API_KEY not found - LLM analysis (Step 3c) will not work")
+    ANTHROPIC_API_KEY = None
+
+# LLM model for transcript analysis (cost-effective for analysis tasks)
+LLM_MODEL = "claude-sonnet-4-6"
+
 SUPADATA_BASE_URL = "https://api.supadata.ai/v1/transcript"
 
 # API Settings
