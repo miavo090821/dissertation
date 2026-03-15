@@ -9,8 +9,8 @@
 # Python dependencies
 #aaa
 # google API (youtube data api)
-google-api-python-client==2.111.0 # this is youtube data api 
-youtube-transcript-api>=0.6.0
+google-api-python-client==2.111.0 # this is youtube data api
+youtube-transcript-api>=0.6.0  # Transcript fetching 
 
 # Data processing
 pandas==2.1.4

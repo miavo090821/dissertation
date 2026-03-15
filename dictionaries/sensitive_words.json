@@ -1,7 +1,109 @@
 {
   "description": "Sensitive words dictionary for YouTube self-censorship analysis. Based on advertiser-restricted terms and content that may trigger demonetization.",
-  "version": "1.0",
+  "version": "2.0",
   "source": "Compiled from pilot study and YouTube advertiser guidelines",
+  "categories": {
+    "violence_death": {
+      "words": [
+        "kill", "killed", "murder", "murdered", "murderers", "homicide",
+        "assassinate", "attack", "attacked", "assault", "stabbing", "stabbed",
+        "stabs", "kidnapping", "kidnap", "torture", "bombing", "robbery",
+        "robbing", "bounty", "crime", "criminal", "criminals", "vandalism",
+        "beaten", "burn", "blood", "death", "dead", "die", "dying",
+        "violence", "brutality", "pummel", "injury", "gash", "stitches",
+        "decimate", "destroy", "genocide", "armenian genocide", "holocaust",
+        "concentration camp", "war crimes", "slavery", "slave", "columbine",
+        "sandy hook", "las vegas shooting", "virginia tech shooting",
+        "timothy mcveigh", "ted bundy", "john wayne gacy", "elliot rodger",
+        "terror", "terrorist", "disaster"
+      ]
+    },
+    "sexual_content": {
+      "words": [
+        "rape", "penis", "genitals", "objectifying", "cock", "porn", "porno",
+        "pornography", "pornhub", "xvideos", "xnxx", "xxx", "nsfw", "nude",
+        "nudes", "nudity", "topless", "nipple", "areola", "breast", "breasts",
+        "boob", "boobs", "sex", "sexual", "anal", "anus", "blowjob",
+        "handjob", "deep throat", "orgy", "threesome", "masturbate",
+        "masturbation", "cum", "cumshot", "dildo", "vagina", "pussy", "cunt",
+        "prostitute", "prostitution", "escort", "sex work", "sex worker",
+        "paedo", "pedo", "paedophile", "pedophile", "pedophilia",
+        "child porn", "incest", "bestiality", "necrophilia", "2 girls 1 cup",
+        "boku no pico", "pregnant", "#freethenipple"
+      ]
+    },
+    "profanity": {
+      "words": [
+        "bullshit", "fuck", "fucking", "shit", "dumbass", "scumbag",
+        "scumbags", "scum", "assholes", "bitch", "twat", "bastard", "damn",
+        "hell", "cringe", "cringy", "obnoxious", "nonsense", "stupid",
+        "dumber", "loser", "crybaby", "hypocrite", "villain", "worst",
+        "irrelevant", "bitter", "insane", "madman", "meltdown", "regressive",
+        "wrong", "false", "brainwashed", "god"
+      ]
+    },
+    "drugs_substances": {
+      "words": [
+        "drugs", "alcohol", "alcoholic", "alcoholics", "beer", "cigarette",
+        "cigarettes", "vape", "weed", "cannabis", "marijuana", "cocaine",
+        "heroin", "meth", "methamphetamine", "lsd", "thc", "ecstasy",
+        "amphetamine", "crackhead", "poisons", "chemical", "chemically"
+      ]
+    },
+    "hate_speech_slurs": {
+      "words": [
+        "racist", "racism", "islamophobe", "islamophobia", "bigot", "sexist",
+        "supremacist", "supremacists", "anti-semitic", "nazi", "neo-nazi",
+        "neonazi", "kkk", "swastika", "hitler", "hate speech", "hate",
+        "black", "white", "nigger", "nigga", "niggaz", "n1gga", "n1gger",
+        "nigg3r", "kike", "chink", "gook", "jap", "paki", "honkey", "wog",
+        "gypsy", "fag", "faggot", "dyke", "retard", "retarded",
+        "segregation", "oppressed", "oppressor", "redlining",
+        "discrimination", "discriminating", "minority", "majority",
+        "alt right", "antifa", "white supremacy", "black lives matter",
+        "all lives matter", "black separatist", "race war", "#metoo", "metoo"
+      ]
+    },
+    "mental_health": {
+      "words": [
+        "suicide", "depression", "schizophrenia", "mentally", "anorexia",
+        "anorexia nervosa", "bulimia", "self-harm", "dysphoria", "disabled",
+        "recovery", "pain"
+      ]
+    },
+    "political_controversial": {
+      "words": [
+        "censorship", "pandemic", "lockdowns", "recession", "inflation",
+        "scalping", "fired", "layoffs", "controversy", "transition",
+        "hormones", "sterilize", "sterile", "puberty", "surgery", "regret",
+        "procedure", "alter", "banned", "doxing", "doxxing", "virus",
+        "corruption", "defeat", "fight", "consequences", "propaganda",
+        "indoctrination", "transgenderism", "blockers", "litigation", "tax",
+        "court", "lawsuit", "suing", "opposition", "punishment", "jail",
+        "prison", "convicted", "sentenced", "wrongful", "bail", "felony",
+        "charges", "prosecutor", "judge", "arrested", "nypd", "harassment",
+        "harass", "abusive", "threat", "threats", "hang", "mug", "espionage",
+        "evil", "suppress", "graffiti", "strike", "flag", "dictator",
+        "nuclear", "broke", "nagging", "bullying", "thug", "incitement",
+        "war", "damage", "chemtrails", "qanon", "pizzagate", "anti vaccine",
+        "antivaxx", "anti vaxxer", "antivaxxer", "election fraud",
+        "the big lie", "apostate", "sharia", "al qaeda", "al qaida",
+        "al qassam brigade", "abu obeida", "boko haram", "isis", "isil",
+        "ira", "malware"
+      ]
+    },
+    "weapons_military": {
+      "words": [
+        "guns", "gun", "shoot", "shooting", "weapon", "weapons", "bombs",
+        "grenade", "knives", "drones", "rockets"
+      ]
+    },
+    "coded_numbers": {
+      "words": [
+        "69", "88", "420", "666", "911", "9-11", "9/11", "14/88", "18+"
+      ]
+    }
+  },
   "words": [
     "bullshit",
     "hypocrite",
@@ -356,4 +458,3 @@
     "the big lie"
   ]
 }
-
