@@ -17,7 +17,48 @@ This document tracks all changes from thhe day we realised HTML and Network API 
 
 ## Session Log
 
-### 2026-02-01: Ad Detection Testing - Probabilistic Ad Serving Discovery
+## 01-14/03/2026 — Resilient Pipeline Orchestrator Redesign
+
+### Problem
+The pipeline had three weaknesses:
+1. **No failure resilience** — if any step crashed, the entire pipeline stopped (video 101 failing killed 102-257)
+2. **No progress tracking** — after a crash, no way to know which steps ran, which failed, or what to run next
+3. **Scattered sys.argv logic** — each step had ad-hoc `sys.argv = [...]` manipulation
+
+### Changes Made
+
+**`main.py` — full rewrite of orchestrator logic:**
+
+1. **New `--continue-on-failure` flag** — when a step fails, logs the error and continues to the next step instead of stopping. Enables overnight runs where you deal with failures in the morning.
+
+2. **Pipeline progress report** (`data/output/pipeline_report.txt`) — saved after every run, appends to file for history. Shows:
+   - Timing for each step (identifies slow steps)
+   - Actual error messages for failures
+   - Exact recovery command (`python main.py --steps 3c`) to re-run just the failed steps
+   - SKIPPED/NOT RUN status for steps that didn't execute
+
+3. **`_set_step_argv()` helper** — replaced all scattered `sys.argv = [...]` blocks with a clean helper that builds argv from keyword arguments. Eliminates inconsistent flag handling.
+
+4. **`run_step()` now returns `(success, elapsed_seconds, error_message)`** — previously returned just `bool`. The richer return enables the progress report.
+
+5. **Phase-based code organisation** — steps grouped into logical phases with clear comments:
+   - Phase 1: Data Collection (Steps 1-2)
+   - Phase 2: Analysis (Steps 3-5)
+   - Phase 3: Output (Steps 6-7)
+   - Phase 4: Summary (report + recovery commands)
+
+6. **7 recovery scenarios in `--help` and README** — concrete commands for: fresh start, resume after crash, ad detection failure, LLM API error, different detection method, re-run analysis only, overnight run.
+
+**`README.md` — updated Commands Reference section:**
+- Replaced "Common Workflows" with 7 named scenarios with explanations
+- Added flags reference table
+- Documented `--continue-on-failure` flag and `pipeline_report.txt` output
+
+### No Changes To
+- Individual step scripts — all resilience handled at orchestrator level
+- Existing flags — `--skip-existing`, `--skip-extraction`, `--skip-llm`, `--steps`, `--method`, `--archive`, `--recheck-no`, `--recheck-rounds` all unchanged
+
+### 20-28/02/2026: Ad Detection Testing - Probabilistic Ad Serving Discovery
 
 #### What We Did
 
