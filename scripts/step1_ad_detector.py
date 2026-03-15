@@ -64,7 +64,9 @@ def extract_video_id(url: str) -> str:
 RECHECK_COLUMNS = ['recheck_round_1', 'recheck_round_2', 'recheck_round_3',
                     'recheck_round_4', 'recheck_round_5']
 
-
+#  this is for the 5th times on "No-ad videos". so the pipeline compiles 
+# all the video fresh starts, if any video has yes ad, then pass, if it shows 'no' ad
+# then this function will run the ad detection 5 times to double check whether it's correct. 
 def _ensure_recheck_columns(df):
     """Add recheck_round_1..5 columns if they don't exist."""
     for col in RECHECK_COLUMNS:
