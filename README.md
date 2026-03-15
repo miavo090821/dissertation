@@ -17,7 +17,6 @@ A computational audit examining whether YouTube's monetisation system influences
    ```
    YOUTUBE_API_KEY=your_key
    SUPADATA_API_KEY=your_key
-   ANTHROPIC_API_KEY=your_key  # Optional, for LLM analysis
    ```
 4. Run: `python main.py`
 
@@ -50,7 +49,6 @@ video_urls.csv
 ┌─────────────────────────────────────────────────────────┐
 │  Step 3:  Sensitivity Analysis (RQ1)                    │
 │  Step 3b: Category Cross-Analysis                       │
-│  Step 3c: LLM Temporal Analysis (Claude API, optional)  │
 │  Step 4:  Comments Perception (RQ2)                     │
 │  Step 5:  Algospeak Detection (RQ3)                     │
 └─────────────────────────────────────────────────────────┘
@@ -72,7 +70,6 @@ video_urls.csv
 | 2 | `scripts/step2_batch_extract.py` | Extract metadata, transcripts, comments via APIs | `data/raw/{video_id}/` |
 | 3 | `scripts/step3_sensitivity_analysis.py` | NLP sensitivity analysis with 357-word dictionary | `sensitivity_scores.csv` |
 | 3b | `scripts/step3b_category_analysis.py` | Cross-category analysis (sensitive words vs algospeak) | `category_analysis.csv` |
-| 3c | `scripts/step3c_llm_analysis.py` | Claude API temporal language evolution analysis | `llm_temporal_analysis.csv` |
 | 4 | `scripts/step4_comments_analysis.py` | Comment perception keyword search (90+ keywords) | `comments_perception.csv` |
 | 5 | `scripts/step5_algospeak_detection.py` | Algospeak coded language detection (128 terms) | `algospeak_findings.csv` |
 | 6 | `scripts/step6_generate_report.py` | Compile all results into Excel workbook | `analysis_results.xlsx` |
@@ -80,7 +77,7 @@ video_urls.csv
 
 ## Commands Reference
 
-### 7 Scenarios — When Things Go Wrong (and What to Run)
+### 6 Scenarios — When Things Go Wrong (and What to Run)
 
 **Scenario 1: Fresh start** — run everything from scratch:
 ```bash
@@ -97,23 +94,18 @@ python main.py --skip-existing --continue-on-failure
 python main.py --steps 1 --skip-existing
 ```
 
-**Scenario 4: LLM API error** — rate limit or quota exceeded, re-run just that step:
-```bash
-python main.py --steps 3c
-```
-
-**Scenario 5: Try a different ad detection method** — stealth not working, try DOM or Network API:
+**Scenario 4: Try a different ad detection method** — stealth not working, try DOM or Network API:
 ```bash
 python main.py --steps 1 --method dom
 python main.py --steps 1 --method network-api
 ```
 
-**Scenario 6: Re-run analysis only** — data already collected, just regenerate results:
+**Scenario 5: Re-run analysis only** — data already collected, just regenerate results:
 ```bash
-python main.py --skip-extraction --skip-llm
+python main.py --skip-extraction
 ```
 
-**Scenario 7: Run overnight** — don't stop on failures, deal with them in the morning:
+**Scenario 6: Run overnight** — don't stop on failures, deal with them in the morning:
 ```bash
 python main.py --continue-on-failure
 ```
@@ -127,7 +119,6 @@ After any run, check `data/output/pipeline_report.txt` for timing, errors, and r
 | `--continue-on-failure` | Log errors and keep going instead of stopping |
 | `--skip-existing` | Skip already-processed videos (Steps 1, 2, 5) |
 | `--skip-extraction` | Skip Step 2 entirely, use existing data |
-| `--skip-llm` | Skip Step 3c (LLM analysis) to avoid API costs |
 | `--steps N [N ...]` | Run only specific steps (e.g., `--steps 3 3b 6 7`) |
 | `--method {stealth,dom,network-api}` | Ad detection method for Step 1 (default: stealth) |
 | `--archive` | Archive previous output before running |
@@ -141,7 +132,6 @@ python main.py --steps 1          # Run only ad detection
 python main.py --steps 2          # Run only data extraction
 python main.py --steps 3          # Run only sensitivity analysis
 python main.py --steps 3b         # Run only category cross-analysis
-python main.py --steps 3c         # Run only LLM temporal analysis
 python main.py --steps 4          # Run only comments perception
 python main.py --steps 5          # Run only algospeak detection
 python main.py --steps 6          # Run only Excel report generation
@@ -202,7 +192,6 @@ dissertation/
 │   ├── step2_batch_extract.py       # Data extraction
 │   ├── step3_sensitivity_analysis.py # Sensitivity analysis
 │   ├── step3b_category_analysis.py  # Category cross-analysis
-│   ├── step3c_llm_analysis.py       # LLM temporal analysis
 │   ├── step4_comments_analysis.py   # Comment perception
 │   ├── step5_algospeak_detection.py # Algospeak detection
 │   ├── step6_generate_report.py     # Excel report

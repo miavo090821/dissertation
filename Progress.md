@@ -17,6 +17,32 @@ This document tracks all changes from thhe day we realised HTML and Network API 
 
 ## Session Log
 
+## 15/03/2026 — Removed Step 3c (LLM Temporal Analysis) from Pipeline
+
+### What Changed
+Removed Step 3c (LLM-based temporal analysis via Claude API) from the research pipeline entirely.
+
+### Why
+LLM analysis will be done in the consumer app instead of the research pipeline. The pipeline should focus on deterministic, reproducible analysis steps. LLM analysis is better suited to the interactive consumer layer where results can be reviewed and iterated on in real time.
+
+### Files Modified
+| File | Changes |
+|------|---------|
+| `main.py` | Removed 3c from STEP_NAMES, ALL_STEPS, PHASES; removed `--skip-llm` flag and step 3c execution block; updated help text scenarios (7→6) |
+| `config.py` | Removed ANTHROPIC_API_KEY loading/warning and LLM_MODEL constant |
+| `README.md` | Removed 3c from pipeline diagram, step table, scenarios, flags table, selective steps, .env example, folder structure |
+| `PROGRESS.md` | Removed LLM Temporal Analysis Methodology section; added this entry |
+
+### File Deleted
+| File | Why |
+|------|-----|
+| `scripts/step3c_llm_analysis.py` | Entire step removed from pipeline |
+
+### Not Affected
+- Steps 6 (report) and 7 (visualizations) had no dependency on 3c output
+- Pipeline now has 8 steps: 1, 2, 3, 3b, 4, 5, 6, 7
+
+
 ## 01-14/03/2026 — Resilient Pipeline Orchestrator Redesign
 
 ### Problem

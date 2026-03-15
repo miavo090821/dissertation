@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Main Pipeline Orchestrator
 ==========================
@@ -12,7 +13,6 @@ Pipeline Phases:
   PHASE 2 — ANALYSIS
     Step 3:  Analyse transcript sensitivity (RQ1)
     Step 3b: Cross-category analysis (sensitive words vs algospeak categories)
-    Step 3c: LLM temporal analysis (Claude API, optional)
     Step 4:  Analyse comment perception keywords (RQ2)
     Step 5:  Detect algospeak in transcripts and comments (RQ3)
 
@@ -27,10 +27,9 @@ Scenarios:
   1. Fresh start:                    python main.py
   2. Resume after crash:             python main.py --skip-existing --continue-on-failure
   3. Ad detection failed mid-run:    python main.py --steps 1 --skip-existing
-  4. LLM API error:                  python main.py --steps 3c
-  5. Different detection method:     python main.py --steps 1 --method dom
-  6. Re-run analysis only:           python main.py --skip-extraction --skip-llm
-  7. Run overnight, tolerate errors: python main.py --continue-on-failure
+  4. Different detection method:     python main.py --steps 1 --method dom
+  5. Re-run analysis only:           python main.py --skip-extraction
+  6. Run overnight, tolerate errors: python main.py --continue-on-failure
 """
 
 import argparse
@@ -45,7 +44,6 @@ STEP_NAMES = {
     '2': "Batch Extract",
     '3': "Sensitivity Analysis",
     '3b': "Category Cross-Analysis",
-    '3c': "LLM Temporal Analysis",
     '4': "Comments Perception",
     '5': "Algospeak Detection",
     '6': "Generate Report",
@@ -53,12 +51,12 @@ STEP_NAMES = {
 }
 
 # Default full pipeline order
-ALL_STEPS = ['1', '2', '3', '3b', '3c', '4', '5', '6', '7']
+ALL_STEPS = ['1', '2', '3', '3b', '4', '5', '6', '7']
 
 # Phase groupings for display
 PHASES = {
     'DATA COLLECTION': ['1', '2'],
-    'ANALYSIS': ['3', '3b', '3c', '4', '5'],
+    'ANALYSIS': ['3', '3b', '4', '5'],
     'OUTPUT': ['6', '7'],
 }
 
@@ -214,24 +212,20 @@ Scenarios:
   3. Ad detection failed mid-run — resume from where it stopped:
      python main.py --steps 1 --skip-existing
 
-  4. LLM API error — re-run just that step:
-     python main.py --steps 3c
-
-  5. Try a different ad detection method:
+  4. Try a different ad detection method:
      python main.py --steps 1 --method dom
      python main.py --steps 1 --method network-api
 
-  6. Re-run analysis only (data already collected):
-     python main.py --skip-extraction --skip-llm
+  5. Re-run analysis only (data already collected):
+     python main.py --skip-extraction
 
-  7. Run overnight — don't stop on failures:
+  6. Run overnight — don't stop on failures:
      python main.py --continue-on-failure
 
 Flags:
   --continue-on-failure   Log errors and keep going instead of stopping
   --skip-existing         Skip already-processed videos (Steps 1, 2, 5)
   --skip-extraction       Skip Step 2 entirely, use existing data
-  --skip-llm              Skip Step 3c (LLM analysis) to avoid API costs
   --steps N [N ...]       Run only specific steps (e.g., --steps 3 3b 6 7)
   --method {stealth,dom,network-api}  Ad detection method for Step 1
   --archive               Archive previous output before running
@@ -254,8 +248,6 @@ Flags:
     parser.add_argument('--method', choices=['stealth', 'dom', 'network-api'],
                         default='stealth',
                         help='Ad detection method for Step 1 (default: stealth)')
-    parser.add_argument('--skip-llm', action='store_true',
-                        help='Skip Step 3c (LLM analysis) to avoid API costs')
     parser.add_argument('--continue-on-failure', action='store_true',
                         help='Log errors and keep going instead of stopping the pipeline')
     args = parser.parse_args()
@@ -351,20 +343,6 @@ Flags:
         if not results['3b'][0] and not args.continue_on_failure:
             print(f"\nStep 3b failed. Use --continue-on-failure to keep going.")
             pipeline_stopped = True
-
-    # Step 3c: LLM Temporal Analysis (skippable)
-    if '3c' in steps_to_run and not pipeline_stopped:
-        if args.skip_llm:
-            print("\nStep 3c: LLM Temporal Analysis — SKIPPED (--skip-llm)")
-            skipped_steps.add('3c')
-        else:
-            from scripts import step3c_llm_analysis
-            _set_step_argv('step3c_llm_analysis.py')
-            results['3c'] = run_step('3c', "LLM Temporal Analysis", step3c_llm_analysis.main)
-
-            if not results['3c'][0] and not args.continue_on_failure:
-                print(f"\nStep 3c failed. Use --continue-on-failure to keep going.")
-                pipeline_stopped = True
 
     # Step 4: Comments Perception
     if '4' in steps_to_run and not pipeline_stopped:
