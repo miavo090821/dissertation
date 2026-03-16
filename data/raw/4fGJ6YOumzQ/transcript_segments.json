@@ -1,0 +1,317 @@
+[
+  {
+    "text": "Back in October 2025, I talked about a",
+    "start": 0.08,
+    "duration": 4.32
+  },
+  {
+    "text": "leak that Discord was involved with",
+    "start": 2.48,
+    "duration": 3.359
+  },
+  {
+    "text": "where hackers claimed to have gotten a",
+    "start": 4.4,
+    "duration": 3.6
+  },
+  {
+    "text": "hold of two million plus images and 1.5",
+    "start": 5.839,
+    "duration": 4.081
+  },
+  {
+    "text": "terabytes of data, including personal",
+    "start": 8.0,
+    "duration": 3.759
+  },
+  {
+    "text": "information of Discord users, like their",
+    "start": 9.92,
+    "duration": 3.44
+  },
+  {
+    "text": "names, usernames, email addresses,",
+    "start": 11.759,
+    "duration": 3.281
+  },
+  {
+    "text": "contact information, billing",
+    "start": 13.36,
+    "duration": 3.919
+  },
+  {
+    "text": "information, stuff like that. Discord",
+    "start": 15.04,
+    "duration": 4.159
+  },
+  {
+    "text": "tried to defend themselves, saying that,",
+    "start": 17.279,
+    "duration": 3.361
+  },
+  {
+    "text": "well, they didn't actually get hacked",
+    "start": 19.199,
+    "duration": 2.881
+  },
+  {
+    "text": "directly. It was a thirdparty vendor",
+    "start": 20.64,
+    "duration": 2.719
+  },
+  {
+    "text": "that they work with. But this just",
+    "start": 22.08,
+    "duration": 3.039
+  },
+  {
+    "text": "caused people to wonder, why is Discord",
+    "start": 23.359,
+    "duration": 3.201
+  },
+  {
+    "text": "giving all this personal information to",
+    "start": 25.119,
+    "duration": 3.361
+  },
+  {
+    "text": "a third party? It didn't do anything to",
+    "start": 26.56,
+    "duration": 3.68
+  },
+  {
+    "text": "actually help their image. While this",
+    "start": 28.48,
+    "duration": 4.48
+  },
+  {
+    "text": "was the most recent major data leak that",
+    "start": 30.24,
+    "duration": 4.479
+  },
+  {
+    "text": "Discord was involved with, it's not the",
+    "start": 32.96,
+    "duration": 3.759
+  },
+  {
+    "text": "only one, as this has happened multiple",
+    "start": 34.719,
+    "duration": 3.52
+  },
+  {
+    "text": "times over the years, apparently. Well,",
+    "start": 36.719,
+    "duration": 3.52
+  },
+  {
+    "text": "now Discord has this bright idea that's",
+    "start": 38.239,
+    "duration": 4.081
+  },
+  {
+    "text": "in the news today. Discord is launching",
+    "start": 40.239,
+    "duration": 3.921
+  },
+  {
+    "text": "what they say is teen by default",
+    "start": 42.32,
+    "duration": 3.6
+  },
+  {
+    "text": "settings globally. This means that",
+    "start": 44.16,
+    "duration": 3.919
+  },
+  {
+    "text": "Discord accounts globally are going to",
+    "start": 45.92,
+    "duration": 4.799
+  },
+  {
+    "text": "be limited on mature content unless they",
+    "start": 48.079,
+    "duration": 5.041
+  },
+  {
+    "text": "verify their age. Sounds familiar,",
+    "start": 50.719,
+    "duration": 4.32
+  },
+  {
+    "text": "doesn't it, Offcom? They specifically",
+    "start": 53.12,
+    "duration": 3.68
+  },
+  {
+    "text": "say age assurance is the foundation of",
+    "start": 55.039,
+    "duration": 3.36
+  },
+  {
+    "text": "this new experience and is designed to",
+    "start": 56.8,
+    "duration": 3.36
+  },
+  {
+    "text": "respect Discord users privacy and",
+    "start": 58.399,
+    "duration": 4.32
+  },
+  {
+    "text": "choice. That's ironic. Discord users,",
+    "start": 60.16,
+    "duration": 4.319
+  },
+  {
+    "text": "they say, can choose to use facial age",
+    "start": 62.719,
+    "duration": 3.44
+  },
+  {
+    "text": "estimation or submit a form of",
+    "start": 64.479,
+    "duration": 3.68
+  },
+  {
+    "text": "identification to its vendor partners.",
+    "start": 66.159,
+    "duration": 3.361
+  },
+  {
+    "text": "Oh, yeah. Because they've never had a",
+    "start": 68.159,
+    "duration": 2.96
+  },
+  {
+    "text": "problem with personal information",
+    "start": 69.52,
+    "duration": 3.84
+  },
+  {
+    "text": "getting leaked by their vendor partners",
+    "start": 71.119,
+    "duration": 4.481
+  },
+  {
+    "text": "before. Yeah, it's a it's a great great",
+    "start": 73.36,
+    "duration": 4.16
+  },
+  {
+    "text": "idea. Each verification will require",
+    "start": 75.6,
+    "duration": 4.32
+  },
+  {
+    "text": "things like video selfies or maybe even",
+    "start": 77.52,
+    "duration": 4.56
+  },
+  {
+    "text": "personal identifying documents. try to",
+    "start": 79.92,
+    "duration": 3.68
+  },
+  {
+    "text": "reassure people by saying that the video",
+    "start": 82.08,
+    "duration": 3.2
+  },
+  {
+    "text": "selfies will never leave your device and",
+    "start": 83.6,
+    "duration": 3.12
+  },
+  {
+    "text": "the identifying documents that you",
+    "start": 85.28,
+    "duration": 2.8
+  },
+  {
+    "text": "submit to their vendors, oh, they'll get",
+    "start": 86.72,
+    "duration": 3.12
+  },
+  {
+    "text": "deleted really quickly. But here's the",
+    "start": 88.08,
+    "duration": 3.6
+  },
+  {
+    "text": "thing, there's no good reason to trust",
+    "start": 89.84,
+    "duration": 3.279
+  },
+  {
+    "text": "these companies. You know, it's pretty",
+    "start": 91.68,
+    "duration": 2.799
+  },
+  {
+    "text": "creepy stuff. Once again, this is",
+    "start": 93.119,
+    "duration": 3.201
+  },
+  {
+    "text": "collecting and harvesting biometric data",
+    "start": 94.479,
+    "duration": 3.361
+  },
+  {
+    "text": "under the guise of protecting children",
+    "start": 96.32,
+    "duration": 2.64
+  },
+  {
+    "text": "like we've seen so many corrupt",
+    "start": 97.84,
+    "duration": 3.04
+  },
+  {
+    "text": "organizations, corrupt businesses, and",
+    "start": 98.96,
+    "duration": 4.32
+  },
+  {
+    "text": "corrupt governments do over the years.",
+    "start": 100.88,
+    "duration": 3.919
+  },
+  {
+    "text": "Understandably, Discord's getting a ton",
+    "start": 103.28,
+    "duration": 3.04
+  },
+  {
+    "text": "of backlash for this. People are talking",
+    "start": 104.799,
+    "duration": 2.881
+  },
+  {
+    "text": "about going back to Ventrillo and",
+    "start": 106.32,
+    "duration": 2.64
+  },
+  {
+    "text": "TeamSpeak, which is actually pretty",
+    "start": 107.68,
+    "duration": 2.64
+  },
+  {
+    "text": "wholesome to see. It's good that people",
+    "start": 108.96,
+    "duration": 2.88
+  },
+  {
+    "text": "aren't just capitulating. But let me",
+    "start": 110.32,
+    "duration": 4.72
+  },
+  {
+    "text": "know what you think about the latest.",
+    "start": 111.84,
+    "duration": 3.2
+  }
+]

@@ -1,0 +1,6462 @@
+[
+  {
+    "text": "hey how's it going folks Dan here with a",
+    "start": 0.179,
+    "duration": 7.08
+  },
+  {
+    "text": "new episode for you initially this was a",
+    "start": 3.84,
+    "duration": 6.299
+  },
+  {
+    "text": "show only for patrons of the podcast but",
+    "start": 7.259,
+    "duration": 5.941
+  },
+  {
+    "text": "upon listening to it this is really more",
+    "start": 10.139,
+    "duration": 6.121
+  },
+  {
+    "text": "three arrows than iron dice content",
+    "start": 13.2,
+    "duration": 5.1
+  },
+  {
+    "text": "although the line is a little blurry",
+    "start": 16.26,
+    "duration": 5.9
+  },
+  {
+    "text": "there anyway enjoy",
+    "start": 18.3,
+    "duration": 3.86
+  },
+  {
+    "text": "hey how's it going everyone",
+    "start": 25.92,
+    "duration": 5.88
+  },
+  {
+    "text": "Dan here with another bonus show",
+    "start": 28.56,
+    "duration": 6.179
+  },
+  {
+    "text": "one that I have been very much looking",
+    "start": 31.8,
+    "duration": 5.88
+  },
+  {
+    "text": "forward to the U.S midterms in which the",
+    "start": 34.739,
+    "duration": 5.34
+  },
+  {
+    "text": "Republicans achieved a historically bad",
+    "start": 37.68,
+    "duration": 5.219
+  },
+  {
+    "text": "result are now behind us and",
+    "start": 40.079,
+    "duration": 5.461
+  },
+  {
+    "text": "historically really is the appropriate",
+    "start": 42.899,
+    "duration": 5.401
+  },
+  {
+    "text": "term here considering that a midterm",
+    "start": 45.54,
+    "duration": 5.64
+  },
+  {
+    "text": "election in which the Republicans lost",
+    "start": 48.3,
+    "duration": 5.4
+  },
+  {
+    "text": "ground in terms of the raw number of",
+    "start": 51.18,
+    "duration": 5.1
+  },
+  {
+    "text": "State Legislative seats has only",
+    "start": 53.7,
+    "duration": 7.199
+  },
+  {
+    "text": "happened twice in the last 100 years the",
+    "start": 56.28,
+    "duration": 6.119
+  },
+  {
+    "text": "reason why I'm only talking about this",
+    "start": 60.899,
+    "duration": 4.501
+  },
+  {
+    "text": "now because I wanted to wait for the",
+    "start": 62.399,
+    "duration": 4.861
+  },
+  {
+    "text": "Georgia runoff that happened this week",
+    "start": 65.4,
+    "duration": 5.28
+  },
+  {
+    "text": "that one has now also been won by the",
+    "start": 67.26,
+    "duration": 6.48
+  },
+  {
+    "text": "Democratic candidate Rafael Warnock so I",
+    "start": 70.68,
+    "duration": 6.06
+  },
+  {
+    "text": "think it's safe to say that Republicans",
+    "start": 73.74,
+    "duration": 6.36
+  },
+  {
+    "text": "took a big L especially considering all",
+    "start": 76.74,
+    "duration": 5.699
+  },
+  {
+    "text": "the talk about a red wave sweeping the",
+    "start": 80.1,
+    "duration": 5.04
+  },
+  {
+    "text": "country given that the election happened",
+    "start": 82.439,
+    "duration": 5.581
+  },
+  {
+    "text": "in early November most angles of",
+    "start": 85.14,
+    "duration": 6.0
+  },
+  {
+    "text": "commentary have been touched upon so you",
+    "start": 88.02,
+    "duration": 5.04
+  },
+  {
+    "text": "don't need me to to retread them here",
+    "start": 91.14,
+    "duration": 5.58
+  },
+  {
+    "text": "but there is one aspect to this I",
+    "start": 93.06,
+    "duration": 6.12
+  },
+  {
+    "text": "haven't seen too much on and that is",
+    "start": 96.72,
+    "duration": 5.399
+  },
+  {
+    "text": "what I want to focus on today because it",
+    "start": 99.18,
+    "duration": 5.22
+  },
+  {
+    "text": "finally gives me a reason to talk about",
+    "start": 102.119,
+    "duration": 5.881
+  },
+  {
+    "text": "U.S politics in a way that is somewhat",
+    "start": 104.4,
+    "duration": 5.88
+  },
+  {
+    "text": "optimistic which I found very difficult",
+    "start": 108.0,
+    "duration": 5.159
+  },
+  {
+    "text": "to do recently that optimism doesn't",
+    "start": 110.28,
+    "duration": 5.22
+  },
+  {
+    "text": "stem from the fact that the Democrats",
+    "start": 113.159,
+    "duration": 4.981
+  },
+  {
+    "text": "did good but that Republicans did so",
+    "start": 115.5,
+    "duration": 4.979
+  },
+  {
+    "text": "poorly with the messaging they choose",
+    "start": 118.14,
+    "duration": 4.68
+  },
+  {
+    "text": "for the selection and of course that",
+    "start": 120.479,
+    "duration": 5.341
+  },
+  {
+    "text": "varies somewhat from state to state but",
+    "start": 122.82,
+    "duration": 5.82
+  },
+  {
+    "text": "there is one consistent through line",
+    "start": 125.82,
+    "duration": 5.999
+  },
+  {
+    "text": "that Republicans were convinced of would",
+    "start": 128.64,
+    "duration": 4.92
+  },
+  {
+    "text": "get them the numbers that they needed",
+    "start": 131.819,
+    "duration": 5.341
+  },
+  {
+    "text": "and it didn't if there is one issue",
+    "start": 133.56,
+    "duration": 6.66
+  },
+  {
+    "text": "Republicans hammered on the most on a",
+    "start": 137.16,
+    "duration": 5.939
+  },
+  {
+    "text": "national level it's transphobia and",
+    "start": 140.22,
+    "duration": 4.5
+  },
+  {
+    "text": "scare mongering about gender",
+    "start": 143.099,
+    "duration": 4.561
+  },
+  {
+    "text": "indoctrination this isn't just something",
+    "start": 144.72,
+    "duration": 6.18
+  },
+  {
+    "text": "they use to win votes though but goes",
+    "start": 147.66,
+    "duration": 7.38
+  },
+  {
+    "text": "hand in hand with a legislative push to",
+    "start": 150.9,
+    "duration": 6.9
+  },
+  {
+    "text": "discriminate against the lgbtq community",
+    "start": 155.04,
+    "duration": 6.6
+  },
+  {
+    "text": "a push that has enormously increased in",
+    "start": 157.8,
+    "duration": 7.079
+  },
+  {
+    "text": "the last two to four years so I'm gonna",
+    "start": 161.64,
+    "duration": 5.819
+  },
+  {
+    "text": "paint a little picture for you here to",
+    "start": 164.879,
+    "duration": 5.521
+  },
+  {
+    "text": "show you just how much Republicans have",
+    "start": 167.459,
+    "duration": 5.461
+  },
+  {
+    "text": "gone in on attacking lgbtq people",
+    "start": 170.4,
+    "duration": 5.1
+  },
+  {
+    "text": "recently and then we'll take a look at",
+    "start": 172.92,
+    "duration": 5.22
+  },
+  {
+    "text": "how that worked out for them this comes",
+    "start": 175.5,
+    "duration": 5.459
+  },
+  {
+    "text": "courtesy of NBC News quote State",
+    "start": 178.14,
+    "duration": 6.319
+  },
+  {
+    "text": "lawmakers have proposed a record",
+    "start": 180.959,
+    "duration": 6.901
+  },
+  {
+    "text": "238 bills that would limit the rights of",
+    "start": 184.459,
+    "duration": 6.761
+  },
+  {
+    "text": "lgbtq Americans this year or more than",
+    "start": 187.86,
+    "duration": 5.82
+  },
+  {
+    "text": "three per day with about half of them",
+    "start": 191.22,
+    "duration": 4.08
+  },
+  {
+    "text": "targeting transgender people",
+    "start": 193.68,
+    "duration": 5.24
+  },
+  {
+    "text": "specifically nearly 670",
+    "start": 195.3,
+    "duration": 6.18
+  },
+  {
+    "text": "anti-lgbtq builds have been filed since",
+    "start": 198.92,
+    "duration": 5.86
+  },
+  {
+    "text": "2018 according to an NBC News analysis",
+    "start": 201.48,
+    "duration": 5.339
+  },
+  {
+    "text": "of data from the American civil",
+    "start": 204.78,
+    "duration": 5.16
+  },
+  {
+    "text": "liberties Union and lgbtq advocacy group",
+    "start": 206.819,
+    "duration": 5.821
+  },
+  {
+    "text": "freedom for all Americans with nearly",
+    "start": 209.94,
+    "duration": 4.62
+  },
+  {
+    "text": "all of the country's 50 state",
+    "start": 212.64,
+    "duration": 4.739
+  },
+  {
+    "text": "legislators having weighed at least one",
+    "start": 214.56,
+    "duration": 5.58
+  },
+  {
+    "text": "bill throughout that time the annual",
+    "start": 217.379,
+    "duration": 6.841
+  },
+  {
+    "text": "number of anti-lgbtq bills filed has",
+    "start": 220.14,
+    "duration": 8.7
+  },
+  {
+    "text": "skyrocketed from 41 bills in 2018 to 238",
+    "start": 224.22,
+    "duration": 7.739
+  },
+  {
+    "text": "builds in less than three months of 2022",
+    "start": 228.84,
+    "duration": 6.0
+  },
+  {
+    "text": "and this year's historic tally quickly",
+    "start": 231.959,
+    "duration": 5.101
+  },
+  {
+    "text": "follows what some Advocates had labeled",
+    "start": 234.84,
+    "duration": 5.52
+  },
+  {
+    "text": "the worst year in recent history for",
+    "start": 237.06,
+    "duration": 7.679
+  },
+  {
+    "text": "lgbtq State Legislative attacks when 191",
+    "start": 240.36,
+    "duration": 7.379
+  },
+  {
+    "text": "bills were proposed last year end quote",
+    "start": 244.739,
+    "duration": 6.661
+  },
+  {
+    "text": "now while the lgbtq community as a whole",
+    "start": 247.739,
+    "duration": 5.761
+  },
+  {
+    "text": "is the target of these builds in terms",
+    "start": 251.4,
+    "duration": 4.44
+  },
+  {
+    "text": "of restricting school curriculums and",
+    "start": 253.5,
+    "duration": 4.979
+  },
+  {
+    "text": "the like there is one aspect here I want",
+    "start": 255.84,
+    "duration": 5.16
+  },
+  {
+    "text": "to highlight today and that is the",
+    "start": 258.479,
+    "duration": 4.981
+  },
+  {
+    "text": "targeting of trans people specifically",
+    "start": 261.0,
+    "duration": 5.52
+  },
+  {
+    "text": "because while discrimination of gay",
+    "start": 263.46,
+    "duration": 5.7
+  },
+  {
+    "text": "people under the guise of religious",
+    "start": 266.52,
+    "duration": 5.04
+  },
+  {
+    "text": "freedom goes back much further than the",
+    "start": 269.16,
+    "duration": 6.0
+  },
+  {
+    "text": "last five years there is a huge uptick",
+    "start": 271.56,
+    "duration": 6.6
+  },
+  {
+    "text": "now wrapped up in the Panic Republicans",
+    "start": 275.16,
+    "duration": 5.34
+  },
+  {
+    "text": "want to stir around trans people in",
+    "start": 278.16,
+    "duration": 4.56
+  },
+  {
+    "text": "sports which bathrooms they are allowed",
+    "start": 280.5,
+    "duration": 5.46
+  },
+  {
+    "text": "to use and more there's also a specific",
+    "start": 282.72,
+    "duration": 5.88
+  },
+  {
+    "text": "reason for this namely that Republican",
+    "start": 285.96,
+    "duration": 5.58
+  },
+  {
+    "text": "lawmakers believe that demonizing or",
+    "start": 288.6,
+    "duration": 4.92
+  },
+  {
+    "text": "discriminating against trans people",
+    "start": 291.54,
+    "duration": 5.64
+  },
+  {
+    "text": "specifically provides an in for them to",
+    "start": 293.52,
+    "duration": 6.84
+  },
+  {
+    "text": "Target the entire lgbtq Community more",
+    "start": 297.18,
+    "duration": 5.76
+  },
+  {
+    "text": "broadly it's not like conservatives in",
+    "start": 300.36,
+    "duration": 5.1
+  },
+  {
+    "text": "the U.S simply dropped their homophobia",
+    "start": 302.94,
+    "duration": 5.039
+  },
+  {
+    "text": "when gay marriage became legal with the",
+    "start": 305.46,
+    "duration": 4.739
+  },
+  {
+    "text": "Supreme Court ruling on oberger felvis",
+    "start": 307.979,
+    "duration": 5.22
+  },
+  {
+    "text": "as Hodges in 2015. the problem they have",
+    "start": 310.199,
+    "duration": 6.661
+  },
+  {
+    "text": "is that American society as a whole has",
+    "start": 313.199,
+    "duration": 7.141
+  },
+  {
+    "text": "become overwhelmingly hostile towards",
+    "start": 316.86,
+    "duration": 5.58
+  },
+  {
+    "text": "the Discrimination their base wants to",
+    "start": 320.34,
+    "duration": 6.12
+  },
+  {
+    "text": "push according to a poll by prri nearly",
+    "start": 322.44,
+    "duration": 6.259
+  },
+  {
+    "text": "80 percent of Americans support",
+    "start": 326.46,
+    "duration": 5.459
+  },
+  {
+    "text": "non-discrimination protections for LGBT",
+    "start": 328.699,
+    "duration": 5.741
+  },
+  {
+    "text": "etq people with Democrats coming in at",
+    "start": 331.919,
+    "duration": 6.06
+  },
+  {
+    "text": "89 percent Independence at 82 and",
+    "start": 334.44,
+    "duration": 7.86
+  },
+  {
+    "text": "Republicans at 65 percent so what do you",
+    "start": 337.979,
+    "duration": 6.601
+  },
+  {
+    "text": "do when you have all this homophobia",
+    "start": 342.3,
+    "duration": 4.739
+  },
+  {
+    "text": "among your base and the religious right",
+    "start": 344.58,
+    "duration": 5.22
+  },
+  {
+    "text": "but pushing the legislation they want is",
+    "start": 347.039,
+    "duration": 6.121
+  },
+  {
+    "text": "so unpopular you divide and conquer you",
+    "start": 349.8,
+    "duration": 5.88
+  },
+  {
+    "text": "pick out one specific Target to chip",
+    "start": 353.16,
+    "duration": 5.819
+  },
+  {
+    "text": "away at that allows you to pay lip",
+    "start": 355.68,
+    "duration": 5.94
+  },
+  {
+    "text": "service towards the pro-gay stance of",
+    "start": 358.979,
+    "duration": 5.28
+  },
+  {
+    "text": "American society while still being able",
+    "start": 361.62,
+    "duration": 5.04
+  },
+  {
+    "text": "to deliver for your homophobic and",
+    "start": 364.259,
+    "duration": 5.22
+  },
+  {
+    "text": "transphobic base and that is where the",
+    "start": 366.66,
+    "duration": 5.22
+  },
+  {
+    "text": "attacks on trans people specifically",
+    "start": 369.479,
+    "duration": 6.301
+  },
+  {
+    "text": "come from now I should say that it's not",
+    "start": 371.88,
+    "duration": 6.72
+  },
+  {
+    "text": "like gay people don't face similar",
+    "start": 375.78,
+    "duration": 5.759
+  },
+  {
+    "text": "attacks like with the don't say gay bill",
+    "start": 378.6,
+    "duration": 5.28
+  },
+  {
+    "text": "in Florida that could see a teacher for",
+    "start": 381.539,
+    "duration": 4.741
+  },
+  {
+    "text": "instance punished if they tell their",
+    "start": 383.88,
+    "duration": 4.379
+  },
+  {
+    "text": "students that they have a partner of the",
+    "start": 386.28,
+    "duration": 4.68
+  },
+  {
+    "text": "same sex but in the context of the",
+    "start": 388.259,
+    "duration": 6.481
+  },
+  {
+    "text": "midterms trans people seem to be the",
+    "start": 390.96,
+    "duration": 7.44
+  },
+  {
+    "text": "focus of Republicans ire this really",
+    "start": 394.74,
+    "duration": 7.26
+  },
+  {
+    "text": "began in 2016 with North Carolina's",
+    "start": 398.4,
+    "duration": 6.299
+  },
+  {
+    "text": "bathroom bill that was the first very",
+    "start": 402.0,
+    "duration": 5.46
+  },
+  {
+    "text": "high profile case I can think of and",
+    "start": 404.699,
+    "duration": 5.22
+  },
+  {
+    "text": "from there it just went up and up and up",
+    "start": 407.46,
+    "duration": 6.42
+  },
+  {
+    "text": "according to the ACLU in 2018 there were",
+    "start": 409.919,
+    "duration": 7.56
+  },
+  {
+    "text": "19 builds of that Oak introduced 2019",
+    "start": 413.88,
+    "duration": 6.96
+  },
+  {
+    "text": "saw 25 that then more than doubled the",
+    "start": 417.479,
+    "duration": 6.121
+  },
+  {
+    "text": "year later was 60 builds before doubling",
+    "start": 420.84,
+    "duration": 8.639
+  },
+  {
+    "text": "again in 2021 reaching 131 bills this",
+    "start": 423.6,
+    "duration": 10.08
+  },
+  {
+    "text": "year 2022 as of October that number has",
+    "start": 429.479,
+    "duration": 7.021
+  },
+  {
+    "text": "risen to 155.",
+    "start": 433.68,
+    "duration": 6.06
+  },
+  {
+    "text": "now not all of these past luckily",
+    "start": 436.5,
+    "duration": 6.3
+  },
+  {
+    "text": "because Republicans aren't in power in",
+    "start": 439.74,
+    "duration": 7.079
+  },
+  {
+    "text": "every state but the attempt itself puts",
+    "start": 442.8,
+    "duration": 6.179
+  },
+  {
+    "text": "a Target on trans people's back for sure",
+    "start": 446.819,
+    "duration": 5.16
+  },
+  {
+    "text": "trans Advocate Alyssa McKenzie from",
+    "start": 448.979,
+    "duration": 5.06
+  },
+  {
+    "text": "Orlando said in the Washington Post",
+    "start": 451.979,
+    "duration": 5.521
+  },
+  {
+    "text": "quote I don't know how to describe to",
+    "start": 454.039,
+    "duration": 5.981
+  },
+  {
+    "text": "somebody that isn't going through it how",
+    "start": 457.5,
+    "duration": 4.86
+  },
+  {
+    "text": "it feels to have the anxiety of waking",
+    "start": 460.02,
+    "duration": 4.86
+  },
+  {
+    "text": "up every morning not knowing whether",
+    "start": 462.36,
+    "duration": 4.44
+  },
+  {
+    "text": "your state is going to attack your right",
+    "start": 464.88,
+    "duration": 5.46
+  },
+  {
+    "text": "to exist to do all of the things that so",
+    "start": 466.8,
+    "duration": 5.519
+  },
+  {
+    "text": "many people never ever have to question",
+    "start": 470.34,
+    "duration": 5.699
+  },
+  {
+    "text": "or think about this isolation that",
+    "start": 472.319,
+    "duration": 6.901
+  },
+  {
+    "text": "Alyssa McKenzie is talking about becomes",
+    "start": 476.039,
+    "duration": 6.121
+  },
+  {
+    "text": "very apparent when you actually dig into",
+    "start": 479.22,
+    "duration": 5.879
+  },
+  {
+    "text": "the number of people targeted by these",
+    "start": 482.16,
+    "duration": 6.539
+  },
+  {
+    "text": "builds the case of Utah which became the",
+    "start": 485.099,
+    "duration": 6.181
+  },
+  {
+    "text": "12th state to implement bans targeting",
+    "start": 488.699,
+    "duration": 5.101
+  },
+  {
+    "text": "transgender athletes is worth looking at",
+    "start": 491.28,
+    "duration": 5.18
+  },
+  {
+    "text": "here when the Republicans state",
+    "start": 493.8,
+    "duration": 5.94
+  },
+  {
+    "text": "lawmakers initially passed a bill that",
+    "start": 496.46,
+    "duration": 5.2
+  },
+  {
+    "text": "would ban transgender students from",
+    "start": 499.74,
+    "duration": 4.38
+  },
+  {
+    "text": "participating in Guild Sports it was",
+    "start": 501.66,
+    "duration": 5.46
+  },
+  {
+    "text": "vetoed by the Republican governor of",
+    "start": 504.12,
+    "duration": 5.22
+  },
+  {
+    "text": "that state here are some of what",
+    "start": 507.12,
+    "duration": 5.58
+  },
+  {
+    "text": "governor Spencer Cox wrote regarding his",
+    "start": 509.34,
+    "duration": 7.4
+  },
+  {
+    "text": "decision to veto this bill quote finally",
+    "start": 512.7,
+    "duration": 6.66
+  },
+  {
+    "text": "there is one more important reason for",
+    "start": 516.74,
+    "duration": 5.799
+  },
+  {
+    "text": "this veto I must admit I am not an",
+    "start": 519.36,
+    "duration": 6.06
+  },
+  {
+    "text": "expert on transgenderism I struggle to",
+    "start": 522.539,
+    "duration": 5.341
+  },
+  {
+    "text": "understand so much of it and the science",
+    "start": 525.42,
+    "duration": 5.22
+  },
+  {
+    "text": "is conflicting it's not I want to add",
+    "start": 527.88,
+    "duration": 5.7
+  },
+  {
+    "text": "here what in doubt however I always try",
+    "start": 530.64,
+    "duration": 5.819
+  },
+  {
+    "text": "to ER on the side of kindness mercy and",
+    "start": 533.58,
+    "duration": 5.64
+  },
+  {
+    "text": "compassion I also try to get proximate",
+    "start": 536.459,
+    "duration": 4.621
+  },
+  {
+    "text": "and I'm learning so much from our",
+    "start": 539.22,
+    "duration": 3.72
+  },
+  {
+    "text": "transgender community",
+    "start": 541.08,
+    "duration": 4.56
+  },
+  {
+    "text": "they are great kids who face enormous",
+    "start": 542.94,
+    "duration": 4.68
+  },
+  {
+    "text": "struggle now here comes the important",
+    "start": 545.64,
+    "duration": 4.8
+  },
+  {
+    "text": "part here are the numbers that have most",
+    "start": 547.62,
+    "duration": 5.82
+  },
+  {
+    "text": "impacted my decision 75",
+    "start": 550.44,
+    "duration": 7.86
+  },
+  {
+    "text": "000 for 86 and 56 75",
+    "start": 553.44,
+    "duration": 6.899
+  },
+  {
+    "text": "000 high school kids participating in",
+    "start": 558.3,
+    "duration": 4.2
+  },
+  {
+    "text": "high school sports in Utah",
+    "start": 560.339,
+    "duration": 5.281
+  },
+  {
+    "text": "for transgender kids playing High School",
+    "start": 562.5,
+    "duration": 4.68
+  },
+  {
+    "text": "sports in Utah",
+    "start": 565.62,
+    "duration": 4.86
+  },
+  {
+    "text": "1. transgender student playing girls",
+    "start": 567.18,
+    "duration": 6.54
+  },
+  {
+    "text": "Sports 86 percent of trans youth",
+    "start": 570.48,
+    "duration": 5.24
+  },
+  {
+    "text": "reporting suicidality",
+    "start": 573.72,
+    "duration": 5.64
+  },
+  {
+    "text": "56 percent of trans youth having",
+    "start": 575.72,
+    "duration": 7.299
+  },
+  {
+    "text": "attempted suicide for kids and only one",
+    "start": 579.36,
+    "duration": 5.64
+  },
+  {
+    "text": "of them playing girls Sports",
+    "start": 583.019,
+    "duration": 4.861
+  },
+  {
+    "text": "that is what this is all about four kids",
+    "start": 585.0,
+    "duration": 4.74
+  },
+  {
+    "text": "who aren't dominating or winning",
+    "start": 587.88,
+    "duration": 4.92
+  },
+  {
+    "text": "trophies and taking scholarships four",
+    "start": 589.74,
+    "duration": 5.64
+  },
+  {
+    "text": "kids who are just trying to find some",
+    "start": 592.8,
+    "duration": 4.62
+  },
+  {
+    "text": "friends and feel like they are part of",
+    "start": 595.38,
+    "duration": 4.68
+  },
+  {
+    "text": "something four kids trying to get",
+    "start": 597.42,
+    "duration": 6.06
+  },
+  {
+    "text": "through each day really has so much fear",
+    "start": 600.06,
+    "duration": 6.719
+  },
+  {
+    "text": "and anger been directed at so few I",
+    "start": 603.48,
+    "duration": 4.799
+  },
+  {
+    "text": "don't understand what they are going",
+    "start": 606.779,
+    "duration": 3.361
+  },
+  {
+    "text": "through or why they feel the way they do",
+    "start": 608.279,
+    "duration": 4.801
+  },
+  {
+    "text": "but I want them to live",
+    "start": 610.14,
+    "duration": 4.139
+  },
+  {
+    "text": "quote",
+    "start": 613.08,
+    "duration": 4.92
+  },
+  {
+    "text": "the response to this by the Republicans",
+    "start": 614.279,
+    "duration": 6.18
+  },
+  {
+    "text": "in the Utah Senate and House was",
+    "start": 618.0,
+    "duration": 6.5
+  },
+  {
+    "text": "basically saying yeah yeah that's nice",
+    "start": 620.459,
+    "duration": 8.641
+  },
+  {
+    "text": "but we don't care they overrode his veto",
+    "start": 624.5,
+    "duration": 7.8
+  },
+  {
+    "text": "and the law went into effect in July of",
+    "start": 629.1,
+    "duration": 7.919
+  },
+  {
+    "text": "2022 for five trans people one of them",
+    "start": 632.3,
+    "duration": 7.12
+  },
+  {
+    "text": "playing sports four of them in high",
+    "start": 637.019,
+    "duration": 5.76
+  },
+  {
+    "text": "school in a state of over 3 million",
+    "start": 639.42,
+    "duration": 4.44
+  },
+  {
+    "text": "people",
+    "start": 642.779,
+    "duration": 5.12
+  },
+  {
+    "text": "think of how [ __ ] the botched it just",
+    "start": 643.86,
+    "duration": 6.539
+  },
+  {
+    "text": "consumed with hate you have to be to do",
+    "start": 647.899,
+    "duration": 4.741
+  },
+  {
+    "text": "that",
+    "start": 650.399,
+    "duration": 2.241
+  },
+  {
+    "text": "something similar happened in Indiana",
+    "start": 653.16,
+    "duration": 5.6
+  },
+  {
+    "text": "where Republican Governor Eric Holcomb",
+    "start": 655.579,
+    "duration": 5.981
+  },
+  {
+    "text": "vetoed a bill Benning transgender women",
+    "start": 658.76,
+    "duration": 4.84
+  },
+  {
+    "text": "and girls from competing on public",
+    "start": 661.56,
+    "duration": 4.5
+  },
+  {
+    "text": "school sports teams consistent with",
+    "start": 663.6,
+    "duration": 4.739
+  },
+  {
+    "text": "their gender he said at the end of his",
+    "start": 666.06,
+    "duration": 5.399
+  },
+  {
+    "text": "ladder on the matter that quote the",
+    "start": 668.339,
+    "duration": 5.461
+  },
+  {
+    "text": "presumption of the policy laid out is",
+    "start": 671.459,
+    "duration": 4.44
+  },
+  {
+    "text": "that there is an existing problem in",
+    "start": 673.8,
+    "duration": 5.4
+  },
+  {
+    "text": "K-12 Sports in Indiana that requires",
+    "start": 675.899,
+    "duration": 5.94
+  },
+  {
+    "text": "further state government intervention it",
+    "start": 679.2,
+    "duration": 4.74
+  },
+  {
+    "text": "implies that the goals of consistency",
+    "start": 681.839,
+    "duration": 4.5
+  },
+  {
+    "text": "and fair in competitive female sports",
+    "start": 683.94,
+    "duration": 4.62
+  },
+  {
+    "text": "are not currently being met after",
+    "start": 686.339,
+    "duration": 5.461
+  },
+  {
+    "text": "thorough review I find no evidence to",
+    "start": 688.56,
+    "duration": 5.94
+  },
+  {
+    "text": "support either claim even if I support",
+    "start": 691.8,
+    "duration": 4.74
+  },
+  {
+    "text": "the overall goal",
+    "start": 694.5,
+    "duration": 5.16
+  },
+  {
+    "text": "quote not to mention that Indiana",
+    "start": 696.54,
+    "duration": 6.539
+  },
+  {
+    "text": "already has a policy in place since 2017",
+    "start": 699.66,
+    "duration": 6.54
+  },
+  {
+    "text": "that requires transgender athletes",
+    "start": 703.079,
+    "duration": 5.94
+  },
+  {
+    "text": "wishing to compete in sports to apply",
+    "start": 706.2,
+    "duration": 5.52
+  },
+  {
+    "text": "for a waiver confirming that they have",
+    "start": 709.019,
+    "duration": 5.161
+  },
+  {
+    "text": "been living as their gender identity for",
+    "start": 711.72,
+    "duration": 5.7
+  },
+  {
+    "text": "at least a year additionally transgender",
+    "start": 714.18,
+    "duration": 5.339
+  },
+  {
+    "text": "girls must prove they have undergone",
+    "start": 717.42,
+    "duration": 4.5
+  },
+  {
+    "text": "either hormone therapy for at least a",
+    "start": 719.519,
+    "duration": 5.521
+  },
+  {
+    "text": "year or a surgery now get this",
+    "start": 721.92,
+    "duration": 5.4
+  },
+  {
+    "text": "since 2017",
+    "start": 725.04,
+    "duration": 6.08
+  },
+  {
+    "text": "there have been two waiver applications",
+    "start": 727.32,
+    "duration": 9.959
+  },
+  {
+    "text": "not 2000 not 200 not even twenty two but",
+    "start": 731.12,
+    "duration": 9.88
+  },
+  {
+    "text": "quote no evidence is Eric Holcomb put it",
+    "start": 737.279,
+    "duration": 6.18
+  },
+  {
+    "text": "has never stopped the conservative",
+    "start": 741.0,
+    "duration": 5.22
+  },
+  {
+    "text": "movement as far as I know and the state",
+    "start": 743.459,
+    "duration": 6.0
+  },
+  {
+    "text": "Senate and House voted to override that",
+    "start": 746.22,
+    "duration": 6.96
+  },
+  {
+    "text": "veto as well that said Banning trans",
+    "start": 749.459,
+    "duration": 6.781
+  },
+  {
+    "text": "people from participating in sports is",
+    "start": 753.18,
+    "duration": 6.659
+  },
+  {
+    "text": "just one slice of the broader Republican",
+    "start": 756.24,
+    "duration": 7.2
+  },
+  {
+    "text": "assault right now the arguably most",
+    "start": 759.839,
+    "duration": 7.381
+  },
+  {
+    "text": "alarming type of laws surround trans",
+    "start": 763.44,
+    "duration": 6.899
+  },
+  {
+    "text": "Healthcare this paragraph comes courtesy",
+    "start": 767.22,
+    "duration": 5.1
+  },
+  {
+    "text": "of the washing post that did a good",
+    "start": 770.339,
+    "duration": 4.68
+  },
+  {
+    "text": "write-up on this quote these builds",
+    "start": 772.32,
+    "duration": 5.04
+  },
+  {
+    "text": "criminalize doctors who provide this",
+    "start": 775.019,
+    "duration": 4.26
+  },
+  {
+    "text": "highly individualized form of healthcare",
+    "start": 777.36,
+    "duration": 4.5
+  },
+  {
+    "text": "which can include medical interventions",
+    "start": 779.279,
+    "duration": 4.62
+  },
+  {
+    "text": "such as puberty blockers and hormone",
+    "start": 781.86,
+    "duration": 4.44
+  },
+  {
+    "text": "therapy they could also punish parents",
+    "start": 783.899,
+    "duration": 4.56
+  },
+  {
+    "text": "for supporting their kid as they seek",
+    "start": 786.3,
+    "duration": 4.62
+  },
+  {
+    "text": "treatment states have also pressured",
+    "start": 788.459,
+    "duration": 4.44
+  },
+  {
+    "text": "Hospitals and Clinics that provide",
+    "start": 790.92,
+    "duration": 4.38
+  },
+  {
+    "text": "gender affirming care to shatter or stop",
+    "start": 792.899,
+    "duration": 4.201
+  },
+  {
+    "text": "offering those treatments for Trans",
+    "start": 795.3,
+    "duration": 4.68
+  },
+  {
+    "text": "people both behind the scenes and",
+    "start": 797.1,
+    "duration": 4.799
+  },
+  {
+    "text": "through legislation threatening to",
+    "start": 799.98,
+    "duration": 4.62
+  },
+  {
+    "text": "withhold funding end quote the reason",
+    "start": 801.899,
+    "duration": 5.461
+  },
+  {
+    "text": "why this interference by lawmakers when",
+    "start": 804.6,
+    "duration": 4.679
+  },
+  {
+    "text": "it comes to health care for Trans people",
+    "start": 807.36,
+    "duration": 5.7
+  },
+  {
+    "text": "specifically is so evil is because again",
+    "start": 809.279,
+    "duration": 6.421
+  },
+  {
+    "text": "the people who suffered the brunt of",
+    "start": 813.06,
+    "duration": 5.519
+  },
+  {
+    "text": "this interference are younger people who",
+    "start": 815.7,
+    "duration": 6.24
+  },
+  {
+    "text": "are forced to go through puberty by",
+    "start": 818.579,
+    "duration": 5.82
+  },
+  {
+    "text": "either a lack of health care or the",
+    "start": 821.94,
+    "duration": 4.56
+  },
+  {
+    "text": "treatment they need just outright being",
+    "start": 824.399,
+    "duration": 5.161
+  },
+  {
+    "text": "banned and going through puberty and",
+    "start": 826.5,
+    "duration": 5.22
+  },
+  {
+    "text": "seeing your body change into something",
+    "start": 829.56,
+    "duration": 5.04
+  },
+  {
+    "text": "that doesn't match your self-image can",
+    "start": 831.72,
+    "duration": 7.26
+  },
+  {
+    "text": "be very traumatic this has become such a",
+    "start": 834.6,
+    "duration": 7.26
+  },
+  {
+    "text": "big problem that the American Medical",
+    "start": 838.98,
+    "duration": 6.859
+  },
+  {
+    "text": "Association called upon states to stop",
+    "start": 841.86,
+    "duration": 6.9
+  },
+  {
+    "text": "interfering and health care of trans",
+    "start": 845.839,
+    "duration": 5.861
+  },
+  {
+    "text": "individuals in an open letter it reads",
+    "start": 848.76,
+    "duration": 5.819
+  },
+  {
+    "text": "evidence has demonstrated that foregoing",
+    "start": 851.7,
+    "duration": 5.4
+  },
+  {
+    "text": "gender affirming care can have tragic",
+    "start": 854.579,
+    "duration": 5.521
+  },
+  {
+    "text": "consequences transgender individuals are",
+    "start": 857.1,
+    "duration": 4.979
+  },
+  {
+    "text": "up to three times more likely than the",
+    "start": 860.1,
+    "duration": 3.96
+  },
+  {
+    "text": "general population to report or be",
+    "start": 862.079,
+    "duration": 4.56
+  },
+  {
+    "text": "diagnosed with mental health disorders",
+    "start": 864.06,
+    "duration": 7.32
+  },
+  {
+    "text": "with as many as 41.5 percent reporting",
+    "start": 866.639,
+    "duration": 7.981
+  },
+  {
+    "text": "at least one diagnosis of mental health",
+    "start": 871.38,
+    "duration": 6.18
+  },
+  {
+    "text": "or substance use disorder The increased",
+    "start": 874.62,
+    "duration": 4.56
+  },
+  {
+    "text": "prevalence of these mental health",
+    "start": 877.56,
+    "duration": 4.68
+  },
+  {
+    "text": "conditions is widely thought to be a",
+    "start": 879.18,
+    "duration": 5.519
+  },
+  {
+    "text": "consequence of minority stress the",
+    "start": 882.24,
+    "duration": 4.44
+  },
+  {
+    "text": "chronic stress from coping with societal",
+    "start": 884.699,
+    "duration": 4.44
+  },
+  {
+    "text": "stigma and discrimination because of",
+    "start": 886.68,
+    "duration": 4.56
+  },
+  {
+    "text": "one's gender identity and expression",
+    "start": 889.139,
+    "duration": 4.861
+  },
+  {
+    "text": "because of this stress transgender",
+    "start": 891.24,
+    "duration": 5.339
+  },
+  {
+    "text": "miners also face a significantly",
+    "start": 894.0,
+    "duration": 5.88
+  },
+  {
+    "text": "heightened risk of suicide now it's",
+    "start": 896.579,
+    "duration": 5.641
+  },
+  {
+    "text": "worth talking about the behind the",
+    "start": 899.88,
+    "duration": 4.199
+  },
+  {
+    "text": "scenes pressure here that the Washington",
+    "start": 902.22,
+    "duration": 4.26
+  },
+  {
+    "text": "Post article mentions because",
+    "start": 904.079,
+    "duration": 6.0
+  },
+  {
+    "text": "this is something that is way less out",
+    "start": 906.48,
+    "duration": 6.479
+  },
+  {
+    "text": "in the open than you know a bill",
+    "start": 910.079,
+    "duration": 6.241
+  },
+  {
+    "text": "we can see a good example of this at the",
+    "start": 912.959,
+    "duration": 6.841
+  },
+  {
+    "text": "Children's Medical Center in Dallas that",
+    "start": 916.32,
+    "duration": 6.12
+  },
+  {
+    "text": "saw itself forced to disband its gender",
+    "start": 919.8,
+    "duration": 5.399
+  },
+  {
+    "text": "affirming CARE program in November of",
+    "start": 922.44,
+    "duration": 5.699
+  },
+  {
+    "text": "last year for many families in Texas and",
+    "start": 925.199,
+    "duration": 4.921
+  },
+  {
+    "text": "neighboring states this was the only",
+    "start": 928.139,
+    "duration": 4.861
+  },
+  {
+    "text": "option they had to provide Health Care",
+    "start": 930.12,
+    "duration": 6.06
+  },
+  {
+    "text": "to their children and often parents had",
+    "start": 933.0,
+    "duration": 5.22
+  },
+  {
+    "text": "to drive eight hours to an appointment",
+    "start": 936.18,
+    "duration": 5.04
+  },
+  {
+    "text": "at this Medical Center this was by far",
+    "start": 938.22,
+    "duration": 5.82
+  },
+  {
+    "text": "the largest program for transgender",
+    "start": 941.22,
+    "duration": 6.119
+  },
+  {
+    "text": "youth in all of Texas now what's kind of",
+    "start": 944.04,
+    "duration": 6.479
+  },
+  {
+    "text": "weird about this whole thing is that no",
+    "start": 947.339,
+    "duration": 5.581
+  },
+  {
+    "text": "one who either worked in the Child Care",
+    "start": 950.519,
+    "duration": 4.5
+  },
+  {
+    "text": "Program or higher ups of the medical",
+    "start": 952.92,
+    "duration": 3.14
+  },
+  {
+    "text": "center",
+    "start": 955.019,
+    "duration": 3.901
+  },
+  {
+    "text": "responded when asked to comment for a",
+    "start": 956.06,
+    "duration": 6.639
+  },
+  {
+    "text": "piece on the 19th News website about why",
+    "start": 958.92,
+    "duration": 6.12
+  },
+  {
+    "text": "they are disbanding the program it's",
+    "start": 962.699,
+    "duration": 4.681
+  },
+  {
+    "text": "obviously not a lack of demand",
+    "start": 965.04,
+    "duration": 5.52
+  },
+  {
+    "text": "considering the number of patients in",
+    "start": 967.38,
+    "duration": 5.16
+  },
+  {
+    "text": "gender affirming care has only grown",
+    "start": 970.56,
+    "duration": 4.139
+  },
+  {
+    "text": "since death launched it and then",
+    "start": 972.54,
+    "duration": 4.919
+  },
+  {
+    "text": "suddenly they quietly close off the",
+    "start": 974.699,
+    "duration": 5.64
+  },
+  {
+    "text": "program to new patients and even scrub",
+    "start": 977.459,
+    "duration": 5.161
+  },
+  {
+    "text": "all references to it from their website",
+    "start": 980.339,
+    "duration": 5.461
+  },
+  {
+    "text": "they just mentioned 19th followed up",
+    "start": 982.62,
+    "duration": 5.88
+  },
+  {
+    "text": "this story in March this year after",
+    "start": 985.8,
+    "duration": 4.92
+  },
+  {
+    "text": "obtaining recordings of internal",
+    "start": 988.5,
+    "duration": 5.1
+  },
+  {
+    "text": "meetings at this Clinic the title of the",
+    "start": 990.72,
+    "duration": 5.76
+  },
+  {
+    "text": "piece is political pressure led to",
+    "start": 993.6,
+    "duration": 4.859
+  },
+  {
+    "text": "shutdown of Texas largest gender",
+    "start": 996.48,
+    "duration": 4.74
+  },
+  {
+    "text": "affirming CARE program and it basically",
+    "start": 998.459,
+    "duration": 5.82
+  },
+  {
+    "text": "details how the governor's office really",
+    "start": 1001.22,
+    "duration": 6.239
+  },
+  {
+    "text": "put the screws onto this Hospital over",
+    "start": 1004.279,
+    "duration": 5.641
+  },
+  {
+    "text": "their program for Trans youth the people",
+    "start": 1007.459,
+    "duration": 4.74
+  },
+  {
+    "text": "working there increasingly feared that",
+    "start": 1009.92,
+    "duration": 4.979
+  },
+  {
+    "text": "they personally might be subject to",
+    "start": 1012.199,
+    "duration": 5.64
+  },
+  {
+    "text": "lawsuits alleging child abuse for simply",
+    "start": 1014.899,
+    "duration": 5.88
+  },
+  {
+    "text": "providing health care that coupled with",
+    "start": 1017.839,
+    "duration": 5.881
+  },
+  {
+    "text": "an onslaught of legislation aiming at",
+    "start": 1020.779,
+    "duration": 5.04
+  },
+  {
+    "text": "restricting health care of trans youth",
+    "start": 1023.72,
+    "duration": 4.8
+  },
+  {
+    "text": "going as far as targeting doctors and",
+    "start": 1025.819,
+    "duration": 5.401
+  },
+  {
+    "text": "parents led to the shutdown of this",
+    "start": 1028.52,
+    "duration": 5.7
+  },
+  {
+    "text": "Medical Center in Feb February of this",
+    "start": 1031.22,
+    "duration": 5.459
+  },
+  {
+    "text": "year Texas governor Greg Abbott called",
+    "start": 1034.22,
+    "duration": 5.699
+  },
+  {
+    "text": "upon licensed professionals and members",
+    "start": 1036.679,
+    "duration": 6.601
+  },
+  {
+    "text": "of the general public to report the",
+    "start": 1039.919,
+    "duration": 6.841
+  },
+  {
+    "text": "parents of transgender miners to State",
+    "start": 1043.28,
+    "duration": 6.6
+  },
+  {
+    "text": "authorities if it appears the miners are",
+    "start": 1046.76,
+    "duration": 5.039
+  },
+  {
+    "text": "receiving gender affirming Medical Care",
+    "start": 1049.88,
+    "duration": 5.4
+  },
+  {
+    "text": "in addition he made clear that the state",
+    "start": 1051.799,
+    "duration": 7.081
+  },
+  {
+    "text": "law quote provides criminal penalties",
+    "start": 1055.28,
+    "duration": 7.259
+  },
+  {
+    "text": "for failure to report such child abuse",
+    "start": 1058.88,
+    "duration": 6.179
+  },
+  {
+    "text": "there are really no words to describe",
+    "start": 1062.539,
+    "duration": 5.401
+  },
+  {
+    "text": "how vile this stuff is because there is",
+    "start": 1065.059,
+    "duration": 6.541
+  },
+  {
+    "text": "no other aim here than inflicting pain",
+    "start": 1067.94,
+    "duration": 7.38
+  },
+  {
+    "text": "on trans children and their parents who",
+    "start": 1071.6,
+    "duration": 5.34
+  },
+  {
+    "text": "are already facing a number of",
+    "start": 1075.32,
+    "duration": 4.14
+  },
+  {
+    "text": "challenges as is and to think",
+    "start": 1076.94,
+    "duration": 5.22
+  },
+  {
+    "text": "Republicans always bring up is how when",
+    "start": 1079.46,
+    "duration": 4.74
+  },
+  {
+    "text": "you're a kid you don't really have a",
+    "start": 1082.16,
+    "duration": 4.98
+  },
+  {
+    "text": "full grasp of these issues so what a",
+    "start": 1084.2,
+    "duration": 5.099
+  },
+  {
+    "text": "person under 18 says about themselves",
+    "start": 1087.14,
+    "duration": 4.74
+  },
+  {
+    "text": "shouldn't matter basically it's one of",
+    "start": 1089.299,
+    "duration": 4.38
+  },
+  {
+    "text": "the cringy jokes that they have like",
+    "start": 1091.88,
+    "duration": 3.659
+  },
+  {
+    "text": "when I was a kid I wanted to be a",
+    "start": 1093.679,
+    "duration": 4.141
+  },
+  {
+    "text": "Transformer haha but of course nobody",
+    "start": 1095.539,
+    "duration": 4.921
+  },
+  {
+    "text": "believes that someone at the age of 12",
+    "start": 1097.82,
+    "duration": 6.06
+  },
+  {
+    "text": "let's say can fully decide how they want",
+    "start": 1100.46,
+    "duration": 5.42
+  },
+  {
+    "text": "to live the rest of their entire life",
+    "start": 1103.88,
+    "duration": 5.28
+  },
+  {
+    "text": "but that is literally what trans",
+    "start": 1105.88,
+    "duration": 5.919
+  },
+  {
+    "text": "Healthcare is for that is why it even",
+    "start": 1109.16,
+    "duration": 6.24
+  },
+  {
+    "text": "exists so that a parent who sees that",
+    "start": 1111.799,
+    "duration": 6.181
+  },
+  {
+    "text": "child struggle with their gender can",
+    "start": 1115.4,
+    "duration": 5.46
+  },
+  {
+    "text": "take it to a doctor and together",
+    "start": 1117.98,
+    "duration": 5.939
+  },
+  {
+    "text": "they can evaluate how to go forward and",
+    "start": 1120.86,
+    "duration": 6.179
+  },
+  {
+    "text": "if that kid is then prescribed puberty",
+    "start": 1123.919,
+    "duration": 5.341
+  },
+  {
+    "text": "blockers but down the line figures out",
+    "start": 1127.039,
+    "duration": 4.14
+  },
+  {
+    "text": "that they are actually comfortable with",
+    "start": 1129.26,
+    "duration": 3.779
+  },
+  {
+    "text": "the agenda they were assigned at Birth",
+    "start": 1131.179,
+    "duration": 5.101
+  },
+  {
+    "text": "they can decide with their doctor to",
+    "start": 1133.039,
+    "duration": 5.161
+  },
+  {
+    "text": "ditch the medicine and go through",
+    "start": 1136.28,
+    "duration": 4.68
+  },
+  {
+    "text": "puberty a little bit later in life there",
+    "start": 1138.2,
+    "duration": 5.219
+  },
+  {
+    "text": "are no two opinions on this it's a net",
+    "start": 1140.96,
+    "duration": 5.04
+  },
+  {
+    "text": "positive for them and for Society at",
+    "start": 1143.419,
+    "duration": 5.101
+  },
+  {
+    "text": "large to provide this health care and",
+    "start": 1146.0,
+    "duration": 5.4
+  },
+  {
+    "text": "this takes us to the other half of the",
+    "start": 1148.52,
+    "duration": 6.24
+  },
+  {
+    "text": "attack on lgbtq people and trans people",
+    "start": 1151.4,
+    "duration": 6.54
+  },
+  {
+    "text": "more specifically the legislation we've",
+    "start": 1154.76,
+    "duration": 5.82
+  },
+  {
+    "text": "talked about doesn't just pop out of",
+    "start": 1157.94,
+    "duration": 6.359
+  },
+  {
+    "text": "thin air it's largely pushed by the",
+    "start": 1160.58,
+    "duration": 6.24
+  },
+  {
+    "text": "conservative media machine in the case",
+    "start": 1164.299,
+    "duration": 5.941
+  },
+  {
+    "text": "of Texas is a good example of that one",
+    "start": 1166.82,
+    "duration": 5.64
+  },
+  {
+    "text": "reason why this became such a big deal",
+    "start": 1170.24,
+    "duration": 5.46
+  },
+  {
+    "text": "in Texas is because of a child custody",
+    "start": 1172.46,
+    "duration": 6.0
+  },
+  {
+    "text": "case in which the father of a child",
+    "start": 1175.7,
+    "duration": 5.88
+  },
+  {
+    "text": "alleged that the mother was forcing",
+    "start": 1178.46,
+    "duration": 6.42
+  },
+  {
+    "text": "their son to live as a girl when this",
+    "start": 1181.58,
+    "duration": 5.88
+  },
+  {
+    "text": "became a new story The Ride of course",
+    "start": 1184.88,
+    "duration": 4.98
+  },
+  {
+    "text": "jumped in on it making now to be an",
+    "start": 1187.46,
+    "duration": 4.92
+  },
+  {
+    "text": "example of what they believe is",
+    "start": 1189.86,
+    "duration": 4.74
+  },
+  {
+    "text": "happening all over the country liberal",
+    "start": 1192.38,
+    "duration": 4.82
+  },
+  {
+    "text": "parents or in this case one parent",
+    "start": 1194.6,
+    "duration": 5.64
+  },
+  {
+    "text": "colluding with ideologically motivated",
+    "start": 1197.2,
+    "duration": 5.859
+  },
+  {
+    "text": "Healthcare professionals forcing their",
+    "start": 1200.24,
+    "duration": 5.16
+  },
+  {
+    "text": "child to wear dresses giving them",
+    "start": 1203.059,
+    "duration": 5.521
+  },
+  {
+    "text": "hormones Etc and this case is very",
+    "start": 1205.4,
+    "duration": 6.18
+  },
+  {
+    "text": "intertwined with the program of the",
+    "start": 1208.58,
+    "duration": 5.4
+  },
+  {
+    "text": "above mentioned Children's Medical",
+    "start": 1211.58,
+    "duration": 5.64
+  },
+  {
+    "text": "Center in Dallas because that is where",
+    "start": 1213.98,
+    "duration": 5.34
+  },
+  {
+    "text": "the mother went for treatment of her",
+    "start": 1217.22,
+    "duration": 5.699
+  },
+  {
+    "text": "child in interviews the father of this",
+    "start": 1219.32,
+    "duration": 7.02
+  },
+  {
+    "text": "child said that his kid dresses like a",
+    "start": 1222.919,
+    "duration": 5.76
+  },
+  {
+    "text": "boy and understands himself as a boy",
+    "start": 1226.34,
+    "duration": 5.219
+  },
+  {
+    "text": "whenever the kid is with him but when",
+    "start": 1228.679,
+    "duration": 6.181
+  },
+  {
+    "text": "it's not the mother allegedly made this",
+    "start": 1231.559,
+    "duration": 6.601
+  },
+  {
+    "text": "child wear dresses and only addressed it",
+    "start": 1234.86,
+    "duration": 6.96
+  },
+  {
+    "text": "as a girl what every single article on",
+    "start": 1238.16,
+    "duration": 7.019
+  },
+  {
+    "text": "this by the right wing press omits is",
+    "start": 1241.82,
+    "duration": 7.02
+  },
+  {
+    "text": "that the child in question was diagnosed",
+    "start": 1245.179,
+    "duration": 7.021
+  },
+  {
+    "text": "by multiple pediatricians to suffer from",
+    "start": 1248.84,
+    "duration": 5.76
+  },
+  {
+    "text": "gender dysphoria as well as there being",
+    "start": 1252.2,
+    "duration": 5.4
+  },
+  {
+    "text": "a huge amount of testimony by School",
+    "start": 1254.6,
+    "duration": 5.34
+  },
+  {
+    "text": "staff and family members that the child",
+    "start": 1257.6,
+    "duration": 5.819
+  },
+  {
+    "text": "in question identifies as a girl without",
+    "start": 1259.94,
+    "duration": 5.72
+  },
+  {
+    "text": "any instruction to do so from the mother",
+    "start": 1263.419,
+    "duration": 6.241
+  },
+  {
+    "text": "who by the way already had two daughters",
+    "start": 1265.66,
+    "duration": 6.519
+  },
+  {
+    "text": "so The Narrative of this mother wanting",
+    "start": 1269.66,
+    "duration": 4.86
+  },
+  {
+    "text": "to have a daughter so bad she made her",
+    "start": 1272.179,
+    "duration": 5.161
+  },
+  {
+    "text": "son undergo treatment made zero sense",
+    "start": 1274.52,
+    "duration": 6.0
+  },
+  {
+    "text": "from the get-go Senator Ted Cruz and",
+    "start": 1277.34,
+    "duration": 6.0
+  },
+  {
+    "text": "Donald Trump Jr got in on this accusing",
+    "start": 1280.52,
+    "duration": 6.18
+  },
+  {
+    "text": "the mother of abusing her child and it",
+    "start": 1283.34,
+    "duration": 5.579
+  },
+  {
+    "text": "wasn't long before Texas governor Greg",
+    "start": 1286.7,
+    "duration": 6.359
+  },
+  {
+    "text": "Abbott tweeted the following FYI the",
+    "start": 1288.919,
+    "duration": 7.561
+  },
+  {
+    "text": "matter of seven-year-old insert dead",
+    "start": 1293.059,
+    "duration": 6.48
+  },
+  {
+    "text": "name here is being looked into by the",
+    "start": 1296.48,
+    "duration": 5.88
+  },
+  {
+    "text": "Texas Attorneys General office and the",
+    "start": 1299.539,
+    "duration": 4.5
+  },
+  {
+    "text": "Texas Department of Family and",
+    "start": 1302.36,
+    "duration": 3.42
+  },
+  {
+    "text": "protective services",
+    "start": 1304.039,
+    "duration": 3.841
+  },
+  {
+    "text": "Bringing Down the full force of the",
+    "start": 1305.78,
+    "duration": 5.399
+  },
+  {
+    "text": "state on this mother the details of this",
+    "start": 1307.88,
+    "duration": 5.64
+  },
+  {
+    "text": "case aren't that important there is a",
+    "start": 1311.179,
+    "duration": 4.021
+  },
+  {
+    "text": "very good Deep dive on YouTube about it",
+    "start": 1313.52,
+    "duration": 4.38
+  },
+  {
+    "text": "that I will link but basically the",
+    "start": 1315.2,
+    "duration": 6.0
+  },
+  {
+    "text": "father of this girl is a religious",
+    "start": 1317.9,
+    "duration": 6.36
+  },
+  {
+    "text": "zealot and didn't want to accept his",
+    "start": 1321.2,
+    "duration": 6.359
+  },
+  {
+    "text": "daughter being trans so he made it into",
+    "start": 1324.26,
+    "duration": 6.72
+  },
+  {
+    "text": "a story of a crazy liberal mom abusing",
+    "start": 1327.559,
+    "duration": 5.521
+  },
+  {
+    "text": "her child in an interview the father",
+    "start": 1330.98,
+    "duration": 5.16
+  },
+  {
+    "text": "says quote it is totally against my",
+    "start": 1333.08,
+    "duration": 6.18
+  },
+  {
+    "text": "religious beliefs to affirm him as a",
+    "start": 1336.14,
+    "duration": 5.88
+  },
+  {
+    "text": "girl Child Protective Services who then",
+    "start": 1339.26,
+    "duration": 5.34
+  },
+  {
+    "text": "investigated the mother at the behest of",
+    "start": 1342.02,
+    "duration": 6.42
+  },
+  {
+    "text": "GOP officials found no wrongdoing on her",
+    "start": 1344.6,
+    "duration": 7.559
+  },
+  {
+    "text": "behalf and that's basically it all I can",
+    "start": 1348.44,
+    "duration": 7.2
+  },
+  {
+    "text": "say is that it's incredibly tragic for",
+    "start": 1352.159,
+    "duration": 5.461
+  },
+  {
+    "text": "this young girl who is already in a",
+    "start": 1355.64,
+    "duration": 4.44
+  },
+  {
+    "text": "tough spot given the custody battle to",
+    "start": 1357.62,
+    "duration": 5.1
+  },
+  {
+    "text": "be exploded like this by the right wing",
+    "start": 1360.08,
+    "duration": 5.76
+  },
+  {
+    "text": "to drum up their transphobic base and",
+    "start": 1362.72,
+    "duration": 5.819
+  },
+  {
+    "text": "exploited for a political clout I should",
+    "start": 1365.84,
+    "duration": 5.66
+  },
+  {
+    "text": "say since her father then ran for office",
+    "start": 1368.539,
+    "duration": 5.821
+  },
+  {
+    "text": "Plastering pictures of his kid all over",
+    "start": 1371.5,
+    "duration": 5.62
+  },
+  {
+    "text": "his website and using the story for",
+    "start": 1374.36,
+    "duration": 5.46
+  },
+  {
+    "text": "electoral game he lost in the primary",
+    "start": 1377.12,
+    "duration": 5.88
+  },
+  {
+    "text": "though so that's good I guess what's",
+    "start": 1379.82,
+    "duration": 5.339
+  },
+  {
+    "text": "more interesting about this case to me",
+    "start": 1383.0,
+    "duration": 5.34
+  },
+  {
+    "text": "is how the right-wing media lied about",
+    "start": 1385.159,
+    "duration": 6.241
+  },
+  {
+    "text": "it and those lies directly leading to",
+    "start": 1388.34,
+    "duration": 5.579
+  },
+  {
+    "text": "the governor's office pressuring the",
+    "start": 1391.4,
+    "duration": 4.92
+  },
+  {
+    "text": "clinic to score got her treatment at to",
+    "start": 1393.919,
+    "duration": 4.321
+  },
+  {
+    "text": "a degree that it had to shut down its",
+    "start": 1396.32,
+    "duration": 4.5
+  },
+  {
+    "text": "program because the other side of the",
+    "start": 1398.24,
+    "duration": 5.179
+  },
+  {
+    "text": "Republican Onslaught on trans rights",
+    "start": 1400.82,
+    "duration": 6.12
+  },
+  {
+    "text": "revolves around conservative media these",
+    "start": 1403.419,
+    "duration": 5.681
+  },
+  {
+    "text": "builds or the media storm around the",
+    "start": 1406.94,
+    "duration": 4.739
+  },
+  {
+    "text": "custody battle in Texas don't happen in",
+    "start": 1409.1,
+    "duration": 5.34
+  },
+  {
+    "text": "a vacuum the dynamic that unfolded in",
+    "start": 1411.679,
+    "duration": 5.941
+  },
+  {
+    "text": "Texas is the current Mo of right-wing",
+    "start": 1414.44,
+    "duration": 5.58
+  },
+  {
+    "text": "media Outlets where they take an event",
+    "start": 1417.62,
+    "duration": 5.52
+  },
+  {
+    "text": "that might not even be a local news",
+    "start": 1420.02,
+    "duration": 6.779
+  },
+  {
+    "text": "story and relentlessly hammer it it and",
+    "start": 1423.14,
+    "duration": 5.519
+  },
+  {
+    "text": "try to connect it to a broader Trend",
+    "start": 1426.799,
+    "duration": 4.321
+  },
+  {
+    "text": "that is supposedly sweeping the country",
+    "start": 1428.659,
+    "duration": 5.361
+  },
+  {
+    "text": "and the reason why they do this so much",
+    "start": 1431.12,
+    "duration": 7.26
+  },
+  {
+    "text": "is because the hardcore base of the",
+    "start": 1434.02,
+    "duration": 5.7
+  },
+  {
+    "text": "Republicans",
+    "start": 1438.38,
+    "duration": 4.56
+  },
+  {
+    "text": "really loves stories that seem to",
+    "start": 1439.72,
+    "duration": 5.319
+  },
+  {
+    "text": "reaffirm their transphobic beliefs",
+    "start": 1442.94,
+    "duration": 5.16
+  },
+  {
+    "text": "according to Media Matters right-leaning",
+    "start": 1445.039,
+    "duration": 6.601
+  },
+  {
+    "text": "Facebook pages earned nearly two-thirds",
+    "start": 1448.1,
+    "duration": 6.72
+  },
+  {
+    "text": "of interactions on posts about trans",
+    "start": 1451.64,
+    "duration": 6.18
+  },
+  {
+    "text": "issues I would be surprised if the",
+    "start": 1454.82,
+    "duration": 6.12
+  },
+  {
+    "text": "numbers from Fox News don't show a",
+    "start": 1457.82,
+    "duration": 5.04
+  },
+  {
+    "text": "larger demand for stories [ __ ] on",
+    "start": 1460.94,
+    "duration": 4.979
+  },
+  {
+    "text": "trans people compared to other topics so",
+    "start": 1462.86,
+    "duration": 5.819
+  },
+  {
+    "text": "anything surrounding trans people hugely",
+    "start": 1465.919,
+    "duration": 4.861
+  },
+  {
+    "text": "resonates within the conservative",
+    "start": 1468.679,
+    "duration": 4.74
+  },
+  {
+    "text": "political sphere Republican lawmakers",
+    "start": 1470.78,
+    "duration": 4.62
+  },
+  {
+    "text": "see that and are increasingly",
+    "start": 1473.419,
+    "duration": 4.62
+  },
+  {
+    "text": "incentivized to push for anti-trans",
+    "start": 1475.4,
+    "duration": 5.46
+  },
+  {
+    "text": "legislation no matter how nonsensical it",
+    "start": 1478.039,
+    "duration": 6.181
+  },
+  {
+    "text": "is if there is one person who due to",
+    "start": 1480.86,
+    "duration": 5.939
+  },
+  {
+    "text": "this insatiable trans phobic thirst",
+    "start": 1484.22,
+    "duration": 5.28
+  },
+  {
+    "text": "among the right was successful in",
+    "start": 1486.799,
+    "duration": 5.281
+  },
+  {
+    "text": "carving out his Niche it's a guy named",
+    "start": 1489.5,
+    "duration": 5.58
+  },
+  {
+    "text": "mad Walsh now if you don't know who met",
+    "start": 1492.08,
+    "duration": 4.2
+  },
+  {
+    "text": "Waltz is",
+    "start": 1495.08,
+    "duration": 4.5
+  },
+  {
+    "text": "he is someone who until 2010 I can only",
+    "start": 1496.28,
+    "duration": 5.759
+  },
+  {
+    "text": "assume hung around under a gas leak",
+    "start": 1499.58,
+    "duration": 4.92
+  },
+  {
+    "text": "until he decided to become a",
+    "start": 1502.039,
+    "duration": 4.681
+  },
+  {
+    "text": "conservative commentator now I don't",
+    "start": 1504.5,
+    "duration": 6.36
+  },
+  {
+    "text": "have kids as of right now but if I did I",
+    "start": 1506.72,
+    "duration": 6.3
+  },
+  {
+    "text": "would definitely want to keep them away",
+    "start": 1510.86,
+    "duration": 5.939
+  },
+  {
+    "text": "from this guy because Matt Walsh seems",
+    "start": 1513.02,
+    "duration": 7.38
+  },
+  {
+    "text": "unable to not talk about children in a",
+    "start": 1516.799,
+    "duration": 6.721
+  },
+  {
+    "text": "very weird way be it about how the age",
+    "start": 1520.4,
+    "duration": 6.3
+  },
+  {
+    "text": "of consent is kind of iffy or children",
+    "start": 1523.52,
+    "duration": 5.82
+  },
+  {
+    "text": "being sexualized by seeing drag queens",
+    "start": 1526.7,
+    "duration": 5.219
+  },
+  {
+    "text": "or doctors supposedly mutilating",
+    "start": 1529.34,
+    "duration": 6.24
+  },
+  {
+    "text": "children lots of crazy stuff but what I",
+    "start": 1531.919,
+    "duration": 7.38
+  },
+  {
+    "text": "appreciate about him is that Matt Walsh",
+    "start": 1535.58,
+    "duration": 6.959
+  },
+  {
+    "text": "offers a clear view into the American",
+    "start": 1539.299,
+    "duration": 6.541
+  },
+  {
+    "text": "conservative mind because he has no",
+    "start": 1542.539,
+    "duration": 6.601
+  },
+  {
+    "text": "filter at all with him you get the pure",
+    "start": 1545.84,
+    "duration": 5.719
+  },
+  {
+    "text": "essence of what conservatives believe",
+    "start": 1549.14,
+    "duration": 5.519
+  },
+  {
+    "text": "stripped of any lip service or",
+    "start": 1551.559,
+    "duration": 5.321
+  },
+  {
+    "text": "moderation to make them seem less crazy",
+    "start": 1554.659,
+    "duration": 5.161
+  },
+  {
+    "text": "so it runs the Gambit from thinking that",
+    "start": 1556.88,
+    "duration": 5.88
+  },
+  {
+    "text": "trans people don't exist it's all just a",
+    "start": 1559.82,
+    "duration": 5.76
+  },
+  {
+    "text": "mental illness being against gay",
+    "start": 1562.76,
+    "duration": 5.76
+  },
+  {
+    "text": "marriage saying that America lost its",
+    "start": 1565.58,
+    "duration": 5.4
+  },
+  {
+    "text": "Republic after reconstruction believing",
+    "start": 1568.52,
+    "duration": 4.56
+  },
+  {
+    "text": "in the great replacement take your pick",
+    "start": 1570.98,
+    "duration": 5.28
+  },
+  {
+    "text": "he is the guy who among the right made",
+    "start": 1573.08,
+    "duration": 6.479
+  },
+  {
+    "text": "attacking lgbtq people his claim to fame",
+    "start": 1576.26,
+    "duration": 6.659
+  },
+  {
+    "text": "part of that is a documentary he made",
+    "start": 1579.559,
+    "duration": 6.301
+  },
+  {
+    "text": "earlier this year that proposes to",
+    "start": 1582.919,
+    "duration": 6.061
+  },
+  {
+    "text": "Simply ask the question what is a woman",
+    "start": 1585.86,
+    "duration": 6.54
+  },
+  {
+    "text": "in this documentary he presents himself",
+    "start": 1588.98,
+    "duration": 7.26
+  },
+  {
+    "text": "as this curious every man and talks to",
+    "start": 1592.4,
+    "duration": 6.779
+  },
+  {
+    "text": "academics politicians and people on the",
+    "start": 1596.24,
+    "duration": 6.0
+  },
+  {
+    "text": "street about what a woman is and in this",
+    "start": 1599.179,
+    "duration": 5.761
+  },
+  {
+    "text": "documentary Matt Walsh seems to struggle",
+    "start": 1602.24,
+    "duration": 5.4
+  },
+  {
+    "text": "with a basic concept that most teenagers",
+    "start": 1604.94,
+    "duration": 5.64
+  },
+  {
+    "text": "can understand namely that while most",
+    "start": 1607.64,
+    "duration": 5.46
+  },
+  {
+    "text": "people are assigned male or female at",
+    "start": 1610.58,
+    "duration": 6.839
+  },
+  {
+    "text": "Birth what makes a woman is largely a",
+    "start": 1613.1,
+    "duration": 7.5
+  },
+  {
+    "text": "collection of social signifiers because",
+    "start": 1617.419,
+    "duration": 5.701
+  },
+  {
+    "text": "you have no idea what a person has",
+    "start": 1620.6,
+    "duration": 4.319
+  },
+  {
+    "text": "between their legs when you meet them",
+    "start": 1623.12,
+    "duration": 4.26
+  },
+  {
+    "text": "for the first time usually so you go by",
+    "start": 1624.919,
+    "duration": 5.281
+  },
+  {
+    "text": "things like do they have long hair what",
+    "start": 1627.38,
+    "duration": 4.98
+  },
+  {
+    "text": "does their voice sound like what body",
+    "start": 1630.2,
+    "duration": 4.44
+  },
+  {
+    "text": "type do they have and so on but there's",
+    "start": 1632.36,
+    "duration": 5.699
+  },
+  {
+    "text": "no biological basis to women typically",
+    "start": 1634.64,
+    "duration": 5.58
+  },
+  {
+    "text": "having long hair or shaving their legs",
+    "start": 1638.059,
+    "duration": 5.341
+  },
+  {
+    "text": "these are things Society has agreed upon",
+    "start": 1640.22,
+    "duration": 6.3
+  },
+  {
+    "text": "to be things women do what we see as a",
+    "start": 1643.4,
+    "duration": 6.42
+  },
+  {
+    "text": "woman suicidally is a question of",
+    "start": 1646.52,
+    "duration": 6.6
+  },
+  {
+    "text": "language not so much biology if you get",
+    "start": 1649.82,
+    "duration": 5.64
+  },
+  {
+    "text": "what I'm saying it's pretty simple there",
+    "start": 1653.12,
+    "duration": 4.62
+  },
+  {
+    "text": "are many many scenes in the documentary",
+    "start": 1655.46,
+    "duration": 4.5
+  },
+  {
+    "text": "worth exploring but one interaction in",
+    "start": 1657.74,
+    "duration": 4.679
+  },
+  {
+    "text": "particular is very enlightening and that",
+    "start": 1659.96,
+    "duration": 4.56
+  },
+  {
+    "text": "is when Matt Walsh talks to a social",
+    "start": 1662.419,
+    "duration": 5.161
+  },
+  {
+    "text": "scientist at a university Walch asks him",
+    "start": 1664.52,
+    "duration": 4.92
+  },
+  {
+    "text": "what is the difference between sex and",
+    "start": 1667.58,
+    "duration": 5.28
+  },
+  {
+    "text": "gender and the response he gets is this",
+    "start": 1669.44,
+    "duration": 6.18
+  },
+  {
+    "text": "long-wielded answer detailing our modern",
+    "start": 1672.86,
+    "duration": 5.04
+  },
+  {
+    "text": "understand ending of how sex and gender",
+    "start": 1675.62,
+    "duration": 4.799
+  },
+  {
+    "text": "are intertwined but that gender is",
+    "start": 1677.9,
+    "duration": 4.74
+  },
+  {
+    "text": "largely a social category in the",
+    "start": 1680.419,
+    "duration": 4.26
+  },
+  {
+    "text": "documentary the answer the professor",
+    "start": 1682.64,
+    "duration": 5.039
+  },
+  {
+    "text": "gives is kind of sped up and mashed",
+    "start": 1684.679,
+    "duration": 6.061
+  },
+  {
+    "text": "together but at the end Walsh just as",
+    "start": 1687.679,
+    "duration": 6.48
+  },
+  {
+    "text": "confused so is there a difference it's",
+    "start": 1690.74,
+    "duration": 5.46
+  },
+  {
+    "text": "supposed to be this haha man this",
+    "start": 1694.159,
+    "duration": 4.62
+  },
+  {
+    "text": "professor guy Julius boring moment but",
+    "start": 1696.2,
+    "duration": 5.219
+  },
+  {
+    "text": "really just showcases how inept Matt",
+    "start": 1698.779,
+    "duration": 5.161
+  },
+  {
+    "text": "Walsh is in grappling with these issues",
+    "start": 1701.419,
+    "duration": 5.041
+  },
+  {
+    "text": "the rest of the documentary is not that",
+    "start": 1703.94,
+    "duration": 4.56
+  },
+  {
+    "text": "different from the typical conservative",
+    "start": 1706.46,
+    "duration": 4.68
+  },
+  {
+    "text": "propaganda pieces out there one moment",
+    "start": 1708.5,
+    "duration": 5.22
+  },
+  {
+    "text": "where Matt Walsh is talking to a man",
+    "start": 1711.14,
+    "duration": 4.38
+  },
+  {
+    "text": "about hormone blockers is pretty",
+    "start": 1713.72,
+    "duration": 4.26
+  },
+  {
+    "text": "instructive in my opinion I have a short",
+    "start": 1715.52,
+    "duration": 3.899
+  },
+  {
+    "text": "clip for you here",
+    "start": 1717.98,
+    "duration": 3.24
+  },
+  {
+    "text": "and we're believing a pharmaceutical",
+    "start": 1719.419,
+    "duration": 2.64
+  },
+  {
+    "text": "company",
+    "start": 1721.22,
+    "duration": 2.28
+  },
+  {
+    "text": "Lupron",
+    "start": 1722.059,
+    "duration": 5.341
+  },
+  {
+    "text": "hormone blockers reversible so they say",
+    "start": 1723.5,
+    "duration": 6.9
+  },
+  {
+    "text": "well the truth is is that in 2003 Lupron",
+    "start": 1727.4,
+    "duration": 5.22
+  },
+  {
+    "text": "was sued and deemed a criminal",
+    "start": 1730.4,
+    "duration": 4.62
+  },
+  {
+    "text": "Enterprise by the U.S government",
+    "start": 1732.62,
+    "duration": 4.32
+  },
+  {
+    "text": "they paid the most",
+    "start": 1735.02,
+    "duration": 4.259
+  },
+  {
+    "text": "fine of any pharmaceutical company at",
+    "start": 1736.94,
+    "duration": 3.38
+  },
+  {
+    "text": "that time",
+    "start": 1739.279,
+    "duration": 4.38
+  },
+  {
+    "text": "874 million dollars wrote a check is",
+    "start": 1740.32,
+    "duration": 4.66
+  },
+  {
+    "text": "Lupron",
+    "start": 1743.659,
+    "duration": 4.681
+  },
+  {
+    "text": "chemical castration yes",
+    "start": 1744.98,
+    "duration": 6.24
+  },
+  {
+    "text": "this person brings up a drug named",
+    "start": 1748.34,
+    "duration": 6.06
+  },
+  {
+    "text": "Lupron being part of a sweeping effort",
+    "start": 1751.22,
+    "duration": 6.48
+  },
+  {
+    "text": "to sterilize children supposedly and in",
+    "start": 1754.4,
+    "duration": 5.46
+  },
+  {
+    "text": "the same breath mentions a billion",
+    "start": 1757.7,
+    "duration": 5.12
+  },
+  {
+    "text": "dollar lawsuit it's not outright said",
+    "start": 1759.86,
+    "duration": 6.179
+  },
+  {
+    "text": "but the impression the viewer gets is",
+    "start": 1762.82,
+    "duration": 6.28
+  },
+  {
+    "text": "that this lawsuit and Lupron being",
+    "start": 1766.039,
+    "duration": 5.301
+  },
+  {
+    "text": "prescribed to Young trans individuals",
+    "start": 1769.1,
+    "duration": 6.059
+  },
+  {
+    "text": "are somehow connected otherwise why",
+    "start": 1771.34,
+    "duration": 5.439
+  },
+  {
+    "text": "would she even bring this up in the same",
+    "start": 1775.159,
+    "duration": 4.5
+  },
+  {
+    "text": "breath now any person who has their",
+    "start": 1776.779,
+    "duration": 5.341
+  },
+  {
+    "text": "senses together will hear this and think",
+    "start": 1779.659,
+    "duration": 6.301
+  },
+  {
+    "text": "what that sounds ridiculous and of",
+    "start": 1782.12,
+    "duration": 5.88
+  },
+  {
+    "text": "course when you look it up you find out",
+    "start": 1785.96,
+    "duration": 4.8
+  },
+  {
+    "text": "that not only did they settle this case",
+    "start": 1788.0,
+    "duration": 8.34
+  },
+  {
+    "text": "in 2001 so 21 years ago but that they",
+    "start": 1790.76,
+    "duration": 7.5
+  },
+  {
+    "text": "had to pay this nearly billion dollar",
+    "start": 1796.34,
+    "duration": 5.76
+  },
+  {
+    "text": "fine over Medicare fraud this company",
+    "start": 1798.26,
+    "duration": 7.139
+  },
+  {
+    "text": "had essentially bribe doctors to",
+    "start": 1802.1,
+    "duration": 6.179
+  },
+  {
+    "text": "prescribe Lupron to elderly men for",
+    "start": 1805.399,
+    "duration": 5.64
+  },
+  {
+    "text": "prostate cancer because that's what the",
+    "start": 1808.279,
+    "duration": 5.64
+  },
+  {
+    "text": "drug is mainly used for now the average",
+    "start": 1811.039,
+    "duration": 8.52
+  },
+  {
+    "text": "eligibility age for Medicare is 65.",
+    "start": 1813.919,
+    "duration": 8.701
+  },
+  {
+    "text": "for this case to be related to trans",
+    "start": 1819.559,
+    "duration": 5.581
+  },
+  {
+    "text": "people in any way there would have to",
+    "start": 1822.62,
+    "duration": 6.779
+  },
+  {
+    "text": "have been an over 65 year old male in",
+    "start": 1825.14,
+    "duration": 7.98
+  },
+  {
+    "text": "the 90s who received Lupron as a puberty",
+    "start": 1829.399,
+    "duration": 6.301
+  },
+  {
+    "text": "blocker from his doctor I'm not a",
+    "start": 1833.12,
+    "duration": 5.58
+  },
+  {
+    "text": "medical expert but I'd be shocked if",
+    "start": 1835.7,
+    "duration": 4.92
+  },
+  {
+    "text": "there was even a single case of this",
+    "start": 1838.7,
+    "duration": 5.339
+  },
+  {
+    "text": "because you know not that many over 65",
+    "start": 1840.62,
+    "duration": 6.0
+  },
+  {
+    "text": "year olds go through puberty dare I say",
+    "start": 1844.039,
+    "duration": 5.401
+  },
+  {
+    "text": "none at all now I don't have time to",
+    "start": 1846.62,
+    "duration": 5.4
+  },
+  {
+    "text": "debunk the entire documentary here but",
+    "start": 1849.44,
+    "duration": 5.16
+  },
+  {
+    "text": "this gives you an idea of the dishonesty",
+    "start": 1852.02,
+    "duration": 6.659
+  },
+  {
+    "text": "involved it basically exists to reaffirm",
+    "start": 1854.6,
+    "duration": 6.299
+  },
+  {
+    "text": "people who are already let's say",
+    "start": 1858.679,
+    "duration": 4.921
+  },
+  {
+    "text": "skeptical towards the existence of trans",
+    "start": 1860.899,
+    "duration": 5.101
+  },
+  {
+    "text": "people but I doubt anyone else will get",
+    "start": 1863.6,
+    "duration": 4.86
+  },
+  {
+    "text": "anything out of it ultimately there is",
+    "start": 1866.0,
+    "duration": 4.679
+  },
+  {
+    "text": "nothing I could say about this",
+    "start": 1868.46,
+    "duration": 6.06
+  },
+  {
+    "text": "documentary that would be as damning as",
+    "start": 1870.679,
+    "duration": 6.841
+  },
+  {
+    "text": "Matt walches onwards when he appeared on",
+    "start": 1874.52,
+    "duration": 4.98
+  },
+  {
+    "text": "The Joe Rogan show now I'm gonna play",
+    "start": 1877.52,
+    "duration": 4.98
+  },
+  {
+    "text": "Play a clip for you here where Matt Walt",
+    "start": 1879.5,
+    "duration": 6.179
+  },
+  {
+    "text": "just asked how many miners are currently",
+    "start": 1882.5,
+    "duration": 5.279
+  },
+  {
+    "text": "on puberty blockers in the United States",
+    "start": 1885.679,
+    "duration": 5.521
+  },
+  {
+    "text": "something he should have an easy time",
+    "start": 1887.779,
+    "duration": 6.301
+  },
+  {
+    "text": "answering considering he made a freaking",
+    "start": 1891.2,
+    "duration": 5.82
+  },
+  {
+    "text": "documentary on this he is then fact",
+    "start": 1894.08,
+    "duration": 5.219
+  },
+  {
+    "text": "checked and yeah take a lesson for",
+    "start": 1897.02,
+    "duration": 4.08
+  },
+  {
+    "text": "yourself how many people have had this",
+    "start": 1899.299,
+    "duration": 2.941
+  },
+  {
+    "text": "done",
+    "start": 1901.1,
+    "duration": 3.12
+  },
+  {
+    "text": "depends on what I don't think we have",
+    "start": 1902.24,
+    "duration": 3.419
+  },
+  {
+    "text": "exact numbers but it's if we're talking",
+    "start": 1904.22,
+    "duration": 4.5
+  },
+  {
+    "text": "about the drugs it's I mean Millions",
+    "start": 1905.659,
+    "duration": 5.581
+  },
+  {
+    "text": "um do you talk about hormone blockers",
+    "start": 1908.72,
+    "duration": 4.5
+  },
+  {
+    "text": "yeah but millions of kids have been on",
+    "start": 1911.24,
+    "duration": 4.5
+  },
+  {
+    "text": "hormone blockers really uh",
+    "start": 1913.22,
+    "duration": 4.02
+  },
+  {
+    "text": "I'm sure someone's going to fact check",
+    "start": 1915.74,
+    "duration": 3.9
+  },
+  {
+    "text": "me on there but my my my guess is that",
+    "start": 1917.24,
+    "duration": 3.78
+  },
+  {
+    "text": "we're in we're into the millions now at",
+    "start": 1919.64,
+    "duration": 3.18
+  },
+  {
+    "text": "this point yeah that'll be my guess",
+    "start": 1921.02,
+    "duration": 6.12
+  },
+  {
+    "text": "um uh I I can say for double",
+    "start": 1922.82,
+    "duration": 6.18
+  },
+  {
+    "text": "mastectomies the most I've read a report",
+    "start": 1927.14,
+    "duration": 3.659
+  },
+  {
+    "text": "recently that",
+    "start": 1929.0,
+    "duration": 3.6
+  },
+  {
+    "text": "um there were over a thousand done",
+    "start": 1930.799,
+    "duration": 4.921
+  },
+  {
+    "text": "between 2016 and 2019 and when you",
+    "start": 1932.6,
+    "duration": 4.38
+  },
+  {
+    "text": "compare that to how many were done",
+    "start": 1935.72,
+    "duration": 4.98
+  },
+  {
+    "text": "between you know 2008 and 2015 it's just",
+    "start": 1936.98,
+    "duration": 7.319
+  },
+  {
+    "text": "it's a massive increase and uh over a",
+    "start": 1940.7,
+    "duration": 5.16
+  },
+  {
+    "text": "thousand girls that double most gender",
+    "start": 1944.299,
+    "duration": 3.781
+  },
+  {
+    "text": "affirming double mastectomies in that in",
+    "start": 1945.86,
+    "duration": 4.02
+  },
+  {
+    "text": "that time frame girls you're talking",
+    "start": 1948.08,
+    "duration": 4.68
+  },
+  {
+    "text": "about prepubes right minors uh and",
+    "start": 1949.88,
+    "duration": 4.98
+  },
+  {
+    "text": "that's just up until 2019 and then we",
+    "start": 1952.76,
+    "duration": 3.299
+  },
+  {
+    "text": "know that uh there's been this",
+    "start": 1954.86,
+    "duration": 2.52
+  },
+  {
+    "text": "exponential increase with all this stuff",
+    "start": 1956.059,
+    "duration": 3.6
+  },
+  {
+    "text": "year over year so",
+    "start": 1957.38,
+    "duration": 4.38
+  },
+  {
+    "text": "um it's it's a lot it's too many you",
+    "start": 1959.659,
+    "duration": 3.601
+  },
+  {
+    "text": "know one having this happen to one kid",
+    "start": 1961.76,
+    "duration": 3.0
+  },
+  {
+    "text": "is way too many it's a lot more than one",
+    "start": 1963.26,
+    "duration": 3.72
+  },
+  {
+    "text": "yeah look if you're an adult and you",
+    "start": 1964.76,
+    "duration": 4.139
+  },
+  {
+    "text": "want to do that and you understand who",
+    "start": 1966.98,
+    "duration": 4.5
+  },
+  {
+    "text": "you are and what you are and this is how",
+    "start": 1968.899,
+    "duration": 4.861
+  },
+  {
+    "text": "you feel you should progress you're an",
+    "start": 1971.48,
+    "duration": 4.199
+  },
+  {
+    "text": "adult this is a free country you should",
+    "start": 1973.76,
+    "duration": 3.299
+  },
+  {
+    "text": "be able to do whatever you want",
+    "start": 1975.679,
+    "duration": 2.761
+  },
+  {
+    "text": "but when you're talking about doing that",
+    "start": 1977.059,
+    "duration": 2.701
+  },
+  {
+    "text": "to Children the fact that so many people",
+    "start": 1978.44,
+    "duration": 3.359
+  },
+  {
+    "text": "are on board and so many people are",
+    "start": 1979.76,
+    "duration": 4.62
+  },
+  {
+    "text": "angry if you have like people are going",
+    "start": 1981.799,
+    "duration": 4.141
+  },
+  {
+    "text": "to be angry at us that we're having",
+    "start": 1984.38,
+    "duration": 3.36
+  },
+  {
+    "text": "these conversations",
+    "start": 1985.94,
+    "duration": 5.099
+  },
+  {
+    "text": "yeah they will be and I also",
+    "start": 1987.74,
+    "duration": 6.12
+  },
+  {
+    "text": "I I actually think that uh that that",
+    "start": 1991.039,
+    "duration": 4.26
+  },
+  {
+    "text": "this should this shouldn't be happening",
+    "start": 1993.86,
+    "duration": 3.72
+  },
+  {
+    "text": "to",
+    "start": 1995.299,
+    "duration": 4.081
+  },
+  {
+    "text": "it's a very small number if that's right",
+    "start": 1997.58,
+    "duration": 3.839
+  },
+  {
+    "text": "it says over the last five years there",
+    "start": 1999.38,
+    "duration": 4.679
+  },
+  {
+    "text": "were at least 4 780 adolescents who",
+    "start": 2001.419,
+    "duration": 4.921
+  },
+  {
+    "text": "started puberty blockers and at a prior",
+    "start": 2004.059,
+    "duration": 5.161
+  },
+  {
+    "text": "gender dysphoria diagnosis it says it's",
+    "start": 2006.34,
+    "duration": 6.319
+  },
+  {
+    "text": "kind of under counted but that's",
+    "start": 2009.22,
+    "duration": 3.439
+  },
+  {
+    "text": "yeah I mean I I would guess you know",
+    "start": 2016.659,
+    "duration": 4.14
+  },
+  {
+    "text": "hundreds of thousands at this but I",
+    "start": 2018.88,
+    "duration": 3.0
+  },
+  {
+    "text": "could be wrong",
+    "start": 2020.799,
+    "duration": 4.321
+  },
+  {
+    "text": "a million sounds great yeah that could",
+    "start": 2021.88,
+    "duration": 4.44
+  },
+  {
+    "text": "be wrong yeah",
+    "start": 2025.12,
+    "duration": 2.58
+  },
+  {
+    "text": "um the Media Matters will have fun with",
+    "start": 2026.32,
+    "duration": 4.199
+  },
+  {
+    "text": "that clip yeah Matt Walsh claims okay",
+    "start": 2027.7,
+    "duration": 4.859
+  },
+  {
+    "text": "let's go through this because this is",
+    "start": 2030.519,
+    "duration": 5.461
+  },
+  {
+    "text": "just amazing that this guy who has made",
+    "start": 2032.559,
+    "duration": 6.48
+  },
+  {
+    "text": "a name for himself as the right Wing's",
+    "start": 2035.98,
+    "duration": 6.66
+  },
+  {
+    "text": "top psychopath on transgender issues is",
+    "start": 2039.039,
+    "duration": 8.281
+  },
+  {
+    "text": "off by a factor of 1 000 when asked the",
+    "start": 2042.64,
+    "duration": 6.539
+  },
+  {
+    "text": "most basic question you could think of",
+    "start": 2047.32,
+    "duration": 5.339
+  },
+  {
+    "text": "Imagine Me Going On The Joe Rogan show",
+    "start": 2049.179,
+    "duration": 6.541
+  },
+  {
+    "text": "after I made a documentary called what",
+    "start": 2052.659,
+    "duration": 6.301
+  },
+  {
+    "text": "is a tiger and what I'm asked how many",
+    "start": 2055.72,
+    "duration": 5.34
+  },
+  {
+    "text": "tigers are left in the world I go like",
+    "start": 2058.96,
+    "duration": 4.56
+  },
+  {
+    "text": "oh you know my guess is a couple of",
+    "start": 2061.06,
+    "duration": 4.68
+  },
+  {
+    "text": "millions and then when I'm fact checked",
+    "start": 2063.52,
+    "duration": 5.28
+  },
+  {
+    "text": "to my face and told the number of tigers",
+    "start": 2065.74,
+    "duration": 6.899
+  },
+  {
+    "text": "is roughly 4 000 I go yeah probably in",
+    "start": 2068.8,
+    "duration": 5.819
+  },
+  {
+    "text": "the hundreds of thousands it's like dude",
+    "start": 2072.639,
+    "duration": 4.081
+  },
+  {
+    "text": "you just guessed Millions what are you",
+    "start": 2074.619,
+    "duration": 4.081
+  },
+  {
+    "text": "even talking about this is so",
+    "start": 2076.72,
+    "duration": 5.1
+  },
+  {
+    "text": "embarrassing I would consider you know",
+    "start": 2078.7,
+    "duration": 5.639
+  },
+  {
+    "text": "drastic measures if this ever happened",
+    "start": 2081.82,
+    "duration": 5.76
+  },
+  {
+    "text": "to me getting exposed as such a dumbass",
+    "start": 2084.339,
+    "duration": 6.121
+  },
+  {
+    "text": "to millions of people and yeah Media",
+    "start": 2087.58,
+    "duration": 4.259
+  },
+  {
+    "text": "Matters should have a field day with",
+    "start": 2090.46,
+    "duration": 2.639
+  },
+  {
+    "text": "this because you're full of [ __ ] Matt",
+    "start": 2091.839,
+    "duration": 4.681
+  },
+  {
+    "text": "Walsh just incredible and one thing I",
+    "start": 2093.099,
+    "duration": 5.581
+  },
+  {
+    "text": "don't want to let slide because Joe",
+    "start": 2096.52,
+    "duration": 4.5
+  },
+  {
+    "text": "Rogan frankly is too stupid to be",
+    "start": 2098.68,
+    "duration": 5.7
+  },
+  {
+    "text": "trusted with an issue like this the vast",
+    "start": 2101.02,
+    "duration": 7.02
+  },
+  {
+    "text": "vast vast majority of trans men if they",
+    "start": 2104.38,
+    "duration": 6.959
+  },
+  {
+    "text": "get mastectomies AKA Top surgery get it",
+    "start": 2108.04,
+    "duration": 6.36
+  },
+  {
+    "text": "over the age of 18. the reason for that",
+    "start": 2111.339,
+    "duration": 6.24
+  },
+  {
+    "text": "is that the body is still growing and",
+    "start": 2114.4,
+    "duration": 5.76
+  },
+  {
+    "text": "getting this kind of surgery can be more",
+    "start": 2117.579,
+    "duration": 4.801
+  },
+  {
+    "text": "complicated if your breasts are still in",
+    "start": 2120.16,
+    "duration": 4.62
+  },
+  {
+    "text": "the process of forming if you are below",
+    "start": 2122.38,
+    "duration": 6.9
+  },
+  {
+    "text": "that age let's say 16 or 17 there are a",
+    "start": 2124.78,
+    "duration": 6.6
+  },
+  {
+    "text": "bunch of hurdles like consent of both",
+    "start": 2129.28,
+    "duration": 5.819
+  },
+  {
+    "text": "parents mental evaluation and a team of",
+    "start": 2131.38,
+    "duration": 6.06
+  },
+  {
+    "text": "doctors determining that it would be",
+    "start": 2135.099,
+    "duration": 4.321
+  },
+  {
+    "text": "more dangerous to wait for this",
+    "start": 2137.44,
+    "duration": 4.32
+  },
+  {
+    "text": "procedure than performing the procedure",
+    "start": 2139.42,
+    "duration": 5.76
+  },
+  {
+    "text": "major itself it's much much harder to",
+    "start": 2141.76,
+    "duration": 5.339
+  },
+  {
+    "text": "get than Matt Walsh makes it out to be",
+    "start": 2145.18,
+    "duration": 5.82
+  },
+  {
+    "text": "anyway of course this documentary is a",
+    "start": 2147.099,
+    "duration": 6.121
+  },
+  {
+    "text": "huge success among the right confirming",
+    "start": 2151.0,
+    "duration": 4.56
+  },
+  {
+    "text": "all their beliefs about cookie liberals",
+    "start": 2153.22,
+    "duration": 4.56
+  },
+  {
+    "text": "not even having a concept of what a",
+    "start": 2155.56,
+    "duration": 4.74
+  },
+  {
+    "text": "woman is Congress people mention it on",
+    "start": 2157.78,
+    "duration": 4.86
+  },
+  {
+    "text": "the house floor in a positive way it",
+    "start": 2160.3,
+    "duration": 4.2
+  },
+  {
+    "text": "makes waves beyond the conservative",
+    "start": 2162.64,
+    "duration": 4.32
+  },
+  {
+    "text": "sphere as Matt Walsh is invited onto",
+    "start": 2164.5,
+    "duration": 5.16
+  },
+  {
+    "text": "Bill Maher he and his documentary even",
+    "start": 2166.96,
+    "duration": 4.8
+  },
+  {
+    "text": "get a fawning write-up in one of",
+    "start": 2169.66,
+    "duration": 4.02
+  },
+  {
+    "text": "Germany's largest newspapers called",
+    "start": 2171.76,
+    "duration": 4.079
+  },
+  {
+    "text": "develt calling him a conservative",
+    "start": 2173.68,
+    "duration": 4.98
+  },
+  {
+    "text": "Michael Moore so from their perspective",
+    "start": 2175.839,
+    "duration": 6.78
+  },
+  {
+    "text": "this is a huge success now Republican",
+    "start": 2178.66,
+    "duration": 6.84
+  },
+  {
+    "text": "lawmakers and strategists see how much",
+    "start": 2182.619,
+    "duration": 5.401
+  },
+  {
+    "text": "trans issues resonate among their base",
+    "start": 2185.5,
+    "duration": 4.859
+  },
+  {
+    "text": "and conservatives more broadly and tell",
+    "start": 2188.02,
+    "duration": 4.98
+  },
+  {
+    "text": "themselves hell yeah this is how we're",
+    "start": 2190.359,
+    "duration": 5.101
+  },
+  {
+    "text": "gonna win the midterms forget the",
+    "start": 2193.0,
+    "duration": 5.52
+  },
+  {
+    "text": "economy forget anti-vax stuff this is",
+    "start": 2195.46,
+    "duration": 5.34
+  },
+  {
+    "text": "where it's at this is gonna fire up the",
+    "start": 2198.52,
+    "duration": 5.46
+  },
+  {
+    "text": "religious right the mega people and get",
+    "start": 2200.8,
+    "duration": 6.059
+  },
+  {
+    "text": "the independent voters on our side so",
+    "start": 2203.98,
+    "duration": 6.72
+  },
+  {
+    "text": "they pour a ton of money into anti-trans",
+    "start": 2206.859,
+    "duration": 6.541
+  },
+  {
+    "text": "ads and I have a couple of stories for",
+    "start": 2210.7,
+    "duration": 5.58
+  },
+  {
+    "text": "you here from before the midterms going",
+    "start": 2213.4,
+    "duration": 6.179
+  },
+  {
+    "text": "as far back as March there is a story by",
+    "start": 2216.28,
+    "duration": 7.26
+  },
+  {
+    "text": "NBC News titled GOP candidates unleash",
+    "start": 2219.579,
+    "duration": 6.661
+  },
+  {
+    "text": "wave of ads targeting transgender rights",
+    "start": 2223.54,
+    "duration": 5.76
+  },
+  {
+    "text": "it reads two leading Republican Senate",
+    "start": 2226.24,
+    "duration": 5.879
+  },
+  {
+    "text": "hopefulls in Pennsylvania are savaging",
+    "start": 2229.3,
+    "duration": 5.76
+  },
+  {
+    "text": "each other in TV ads over who supported",
+    "start": 2232.119,
+    "duration": 5.281
+  },
+  {
+    "text": "transgender surgery more in Missouri",
+    "start": 2235.06,
+    "duration": 5.58
+  },
+  {
+    "text": "another GOP candidate for Senate surged",
+    "start": 2237.4,
+    "duration": 5.4
+  },
+  {
+    "text": "when she criticized transgender swimmer",
+    "start": 2240.64,
+    "duration": 4.32
+  },
+  {
+    "text": "Leah Thomas in a commercial and in",
+    "start": 2242.8,
+    "duration": 4.86
+  },
+  {
+    "text": "Alabama a charter school for transgender",
+    "start": 2244.96,
+    "duration": 5.34
+  },
+  {
+    "text": "kids has been invoked in ads as an issue",
+    "start": 2247.66,
+    "duration": 4.679
+  },
+  {
+    "text": "in the Republican primary for governor",
+    "start": 2250.3,
+    "duration": 4.74
+  },
+  {
+    "text": "like never before Republicans in",
+    "start": 2252.339,
+    "duration": 5.221
+  },
+  {
+    "text": "primaries across the country have made",
+    "start": 2255.04,
+    "duration": 5.64
+  },
+  {
+    "text": "attacking transgender rights Central to",
+    "start": 2257.56,
+    "duration": 4.98
+  },
+  {
+    "text": "their paid media campaign lines and",
+    "start": 2260.68,
+    "duration": 4.32
+  },
+  {
+    "text": "stump speeches focusing on issues of",
+    "start": 2262.54,
+    "duration": 5.1
+  },
+  {
+    "text": "Education gender transitioning and",
+    "start": 2265.0,
+    "duration": 4.859
+  },
+  {
+    "text": "sports according to the ad tracking firm",
+    "start": 2267.64,
+    "duration": 4.74
+  },
+  {
+    "text": "at impact further down in the article",
+    "start": 2269.859,
+    "duration": 5.281
+  },
+  {
+    "text": "they interview a republican consultant",
+    "start": 2272.38,
+    "duration": 6.239
+  },
+  {
+    "text": "and this is really funny and provides an",
+    "start": 2275.14,
+    "duration": 5.939
+  },
+  {
+    "text": "insight into their rationale this guy",
+    "start": 2278.619,
+    "duration": 5.761
+  },
+  {
+    "text": "says voters overall are nowhere near",
+    "start": 2281.079,
+    "duration": 6.54
+  },
+  {
+    "text": "Democrats on this and the Heart woke",
+    "start": 2284.38,
+    "duration": 5.219
+  },
+  {
+    "text": "left there is a biological difference",
+    "start": 2287.619,
+    "duration": 4.381
+  },
+  {
+    "text": "between men and women once in a while",
+    "start": 2289.599,
+    "duration": 4.321
+  },
+  {
+    "text": "you find an issue that is your",
+    "start": 2292.0,
+    "duration": 4.56
+  },
+  {
+    "text": "opponent's heel where they are way over",
+    "start": 2293.92,
+    "duration": 5.22
+  },
+  {
+    "text": "their skis Democrats are stuck on this",
+    "start": 2296.56,
+    "duration": 5.1
+  },
+  {
+    "text": "because if they step out of line they",
+    "start": 2299.14,
+    "duration": 5.28
+  },
+  {
+    "text": "get smacked as transphobic keep this guy",
+    "start": 2301.66,
+    "duration": 4.679
+  },
+  {
+    "text": "in mind for later when we discuss the",
+    "start": 2304.42,
+    "duration": 4.88
+  },
+  {
+    "text": "election results this article mentions",
+    "start": 2306.339,
+    "duration": 6.841
+  },
+  {
+    "text": "4.5 million dollars in ads targeting",
+    "start": 2309.3,
+    "duration": 6.46
+  },
+  {
+    "text": "transgender rights which isn't that much",
+    "start": 2313.18,
+    "duration": 5.28
+  },
+  {
+    "text": "money in the grand scheme of things but",
+    "start": 2315.76,
+    "duration": 5.579
+  },
+  {
+    "text": "that number only increased from when",
+    "start": 2318.46,
+    "duration": 5.58
+  },
+  {
+    "text": "this end BC piece was published in May",
+    "start": 2321.339,
+    "duration": 5.821
+  },
+  {
+    "text": "reported by USA Today Republicans see",
+    "start": 2324.04,
+    "duration": 5.76
+  },
+  {
+    "text": "anti-trans bills as key to midterm",
+    "start": 2327.16,
+    "duration": 6.179
+  },
+  {
+    "text": "Victory September of 2022 also by NBC",
+    "start": 2329.8,
+    "duration": 5.64
+  },
+  {
+    "text": "News conservative group releases",
+    "start": 2333.339,
+    "duration": 4.081
+  },
+  {
+    "text": "anti-transgender political ads in",
+    "start": 2335.44,
+    "duration": 4.62
+  },
+  {
+    "text": "Michigan the byline being American",
+    "start": 2337.42,
+    "duration": 4.919
+  },
+  {
+    "text": "principles project announced that it",
+    "start": 2340.06,
+    "duration": 4.08
+  },
+  {
+    "text": "would spend millions in Battleground",
+    "start": 2342.339,
+    "duration": 5.301
+  },
+  {
+    "text": "states to expose Democrats transgender",
+    "start": 2344.14,
+    "duration": 7.8
+  },
+  {
+    "text": "radicalism October 10th in Bloomberg GOP",
+    "start": 2347.64,
+    "duration": 6.58
+  },
+  {
+    "text": "looks to fire up base with attacks on",
+    "start": 2351.94,
+    "duration": 4.5
+  },
+  {
+    "text": "transgender rights getting close to the",
+    "start": 2354.22,
+    "duration": 4.619
+  },
+  {
+    "text": "midterms here now November 1st in",
+    "start": 2356.44,
+    "duration": 4.98
+  },
+  {
+    "text": "Politico adds Target transgender kids",
+    "start": 2358.839,
+    "duration": 5.221
+  },
+  {
+    "text": "flood swing States a group started by",
+    "start": 2361.42,
+    "duration": 5.04
+  },
+  {
+    "text": "Trump Administration alums is spending",
+    "start": 2364.06,
+    "duration": 4.44
+  },
+  {
+    "text": "millions of dollars on Battleground",
+    "start": 2366.46,
+    "duration": 4.68
+  },
+  {
+    "text": "mailers and radio ads looking at all",
+    "start": 2368.5,
+    "duration": 5.64
+  },
+  {
+    "text": "these headlines you can really see how",
+    "start": 2371.14,
+    "duration": 5.52
+  },
+  {
+    "text": "they went all in on this and I have one",
+    "start": 2374.14,
+    "duration": 6.18
+  },
+  {
+    "text": "more piece for you by NPR published five",
+    "start": 2376.66,
+    "duration": 5.64
+  },
+  {
+    "text": "days before the elect",
+    "start": 2380.32,
+    "duration": 4.259
+  },
+  {
+    "text": "right-wing groups spend millions of",
+    "start": 2382.3,
+    "duration": 4.5
+  },
+  {
+    "text": "dollars on ads targeting transgender",
+    "start": 2384.579,
+    "duration": 4.801
+  },
+  {
+    "text": "kids ahead of election day in the high",
+    "start": 2386.8,
+    "duration": 5.58
+  },
+  {
+    "text": "stakes 2022 midterm elections right-wing",
+    "start": 2389.38,
+    "duration": 6.12
+  },
+  {
+    "text": "groups have spent tens of millions of",
+    "start": 2392.38,
+    "duration": 5.94
+  },
+  {
+    "text": "dollars on anti-transgender ads in",
+    "start": 2395.5,
+    "duration": 5.16
+  },
+  {
+    "text": "Battleground States the narrator of an",
+    "start": 2398.32,
+    "duration": 4.62
+  },
+  {
+    "text": "America First legal radio ad accuses",
+    "start": 2400.66,
+    "duration": 4.56
+  },
+  {
+    "text": "President Biden of pushing children to",
+    "start": 2402.94,
+    "duration": 5.7
+  },
+  {
+    "text": "take cross-sex hormones medication and",
+    "start": 2405.22,
+    "duration": 5.879
+  },
+  {
+    "text": "get gender affirming surgery the Biden",
+    "start": 2408.64,
+    "duration": 4.56
+  },
+  {
+    "text": "Administration is pushing radical gender",
+    "start": 2411.099,
+    "duration": 4.621
+  },
+  {
+    "text": "experiments on children changing their",
+    "start": 2413.2,
+    "duration": 4.74
+  },
+  {
+    "text": "names close identities and bodies the",
+    "start": 2415.72,
+    "duration": 4.44
+  },
+  {
+    "text": "narrator says they want boys in our",
+    "start": 2417.94,
+    "duration": 4.399
+  },
+  {
+    "text": "daughter's bathrooms and sports teams",
+    "start": 2420.16,
+    "duration": 5.4
+  },
+  {
+    "text": "conservative estimates on just how much",
+    "start": 2422.339,
+    "duration": 5.561
+  },
+  {
+    "text": "Republican candidates and Pacs spend on",
+    "start": 2425.56,
+    "duration": 5.34
+  },
+  {
+    "text": "ads talking trans children mainly come",
+    "start": 2427.9,
+    "duration": 6.78
+  },
+  {
+    "text": "in at around 50 million dollars 50",
+    "start": 2430.9,
+    "duration": 7.199
+  },
+  {
+    "text": "million in Michigan which is a key",
+    "start": 2434.68,
+    "duration": 5.939
+  },
+  {
+    "text": "Battleground State there were more ads",
+    "start": 2438.099,
+    "duration": 5.821
+  },
+  {
+    "text": "on trans people in sports than any other",
+    "start": 2440.619,
+    "duration": 6.0
+  },
+  {
+    "text": "campaign issue be it gas prices",
+    "start": 2443.92,
+    "duration": 6.179
+  },
+  {
+    "text": "inflation or what have you all paled",
+    "start": 2446.619,
+    "duration": 5.901
+  },
+  {
+    "text": "next to the onslaught on trans people",
+    "start": 2450.099,
+    "duration": 4.861
+  },
+  {
+    "text": "Republicans believed would be key to",
+    "start": 2452.52,
+    "duration": 5.38
+  },
+  {
+    "text": "their Victory okay Republicans spent all",
+    "start": 2454.96,
+    "duration": 4.92
+  },
+  {
+    "text": "this money talk about trans people",
+    "start": 2457.9,
+    "duration": 4.439
+  },
+  {
+    "text": "non-stop on Fox news or campaign trails",
+    "start": 2459.88,
+    "duration": 6.06
+  },
+  {
+    "text": "and you hear lots of talk about the Red",
+    "start": 2462.339,
+    "duration": 6.061
+  },
+  {
+    "text": "Wave that's gonna sweep the country I",
+    "start": 2465.94,
+    "duration": 4.02
+  },
+  {
+    "text": "have a little compilation for you here",
+    "start": 2468.4,
+    "duration": 4.02
+  },
+  {
+    "text": "compiled from various Fox news programs",
+    "start": 2469.96,
+    "duration": 4.98
+  },
+  {
+    "text": "by The Washington Post",
+    "start": 2472.42,
+    "duration": 5.46
+  },
+  {
+    "text": "Red Wave Rising that is the focus of",
+    "start": 2474.94,
+    "duration": 4.46
+  },
+  {
+    "text": "tonight's angle",
+    "start": 2477.88,
+    "duration": 3.479
+  },
+  {
+    "text": "and you're going to lose the Senate and",
+    "start": 2479.4,
+    "duration": 3.219
+  },
+  {
+    "text": "I'll bet you a thousand dollars right",
+    "start": 2481.359,
+    "duration": 3.301
+  },
+  {
+    "text": "now the knives are being sharpened right",
+    "start": 2482.619,
+    "duration": 4.081
+  },
+  {
+    "text": "now for Joe Biden you know Democrats are",
+    "start": 2484.66,
+    "duration": 3.48
+  },
+  {
+    "text": "going to get crushed on November 8th",
+    "start": 2486.7,
+    "duration": 3.3
+  },
+  {
+    "text": "because a red wave is coming but I'm",
+    "start": 2488.14,
+    "duration": 3.54
+  },
+  {
+    "text": "betting that Joy will learn two new",
+    "start": 2490.0,
+    "duration": 4.98
+  },
+  {
+    "text": "words on Tuesday it's Red Wave how big",
+    "start": 2491.68,
+    "duration": 5.82
+  },
+  {
+    "text": "could that looming Red Wave get We Begin",
+    "start": 2494.98,
+    "duration": 4.68
+  },
+  {
+    "text": "this Sunday morning with expectations of",
+    "start": 2497.5,
+    "duration": 4.38
+  },
+  {
+    "text": "a red wave this Tuesday I think this",
+    "start": 2499.66,
+    "duration": 3.66
+  },
+  {
+    "text": "election is going to be a red wave I",
+    "start": 2501.88,
+    "duration": 3.12
+  },
+  {
+    "text": "think we're going to win you know what I",
+    "start": 2503.32,
+    "duration": 3.96
+  },
+  {
+    "text": "I think you know your predictions of a",
+    "start": 2505.0,
+    "duration": 4.14
+  },
+  {
+    "text": "red wave are accurate and the reason I",
+    "start": 2507.28,
+    "duration": 3.48
+  },
+  {
+    "text": "say that is because now even the",
+    "start": 2509.14,
+    "duration": 3.54
+  },
+  {
+    "text": "mainstream media is catching up we've",
+    "start": 2510.76,
+    "duration": 3.18
+  },
+  {
+    "text": "been hearing is it going to be a red",
+    "start": 2512.68,
+    "duration": 3.06
+  },
+  {
+    "text": "wave is it going to be a red tsunami I",
+    "start": 2513.94,
+    "duration": 2.76
+  },
+  {
+    "text": "think it's going to be a red hurricane",
+    "start": 2515.74,
+    "duration": 3.0
+  },
+  {
+    "text": "when the Red Wave comes and it is coming",
+    "start": 2516.7,
+    "duration": 4.86
+  },
+  {
+    "text": "Joe Biden's political utility is over",
+    "start": 2518.74,
+    "duration": 5.4
+  },
+  {
+    "text": "are we in for a red win here or a red",
+    "start": 2521.56,
+    "duration": 4.98
+  },
+  {
+    "text": "wave Red Wave or red tsunami what are",
+    "start": 2524.14,
+    "duration": 4.02
+  },
+  {
+    "text": "you feeling today I'm feeling Red Wave",
+    "start": 2526.54,
+    "duration": 3.12
+  },
+  {
+    "text": "and don't listen to the lies they're",
+    "start": 2528.16,
+    "duration": 3.48
+  },
+  {
+    "text": "spewing that this could take days or",
+    "start": 2529.66,
+    "duration": 3.959
+  },
+  {
+    "text": "days you know to know who won this is",
+    "start": 2531.64,
+    "duration": 4.74
+  },
+  {
+    "text": "total BS wave like this we should know",
+    "start": 2533.619,
+    "duration": 5.161
+  },
+  {
+    "text": "that that night basically who won the",
+    "start": 2536.38,
+    "duration": 4.26
+  },
+  {
+    "text": "senate in the house anything that",
+    "start": 2538.78,
+    "duration": 3.9
+  },
+  {
+    "text": "happens Wednesday into Thursday is gravy",
+    "start": 2540.64,
+    "duration": 4.68
+  },
+  {
+    "text": "and right out the back door I've got a",
+    "start": 2542.68,
+    "duration": 5.399
+  },
+  {
+    "text": "tropical storm brewing right right now I",
+    "start": 2545.32,
+    "duration": 4.2
+  },
+  {
+    "text": "think they're saying could be a category",
+    "start": 2548.079,
+    "duration": 4.081
+  },
+  {
+    "text": "one by the end of the day however let me",
+    "start": 2549.52,
+    "duration": 4.02
+  },
+  {
+    "text": "tell you what is a storm that Red Wave",
+    "start": 2552.16,
+    "duration": 2.22
+  },
+  {
+    "text": "I'm telling you if there's any",
+    "start": 2553.54,
+    "duration": 2.4
+  },
+  {
+    "text": "indication based upon what we're seeing",
+    "start": 2554.38,
+    "duration": 3.239
+  },
+  {
+    "text": "this morning somebody made a surfboard",
+    "start": 2555.94,
+    "duration": 3.6
+  },
+  {
+    "text": "said the Red Wave is coming",
+    "start": 2557.619,
+    "duration": 5.101
+  },
+  {
+    "text": "now election day comes early on November",
+    "start": 2559.54,
+    "duration": 6.18
+  },
+  {
+    "text": "8th uh confident Matt Walsh tweets out",
+    "start": 2562.72,
+    "duration": 5.399
+  },
+  {
+    "text": "the pulses may not be asking about it",
+    "start": 2565.72,
+    "duration": 4.859
+  },
+  {
+    "text": "but there is no doubt that the Democrat",
+    "start": 2568.119,
+    "duration": 5.521
+  },
+  {
+    "text": "Party was partially doomed by its",
+    "start": 2570.579,
+    "duration": 6.26
+  },
+  {
+    "text": "decision to go all in on gender ideology",
+    "start": 2573.64,
+    "duration": 6.179
+  },
+  {
+    "text": "we successfully made this a losing",
+    "start": 2576.839,
+    "duration": 5.26
+  },
+  {
+    "text": "political issue for them couple of hours",
+    "start": 2579.819,
+    "duration": 5.04
+  },
+  {
+    "text": "later the election results come in and",
+    "start": 2582.099,
+    "duration": 5.641
+  },
+  {
+    "text": "what happens Republicans get [ __ ]",
+    "start": 2584.859,
+    "duration": 5.281
+  },
+  {
+    "text": "trounced they lose seats everywhere",
+    "start": 2587.74,
+    "duration": 4.98
+  },
+  {
+    "text": "except for New York and Florida Michigan",
+    "start": 2590.14,
+    "duration": 5.64
+  },
+  {
+    "text": "it state that Trump won in 2016 and",
+    "start": 2592.72,
+    "duration": 5.04
+  },
+  {
+    "text": "where Republicans spent more on ads",
+    "start": 2595.78,
+    "duration": 3.799
+  },
+  {
+    "text": "about trans people than anything else",
+    "start": 2597.76,
+    "duration": 4.02
+  },
+  {
+    "text": "Democratic governor Gretchen Whitmer",
+    "start": 2599.579,
+    "duration": 5.561
+  },
+  {
+    "text": "wins her re-election in a landslide in",
+    "start": 2601.78,
+    "duration": 5.76
+  },
+  {
+    "text": "Pennsylvania Democrats even pick up a",
+    "start": 2605.14,
+    "duration": 4.92
+  },
+  {
+    "text": "senate seat as John Federman leaves his",
+    "start": 2607.54,
+    "duration": 5.4
+  },
+  {
+    "text": "opponent in the dust in Arizona Nevada",
+    "start": 2610.06,
+    "duration": 5.4
+  },
+  {
+    "text": "and New Hampshire all states where it",
+    "start": 2612.94,
+    "duration": 4.679
+  },
+  {
+    "text": "was supposed to be a toss-up the",
+    "start": 2615.46,
+    "duration": 4.02
+  },
+  {
+    "text": "Democrats come out on top Republic",
+    "start": 2617.619,
+    "duration": 3.781
+  },
+  {
+    "text": "applicants are able to take the house",
+    "start": 2619.48,
+    "duration": 4.619
+  },
+  {
+    "text": "but only buy a Slither",
+    "start": 2621.4,
+    "duration": 4.699
+  },
+  {
+    "text": "shortly before the runoff in Georgia",
+    "start": 2624.099,
+    "duration": 4.321
+  },
+  {
+    "text": "Republican candidate Herschel Walker",
+    "start": 2626.099,
+    "duration": 4.661
+  },
+  {
+    "text": "makes a last effort to bring him over",
+    "start": 2628.42,
+    "duration": 5.04
+  },
+  {
+    "text": "the finish line by airing an ad where he",
+    "start": 2630.76,
+    "duration": 4.98
+  },
+  {
+    "text": "talks to a swimmer from Kentucky that",
+    "start": 2633.46,
+    "duration": 4.74
+  },
+  {
+    "text": "had to compete against a trans woman",
+    "start": 2635.74,
+    "duration": 6.42
+  },
+  {
+    "text": "shortly after he loses as well needless",
+    "start": 2638.2,
+    "duration": 7.56
+  },
+  {
+    "text": "to say Republicans got owned big time I",
+    "start": 2642.16,
+    "duration": 5.88
+  },
+  {
+    "text": "reckon that Republican consultant who",
+    "start": 2645.76,
+    "duration": 4.5
+  },
+  {
+    "text": "described trans issues as the Democrats",
+    "start": 2648.04,
+    "duration": 4.16
+  },
+  {
+    "text": "Angeles heel is in for some",
+    "start": 2650.26,
+    "duration": 4.62
+  },
+  {
+    "text": "uncomfortable meetings now considering",
+    "start": 2652.2,
+    "duration": 5.02
+  },
+  {
+    "text": "what Republicans were expecting these",
+    "start": 2654.88,
+    "duration": 4.439
+  },
+  {
+    "text": "midterm results were nothing short of a",
+    "start": 2657.22,
+    "duration": 5.76
+  },
+  {
+    "text": "disaster now why is that obviously there",
+    "start": 2659.319,
+    "duration": 6.121
+  },
+  {
+    "text": "are a lot of reasons backlash from",
+    "start": 2662.98,
+    "duration": 5.4
+  },
+  {
+    "text": "overturning Roe v Wade is probably the",
+    "start": 2665.44,
+    "duration": 4.62
+  },
+  {
+    "text": "single biggest reason behind their",
+    "start": 2668.38,
+    "duration": 4.439
+  },
+  {
+    "text": "defeat but there's also a point to be",
+    "start": 2670.06,
+    "duration": 5.16
+  },
+  {
+    "text": "made regarding Republicans hammering",
+    "start": 2672.819,
+    "duration": 4.701
+  },
+  {
+    "text": "trans issues prior to this election",
+    "start": 2675.22,
+    "duration": 5.76
+  },
+  {
+    "text": "turns out their base is so far to the",
+    "start": 2677.52,
+    "duration": 6.46
+  },
+  {
+    "text": "right so far removed from the average",
+    "start": 2680.98,
+    "duration": 5.46
+  },
+  {
+    "text": "person that a lot of people were just",
+    "start": 2683.98,
+    "duration": 5.639
+  },
+  {
+    "text": "put off by their messaging they saw Matt",
+    "start": 2686.44,
+    "duration": 5.28
+  },
+  {
+    "text": "Walsh's non-stop rambling about",
+    "start": 2689.619,
+    "duration": 4.74
+  },
+  {
+    "text": "children's genitals and thought get away",
+    "start": 2691.72,
+    "duration": 5.82
+  },
+  {
+    "text": "from me you creepy weirdo all while",
+    "start": 2694.359,
+    "duration": 6.121
+  },
+  {
+    "text": "Democrats didn't run any ads talking",
+    "start": 2697.54,
+    "duration": 5.819
+  },
+  {
+    "text": "about trans issues so it's not even like",
+    "start": 2700.48,
+    "duration": 5.4
+  },
+  {
+    "text": "Democratic messaging was just more",
+    "start": 2703.359,
+    "duration": 5.041
+  },
+  {
+    "text": "convincing on this but that Republican",
+    "start": 2705.88,
+    "duration": 5.52
+  },
+  {
+    "text": "messaging was just so off-putting to the",
+    "start": 2708.4,
+    "duration": 4.679
+  },
+  {
+    "text": "people in the middle and I don't want to",
+    "start": 2711.4,
+    "duration": 4.38
+  },
+  {
+    "text": "pretend that every independent voter is",
+    "start": 2713.079,
+    "duration": 4.861
+  },
+  {
+    "text": "a strong supporter of trans rights of",
+    "start": 2715.78,
+    "duration": 5.4
+  },
+  {
+    "text": "course but the hysteria created by",
+    "start": 2717.94,
+    "duration": 5.28
+  },
+  {
+    "text": "Republicans around trans people existing",
+    "start": 2721.18,
+    "duration": 4.74
+  },
+  {
+    "text": "in society did not do anything for them",
+    "start": 2723.22,
+    "duration": 5.58
+  },
+  {
+    "text": "Republicans were just too weird and",
+    "start": 2725.92,
+    "duration": 5.22
+  },
+  {
+    "text": "creepy around this issue for the",
+    "start": 2728.8,
+    "duration": 5.16
+  },
+  {
+    "text": "majority of Voters and I think that is a",
+    "start": 2731.14,
+    "duration": 5.4
+  },
+  {
+    "text": "reason to be optimistic these same",
+    "start": 2733.96,
+    "duration": 5.159
+  },
+  {
+    "text": "election saw a number of lgbtq",
+    "start": 2736.54,
+    "duration": 4.86
+  },
+  {
+    "text": "candidates winning for the first time in",
+    "start": 2739.119,
+    "duration": 4.861
+  },
+  {
+    "text": "some states and in general I think we",
+    "start": 2741.4,
+    "duration": 5.28
+  },
+  {
+    "text": "can see this election result as a big",
+    "start": 2743.98,
+    "duration": 6.599
+  },
+  {
+    "text": "rebuke of Republican anti-lgbtq efforts",
+    "start": 2746.68,
+    "duration": 8.28
+  },
+  {
+    "text": "and this is where I was initially gonna",
+    "start": 2750.579,
+    "duration": 6.961
+  },
+  {
+    "text": "end the show today leaving on a positive",
+    "start": 2754.96,
+    "duration": 4.859
+  },
+  {
+    "text": "note at least once in a while but then",
+    "start": 2757.54,
+    "duration": 5.1
+  },
+  {
+    "text": "something happened that casts all of",
+    "start": 2759.819,
+    "duration": 4.861
+  },
+  {
+    "text": "this in a different light that's",
+    "start": 2762.64,
+    "duration": 4.439
+  },
+  {
+    "text": "something being the shooting in Colorado",
+    "start": 2764.68,
+    "duration": 5.159
+  },
+  {
+    "text": "Springs where a gunman shot five people",
+    "start": 2767.079,
+    "duration": 7.081
+  },
+  {
+    "text": "at an lgbtq club and this is really just",
+    "start": 2769.839,
+    "duration": 7.141
+  },
+  {
+    "text": "part of the trajectory we have talked",
+    "start": 2774.16,
+    "duration": 5.22
+  },
+  {
+    "text": "about so far and I'm gonna show you how",
+    "start": 2776.98,
+    "duration": 5.22
+  },
+  {
+    "text": "using matte Walsh as an example after",
+    "start": 2779.38,
+    "duration": 4.62
+  },
+  {
+    "text": "the Republicans fell short in the",
+    "start": 2782.2,
+    "duration": 4.619
+  },
+  {
+    "text": "midterms there was this very brief",
+    "start": 2784.0,
+    "duration": 5.9
+  },
+  {
+    "text": "moment where they were kind of just",
+    "start": 2786.819,
+    "duration": 5.641
+  },
+  {
+    "text": "stunmarked looking at themselves and",
+    "start": 2789.9,
+    "duration": 4.959
+  },
+  {
+    "text": "asking what went wrong here looking at",
+    "start": 2792.46,
+    "duration": 4.68
+  },
+  {
+    "text": "themselves and asking what went wrong",
+    "start": 2794.859,
+    "duration": 5.46
+  },
+  {
+    "text": "Matt Walsh tweeted on November 9th most",
+    "start": 2797.14,
+    "duration": 5.4
+  },
+  {
+    "text": "Americans are widely dissatisfied with",
+    "start": 2800.319,
+    "duration": 4.26
+  },
+  {
+    "text": "the direction of the country but",
+    "start": 2802.54,
+    "duration": 4.2
+  },
+  {
+    "text": "Republicans weren't able to harness that",
+    "start": 2804.579,
+    "duration": 4.441
+  },
+  {
+    "text": "dissatisfaction that speaks to a party",
+    "start": 2806.74,
+    "duration": 4.379
+  },
+  {
+    "text": "without any kind of coherent or",
+    "start": 2809.02,
+    "duration": 4.559
+  },
+  {
+    "text": "compelling National message we need new",
+    "start": 2811.119,
+    "duration": 4.621
+  },
+  {
+    "text": "leadership top to bottom really funny",
+    "start": 2813.579,
+    "duration": 4.441
+  },
+  {
+    "text": "seeing Matt Walsh the manual leadership",
+    "start": 2815.74,
+    "duration": 6.0
+  },
+  {
+    "text": "when dude that was you you massively",
+    "start": 2818.02,
+    "duration": 6.36
+  },
+  {
+    "text": "contributed to making anti-trans",
+    "start": 2821.74,
+    "duration": 4.98
+  },
+  {
+    "text": "hysteria the Republicans National",
+    "start": 2824.38,
+    "duration": 4.92
+  },
+  {
+    "text": "message okay so it's right after the",
+    "start": 2826.72,
+    "duration": 5.22
+  },
+  {
+    "text": "midterms and you see some analysts go",
+    "start": 2829.3,
+    "duration": 4.98
+  },
+  {
+    "text": "the typical route of saying you know the",
+    "start": 2831.94,
+    "duration": 4.02
+  },
+  {
+    "text": "Republicans really got to take a look at",
+    "start": 2834.28,
+    "duration": 4.02
+  },
+  {
+    "text": "themselves and moderate and get back to",
+    "start": 2835.96,
+    "duration": 4.56
+  },
+  {
+    "text": "kitchen table issues blah blah blah as",
+    "start": 2838.3,
+    "duration": 4.799
+  },
+  {
+    "text": "if that was ever gonna happen and this",
+    "start": 2840.52,
+    "duration": 4.88
+  },
+  {
+    "text": "is where those people have it backwards",
+    "start": 2843.099,
+    "duration": 5.121
+  },
+  {
+    "text": "Republicans didn't just run an",
+    "start": 2845.4,
+    "duration": 5.38
+  },
+  {
+    "text": "anti-lgbtq campaign because they thought",
+    "start": 2848.22,
+    "duration": 4.78
+  },
+  {
+    "text": "this would be a winning issue but",
+    "start": 2850.78,
+    "duration": 4.62
+  },
+  {
+    "text": "because they genuinely believe this",
+    "start": 2853.0,
+    "duration": 5.64
+  },
+  {
+    "text": "stuff the topics they focus on stem out",
+    "start": 2855.4,
+    "duration": 6.48
+  },
+  {
+    "text": "of bigotry more than anything else this",
+    "start": 2858.64,
+    "duration": 6.06
+  },
+  {
+    "text": "is a genuine campaign of I don't know",
+    "start": 2861.88,
+    "duration": 5.88
+  },
+  {
+    "text": "how else to put it extermination they",
+    "start": 2864.7,
+    "duration": 6.72
+  },
+  {
+    "text": "want lgbtq people and trans people above",
+    "start": 2867.76,
+    "duration": 6.54
+  },
+  {
+    "text": "all to be removed from society their",
+    "start": 2871.42,
+    "duration": 5.34
+  },
+  {
+    "text": "focus is not as strictly political",
+    "start": 2874.3,
+    "duration": 5.819
+  },
+  {
+    "text": "calculation and you you can see that by",
+    "start": 2876.76,
+    "duration": 5.339
+  },
+  {
+    "text": "them going right back at it after",
+    "start": 2880.119,
+    "duration": 4.081
+  },
+  {
+    "text": "suffering a staunch defeat politically",
+    "start": 2882.099,
+    "duration": 5.161
+  },
+  {
+    "text": "on the same day that Matt Walsh said the",
+    "start": 2884.2,
+    "duration": 5.28
+  },
+  {
+    "text": "Republican Party lacks a coherent",
+    "start": 2887.26,
+    "duration": 4.68
+  },
+  {
+    "text": "National message he tweeted ruffled",
+    "start": 2889.48,
+    "duration": 4.8
+  },
+  {
+    "text": "steam ahead here in Tennessee today the",
+    "start": 2891.94,
+    "duration": 3.84
+  },
+  {
+    "text": "protecting children from gender",
+    "start": 2894.28,
+    "duration": 4.319
+  },
+  {
+    "text": "mutilation Act was officially filed it",
+    "start": 2895.78,
+    "duration": 5.18
+  },
+  {
+    "text": "will ban the mutilation and drugging of",
+    "start": 2898.599,
+    "duration": 4.681
+  },
+  {
+    "text": "gender-confused children and provide",
+    "start": 2900.96,
+    "duration": 4.3
+  },
+  {
+    "text": "victims the right to sue for damages",
+    "start": 2903.28,
+    "duration": 4.14
+  },
+  {
+    "text": "we're still getting wins on the board",
+    "start": 2905.26,
+    "duration": 4.74
+  },
+  {
+    "text": "and this is one of Matt Walsh's passions",
+    "start": 2907.42,
+    "duration": 4.8
+  },
+  {
+    "text": "if you're not aware that passion being",
+    "start": 2910.0,
+    "duration": 5.16
+  },
+  {
+    "text": "actually putting children in danger a",
+    "start": 2912.22,
+    "duration": 5.639
+  },
+  {
+    "text": "couple of months ago in early August he",
+    "start": 2915.16,
+    "duration": 5.159
+  },
+  {
+    "text": "went on air and accused Boston",
+    "start": 2917.859,
+    "duration": 4.621
+  },
+  {
+    "text": "Children's Hospital among others of",
+    "start": 2920.319,
+    "duration": 4.741
+  },
+  {
+    "text": "quote butchering mutilating and",
+    "start": 2922.48,
+    "duration": 5.4
+  },
+  {
+    "text": "sterilizing their young patients and",
+    "start": 2925.06,
+    "duration": 6.12
+  },
+  {
+    "text": "said that we have to stop making it so",
+    "start": 2927.88,
+    "duration": 5.64
+  },
+  {
+    "text": "easy on them Walsh wasn't the only guy",
+    "start": 2931.18,
+    "duration": 4.919
+  },
+  {
+    "text": "who talked about this but one of many",
+    "start": 2933.52,
+    "duration": 4.86
+  },
+  {
+    "text": "right-wing mouthpieces demonizing the",
+    "start": 2936.099,
+    "duration": 4.26
+  },
+  {
+    "text": "Clinic claiming they are doing",
+    "start": 2938.38,
+    "duration": 4.86
+  },
+  {
+    "text": "hysterectomies on kids and so on shortly",
+    "start": 2940.359,
+    "duration": 5.281
+  },
+  {
+    "text": "after the people working there received",
+    "start": 2943.24,
+    "duration": 6.119
+  },
+  {
+    "text": "death threats phone calls and a flood of",
+    "start": 2945.64,
+    "duration": 6.66
+  },
+  {
+    "text": "hateful emails on August 30th the",
+    "start": 2949.359,
+    "duration": 4.74
+  },
+  {
+    "text": "hospital had to go into temporary",
+    "start": 2952.3,
+    "duration": 3.779
+  },
+  {
+    "text": "lockdown because of a bomb threat",
+    "start": 2954.099,
+    "duration": 4.921
+  },
+  {
+    "text": "another bomb threat came in on September",
+    "start": 2956.079,
+    "duration": 6.901
+  },
+  {
+    "text": "9th and a third one last month in which",
+    "start": 2959.02,
+    "duration": 6.66
+  },
+  {
+    "text": "the color specified he placed the",
+    "start": 2962.98,
+    "duration": 4.44
+  },
+  {
+    "text": "explosives in the section of the",
+    "start": 2965.68,
+    "duration": 3.72
+  },
+  {
+    "text": "hospital responsible for gender",
+    "start": 2967.42,
+    "duration": 5.399
+  },
+  {
+    "text": "affirming care all of this based on",
+    "start": 2969.4,
+    "duration": 7.56
+  },
+  {
+    "text": "total lies this Children's Hospital did",
+    "start": 2972.819,
+    "duration": 6.121
+  },
+  {
+    "text": "never offer gender affirming",
+    "start": 2976.96,
+    "duration": 4.26
+  },
+  {
+    "text": "hysterectomies to girls under the age of",
+    "start": 2978.94,
+    "duration": 6.0
+  },
+  {
+    "text": "18 never happened this alone would be",
+    "start": 2981.22,
+    "duration": 6.18
+  },
+  {
+    "text": "awful enough but shortly after his first",
+    "start": 2984.94,
+    "duration": 5.22
+  },
+  {
+    "text": "accusation in August he leveled he",
+    "start": 2987.4,
+    "duration": 4.98
+  },
+  {
+    "text": "leveled similar accusations at the",
+    "start": 2990.16,
+    "duration": 4.62
+  },
+  {
+    "text": "Vanderbilt Medical Center in Nashville",
+    "start": 2992.38,
+    "duration": 5.04
+  },
+  {
+    "text": "Tennessee Walsh called out doctors by",
+    "start": 2994.78,
+    "duration": 5.52
+  },
+  {
+    "text": "name on his show and said they castrate",
+    "start": 2997.42,
+    "duration": 5.76
+  },
+  {
+    "text": "drug and mutilate children to make money",
+    "start": 3000.3,
+    "duration": 5.22
+  },
+  {
+    "text": "this got gobbled up and spread around",
+    "start": 3003.18,
+    "duration": 4.5
+  },
+  {
+    "text": "the right-wing political sphere and it",
+    "start": 3005.52,
+    "duration": 4.14
+  },
+  {
+    "text": "wasn't long until Tennessee governor",
+    "start": 3007.68,
+    "duration": 4.08
+  },
+  {
+    "text": "Billy and other Republicans in the state",
+    "start": 3009.66,
+    "duration": 4.5
+  },
+  {
+    "text": "called for an investigation into the",
+    "start": 3011.76,
+    "duration": 4.62
+  },
+  {
+    "text": "clinic Walsh supposedly met with",
+    "start": 3014.16,
+    "duration": 4.14
+  },
+  {
+    "text": "Tennessee lawmakers about a bill that",
+    "start": 3016.38,
+    "duration": 4.14
+  },
+  {
+    "text": "would force it to shut down same Spiel",
+    "start": 3018.3,
+    "duration": 4.14
+  },
+  {
+    "text": "as in Boston tons of death threats",
+    "start": 3020.52,
+    "duration": 3.78
+  },
+  {
+    "text": "against doctors or other people working",
+    "start": 3022.44,
+    "duration": 5.48
+  },
+  {
+    "text": "at the clinic and on October 7th 2022",
+    "start": 3024.3,
+    "duration": 6.299
+  },
+  {
+    "text": "Vanderbilt Medical Center announced that",
+    "start": 3027.92,
+    "duration": 4.179
+  },
+  {
+    "text": "it would cause gender affirming",
+    "start": 3030.599,
+    "duration": 3.661
+  },
+  {
+    "text": "surgeries for minors and that word",
+    "start": 3032.099,
+    "duration": 5.22
+  },
+  {
+    "text": "minors can be misleading because since",
+    "start": 3034.26,
+    "duration": 8.04
+  },
+  {
+    "text": "2018 this Clinic had performed five such",
+    "start": 3037.319,
+    "duration": 7.861
+  },
+  {
+    "text": "surgeries annually all the patients",
+    "start": 3042.3,
+    "duration": 5.7
+  },
+  {
+    "text": "being over 16 and having parental",
+    "start": 3045.18,
+    "duration": 5.159
+  },
+  {
+    "text": "consent with none of them receiving",
+    "start": 3048.0,
+    "duration": 5.22
+  },
+  {
+    "text": "general surgery this is what Matt Walsh",
+    "start": 3050.339,
+    "duration": 5.581
+  },
+  {
+    "text": "means this is what Matt Walsh means when",
+    "start": 3053.22,
+    "duration": 4.74
+  },
+  {
+    "text": "he says putting wins on the board on",
+    "start": 3055.92,
+    "duration": 5.28
+  },
+  {
+    "text": "November 19th he was able to put another",
+    "start": 3057.96,
+    "duration": 6.54
+  },
+  {
+    "text": "win on the board as a 22 year old gunman",
+    "start": 3061.2,
+    "duration": 6.54
+  },
+  {
+    "text": "entered a lgbtq club in Colorado Springs",
+    "start": 3064.5,
+    "duration": 6.66
+  },
+  {
+    "text": "killed five people and severely injured",
+    "start": 3067.74,
+    "duration": 6.0
+  },
+  {
+    "text": "18 more usually when something like this",
+    "start": 3071.16,
+    "duration": 5.34
+  },
+  {
+    "text": "happens something meaning an act of",
+    "start": 3073.74,
+    "duration": 5.46
+  },
+  {
+    "text": "violence that is obviously partially",
+    "start": 3076.5,
+    "duration": 5.04
+  },
+  {
+    "text": "motivated by the bigotry and hatred for",
+    "start": 3079.2,
+    "duration": 4.08
+  },
+  {
+    "text": "minorities in the right-wing political",
+    "start": 3081.54,
+    "duration": 4.92
+  },
+  {
+    "text": "sphere the response is denial the right",
+    "start": 3083.28,
+    "duration": 5.52
+  },
+  {
+    "text": "wing denies that this has anything to do",
+    "start": 3086.46,
+    "duration": 5.639
+  },
+  {
+    "text": "with their rhetoric and pretends to not",
+    "start": 3088.8,
+    "duration": 5.58
+  },
+  {
+    "text": "even understand the allegation leveled",
+    "start": 3092.099,
+    "duration": 5.041
+  },
+  {
+    "text": "at them a good example of this is the",
+    "start": 3094.38,
+    "duration": 5.4
+  },
+  {
+    "text": "Canadian mosque shooting in 2018 that",
+    "start": 3097.14,
+    "duration": 4.979
+  },
+  {
+    "text": "the shooter himself claimed was caused",
+    "start": 3099.78,
+    "duration": 4.62
+  },
+  {
+    "text": "by his fear of Muslims being terrorists",
+    "start": 3102.119,
+    "duration": 5.041
+  },
+  {
+    "text": "as part of the sentencing his internet",
+    "start": 3104.4,
+    "duration": 5.4
+  },
+  {
+    "text": "activities became public knowledge and",
+    "start": 3107.16,
+    "duration": 4.98
+  },
+  {
+    "text": "part of them was him visiting Ben",
+    "start": 3109.8,
+    "duration": 5.819
+  },
+  {
+    "text": "Shapiro's Twitter page 93 times in the",
+    "start": 3112.14,
+    "duration": 5.64
+  },
+  {
+    "text": "month before the shooting also Tucker",
+    "start": 3115.619,
+    "duration": 4.921
+  },
+  {
+    "text": "Carlson's pay age close to 50 times and",
+    "start": 3117.78,
+    "duration": 5.279
+  },
+  {
+    "text": "Coulter Alex Jones now I'm not gonna",
+    "start": 3120.54,
+    "duration": 5.4
+  },
+  {
+    "text": "claim that a perfectly adjusted human",
+    "start": 3123.059,
+    "duration": 5.461
+  },
+  {
+    "text": "being will turn into a mass murderer",
+    "start": 3125.94,
+    "duration": 4.8
+  },
+  {
+    "text": "simply by being exposed to right-wing",
+    "start": 3128.52,
+    "duration": 4.92
+  },
+  {
+    "text": "rhetoric obviously but there are plenty",
+    "start": 3130.74,
+    "duration": 4.92
+  },
+  {
+    "text": "of people out there mostly young men",
+    "start": 3133.44,
+    "duration": 5.46
+  },
+  {
+    "text": "that aren't well adjusted and if your",
+    "start": 3135.66,
+    "duration": 6.0
+  },
+  {
+    "text": "political movement thrives off of hate",
+    "start": 3138.9,
+    "duration": 5.58
+  },
+  {
+    "text": "and fear of course these men will have",
+    "start": 3141.66,
+    "duration": 5.22
+  },
+  {
+    "text": "an easier time latching onto that cause",
+    "start": 3144.48,
+    "duration": 4.859
+  },
+  {
+    "text": "compared to others as a response Ben",
+    "start": 3146.88,
+    "duration": 4.8
+  },
+  {
+    "text": "Shapiro condemned the mass shooter and",
+    "start": 3149.339,
+    "duration": 4.441
+  },
+  {
+    "text": "said that it was ridiculous that the",
+    "start": 3151.68,
+    "duration": 3.72
+  },
+  {
+    "text": "left pretends someone will start",
+    "start": 3153.78,
+    "duration": 3.72
+  },
+  {
+    "text": "murdering people just because they're a",
+    "start": 3155.4,
+    "duration": 4.14
+  },
+  {
+    "text": "fan of his tweets which of course nobody",
+    "start": 3157.5,
+    "duration": 3.9
+  },
+  {
+    "text": "is saying but that is really not",
+    "start": 3159.54,
+    "duration": 3.42
+  },
+  {
+    "text": "important to what Ben is trying to do",
+    "start": 3161.4,
+    "duration": 3.719
+  },
+  {
+    "text": "here the goal is to deflect and hope",
+    "start": 3162.96,
+    "duration": 4.619
+  },
+  {
+    "text": "everyone forgets about it quickly while",
+    "start": 3165.119,
+    "duration": 4.681
+  },
+  {
+    "text": "engaging in the exact same rhetoric",
+    "start": 3167.579,
+    "duration": 5.401
+  },
+  {
+    "text": "until the next shooting happens we saw a",
+    "start": 3169.8,
+    "duration": 4.86
+  },
+  {
+    "text": "little bit of that after the shooting",
+    "start": 3172.98,
+    "duration": 3.78
+  },
+  {
+    "text": "Colorado Springs Republican",
+    "start": 3174.66,
+    "duration": 4.439
+  },
+  {
+    "text": "congresswoman Lauren bobert tweeted that",
+    "start": 3176.76,
+    "duration": 4.559
+  },
+  {
+    "text": "she is praying for the victims and their",
+    "start": 3179.099,
+    "duration": 4.861
+  },
+  {
+    "text": "families very thoughtful to pray for the",
+    "start": 3181.319,
+    "duration": 4.861
+  },
+  {
+    "text": "people she demonizes on a daily basis",
+    "start": 3183.96,
+    "duration": 5.04
+  },
+  {
+    "text": "but the tone from the right shifted",
+    "start": 3186.18,
+    "duration": 5.7
+  },
+  {
+    "text": "relatively fast because of course a",
+    "start": 3189.0,
+    "duration": 4.98
+  },
+  {
+    "text": "tweet like the one from Lauren bobert",
+    "start": 3191.88,
+    "duration": 5.4
+  },
+  {
+    "text": "Rings completely Hollow as the shooting",
+    "start": 3193.98,
+    "duration": 6.48
+  },
+  {
+    "text": "is clearly the result of the hysteria",
+    "start": 3197.28,
+    "duration": 6.12
+  },
+  {
+    "text": "the right wing has created around lgbtq",
+    "start": 3200.46,
+    "duration": 6.24
+  },
+  {
+    "text": "people so instead people like Ben decide",
+    "start": 3203.4,
+    "duration": 5.34
+  },
+  {
+    "text": "to go on the offensive after the",
+    "start": 3206.7,
+    "duration": 4.619
+  },
+  {
+    "text": "shooting Ben Shapiro tweeted the quest",
+    "start": 3208.74,
+    "duration": 4.74
+  },
+  {
+    "text": "by the Democratic Leadership and media",
+    "start": 3211.319,
+    "duration": 4.561
+  },
+  {
+    "text": "to link a horrifically evil shooting at",
+    "start": 3213.48,
+    "duration": 4.56
+  },
+  {
+    "text": "a Colorado gay club to anyone who",
+    "start": 3215.88,
+    "duration": 3.959
+  },
+  {
+    "text": "doesn't support a progressive social",
+    "start": 3218.04,
+    "duration": 4.5
+  },
+  {
+    "text": "agenda is ongoing and terrible for the",
+    "start": 3219.839,
+    "duration": 5.041
+  },
+  {
+    "text": "country it's a cynical game only one",
+    "start": 3222.54,
+    "duration": 5.22
+  },
+  {
+    "text": "side plays and it's trash Matt Walsh",
+    "start": 3224.88,
+    "duration": 5.699
+  },
+  {
+    "text": "follows suit and tweets leftists are",
+    "start": 3227.76,
+    "duration": 4.74
+  },
+  {
+    "text": "using a mass shooting to try and",
+    "start": 3230.579,
+    "duration": 4.201
+  },
+  {
+    "text": "blackmail us into accepting the",
+    "start": 3232.5,
+    "duration": 4.92
+  },
+  {
+    "text": "castration and sexualization of children",
+    "start": 3234.78,
+    "duration": 6.0
+  },
+  {
+    "text": "these people are just beyond evil I have",
+    "start": 3237.42,
+    "duration": 5.22
+  },
+  {
+    "text": "never felt more motivated to oppose",
+    "start": 3240.78,
+    "duration": 4.079
+  },
+  {
+    "text": "everything they stand for with every",
+    "start": 3242.64,
+    "duration": 5.82
+  },
+  {
+    "text": "fiber of my being despicable scumbags I",
+    "start": 3244.859,
+    "duration": 6.661
+  },
+  {
+    "text": "feel like a couple of years ago this",
+    "start": 3248.46,
+    "duration": 6.119
+  },
+  {
+    "text": "Pearl clutching had anyone suggesting",
+    "start": 3251.52,
+    "duration": 6.78
+  },
+  {
+    "text": "the right wing calling lgbtq people evil",
+    "start": 3254.579,
+    "duration": 6.121
+  },
+  {
+    "text": "perverted disgusting rumors that",
+    "start": 3258.3,
+    "duration": 4.5
+  },
+  {
+    "text": "mutilate children leads to violence",
+    "start": 3260.7,
+    "duration": 4.859
+  },
+  {
+    "text": "against lgbtq people could have worked",
+    "start": 3262.8,
+    "duration": 4.799
+  },
+  {
+    "text": "but the calling for violence has become",
+    "start": 3265.559,
+    "duration": 4.981
+  },
+  {
+    "text": "so obvious that it really doesn't the",
+    "start": 3267.599,
+    "duration": 5.22
+  },
+  {
+    "text": "mask has simply slept too much by now",
+    "start": 3270.54,
+    "duration": 5.16
+  },
+  {
+    "text": "nobody believes that Matt Walsh isn't",
+    "start": 3272.819,
+    "duration": 5.04
+  },
+  {
+    "text": "either happy or is thinking something",
+    "start": 3275.7,
+    "duration": 4.32
+  },
+  {
+    "text": "along the lines of well they had it",
+    "start": 3277.859,
+    "duration": 4.921
+  },
+  {
+    "text": "coming about this shooting because he",
+    "start": 3280.02,
+    "duration": 6.12
+  },
+  {
+    "text": "wants lgbtq people or drag queens to",
+    "start": 3282.78,
+    "duration": 5.64
+  },
+  {
+    "text": "fear for their life if they are part of",
+    "start": 3286.14,
+    "duration": 4.32
+  },
+  {
+    "text": "something he objects to like reading",
+    "start": 3288.42,
+    "duration": 4.439
+  },
+  {
+    "text": "books to Children again you don't have",
+    "start": 3290.46,
+    "duration": 5.28
+  },
+  {
+    "text": "to take my word for it here is what Matt",
+    "start": 3292.859,
+    "duration": 4.921
+  },
+  {
+    "text": "Walsh had to say about the shooting on",
+    "start": 3295.74,
+    "duration": 3.06
+  },
+  {
+    "text": "his show",
+    "start": 3297.78,
+    "duration": 2.7
+  },
+  {
+    "text": "according to the left",
+    "start": 3298.8,
+    "duration": 4.259
+  },
+  {
+    "text": "the drag queen child combination has",
+    "start": 3300.48,
+    "duration": 4.32
+  },
+  {
+    "text": "become dangerous they say it's a",
+    "start": 3303.059,
+    "duration": 4.8
+  },
+  {
+    "text": "lightning rod for violent backlash",
+    "start": 3304.8,
+    "duration": 4.98
+  },
+  {
+    "text": "right that's what they said and it's",
+    "start": 3307.859,
+    "duration": 3.421
+  },
+  {
+    "text": "greatly exaggerated of course mostly",
+    "start": 3309.78,
+    "duration": 2.76
+  },
+  {
+    "text": "it's invented out of whole cloth",
+    "start": 3311.28,
+    "duration": 2.7
+  },
+  {
+    "text": "actually but",
+    "start": 3312.54,
+    "duration": 4.14
+  },
+  {
+    "text": "but even by their version of events",
+    "start": 3313.98,
+    "duration": 4.98
+  },
+  {
+    "text": "if it's causing this much chaos and",
+    "start": 3316.68,
+    "duration": 3.419
+  },
+  {
+    "text": "violence",
+    "start": 3318.96,
+    "duration": 4.2
+  },
+  {
+    "text": "why do you insist on continuing to do it",
+    "start": 3320.099,
+    "duration": 4.561
+  },
+  {
+    "text": "if according to you it's like putting",
+    "start": 3323.16,
+    "duration": 3.48
+  },
+  {
+    "text": "people's lives at risk",
+    "start": 3324.66,
+    "duration": 4.86
+  },
+  {
+    "text": "if if the effort to have men cross-dress",
+    "start": 3326.64,
+    "duration": 4.26
+  },
+  {
+    "text": "in front of children is putting people's",
+    "start": 3329.52,
+    "duration": 3.66
+  },
+  {
+    "text": "lives at risk why are you still doing it",
+    "start": 3330.9,
+    "duration": 5.52
+  },
+  {
+    "text": "is it that important to you now not only",
+    "start": 3333.18,
+    "duration": 5.58
+  },
+  {
+    "text": "does Matt Walsh in doing this why are",
+    "start": 3336.42,
+    "duration": 4.74
+  },
+  {
+    "text": "you hitting yourself routine here failed",
+    "start": 3338.76,
+    "duration": 5.52
+  },
+  {
+    "text": "to grasp why people insist on being able",
+    "start": 3341.16,
+    "duration": 5.1
+  },
+  {
+    "text": "to do something that is perfectly within",
+    "start": 3344.28,
+    "duration": 4.92
+  },
+  {
+    "text": "their rights he almost spills the beans",
+    "start": 3346.26,
+    "duration": 5.64
+  },
+  {
+    "text": "a little bit because what goes unsaid is",
+    "start": 3349.2,
+    "duration": 6.119
+  },
+  {
+    "text": "that yes I do believe you deserve to get",
+    "start": 3351.9,
+    "duration": 6.06
+  },
+  {
+    "text": "shot if you are at an event where drag",
+    "start": 3355.319,
+    "duration": 5.101
+  },
+  {
+    "text": "queens read books to children at this",
+    "start": 3357.96,
+    "duration": 5.399
+  },
+  {
+    "text": "point you probably don't need me to tell",
+    "start": 3360.42,
+    "duration": 5.22
+  },
+  {
+    "text": "you how Despicable people like Matt",
+    "start": 3363.359,
+    "duration": 4.801
+  },
+  {
+    "text": "Walsh and Ben Shapiro are they prove",
+    "start": 3365.64,
+    "duration": 4.979
+  },
+  {
+    "text": "that themselves virtually every day and",
+    "start": 3368.16,
+    "duration": 4.679
+  },
+  {
+    "text": "are perfectly aware of what they're",
+    "start": 3370.619,
+    "duration": 4.74
+  },
+  {
+    "text": "doing their goal and by extension the",
+    "start": 3372.839,
+    "duration": 3.961
+  },
+  {
+    "text": "goal of the right wing in the United",
+    "start": 3375.359,
+    "duration": 5.161
+  },
+  {
+    "text": "States is for lgbtq people to either not",
+    "start": 3376.8,
+    "duration": 6.059
+  },
+  {
+    "text": "exist at all or not be part of the",
+    "start": 3380.52,
+    "duration": 5.4
+  },
+  {
+    "text": "public sphere in any way a political",
+    "start": 3382.859,
+    "duration": 5.76
+  },
+  {
+    "text": "defeat like like we just saw won't make",
+    "start": 3385.92,
+    "duration": 5.04
+  },
+  {
+    "text": "them stop working towards that goal I",
+    "start": 3388.619,
+    "duration": 4.2
+  },
+  {
+    "text": "think we all know that but here's the",
+    "start": 3390.96,
+    "duration": 4.26
+  },
+  {
+    "text": "thing we have just seen the American",
+    "start": 3392.819,
+    "duration": 6.601
+  },
+  {
+    "text": "public reject their anti-gay anti-trans",
+    "start": 3395.22,
+    "duration": 7.139
+  },
+  {
+    "text": "efforts in a way that could almost not",
+    "start": 3399.42,
+    "duration": 5.699
+  },
+  {
+    "text": "have been more clear so if you are part",
+    "start": 3402.359,
+    "duration": 6.061
+  },
+  {
+    "text": "of the lgbtq community you might find",
+    "start": 3405.119,
+    "duration": 6.361
+  },
+  {
+    "text": "some solace in the fact that the average",
+    "start": 3408.42,
+    "duration": 6.24
+  },
+  {
+    "text": "American voter finds Matt Walsh renting",
+    "start": 3411.48,
+    "duration": 5.78
+  },
+  {
+    "text": "himself into a frenzy about trans people",
+    "start": 3414.66,
+    "duration": 6.36
+  },
+  {
+    "text": "just as creepy and weird as you and I do",
+    "start": 3417.26,
+    "duration": 6.64
+  },
+  {
+    "text": "there will always be bitter hate",
+    "start": 3421.02,
+    "duration": 5.64
+  },
+  {
+    "text": "preachers that fear the way of human",
+    "start": 3423.9,
+    "duration": 5.82
+  },
+  {
+    "text": "progress and sometimes they get their",
+    "start": 3426.66,
+    "duration": 5.28
+  },
+  {
+    "text": "way but if the midterms show anything",
+    "start": 3429.72,
+    "duration": 5.76
+  },
+  {
+    "text": "it's that the majority of the electorate",
+    "start": 3431.94,
+    "duration": 5.94
+  },
+  {
+    "text": "is not on board with hate and",
+    "start": 3435.48,
+    "duration": 5.579
+  },
+  {
+    "text": "intolerance and that if we keep working",
+    "start": 3437.88,
+    "duration": 6.42
+  },
+  {
+    "text": "on it the Ben shapiroes and met Walters",
+    "start": 3441.059,
+    "duration": 6.181
+  },
+  {
+    "text": "of the world will be left behind while",
+    "start": 3444.3,
+    "duration": 6.059
+  },
+  {
+    "text": "the rest of us move forward in Universal",
+    "start": 3447.24,
+    "duration": 6.02
+  },
+  {
+    "text": "Brotherhood",
+    "start": 3450.359,
+    "duration": 2.901
+  },
+  {
+    "text": "foreign",
+    "start": 3480.9,
+    "duration": 3.0
+  },
+  {
+    "text": "[Music]",
+    "start": 3517.11,
+    "duration": 4.11
+  },
+  {
+    "text": "foreign",
+    "start": 3518.22,
+    "duration": 3.0
+  },
+  {
+    "text": "[Music]",
+    "start": 3529.12,
+    "duration": 3.05
+  }
+]
