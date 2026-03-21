@@ -70,6 +70,7 @@ class AdDetectionResult:
     error: Optional[str] = None
 
     # Convert result fields to a flat dictionary for CSV export
+    
     def to_dict(self) -> dict:
         return {
             'video_id': self.video_id,
