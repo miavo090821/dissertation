@@ -1,7 +1,9 @@
-# Chart Generator Functions
-# Individual chart generation functions for the dissertation visualisation pipeline.
-# Extracted from step7_visualizations.py for modularity.
-# Each function produces one chart and saves it as a PNG file.
+# chart generators
+#
+#1. each function makes one chart and saves it as a png - extracted from step7 for modularity
+#2. charts 1-7 are for RQ1 (sensitivity vs monetisation), 8-9 for RQ2 (perception), 10-12 for RQ3 (algospeak)
+#3. charts 13-15 are combined insights that bring the research questions together
+#4. all charts use consistent figsize and dpi so they look uniform in the dissertation
 
 import os
 
@@ -11,15 +13,13 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
-# Default figure size and DPI for consistent output
 FIGSIZE = (10, 6)
 DPI = 150
 
 
-# ─── RQ1: Sensitivity Analysis Charts ────────────────────────────────────────
-
+# rq1: scatter plot showing sensitive ratio for videos with and without ads
 def chart1_risk_vs_ads_scatter(df: pd.DataFrame, charts_dir: str):
-    """Chart 1: RQ1 scatter plot of sensitive ratio vs ad status."""
+    """plots each video's sensitive ratio against whether it had ads or not."""
     print("  01: Risk% vs Starting Ads (scatter)")
 
     fig, ax = plt.subplots(figsize=FIGSIZE)
@@ -56,8 +56,9 @@ def chart1_risk_vs_ads_scatter(df: pd.DataFrame, charts_dir: str):
     plt.close()
 
 
+# rq1: box plot comparing the distribution of sensitive ratios between ad/no-ad groups
 def chart2_risk_by_ads_boxplot(df: pd.DataFrame, charts_dir: str):
-    """Chart 2: RQ1 box plot of sensitive ratio grouped by ad status."""
+    """shows the spread and median of sensitive ratio for each ad status group."""
     print("  02: Risk% by Ad Status (box plot)")
 
     fig, ax = plt.subplots(figsize=FIGSIZE)
@@ -91,8 +92,9 @@ def chart2_risk_by_ads_boxplot(df: pd.DataFrame, charts_dir: str):
     plt.close()
 
 
+# rq1: checks if sensitive ratio changes over time with a trend line
 def chart3_risk_vs_year_scatter(df: pd.DataFrame, charts_dir: str):
-    """Chart 3: RQ1 scatter plot of sensitive ratio vs upload year."""
+    """scatter of sensitive ratio vs upload year with a linear trend line overlaid."""
     print("  03: Risk% vs Upload Year (scatter)")
 
     fig, ax = plt.subplots(figsize=FIGSIZE)
@@ -127,8 +129,9 @@ def chart3_risk_vs_year_scatter(df: pd.DataFrame, charts_dir: str):
     plt.close()
 
 
+# rq1: simple bar chart comparing average sensitive ratio between ad groups
 def chart4_avg_risk_by_ads_bar(df: pd.DataFrame, charts_dir: str):
-    """Chart 4: RQ1 average sensitive ratio by ad status."""
+    """bar chart with the mean sensitive ratio for monetised vs demonetised videos."""
     print("  04: Average Risk% by Ad Status (bar)")
 
     fig, ax = plt.subplots(figsize=(8, 6))
@@ -164,8 +167,9 @@ def chart4_avg_risk_by_ads_bar(df: pd.DataFrame, charts_dir: str):
     plt.close()
 
 
+# rq1: views vs sensitive ratio on log scale to see if popular videos censor more
 def chart5_risk_vs_views_scatter(df: pd.DataFrame, charts_dir: str):
-    """Chart 5: RQ1 scatter of views vs sensitive ratio with log scale."""
+    """scatter with log-scaled x axis to handle the huge range of view counts."""
     print("  05: Risk% vs View Count (scatter)")
 
     fig, ax = plt.subplots(figsize=FIGSIZE)
@@ -194,8 +198,9 @@ def chart5_risk_vs_views_scatter(df: pd.DataFrame, charts_dir: str):
     plt.close()
 
 
+# rq1: histogram to see the overall distribution of sensitive ratios across all videos
 def chart6_risk_histogram(df: pd.DataFrame, charts_dir: str):
-    """Chart 6: RQ1 histogram of sensitive ratio distribution."""
+    """histogram with threshold lines at T1 and T2 to show the classification boundaries."""
     print("  06: Risk% Distribution (histogram)")
 
     fig, ax = plt.subplots(figsize=FIGSIZE)
@@ -220,8 +225,9 @@ def chart6_risk_histogram(df: pd.DataFrame, charts_dir: str):
     plt.close()
 
 
+# rq1: pie chart showing how many videos fall into each monetisation classification
 def chart7_classification_pie(df: pd.DataFrame, charts_dir: str):
-    """Chart 7: RQ1 pie chart of monetisation classification distribution."""
+    """pie chart of likely monetised / uncertain / likely demonetised split."""
     print("  07: Classification Distribution (pie)")
 
     fig, ax = plt.subplots(figsize=(8, 8))
@@ -249,10 +255,9 @@ def chart7_classification_pie(df: pd.DataFrame, charts_dir: str):
     plt.close()
 
 
-# ─── RQ2: Perception Analysis Charts ─────────────────────────────────────────
-
+# rq2: which perception categories appear most in viewer comments
 def chart8_perception_categories(perception_df: pd.DataFrame, charts_dir: str):
-    """Chart 8: RQ2 bar chart of viewer perception categories."""
+    """horizontal bar chart ranking perception keyword categories by total mentions."""
     print("  08: Perception Categories (bar)")
 
     if perception_df is None or perception_df.empty:
@@ -291,8 +296,9 @@ def chart8_perception_categories(perception_df: pd.DataFrame, charts_dir: str):
     plt.close()
 
 
+# rq2: which videos have the highest proportion of perception-related comments
 def chart9_top_videos_perception(perception_df: pd.DataFrame, charts_dir: str):
-    """Chart 9: RQ2 bar chart of top videos by perception ratio."""
+    """top 10 videos ranked by perception ratio with truncated titles."""
     print("  09: Top Videos by Perception Ratio (bar)")
 
     if perception_df is None or perception_df.empty:
@@ -326,10 +332,9 @@ def chart9_top_videos_perception(perception_df: pd.DataFrame, charts_dir: str):
     plt.close()
 
 
-# ─── RQ3: Algospeak Analysis Charts ──────────────────────────────────────────
-
+# rq3: compares algospeak in creator speech vs viewer comments side by side
 def chart10_algospeak_transcript_vs_comments(algospeak_summary: pd.DataFrame, charts_dir: str):
-    """Chart 10: RQ3 grouped bar comparing algospeak in transcripts vs comments."""
+    """grouped bar chart showing transcript vs comment algospeak for top 15 videos."""
     print("  10: Algospeak Transcripts vs Comments (grouped bar)")
 
     if algospeak_summary is None or algospeak_summary.empty:
@@ -369,8 +374,9 @@ def chart10_algospeak_transcript_vs_comments(algospeak_summary: pd.DataFrame, ch
     plt.close()
 
 
+# rq3: which algospeak terms are used the most across the whole dataset
 def chart11_top_algospeak_terms(algospeak_df: pd.DataFrame, charts_dir: str):
-    """Chart 11: RQ3 horizontal bar of top 15 algospeak terms."""
+    """horizontal bar of the top 15 algospeak terms with their meanings annotated."""
     print("  11: Top Algospeak Terms (horizontal bar)")
 
     if algospeak_df is None or algospeak_df.empty:
@@ -405,8 +411,9 @@ def chart11_top_algospeak_terms(algospeak_df: pd.DataFrame, charts_dir: str):
     plt.close()
 
 
+# rq3: pie chart breaking down algospeak usage by semantic category
 def chart12_algospeak_by_category(algospeak_df: pd.DataFrame, charts_dir: str):
-    """Chart 12: RQ3 pie chart of algospeak usage by category."""
+    """shows which categories of algospeak (violence, sexual, drugs, etc) are most common."""
     print("  12: Algospeak by Category (pie)")
 
     if algospeak_df is None or algospeak_df.empty:
@@ -440,10 +447,10 @@ def chart12_algospeak_by_category(algospeak_df: pd.DataFrame, charts_dir: str):
     plt.close()
 
 
-# ─── Combined Insights ───────────────────────────────────────────────────────
-
+# combined: scatter showing relationship between sensitive word ratio and algospeak usage
 def chart13_risk_vs_algospeak(main_df: pd.DataFrame, algospeak_summary: pd.DataFrame, charts_dir: str):
-    """Chart 13: Combined scatter plot of risk% vs algospeak count."""
+    """scatter with trend line and correlation value to see if high-sensitivity
+    videos also use more algospeak."""
     print("  13: Risk% vs Algospeak Count (scatter)")
 
     if main_df is None or algospeak_summary is None:
@@ -487,10 +494,10 @@ def chart13_risk_vs_algospeak(main_df: pd.DataFrame, algospeak_summary: pd.DataF
     plt.close()
 
 
-# ─── Category Analysis Charts ────────────────────────────────────────────────
-
+# category analysis: compares sensitive word categories between monetised and demonetised groups
 def chart14_sensitivity_by_category(df: pd.DataFrame, charts_dir: str):
-    """Chart 14: Sensitivity by Category — grouped bar monetised vs demonetised."""
+    """grouped bar chart showing which sensitive word categories differ most
+    between videos with ads vs without."""
     print("  14: Sensitivity by Category (grouped bar)")
 
     if df is None or df.empty:
@@ -539,8 +546,10 @@ def chart14_sensitivity_by_category(df: pd.DataFrame, charts_dir: str):
     plt.close()
 
 
+# category analysis: heatmap showing correlations between sensitive word and algospeak categories
 def chart15_category_correlation_heatmap(category_df: pd.DataFrame, charts_dir: str):
-    """Chart 15: Category Correlation Heatmap — sensitive vs algospeak categories."""
+    """cross-correlation heatmap between sw_ and as_ category columns to see
+    if certain types of sensitive content co-occur with specific algospeak categories."""
     print("  15: Category Correlation Heatmap")
 
     if category_df is None or category_df.empty:
