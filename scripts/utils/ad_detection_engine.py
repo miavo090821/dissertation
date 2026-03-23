@@ -1,9 +1,9 @@
-# Ad Detection Engine
-# Core detection classes and browser automation for stealth ad detection.
-# Extracted from step1_ad_detector.py for modularity.
-
-# This is main method for ad detection with highest successful 
-# detection rate due to stealth browser and UI marker checks
+# ad detection engine
+#
+#1. uses playwright stealth browser to load youtube videos and check if ads appear
+#2. checks for UI markers like "Sponsored" labels, skip buttons, ad countdowns etc
+#3. seeks through the video at 25/50/75% to trigger mid-roll ads too
+#4. restarts browser every 5 videos and rotates user agents to avoid bot detection
 
 import asyncio
 import logging
@@ -12,7 +12,6 @@ import sys
 from dataclasses import dataclass, field
 from typing import Optional
 
-# Check for optional stealth library (improves bot evasion)
 try:
     from playwright_stealth import Stealth
     STEALTH_AVAILABLE = True
@@ -20,21 +19,10 @@ except ImportError:
     STEALTH_AVAILABLE = False
 
 
-# Dataclass holding individual UI ad marker flags
 @dataclass
 class UIAdDetectionResult:
-    """
-    Results from player UI ad detection.
-
-    Attributes:
-        sponsored_label: True if "Sponsored" text found in player
-        ad_label: True if "Ad" badge found
-        skip_button: True if skip ad button visible
-        ad_countdown: True if ad countdown timer visible
-        ad_overlay: True if ad overlay container present
-        ad_showing_class: True if player has 'ad-showing' CSS class
-        raw_markers: List of detection context for debugging
-    """
+    """stores all the individual ad marker flags we found in the player UI.
+    each bool tracks whether a specific marker was spotted during detection."""
     sponsored_label: bool = False
     ad_label: bool = False
     skip_button: bool = False
@@ -43,34 +31,24 @@ class UIAdDetectionResult:
     ad_showing_class: bool = False
     raw_markers: list = field(default_factory=list)
 
-    # Check if any ad marker was detected (sponsored label is primary)
+    # only counts as having ads if we saw the "Sponsored" label specifically
     @property
     def has_ads(self) -> bool:
-        """Returns True if any ad marker was detected."""
+        """returns true if the sponsored label was detected."""
         return self.sponsored_label
 
 
-# Dataclass holding final detection verdict for a video
 @dataclass
 class AdDetectionResult:
-    """
-    Final ad detection result for a video.
-
-    Attributes:
-        video_id: YouTube video ID
-        ui_result: Detailed UI detection findings
-        verdict: True=has ads, False=no ads
-        confidence: Detection confidence level
-        error: Error message if detection failed
-    """
+    """final verdict for one video - wraps the UI result with a yes/no answer
+    and confidence level. error field captures any failures."""
     video_id: str
     ui_result: UIAdDetectionResult
     verdict: bool = False
     confidence: str = "high"
     error: Optional[str] = None
 
-    # Convert result fields to a flat dictionary for CSV export
-    
+    # flattens everything into a dict so we can dump it straight into a csv row
     def to_dict(self) -> dict:
         return {
             'video_id': self.video_id,
@@ -86,29 +64,19 @@ class AdDetectionResult:
         }
 
 
-# Main detector class using stealth Playwright browser
 class AdDetector:
-    """
-    YouTube ad detector using stealth browser automation.
+    """main detector - launches a stealth chromium browser, navigates to youtube
+    videos, and checks the player UI for ad indicators. uses headed mode by default
+    because headless gets caught by bot detection."""
 
-    Uses headed Chromium browser with stealth settings to avoid bot detection.
-    Detects ads by checking for "Sponsored" label in the video player UI.
-
-    Usage:
-        detector = AdDetector()
-        await detector.setup()
-        result = await detector.detect("VIDEO_ID")
-        await detector.cleanup()
-    """
-
-    # Initialise detector with browser mode and logging config
+    # sets up logger and user agent rotation list
     def __init__(self, headless: bool = False, log_level: int = logging.INFO):
         self.headless = headless
         self.browser = None
         self.playwright = None
         self.logger = self._setup_logger(log_level)
 
-        # macOS Chrome user agents for rotation
+        # bunch of recent chrome on mac user agents so we look like a real person
         self._user_agents = [
             'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
             'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
@@ -121,7 +89,7 @@ class AdDetector:
         if headless:
             self.logger.warning("Headless mode may not detect ads due to bot detection!")
 
-    # Configure stdout logger with timestamp format
+    # creates a stdout logger with timestamps
     def _setup_logger(self, log_level: int) -> logging.Logger:
         logger = logging.getLogger("ad_detector")
         if not logger.handlers:
@@ -132,17 +100,17 @@ class AdDetector:
         logger.setLevel(log_level)
         return logger
 
-    # Pick a random user agent from the rotation list
+    # picks a random UA from the list to vary our browser fingerprint
     def _random_user_agent(self) -> str:
         return random.choice(self._user_agents)
 
-    # Generate a randomised viewport to vary browser fingerprint
+    # randomises window size so each session looks slightly different
     def _random_viewport(self) -> dict:
         width = random.randint(1250, 1400)
         height = random.randint(700, 800)
         return {'width': width, 'height': height}
 
-    # Launch Chromium with anti-detection arguments and stealth patches
+    # launches chromium with stealth flags to dodge youtube's bot detection
     async def setup(self):
         try:
             from playwright.async_api import async_playwright
@@ -150,7 +118,6 @@ class AdDetector:
             self.logger.info("Starting browser (headless=%s)", self.headless)
             self.playwright = await async_playwright().start()
 
-            # Stealth arguments to avoid bot detection
             stealth_args = [
                 "--disable-blink-features=AutomationControlled",
                 "--disable-infobars",
@@ -161,7 +128,7 @@ class AdDetector:
             self.browser = await self.playwright.chromium.launch(
                 headless=self.headless,
                 args=stealth_args,
-                channel="chrome"  # Use installed Chrome for better stealth
+                channel="chrome"
             )
             self.logger.info("Browser launched with stealth settings")
 
@@ -170,7 +137,7 @@ class AdDetector:
                 "Playwright not installed. Run: pip install playwright && playwright install chromium"
             )
 
-    # Close browser and release Playwright resources
+    # shuts down the browser and playwright cleanly
     async def cleanup(self):
         if self.browser:
             self.logger.info("Closing browser")
@@ -178,7 +145,7 @@ class AdDetector:
         if self.playwright:
             await self.playwright.stop()
 
-    # Dismiss Google/YouTube cookie consent banner if present
+    # clicks away the google cookie consent popup if it shows up
     async def _dismiss_consent(self, page):
         try:
             await asyncio.sleep(1)
@@ -202,7 +169,7 @@ class AdDetector:
         except Exception as e:
             self.logger.debug("Consent handling: %s", e)
 
-    # Check player UI for ad markers (sponsored label, skip button, etc.)
+    # runs javascript in the page to check for all the different ad UI elements
     async def _check_ui_markers(self, page, ui_result: UIAdDetectionResult, context: str = ""):
         try:
             markers = await page.evaluate('''() => {
@@ -246,7 +213,7 @@ class AdDetector:
                 };
             }''')
 
-            # Update result with newly detected markers
+            # update the result object with any new markers we found this check
             newly_detected = []
 
             if markers.get('hasSponsored') and not ui_result.sponsored_label:
@@ -278,12 +245,11 @@ class AdDetector:
             self.logger.warning("UI marker check failed: %s", str(e))
             return None
 
-    # Play video and seek to 25/50/75% to trigger mid-roll ads
+    # starts the video muted, then seeks to 25/50/75% to trigger mid-roll ads
     async def _play_and_seek(self, page, ui_result: UIAdDetectionResult):
         try:
             self.logger.info("Starting playback and seek sequence")
 
-            # Start video playback
             await page.evaluate('''() => {
                 const player = document.querySelector('video');
                 if (player) {
@@ -292,20 +258,19 @@ class AdDetector:
                 }
             }''')
 
-            # Wait for pre-roll ads
             await asyncio.sleep(3)
             markers = await self._check_ui_markers(page, ui_result, context="after play")
 
-            # If ad is playing, wait for it to finish before seeking
+            # if a pre-roll is playing, wait up to 20s for it to finish
             if markers and markers.get('adShowing'):
                 self.logger.info("Ad playing, waiting...")
-                for _ in range(10):  # Wait up to 20 seconds
+                for _ in range(10):
                     await asyncio.sleep(2)
                     markers = await self._check_ui_markers(page, ui_result, context="ad wait")
                     if not markers or not markers.get('adShowing'):
                         break
 
-            # Seek to different positions to trigger mid-roll ads
+            # jump to different positions to see if mid-rolls appear
             for position in [0.25, 0.5, 0.75]:
                 self.logger.info("Seeking to %.0f%%", position * 100)
                 await page.evaluate(f'''() => {{
@@ -317,14 +282,13 @@ class AdDetector:
                 await asyncio.sleep(2)
                 await self._check_ui_markers(page, ui_result, context=f"seek {int(position * 100)}%")
 
-            # Final check
             await asyncio.sleep(2)
             await self._check_ui_markers(page, ui_result, context="final")
 
         except Exception as e:
             self.logger.warning("Playback/seek failed: %s", str(e))
 
-    # Run full ad detection for a single video (navigate, poll, seek)
+    # full detection pipeline for one video: open page, poll for pre-rolls, seek for mid-rolls
     async def detect(self, video_id: str) -> AdDetectionResult:
         url = f"https://www.youtube.com/watch?v={video_id}"
         self.logger.info("Detecting ads for: %s", video_id)
@@ -333,13 +297,13 @@ class AdDetector:
         error = None
 
         try:
-            # Create fresh browser context with randomized fingerprint
+            # fresh context each time with random fingerprint
             ua = self._random_user_agent()
             vp = self._random_viewport()
             self.logger.info("Using viewport %dx%d", vp['width'], vp['height'])
             context = await self.browser.new_context(viewport=vp, user_agent=ua)
 
-            # Override navigator.webdriver to avoid detection
+            # hide the webdriver flag so youtube doesn't know we're automated
             await context.add_init_script("""
                 Object.defineProperty(navigator, 'webdriver', {
                     get: () => undefined
@@ -348,23 +312,19 @@ class AdDetector:
 
             page = await context.new_page()
 
-            # Apply stealth patches if available
             if STEALTH_AVAILABLE:
                 stealth = Stealth()
                 await stealth.apply_stealth_async(page)
                 self.logger.info("Applied stealth patches")
 
-            # Navigate to video
             self.logger.info("Loading video page...")
             await page.goto(url, wait_until='networkidle', timeout=30000)
 
-            # Dismiss cookie consent
             await self._dismiss_consent(page)
 
-            # Wait for player to initialize
             await asyncio.sleep(2)
 
-            # Poll for pre-roll ads (they appear shortly after page load)
+            # poll a few times for pre-roll ads right after page load
             self.logger.info("Checking for pre-roll ads...")
             for poll in range(4):
                 await self._check_ui_markers(page, ui_result, context=f"pre-roll {poll+1}")
@@ -373,10 +333,8 @@ class AdDetector:
                     break
                 await asyncio.sleep(2)
 
-            # Play video and seek to trigger mid-roll ads
             await self._play_and_seek(page, ui_result)
 
-            # Log final UI state
             self.logger.info(
                 "UI summary: sponsored=%s, ad_label=%s, skip=%s, countdown=%s",
                 ui_result.sponsored_label,
@@ -391,7 +349,6 @@ class AdDetector:
             error = str(e)
             self.logger.error("Detection failed: %s", error)
 
-        # Determine verdict based on sponsored label
         verdict = ui_result.sponsored_label
 
         self.logger.info("Verdict: %s", "Has Ads" if verdict else "No Ads")
@@ -404,7 +361,7 @@ class AdDetector:
             error=error,
         )
 
-    # Detect ads for a list of videos with progress reporting
+    # runs detect() on a list of videos, restarting browser every 5 to stay fresh
     async def detect_batch(self, video_ids: list, delay: float = 1.0,
                            progress_callback=None) -> list:
         results = []
@@ -416,7 +373,7 @@ class AdDetector:
             if progress_callback:
                 progress_callback(i + 1, len(video_ids), result)
 
-            # Restart browser every 5 videos to get a fresh fingerprint
+            # restart browser every 5 videos to get a fresh fingerprint
             if (i + 1) % 5 == 0 and i < len(video_ids) - 1:
                 self.logger.info("Restarting browser to avoid detection...")
                 await self.cleanup()
@@ -430,7 +387,7 @@ class AdDetector:
         return results
 
 
-# Synchronous wrapper for single-video ad detection
+# sync wrapper so you can call detection without dealing with async/await
 def detect_ads_sync(video_id: str, headless: bool = False) -> AdDetectionResult:
     async def _detect():
         detector = AdDetector(headless=headless)
