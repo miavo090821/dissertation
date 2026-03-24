@@ -1,45 +1,32 @@
-"""
-Ad Detection Module for YouTube Self-Censorship Research
-=========================================================
+# step 1: ad detection (stealth/ui method)
+#
+#1. detects ads on youtube videos using a real browser with stealth settings
+#2. looks for the "Sponsored" label in the video player -
+#  this only shows up when an ad actually renders
+#3. this means we're detecting ad DELIVERY not just ad infrastructure (which is why we chose this over dom/network)
+#4. dom variables (adTimeOffset, playerAds) and network signals (ad_break, pagead) were tested but gave false positives
+#5. if a video shows "No" ads on first check, we recheck it 5 more times to be sure
+#6. saves results back to video_urls.csv and a detailed output csv
 
-Detects advertisements on YouTube videos using stealth browser automation
-and UI-based detection (checking for "Sponsored" label in video player).
-
-Methodology:
-- Uses headed browser with stealth settings to avoid bot detection
-- Checks for "Sponsored" label which only appears when an ad is actually rendered
-- This approach detects ad DELIVERY, not just ad INFRASTRUCTURE
-
-Note: DOM variables (adTimeOffset, playerAds) and Network signals (ad_break, pagead)
-were evaluated but removed as they indicate infrastructure availability, not actual
-ad delivery, producing false positives on non-monetised content.
-
-Reference: YouTube Self-Censorship Research Project (RQ1 Methodology)
-"""
-
-# Standard library imports
 import argparse
 import asyncio
 import os
 import re
 import sys
 
-# Third-party imports
 import pandas as pd
 
-# Add project root to path for imports
+# need this so python can find our config and utils folders one level up
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-# Import project configuration paths
 try:
     from config import DATA_INPUT_DIR, DATA_OUTPUT_DIR, AD_DETECTION_FILE
 except ImportError:
-    # Fallback defaults if config not available (e.g., standalone testing)
+    # fallback if running standalone without config
     DATA_INPUT_DIR = "data/input"
     DATA_OUTPUT_DIR = "data/output"
     AD_DETECTION_FILE = "ad_detection_results.csv"
 
-# Import detection engine classes
 from scripts.utils.ad_detection_engine import (
     UIAdDetectionResult,
     AdDetectionResult,
@@ -48,7 +35,7 @@ from scripts.utils.ad_detection_engine import (
 )
 
 
-# Extract the 11-character video ID from a YouTube URL
+# pulls the 11-char video id out of any youtube url format
 def extract_video_id(url: str) -> str:
     patterns = [
         r'(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})',
@@ -64,11 +51,11 @@ def extract_video_id(url: str) -> str:
 RECHECK_COLUMNS = ['recheck_round_1', 'recheck_round_2', 'recheck_round_3',
                     'recheck_round_4', 'recheck_round_5']
 
-#  this is for the 5th times on "No-ad videos". so the pipeline compiles 
+#  this is for the 5th times on "No-ad videos". so the pipeline compiles
 # all the video fresh starts, if any video has yes ad, then pass, if it shows 'no' ad
-# then this function will run the ad detection 5 times to double check whether it's correct. 
+# then this function will run the ad detection 5 times to double check whether it's correct.
 def _ensure_recheck_columns(df):
-    """Add recheck_round_1..5 columns if they don't exist."""
+    """adds recheck_round_1..5 columns if they don't exist yet."""
     for col in RECHECK_COLUMNS:
         if col not in df.columns:
             df[col] = ''
@@ -78,20 +65,20 @@ def _ensure_recheck_columns(df):
 
 
 def _needs_recheck(row):
-    """True if ad_status=No but recheck_round_1 is empty (unverified No)."""
+    """true if ad_status=No but we haven't done the recheck rounds yet."""
     ad = str(row.get('ad_status', '')).strip().lower()
     r1 = str(row.get('recheck_round_1', '')).strip()
     return ad == 'no' and r1 in ('', 'nan')
 
 
 def _needs_full_detect(row):
-    """True if ad_status is empty (not yet processed)."""
+    """true if this video hasn't been processed at all (no ad_status)."""
     ad = str(row.get('ad_status', '')).strip().lower()
     return ad not in ('yes', 'no')
 
 
 def _is_complete(row):
-    """True if video is fully processed (Yes, or No with rechecks filled)."""
+    """true if video is done - either Yes, or No with rechecks filled in."""
     ad = str(row.get('ad_status', '')).strip().lower()
     if ad == 'yes':
         return True
@@ -101,25 +88,20 @@ def _is_complete(row):
     return False
 
 
-# Batch ad detection with integrated recheck flow
+# batch ad detection with integrated recheck flow
 def main():
-    # Get base directory
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-    # Resolve paths
     input_csv = os.path.join(base_dir, DATA_INPUT_DIR, "video_urls.csv")
     output_dir = os.path.join(base_dir, DATA_OUTPUT_DIR)
     output_csv = os.path.join(output_dir, AD_DETECTION_FILE)
 
-    # Check input exists
     if not os.path.exists(input_csv):
         print(f"ERROR: {input_csv} not found")
         sys.exit(1)
 
-    # Ensure output directory exists
     os.makedirs(output_dir, exist_ok=True)
 
-    # Parse CLI arguments
     parser = argparse.ArgumentParser(description='Detect ads on YouTube videos')
     parser.add_argument('--skip-existing', action='store_true',
                         help='Skip fully processed videos, resume unverified Nos and new videos')
@@ -127,7 +109,6 @@ def main():
                         help='Manual mode: re-check only videos where ad_status is No')
     args = parser.parse_args()
 
-    # Read video URLs
     print("Reading video_urls.csv...")
     df = pd.read_csv(input_csv)
 
@@ -137,31 +118,29 @@ def main():
 
     df = _ensure_recheck_columns(df)
 
-    # Build processing queue with priority ordering
-    # Each entry: (index, video_id, mode) where mode is 'recheck_only' or 'full'
+    # build the processing queue - priority: unverified nos first, then new videos
     queue = []
 
     if args.recheck_no:
-        # Legacy manual mode: recheck all No videos
+        # manual mode: just recheck all No videos
         for i, row in df.iterrows():
             if str(row.get('ad_status', '')).strip().lower() == 'no':
                 queue.append((i, extract_video_id(row['url']), 'recheck_only'))
     else:
-        # Priority 1: Unverified "No" videos (ad_status=No, recheck_round_1 empty)
+        # unverified "No" videos get priority (ad_status=No but recheck_round_1 empty)
         for i, row in df.iterrows():
             if _needs_recheck(row):
                 queue.append((i, extract_video_id(row['url']), 'recheck_only'))
 
-        # Priority 2: New videos (ad_status empty)
+        # then new videos that haven't been checked at all
         for i, row in df.iterrows():
             if _needs_full_detect(row):
                 queue.append((i, extract_video_id(row['url']), 'full'))
 
         if args.skip_existing:
-            # skip-existing: only process the queue above (skip completed videos)
             pass
         else:
-            # Without skip-existing: also re-process completed videos fully
+            # without skip-existing we also re-process already completed videos
             for i, row in df.iterrows():
                 if _is_complete(row):
                     queue.append((i, extract_video_id(row['url']), 'full'))
@@ -183,7 +162,6 @@ def main():
         print("All videos already processed. Nothing to do.")
         return
 
-    # Run integrated detection + recheck flow
     print("\nStarting ad detection...")
     print("NOTE: This requires a visible browser window. Ads cannot be detected in headless mode.")
     print()
@@ -199,32 +177,30 @@ def main():
                 print(f"\n[{q_idx+1}/{len(queue)}] {video_id} ({mode})")
 
                 if mode == 'full':
-                    # Step 1: Initial detection
                     result = await detector.detect(video_id)
                     verdict = "Yes" if result.verdict else "No"
                     print(f"  Initial detect: {verdict}")
 
                     if result.verdict:
-                        # Yes on first detect — write and move on
+                        # got ads on first try, no need to recheck
                         df.at[df_idx, 'ad_status'] = 'Yes'
-                        # Leave recheck columns empty
                         for col in RECHECK_COLUMNS:
                             df.at[df_idx, col] = ''
                         all_results.append(result)
                         df.to_csv(input_csv, index=False)
                         print(f"  -> Saved (Yes, no recheck needed)")
 
-                        # Restart browser periodically
+                        # restart browser every 5 videos to avoid fingerprint buildup
                         if (q_idx + 1) % 5 == 0 and q_idx < len(queue) - 1:
                             print("  Restarting browser...")
                             await detector.cleanup()
                             await detector.setup()
                         continue
 
-                    # No on first detect — fall through to recheck
+                    # no ads on first detect, fall through to recheck
                     df.at[df_idx, 'ad_status'] = 'No'
 
-                # Recheck: 5 rounds
+                # recheck: run 5 more times to make sure it's really no ads
                 print(f"  Running 5 recheck rounds...")
                 flipped = False
                 for round_num in range(1, 6):
@@ -235,7 +211,7 @@ def main():
                     print(f"  Round {round_num}/5: {round_verdict}")
 
                     if result.verdict:
-                        # Flip ad_status to Yes, leave remaining columns empty
+                        # found ads this time, flip the status
                         df.at[df_idx, 'ad_status'] = 'Yes'
                         flipped = True
                         all_results.append(result)
@@ -244,12 +220,11 @@ def main():
                         break
 
                 if not flipped:
-                    # All 5 rounds said No — confirmed
+                    # all 5 rounds confirmed no ads
                     all_results.append(result)
                     df.to_csv(input_csv, index=False)
                     print(f"  -> Confirmed No after 5 recheck rounds, saved")
 
-                # Restart browser periodically
                 if (q_idx + 1) % 5 == 0 and q_idx < len(queue) - 1:
                     print("  Restarting browser...")
                     await detector.cleanup()
@@ -260,14 +235,13 @@ def main():
 
     asyncio.run(run_detection())
 
-    # Save detailed results to output
+    # save the detailed per-video results to output dir
     if all_results:
         detailed_data = [r.to_dict() for r in all_results]
         detailed_df = pd.DataFrame(detailed_data)
         detailed_df.to_csv(output_csv, index=False)
         print(f"\nSaved detailed results to {output_csv}")
 
-    # Print summary
     yes_count = sum(1 for r in all_results if r.verdict)
     no_count = len(all_results) - yes_count
     error_count = sum(1 for r in all_results if r.error)
@@ -283,7 +257,7 @@ def main():
 
 
 if __name__ == "__main__":
-    # Single video mode: pass a video ID as argument (not a flag)
+    # single video mode: just pass a video id directly
     if len(sys.argv) == 2 and not sys.argv[1].startswith('--'):
         video_id = sys.argv[1]
         print(f"Detecting ads for video: {video_id}")
@@ -306,5 +280,4 @@ if __name__ == "__main__":
         if result.error:
             print(f"Error: {result.error}")
     else:
-        # Batch processing on video_urls.csv (supports --recheck-no flag)
         main()
