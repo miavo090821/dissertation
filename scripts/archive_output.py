@@ -1,5 +1,11 @@
-# Archives the current output, raw data, and input CSV before re-running analysis.
-# Creates timestamped backup in data/archive/, then clears originals.
+# archive output
+#
+#1. this script backs up all generated data before re-running the analysis pipeline
+#2. creates a timestamped folder in data/archive/ and copies output, raw data, and input csv
+#3. optionally clears the originals after archiving so you start fresh
+#4. has a legacy --output-only mode that just archives the output folder
+#5. also resets the ad_status column in video_urls.csv when clearing
+
 import sys
 import os
 import shutil
@@ -7,10 +13,8 @@ import argparse
 import pandas as pd
 from datetime import datetime
 
-# Ensure the project root directory is added to Python path so config can be imported correctly
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-# Try importing directory paths from config
 try:
     from config import DATA_OUTPUT_DIR, DATA_RAW_DIR, DATA_INPUT_DIR
 except ImportError:
@@ -19,30 +23,15 @@ except ImportError:
 
 
 def archive_all(custom_name: str = None, clear_after: bool = True) -> str:
-    """
-    Archive all generated data and optionally clear originals.
-
-    Archives:
-    - data/output/ (analysis results, charts)
-    - data/raw/ (extracted video data)
-    - data/input/video_urls.csv (with ad detection results)
-
-    Args:
-        custom_name: Optional suffix for archive folder name
-        clear_after: If True, delete originals after archiving (default True)
-
-    Returns:
-        Path to archive folder, or None if nothing to archive
-    """
-    # Get base directory
+    """archives output/, raw/, and video_urls.csv into a timestamped folder.
+    if clear_after is true it wipes the originals so you can re-run from scratch.
+    returns the archive path and list of what got archived, or none if nothing to do."""
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-    # Resolve full paths
     output_dir = os.path.join(base_dir, DATA_OUTPUT_DIR)
     raw_dir = os.path.join(base_dir, DATA_RAW_DIR)
     input_csv = os.path.join(base_dir, DATA_INPUT_DIR, "video_urls.csv")
 
-    # Check if there's anything to archive
     has_output = os.path.exists(output_dir) and any(os.scandir(output_dir))
     has_raw = os.path.exists(raw_dir) and any(os.scandir(raw_dir))
     has_input = os.path.exists(input_csv)
@@ -51,11 +40,9 @@ def archive_all(custom_name: str = None, clear_after: bool = True) -> str:
         print("Nothing to archive: no output or raw data found")
         return None
 
-    # Create archive directory
     archive_base = os.path.join(base_dir, 'data', 'archive')
     os.makedirs(archive_base, exist_ok=True)
 
-    # Create timestamped archive folder
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
     if custom_name:
         archive_name = f'run_{timestamp}_{custom_name}'
@@ -67,7 +54,6 @@ def archive_all(custom_name: str = None, clear_after: bool = True) -> str:
 
     archived_items = []
 
-    # Archive output directory
     if has_output:
         shutil.copytree(output_dir, os.path.join(archive_path, 'output'))
         archived_items.append('output/')
@@ -75,10 +61,8 @@ def archive_all(custom_name: str = None, clear_after: bool = True) -> str:
         if clear_after:
             shutil.rmtree(output_dir)
             os.makedirs(output_dir, exist_ok=True)
-            # Recreate charts subdirectory
             os.makedirs(os.path.join(output_dir, 'charts'), exist_ok=True)
 
-    # Archive raw directory
     if has_raw:
         shutil.copytree(raw_dir, os.path.join(archive_path, 'raw'))
         archived_items.append('raw/')
@@ -87,14 +71,12 @@ def archive_all(custom_name: str = None, clear_after: bool = True) -> str:
             shutil.rmtree(raw_dir)
             os.makedirs(raw_dir, exist_ok=True)
 
-    # Archive and reset video_urls.csv
     if has_input:
-        # Copy to archive
         shutil.copy(input_csv, os.path.join(archive_path, 'video_urls.csv'))
         archived_items.append('video_urls.csv')
 
         if clear_after:
-            # Reset the Ads column to empty in original
+            # blank out the ad_status column so its ready for fresh annotation
             try:
                 df = pd.read_csv(input_csv)
                 if 'ad_status' in df.columns:
@@ -106,49 +88,35 @@ def archive_all(custom_name: str = None, clear_after: bool = True) -> str:
     return archive_path, archived_items
 
 
-# Legacy function for backwards compatibility
 def archive_output(output_dir: str, custom_name: str = None) -> str:
-    """
-    Archive just the output directory (legacy behavior).
-
-    For full archiving including raw data and input CSV, use archive_all().
-    """
-    # Return early if output directory does not exist
+    """legacy function - just archives the output directory on its own.
+    use archive_all() instead if you want to backup everything."""
     if not os.path.exists(output_dir):
         print(f"Nothing to archive: {output_dir} does not exist")
         return None
 
-    # Return early if directory exists but contains no files or folders
     if not any(os.scandir(output_dir)):
         print(f"Nothing to archive: {output_dir} is empty")
         return None
 
-    # Create archive directory alongside the output directory
     archive_dir = os.path.join(os.path.dirname(output_dir), 'archive')
     os.makedirs(archive_dir, exist_ok=True)
 
-    # Create a timestamp to ensure unique archive folder names
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
 
-    # Use custom suffix if provided
     if custom_name:
         archive_name = f'run_{timestamp}_{custom_name}'
     else:
         archive_name = f'run_{timestamp}'
 
-    # Full path of archive folder
     archive_path = os.path.join(archive_dir, archive_name)
 
-    # Copy the entire output directory into the archive folder
     shutil.copytree(output_dir, archive_path)
 
-    # Return the location of the archived output
     return archive_path
 
 
-# Main function to handle command line execution
 def main():
-    # Set up command line argument parser
     parser = argparse.ArgumentParser(description='Archive current output, raw data, and input CSV')
     parser.add_argument('--name', type=str, help='Custom suffix for archive name')
     parser.add_argument('--clear', action='store_true', default=True,
@@ -159,16 +127,14 @@ def main():
                         help='Only archive output directory (legacy behavior)')
     args = parser.parse_args()
 
-    # Determine whether to clear after archiving
     clear_after = not args.no_clear
 
-    # Display header text for clarity
     print("=" * 60)
     print("  ARCHIVE DATA")
     print("=" * 60)
 
     if args.output_only:
-        # Legacy behavior: only archive output
+        # legacy mode: only backup the output folder
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         output_dir = os.path.join(base_dir, DATA_OUTPUT_DIR)
 
@@ -193,7 +159,7 @@ def main():
         else:
             print("\nNothing to archive.")
     else:
-        # New behavior: archive all data
+        # full archive mode: backup output, raw, and input csv
         result = archive_all(args.name, clear_after)
 
         if result:
@@ -201,7 +167,6 @@ def main():
             print(f"\n✓ Archived to: {archive_path}")
             print(f"  Items archived: {', '.join(archived_items)}")
 
-            # Count total files
             file_count = sum(1 for root, dirs, files in os.walk(archive_path) for f in files)
             print(f"  Total files: {file_count}")
 
@@ -214,6 +179,5 @@ def main():
             print("\nNothing to archive.")
 
 
-# Ensure the main function runs only when script is executed directly
 if __name__ == "__main__":
     main()
