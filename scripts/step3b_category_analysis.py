@@ -1,7 +1,10 @@
-# Step 3b: Category Cross-Analysis
-# Compares sensitive word categories with algospeak categories per video.
-# Key insight: topic-level grouping reveals which subjects correlate with demonetisation,
-# beyond what individual word detection can show.
+# step 3b: category cross-analysis
+#
+#1. this script compares sensitive word categories with algospeak categories for each video
+#2. instead of just counting individual words, it groups them by topic (violence, drugs, etc.)
+#3. the idea is that topic-level grouping shows which subjects correlate with demonetisation
+#4. it pulls in both the sensitive words dictionary and the algospeak dictionary
+#5. outputs a csv with per-category counts for both sensitive words and algospeak terms
 
 import sys
 import os
@@ -24,7 +27,7 @@ from scripts.utils.nlp_processor import (
 
 
 def load_algospeak_dict():
-    """Load algospeak dictionary and category function."""
+    # Load algospeak dictionary and category function.
     try:
         from scripts.utils.algospeak_dict import ALGOSPEAK_DICT, get_category
         return ALGOSPEAK_DICT, get_category
@@ -34,7 +37,7 @@ def load_algospeak_dict():
 
 
 def count_algospeak_by_category(text: str, algospeak_dict: dict, get_category_fn) -> dict:
-    """Count algospeak terms by category in text."""
+    # count algospeak terms by category in text.
     import re
     text_lower = text.lower()
     category_counts = {}

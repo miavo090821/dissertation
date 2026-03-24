@@ -14,6 +14,12 @@ To get API keys:
 - YouTube: https://console.cloud.google.com/apis/credentials
 - Supadata: https://supadata.ai/ (for transcripts)
 """
+# config
+#1. loads api keys from .env file so we don't hardcode secrets
+#2. youtube api key is only needed for data extraction (step 2), analysis works without it
+#3. supadata key is for transcript fetching as a fallback
+#4. also defines all the file paths and output filenames used across the pipeline
+
 
 import os
 import sys

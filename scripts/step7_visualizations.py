@@ -1,7 +1,11 @@
-# Step 7: Generate Visualizations
-# Orchestrates chart generation across RQ1, RQ2, RQ3 and combined insights.
-# Chart functions are in scripts/utils/chart_generators.py.
-# Saves all charts to data/output/charts/ as PNG files.
+# step 7: generate visualizations
+#
+#1. this script generates all the charts for the dissertation
+#2. it calls chart functions from chart_generators.py for each research question
+#3. rq1 gets 7 sensitivity charts, rq2 gets 2 perception charts, rq3 gets 3 algospeak charts
+#4. plus a combined insight chart and 2 category analysis charts (15 total)
+#5. saves everything as png files to data/output/charts/
+
 
 import sys
 import os

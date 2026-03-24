@@ -1,36 +1,39 @@
-# Step 4: Comments Analysis (RQ2 - Perception)
+# step 4: comments analysis (rq2 - perception)
+#
+#1. this script searches through youtube comments for keywords related to monetisation perception
+#2. uses word boundary regex matching so we dont get false positives from partial word matches
+#3. separates creator comments from viewer comments so we can analyse them independently
+#4. outputs two csvs - one with every matched comment, one with per-video summaries
+#5. the perception keywords come from a json dictionary we defined in the dictionaries folder
 
-# Search comments for keywords related to monetization perception.
-# Uses word boundary matching to avoid false positives.
-# Separates creator comments from viewer comments.
 import sys
 import os
 import csv
 import json
 import re
 
-# Add parent directory to the system path so internal modules can be imported
+# add parent directory to the system path so internal modules can be imported
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 try:
-    # Import project-wide configuration paths and filenames
+    # import project-wide configuration paths and filenames
     from config import DATA_RAW_DIR, DATA_OUTPUT_DIR, DICTIONARIES_DIR, COMMENTS_ANALYSIS_FILE
 except ImportError:
-    # Exit if config is missing, since paths are required
+    # exit if config is missing, since paths are required
     print("ERROR: config.py not found!")
     sys.exit(1)
 
 
 def load_perception_keywords(dictionaries_dir: str) -> dict:
-    # Load perception keyword categories from JSON definitions
+    # load perception keyword categories from JSON definitions
     keywords_path = os.path.join(dictionaries_dir, 'perception_keywords.json')
     
     if not os.path.exists(keywords_path):
-        # Warn if the dictionary file does not exist
+        # warn if the dictionary file does not exist
         print(f"WARNING: {keywords_path} not found")
         return {}
     
-    # Read JSON file
+    # read JSON file
     with open(keywords_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
     
@@ -72,7 +75,7 @@ def load_comments(raw_dir: str, video_id: str) -> list:
         with open(comments_path, 'r', encoding='utf-8') as f:
             comments = json.load(f)
         
-        # Flatten comment + replies into a single list
+        # flatten comment + replies into a single list
         all_comments = []
         for comment in comments:
             all_comments.append(comment)
@@ -117,13 +120,13 @@ def search_comment_with_word_boundaries(text: str, keywords_dict: dict) -> list:
 
 
 def is_creator_comment(comment: dict, channel_id: str) -> bool:
-    # Determine whether the comment was written by the channel owner
+    # determine whether the comment was written by the channel owner
     author_channel_id = comment.get('author_channel_id', '')
     return author_channel_id == channel_id
 
 
 def main():
-    # Build absolute paths for raw data, output, and dictionaries
+    # build absolute paths for raw data, output, and dictionaries
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     raw_dir = os.path.join(base_dir, DATA_RAW_DIR)
     output_dir = os.path.join(base_dir, DATA_OUTPUT_DIR)
@@ -247,7 +250,7 @@ def main():
         print(f"  Comments: {len(comments)} (creator: {creator_comment_count}) | "
               f"Perception: {video_matches} (creator: {creator_matches}, viewers: {viewer_matches})")
     
-    # Write full match dataset to CSV
+    # write full match dataset to CSV
     if all_matches:
         with open(output_path, 'w', newline='', encoding='utf-8') as f:
             writer = csv.DictWriter(f, fieldnames=list(all_matches[0].keys()))
@@ -255,7 +258,7 @@ def main():
             writer.writerows(all_matches)
         print(f"\nSUCCESS: Detailed matches saved to {output_path}")
     
-    # Write video-level summary CSV
+    # write video-level summary CSV
     summary_path = output_path.replace('.csv', '_summary.csv')
     if video_summaries:
         with open(summary_path, 'w', newline='', encoding='utf-8') as f:

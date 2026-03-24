@@ -1,8 +1,12 @@
-# Entry point for Step 5: detecting algospeak in transcripts and comments
+# step 5: algospeak detection
+#
+#1. this script detects coded language (algospeak) that creators and viewers use to avoid content filters
+#2. it scans both transcripts and comments using word-boundary regex matching
+#3. for each match it grabs surrounding context so we can manually verify later
+#4. separates creator vs viewer usage in comments since thats relevant for rq3
+#5. supports --archive flag to backup previous outputs and --skip-existing to resume
+#6. outputs detailed findings csv and a per-video summary csv
 
-# This script detects coded language used by creators or viewers
-# It scans transcripts and comments using word-boundary matching
-# It supports archiving previous outputs when requested by the user
 
 import sys
 import os

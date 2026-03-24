@@ -30,6 +30,11 @@ Scenarios:
   5. Re-run analysis only:           python main.py --skip-extraction
   6. Run overnight, tolerate errors: python main.py --continue-on-failure
 """
+#1. runs the full dissertation pipeline for youtube self-censorship research
+#2. phase 1 collects data (ad detection + video extraction), phase 2 does analysis (sensitivity, comments, algospeak)
+#3. phase 3 generates the excel report and charts, phase 4 saves a summary report with recovery commands
+#4. supports resuming after crashes with --skip-existing and --continue-on-failure flags
+#5. you can run individual steps with --steps or swap ad detection methods with --method
 
 import argparse
 import os

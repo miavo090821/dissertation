@@ -20,6 +20,18 @@ Reference: YouTube Self-Censorship Research Project (RQ1 Methodology)
 #  this file is restored to prove the effeciency 
 # between 3 methods for the research report's purposes 
 
+# step 1c: network api-based ad detection
+#
+#1. detects ads by intercepting network requests while a youtube video plays
+#2. hooks into page.on('request') and matches urls against ad-related patterns (ad_break, pagead, doubleclick, etc.)
+#3. also seeks to 25%, 50%, 75% through the video to trigger any mid-roll ad requests
+#4. only ad_break is used for the final verdict since the other signals are too noisy (false positives)
+#5. this is the third detection method alongside ui (step1) and dom (step1b) for triangulation
+#6. this file is kept to compare efficiency between the 3 methods for the report
+
+#  this file is restored to prove the effeciency
+# between 3 methods for the research report's purposes
+
 # Standard library imports
 import argparse
 import asyncio

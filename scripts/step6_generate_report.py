@@ -1,8 +1,11 @@
-# Step 6 Generate Final Report
-# This script compiles all analysis outputs into one Excel report
-# It combines sensitivity scores comments analysis algospeak findings and manual ad status
-# Usage
-# python scripts/step6_generate_report.py
+# step 6: generate final report
+#
+#1. this script pulls together all the analysis outputs from steps 3-5 into one excel report
+#2. merges sensitivity scores, comments perception, algospeak findings, and manual ad status
+#3. calculates some derived fields like upload age and formatted duration
+#4. outputs a multi-sheet excel workbook so everything is in one place for the dissertation
+#5. run it with: python scripts/step6_generate_report.py
+
 
 import sys
 import os

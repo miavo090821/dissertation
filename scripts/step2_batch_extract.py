@@ -1,6 +1,10 @@
-# Step 2: Batch Extract All Videos
-# Process all videos from video_urls.csv using YouTube Data API v3 and Supadata API
-# Extract metadata, transcripts and comments with replies for all videos
+# step 2: batch extract all videos
+#
+#1. reads video_urls.csv and processes every video through youtube data api v3 and supadata api
+#2. for each video it grabs metadata (title, views, etc.), transcript text + timestamped segments, and comments with replies
+#3. saves everything into per-video folders under data/raw/{video_id}/
+#4. supports --skip-existing so you can resume after a crash without re-fetching everything
+#5. supadata handles transcripts because youtube's built-in transcript api is unreliable
 
 import sys
 import os

@@ -1,7 +1,10 @@
-# Step 3: Sensitivity Analysis
-
-# Analyze all extracted transcripts for sensitive word content.
-# Calculates sensitive term ratio and classifies monetization likelihood.
+# step 3: sensitivity analysis
+#
+#1. this script goes through all the video transcripts we extracted in step 2
+#2. it counts how many sensitive words appear in each transcript (e.g. violence, drugs, sexual content)
+#3. calculates a sensitivity ratio = sensitive words / total words
+#4. classifies each video as likely monetised, uncertain, or likely demonetised based on thresholds
+#5. outputs everything to a csv so we can compare with actual ad status later
 
 import sys
 import os
@@ -9,7 +12,7 @@ import csv
 import json
 from datetime import datetime
 
-# Add parent directory to the import path so config and utils can be imported correctly
+# need this so python can find our config and utils folders one level up
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 try:
@@ -20,7 +23,7 @@ except ImportError:
     print("ERROR: config.py not found!")
     sys.exit(1)
 
-# Import helper functions for transcript analysis and monetisation classification
+# these are the nlp functions i wrote in utils that handle the actual word matching
 from scripts.utils.nlp_processor import (
     analyze_transcript,
     analyze_transcript_by_category,
@@ -28,9 +31,10 @@ from scripts.utils.nlp_processor import (
 )
 
 
+
 def get_extracted_videos(raw_dir: str) -> list:
     """Get list of video IDs that have valid extracted transcripts."""
-    # Ensure directory exists
+    # ensure directory exists
     if not os.path.exists(raw_dir):
         return []
     
@@ -38,7 +42,7 @@ def get_extracted_videos(raw_dir: str) -> list:
     # Loop through each folder inside the raw data directory
     for item in os.listdir(raw_dir):
         item_path = os.path.join(raw_dir, item)
-        # Each video has its own subdirectory
+        # each video has its own subdirectory
         if os.path.isdir(item_path):
             # Check whether a transcript file exists for this video
             transcript_path = os.path.join(item_path, 'transcript.txt')
@@ -53,7 +57,7 @@ def load_metadata(raw_dir: str, video_id: str) -> dict:
     """Load metadata JSON for a video if available."""
     metadata_path = os.path.join(raw_dir, video_id, 'metadata.json')
     
-    # If file exists, read and return it
+    # if file exists, read and return it
     if os.path.exists(metadata_path):
         with open(metadata_path, 'r', encoding='utf-8') as f:
             return json.load(f)
@@ -76,7 +80,7 @@ def load_transcript(raw_dir: str, video_id: str) -> str:
 
 
 def main():
-    # Define base directories for input and output
+    # define base directories for input and output
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     raw_dir = os.path.join(base_dir, DATA_RAW_DIR)
     output_dir = os.path.join(base_dir, DATA_OUTPUT_DIR)
