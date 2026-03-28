@@ -23,12 +23,12 @@ Pipeline Phases:
     Save pipeline_report.txt + print recovery commands
 
 Scenarios:
-  1. Fresh start:                    python main.py
-  2. Resume after crash:             python main.py --skip-existing --continue-on-failure
-  3. Ad detection failed mid-run:    python main.py --steps 1 --skip-existing
-  4. Different detection method:     python main.py --steps 1 --method dom
-  5. Re-run analysis only:           python main.py --skip-extraction
-  6. Run overnight, tolerate errors: python main.py --continue-on-failure
+  1. Fresh start:                    python3 main.py
+  2. Resume after crash:             python3 main.py --skip-existing --continue-on-failure
+  3. Ad detection failed mid-run:    python3 main.py --steps 1 --skip-existing
+  4. Different detection method:     python3 main.py --steps 1 --method dom
+  5. Re-run analysis only:           python3 main.py --skip-extraction
+  6. Run overnight, tolerate errors: python3 main.py --continue-on-failure
 """
 #1. runs the full dissertation pipeline for youtube self-censorship research
 #2. phase 1 collects data (ad detection + video extraction), phase 2 does analysis (sensitivity, comments, algospeak)
@@ -164,6 +164,8 @@ def save_pipeline_report(results, steps_to_run, skipped_steps):
 
     failed_steps = []
 
+#  this is to documents what step has been done. 
+
     for step_id in ALL_STEPS:
         label = labels[step_id].ljust(max_label)
 
@@ -184,7 +186,7 @@ def save_pipeline_report(results, steps_to_run, skipped_steps):
 
     if failed_steps:
         lines.append(f"\nFAILED STEPS: {' '.join(failed_steps)}")
-        lines.append(f"RECOVERY: python main.py --steps {' '.join(failed_steps)}")
+        lines.append(f"RECOVERY: python3 main.py --steps {' '.join(failed_steps)}")
     else:
         lines.append("\nALL STEPS OK")
 
@@ -208,23 +210,23 @@ def main():
         epilog= """
 Scenarios:
   1. Fresh start — run everything:
-     python main.py
+     python3 main.py
 
   2. Resume after crash — skip completed work, tolerate failures:
-     python main.py --skip-existing --continue-on-failure
+     python3 main.py --skip-existing --continue-on-failure
 
   3. Ad detection failed mid-run — resume from where it stopped:
-     python main.py --steps 1 --skip-existing
+     python3 main.py --steps 1 --skip-existing
 
   4. Try a different ad detection method:
-     python main.py --steps 1 --method dom
-     python main.py --steps 1 --method network-api
+     python3 main.py --steps 1 --method dom
+     python3 main.py --steps 1 --method network-api
 
   5. Re-run analysis only (data already collected):
-     python main.py --skip-extraction
+     python3 main.py --skip-extraction
 
   6. Run overnight — don't stop on failures:
-     python main.py --continue-on-failure
+     python3 main.py --continue-on-failure
 
 Flags:
   --continue-on-failure   Log errors and keep going instead of stopping
@@ -276,33 +278,40 @@ Flags:
     from scripts import step6_generate_report
     from scripts import step7_visualizations
 
-    # Determine which steps to run
+    # determine which steps to run
     steps_to_run = parse_steps(args.steps)
     results = {}
     skipped_steps = set()
 
-    # Archive previous output if requested
+    # archive previous output if requested
     if args.archive:
         archive_previous_output()
 
-    # Track whether we should stop (only relevant without --continue-on-failure)
+    # track whether we should stop (only relevant without --continue-on-failure)
     pipeline_stopped = False
 
-    # ── PHASE 1: DATA COLLECTION ──────────────────────────────
+    # ── PHASE 1: DATA COLLECTION 
 
-    # Step 1: Ad Detection (method-dependent)
+    # Step 1: Ad Detection (method-dependent) this is for selection, whether user wants to 
+    # run with UI Playwright Stealth method or HTML or Network API
+    #  1. is for Stealth method 
+    #  2. is for HTML/DOM
+    #  3. is for Network API
+
     if '1' in steps_to_run and not pipeline_stopped:
         if args.method == 'stealth':
             _set_step_argv('step1_ad_detector.py',
                            skip_existing=args.skip_existing or None,
                            recheck_no=args.recheck_no or None)
             results['1'] = run_step('1', "Ad Detection (Stealth/UI)", step1_ad_detector.main)
+
         elif args.method == 'dom':
             from scripts import step1b_dom_detector
             _set_step_argv('step1b_dom_detector.py',
                            recheck_no=args.recheck_no or None,
                            recheck_rounds=args.recheck_rounds if args.recheck_rounds > 1 else None)
             results['1'] = run_step('1', "Ad Detection (HTML/DOM)", step1b_dom_detector.main)
+
         elif args.method == 'network-api':
             from scripts import step1c_network_api_detector
             _set_step_argv('step1c_network_api_detector.py',
@@ -314,7 +323,7 @@ Flags:
             print(f"\nStep 1 failed. Use --continue-on-failure to keep going.")
             pipeline_stopped = True
 
-    # Step 2: Batch extraction (skippable)
+    # Step 2: Batch extraction (skippable) 
     if '2' in steps_to_run and not pipeline_stopped:
         if args.skip_extraction:
             print("\nStep 2: Batch Extract — SKIPPED (--skip-extraction)")
@@ -328,7 +337,7 @@ Flags:
                 print(f"\nStep 2 failed. Use --continue-on-failure to keep going.")
                 pipeline_stopped = True
 
-    # ── PHASE 2: ANALYSIS ─────────────────────────────────────
+    # ── PHASE 2: ANALYSIS 
 
     # Step 3: Sensitivity Analysis
     if '3' in steps_to_run and not pipeline_stopped:
@@ -367,7 +376,7 @@ Flags:
             print(f"\nStep 5 failed. Use --continue-on-failure to keep going.")
             pipeline_stopped = True
 
-    # ── PHASE 3: OUTPUT ───────────────────────────────────────
+    # ── PHASE 3: OUTPUT
 
     # Step 6: Generate report
     if '6' in steps_to_run and not pipeline_stopped:
@@ -387,7 +396,7 @@ Flags:
             print(f"\nStep 7 failed. Use --continue-on-failure to keep going.")
             pipeline_stopped = True
 
-    # ── PHASE 4: SUMMARY ─────────────────────────────────────
+    # ── PHASE 4: SUMMARY 
 
     # Save pipeline report
     report_text, failed_steps = save_pipeline_report(results, steps_to_run, skipped_steps)

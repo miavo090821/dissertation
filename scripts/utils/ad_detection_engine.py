@@ -2,7 +2,7 @@
 #
 #1. uses playwright stealth browser to load youtube videos and check if ads appear
 #2. checks for UI markers like "Sponsored" labels, skip buttons, ad countdowns etc
-#3. seeks through the video at 25/50/75% to trigger mid-roll ads too
+#3. seeks through the video at 25/50/75% randomly timed to trigger mid-roll ads too
 #4. restarts browser every 5 videos and rotates user agents to avoid bot detection
 
 import asyncio
@@ -21,8 +21,9 @@ except ImportError:
 
 @dataclass
 class UIAdDetectionResult:
-    """stores all the individual ad marker flags we found in the player UI.
-    each bool tracks whether a specific marker was spotted during detection."""
+    # stores all the individual ad marker flags we found in the player UI.
+    # each bool tracks whether a specific marker was spotted during detection.
+
     sponsored_label: bool = False
     ad_label: bool = False
     skip_button: bool = False
@@ -34,14 +35,16 @@ class UIAdDetectionResult:
     # only counts as having ads if we saw the "Sponsored" label specifically
     @property
     def has_ads(self) -> bool:
-        """returns true if the sponsored label was detected."""
+        # returns true if the sponsored label was detected.
+
         return self.sponsored_label
 
 
 @dataclass
 class AdDetectionResult:
-    """final verdict for one video - wraps the UI result with a yes/no answer
-    and confidence level. error field captures any failures."""
+    # final verdict for one video - wraps the UI result with a yes/no answer
+    # and confidence level. error field captures any failures.
+
     video_id: str
     ui_result: UIAdDetectionResult
     verdict: bool = False
@@ -76,7 +79,8 @@ class AdDetector:
         self.playwright = None
         self.logger = self._setup_logger(log_level)
 
-        # bunch of recent chrome on mac user agents so we look like a real person
+        # bunch of recent chrome on mac user agents so we look like a real person 
+        #  this is for mac
         self._user_agents = [
             'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
             'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
@@ -124,7 +128,7 @@ class AdDetector:
                 "--no-first-run",
                 "--incognito",
             ]
-
+#  this is for chrome 
             self.browser = await self.playwright.chromium.launch(
                 headless=self.headless,
                 args=stealth_args,
@@ -132,6 +136,7 @@ class AdDetector:
             )
             self.logger.info("Browser launched with stealth settings")
 
+#  this is not to indicate whether the computer needs to intall playwright to activate the ad detector.
         except ImportError:
             raise ImportError(
                 "Playwright not installed. Run: pip install playwright && playwright install chromium"
@@ -281,7 +286,7 @@ class AdDetector:
                 }}''')
                 await asyncio.sleep(2)
                 await self._check_ui_markers(page, ui_result, context=f"seek {int(position * 100)}%")
-
+# 
             await asyncio.sleep(2)
             await self._check_ui_markers(page, ui_result, context="final")
 
@@ -324,7 +329,7 @@ class AdDetector:
 
             await asyncio.sleep(2)
 
-            # poll a few times for pre-roll ads right after page load
+            # poll a few times for pre-roll ads right after page load, which is 4 times
             self.logger.info("Checking for pre-roll ads...")
             for poll in range(4):
                 await self._check_ui_markers(page, ui_result, context=f"pre-roll {poll+1}")
@@ -334,7 +339,7 @@ class AdDetector:
                 await asyncio.sleep(2)
 
             await self._play_and_seek(page, ui_result)
-
+#  ui summary
             self.logger.info(
                 "UI summary: sponsored=%s, ad_label=%s, skip=%s, countdown=%s",
                 ui_result.sponsored_label,
@@ -350,7 +355,7 @@ class AdDetector:
             self.logger.error("Detection failed: %s", error)
 
         verdict = ui_result.sponsored_label
-
+#  this is to mark whether the video has ads or not
         self.logger.info("Verdict: %s", "Has Ads" if verdict else "No Ads")
 
         return AdDetectionResult(
@@ -378,7 +383,8 @@ class AdDetector:
                 self.logger.info("Restarting browser to avoid detection...")
                 await self.cleanup()
                 await self.setup()
-
+#  this is a statement to run another video but within a random 
+# second to advoid bot detections from Youtube
             if i < len(video_ids) - 1:
                 wait_time = random.uniform(5.0, 12.0)
                 self.logger.info("Waiting %.1f seconds before next video...", wait_time)
