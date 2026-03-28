@@ -165,6 +165,7 @@ def get_algospeak_meaning(term: str) -> str:
 def get_category(term: str) -> str:
     """checks each category list to find where this term lives.
     returns 'other' if it's not in any of them."""
+
     term_lower = term.lower()
     for category, terms in ALGOSPEAK_CATEGORIES.items():
         if term_lower in terms:
@@ -181,7 +182,8 @@ def detect_algospeak(text: str) -> list:
     for term, meaning in ALGOSPEAK_DICT.items():
         term_lower = term.lower()
         count = text_lower.count(term_lower)
-
+# this is for analysis, it will generate a csv file 
+# with these details after pipeline run through. then use that for chart generation 
         if count > 0:
             results.append({
                 'term': term,
@@ -192,40 +194,79 @@ def detect_algospeak(text: str) -> list:
 
     return sorted(results, key=lambda x: x['count'], reverse=True)
 
-
-# grabs surrounding text around each occurrence for qualitative analysis
+#  this comments and method below is assisted 
+# by Chatgpt for better algospeak detection and better readability
+# Grab surrounding text around each occurrence of a term
+# so we can inspect how the creator is actually using it.
 def extract_algospeak_context(text: str, term: str, window: int = 60) -> list:
-    """pulls out snippets of text around where the term appears so we can
-    see how creators are actually using it in context. max 3 snippets."""
+    """
+    Return up to 3 short snippets showing the term in context.
+
+    Args:
+        text: Full transcript or text body to search in.
+        term: The algospeak term we want to find.
+        window: Number of characters to include before and after the term.
+
+    Returns:
+        A list of up to 3 snippets, each containing the matched term
+        with nearby surrounding text.
+    """
     snippets = []
+
+    # Convert both text and term to lowercase so matching is case-insensitive.
+    # This lets us find "unalive", "Unalive", or "UNALIVE" equally.
     text_lower = text.lower()
     term_lower = term.lower()
 
+    # Start searching from the beginning of the text.
     start = 0
+
     while True:
+        # Find the next occurrence of the term starting from 'start'.
         pos = text_lower.find(term_lower, start)
+
+        # If no more matches are found, stop the loop.
         if pos == -1:
             break
 
+        # Work out the snippet boundaries:
+        # - go 'window' characters before the match
+        # - go 'window' characters after the match
+        # max(0, ...) stops us going below the start of the text
+        # min(len(text), ...) stops us going past the end of the text
         snippet_start = max(0, pos - window)
         snippet_end = min(len(text), pos + len(term) + window)
 
+        # Extract the original-text snippet, preserving original capitalisation.
         snippet = text[snippet_start:snippet_end]
+
+        # Add "..." at the front if this snippet begins in the middle of the text,
+        # to show that earlier text has been omitted.
         if snippet_start > 0:
             snippet = "..." + snippet
+
+        # Add "..." at the end if this snippet stops before the text ends,
+        # to show that later text has also been omitted.
         if snippet_end < len(text):
             snippet = snippet + "..."
 
+        # Clean up the snippet:
+        # - replace line breaks with spaces so it stays on one line
+        # - strip extra whitespace from the ends
         snippets.append(snippet.replace('\n', ' ').strip())
+
+        # Move search start forward by 1 character from the current match.
+        # This allows the function to continue finding later occurrences.
         start = pos + 1
 
+        # Limit output to at most 3 snippets so results stay manageable
+        # for qualitative review.
         if len(snippets) >= 3:
             break
 
     return snippets
 
-
-# runs the full algospeak pipeline: detect, get context, summarise by category
+# runs the full algospeak pipeline: detect, get context, summarise by category this is for analysis 
 def analyze_algospeak_usage(text: str) -> dict:
     """combines detection + context extraction + category summary into one result.
     returns total count, unique terms, per-term details, and category breakdown."""

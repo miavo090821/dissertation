@@ -5,17 +5,50 @@
 #3. charts 13-15 are combined insights that bring the research questions together
 #4. all charts use consistent figsize and dpi so they look uniform in the dissertation
 
+
+# os is part of Python's standard library.
+# We use it for file and folder operations, especially to build safe file paths
+# like os.path.join(charts_dir, 'file.png') when saving charts.
 import os
 
+# matplotlib is a third-party plotting library for Python.
+# pyplot gives us the main charting functions such as figure creation,
+# scatter plots, bar charts, histograms, labels, titles, and saving figures.
 import matplotlib.pyplot as plt
+
+# matplotlib.dates is a helper module inside matplotlib.
+# It is useful when working with dates on chart axes, for example formatting
+# years, months, or timeline labels more neatly.
 import matplotlib.dates as mdates
+
+# numpy is a third-party numerical computing library.
+# We use it for mathematical operations such as:
+# - creating evenly spaced values with np.linspace()
+# - fitting trend lines with np.polyfit()
+# - building arrays for chart positions
 import numpy as np
+
+# pandas is a third-party data analysis library.
+# We use it to store and manipulate tabular data in DataFrames, including:
+# - selecting columns
+# - dropping missing values
+# - grouping and aggregating data
+# - converting dates with pd.to_datetime()
 import pandas as pd
+
+# seaborn is a third-party data visualisation library built on top of matplotlib.
+# We use it for prettier and more statistical-style charts, such as boxplots
+# and heatmaps, with less code than plain matplotlib.
 import seaborn as sns
 
 FIGSIZE = (10, 6)
 DPI = 150
 
+#  all charts ideas are generated from my own research 
+# to find the best charts to answer research questions. 
+#  the chart generation formula are assisted by LLMs and verified  
+#  and justified and checked by myself. 
+#  The charts are very important for the research report! 
 
 # rq1: scatter plot showing sensitive ratio for videos with and without ads
 def chart1_risk_vs_ads_scatter(df: pd.DataFrame, charts_dir: str):
