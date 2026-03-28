@@ -1,6 +1,6 @@
 """
 Main Pipeline Orchestrator
-==========================
+
 Runs the full dissertation analysis pipeline for YouTube self-censorship research.
 
 Pipeline Phases:
@@ -205,7 +205,7 @@ def main():
     parser = argparse.ArgumentParser(
         description='Run dissertation analysis pipeline',
         formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
+        epilog= """
 Scenarios:
   1. Fresh start — run everything:
      python main.py

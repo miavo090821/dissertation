@@ -1,6 +1,6 @@
 # Dissertation Pipeline Enhancement - Progress Log
 
-This document tracks all changes from thhe day we realised HTML and Network API is not consistent and we need to go with another layer of detecting ads which is using Stealth method to detect ads via UI. This doc is for my own use to keep track of implementations, and progress for the YouTube Self-Censorship Research project enhancements.
+This document tracks all changes assisted and resummarise by ChatGPT from thhe day we realised HTML and Network API is not consistent and we need to go with another layer of detecting ads which is using Stealth method to detect ads via UI. This doc is for my own use to keep track of implementations, and progress for the YouTube Self-Censorship Research project enhancements.
 
 ---
 
@@ -11,11 +11,15 @@ This document tracks all changes from thhe day we realised HTML and Network API 
 2. Automated ad detection (HTML/DOM + Network API + Stealth)
 3. Expanded video dataset support
 
-
-
 ---
 
 ## Session Log
+
+## 20/03/2026 — Added the comments to files and make sure it is readable
+
+### What Changed
+Most the files have more comments and explanation. 
+
 
 ## 15/03/2026 — Removed Step 3c (LLM Temporal Analysis) from Pipeline
 
@@ -60,7 +64,7 @@ The pipeline had three weaknesses:
 2. **Pipeline progress report** (`data/output/pipeline_report.txt`) — saved after every run, appends to file for history. Shows:
    - Timing for each step (identifies slow steps)
    - Actual error messages for failures
-   - Exact recovery command (`python main.py --steps 3c`) to re-run just the failed steps
+   - Exact recovery command (`python3 main.py --steps 3c`) to re-run just the failed steps
    - SKIPPED/NOT RUN status for steps that didn't execute
 
 3. **`_set_step_argv()` helper** — replaced all scattered `sys.argv = [...]` blocks with a clean helper that builds argv from keyword arguments. Eliminates inconsistent flag handling.
@@ -114,12 +118,16 @@ Video `oNHuEdy6cZM` demonstrated probabilistic ad serving:
 - The ad appeared as a **mid-roll** triggered at the 75% seek position
 - This confirms that **single observations can produce false negatives**
 
+
 #### Implications
+
 
 1. **DOM/Network detect capability, not delivery** - These signals remain stable while actual ad serving varies
 2. **UI detection is correct but probabilistic** - It accurately detects when ads render, but rendering is not guaranteed
 3. **Multiple runs increase confidence** - For uncertain videos, repeated observations reduce false negatives
 4. **Mid-roll ads require seeking** - The detection system's seek strategy (25%, 50%, 75%) is essential for catching mid-roll ads
+
+
 
 ### 02-01-2026: Update Main Pipeline Orchestrator
 
@@ -145,16 +153,16 @@ Video `oNHuEdy6cZM` demonstrated probabilistic ad serving:
 
 ```bash
 # Run full pipeline
-python main.py
+python3 main.py
 
 # Skip extraction, run analysis only
-python main.py --skip-extraction
+python3 main.py --skip-extraction
 
 # Run specific steps
-python main.py --steps 3 6 7
+python3 main.py --steps 3 6 7
 
 # Full run but skip already extracted videos
-python main.py --skip-existing
+python3 main.py --skip-existing
 ```
 
 #### Files Created
@@ -165,6 +173,7 @@ python main.py --skip-existing
 | `scripts/__init__.py` | Package initialization |
 
 ---
+
 
 ### 01-01-2026: Added Methodology Section to README
 
@@ -217,10 +226,12 @@ YouTube detected automated browsers (`navigator.webdriver=true`) and suppressed 
    """)
    ```
 
+
 #### Test Results
 
+
 ```
-python scripts/ad_detector.py _9ectEMceBk
+python3 scripts/ad_detector.py _9ectEMceBk
 ```
 
 **Before fix:** No ads detected (false negative)
@@ -230,7 +241,9 @@ python scripts/ad_detector.py _9ectEMceBk
 - Network: 37 ad requests (pagead, doubleclick)
 - **Verdict: Has Ads** (high confidence)
 
+
 #### Files Modified
+
 
 | File | Changes |
 |------|---------|
@@ -272,6 +285,7 @@ Even with stealth fixes, `headless=True` fails to detect ads. YouTube/Google use
 1. **Added UI markers** for Sponsored text and `<ad-image-view-model>` elements
 2. **Kept existing UI signals** (ad label, skip button, countdown, overlay, ad-showing class)
 3. **Updated unit tests** for new UI marker fields
+
 
 #### Test Results
 
