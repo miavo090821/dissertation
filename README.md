@@ -8,7 +8,7 @@ A computational audit examining whether YouTube's monetisation system influences
 2. Clone repo and create virtual environment:
    ```bash
    cd dissertation
-   python -m venv .venv
+   python3 -m venv .venv
    source .venv/bin/activate
    pip install -r requirements.txt
    playwright install chromium
@@ -18,7 +18,7 @@ A computational audit examining whether YouTube's monetisation system influences
    YOUTUBE_API_KEY=your_key
    SUPADATA_API_KEY=your_key
    ```
-4. Run: `python main.py`
+4. Run: `python3 main.py`
 
 ## Research Questions
 
@@ -81,33 +81,33 @@ video_urls.csv
 
 **Scenario 1: Fresh start** — run everything from scratch:
 ```bash
-python main.py
+python3 main.py
 ```
 
 **Scenario 2: Resume after crash** — laptop closed, terminal killed, pick up where you left off:
 ```bash
-python main.py --skip-existing --continue-on-failure
+python3 main.py --skip-existing --continue-on-failure
 ```
 
 **Scenario 3: Ad detection failed mid-run** — video 101 of 257 crashed, resume from there:
 ```bash
-python main.py --steps 1 --skip-existing
+python3 main.py --steps 1 --skip-existing
 ```
 
 **Scenario 4: Try a different ad detection method** — stealth not working, try DOM or Network API:
 ```bash
-python main.py --steps 1 --method dom
-python main.py --steps 1 --method network-api
+python3 main.py --steps 1 --method dom
+python3 main.py --steps 1 --method network-api
 ```
 
 **Scenario 5: Re-run analysis only** — data already collected, just regenerate results:
 ```bash
-python main.py --skip-extraction
+python3 main.py --skip-extraction
 ```
 
 **Scenario 6: Run overnight** — don't stop on failures, deal with them in the morning:
 ```bash
-python main.py --continue-on-failure
+python3 main.py --continue-on-failure
 ```
 
 After any run, check `data/output/pipeline_report.txt` for timing, errors, and recovery commands.
@@ -128,24 +128,24 @@ After any run, check `data/output/pipeline_report.txt` for timing, errors, and r
 ### Selective Steps
 
 ```bash
-python main.py --steps 1          # Run only ad detection
-python main.py --steps 2          # Run only data extraction
-python main.py --steps 3          # Run only sensitivity analysis
-python main.py --steps 3b         # Run only category cross-analysis
-python main.py --steps 4          # Run only comments perception
-python main.py --steps 5          # Run only algospeak detection
-python main.py --steps 6          # Run only Excel report generation
-python main.py --steps 7          # Run only chart generation
-python main.py --steps 3 3b 4 5 6 7  # Run analysis + reporting (skip detection/extraction)
-python main.py --steps 6 7        # Re-generate report and charts only
+python3 main.py --steps 1          # Run only ad detection
+python3 main.py --steps 2          # Run only data extraction
+python3 main.py --steps 3          # Run only sensitivity analysis
+python3 main.py --steps 3b         # Run only category cross-analysis
+python3 main.py --steps 4          # Run only comments perception
+python3 main.py --steps 5          # Run only algospeak detection
+python3 main.py --steps 6          # Run only Excel report generation
+python3 main.py --steps 7          # Run only chart generation
+python3 main.py --steps 3 3b 4 5 6 7  # Run analysis + reporting (skip detection/extraction)
+python3 main.py --steps 6 7        # Re-generate report and charts only
 ```
 
 ### Ad Detection Methods (Step 1)
 
 ```bash
-python main.py --steps 1 --method stealth      # Default: UI "Sponsored" label detection
-python main.py --steps 1 --method dom          # HTML/DOM detection (adTimeOffset, playerAds)
-python main.py --steps 1 --method network-api  # Network API detection (ad_break, pagead)
+python3 main.py --steps 1 --method stealth      # Default: UI "Sponsored" label detection
+python3 main.py --steps 1 --method dom          # HTML/DOM detection (adTimeOffset, playerAds)
+python3 main.py --steps 1 --method network-api  # Network API detection (ad_break, pagead)
 ```
 
 ### Ad Detection Recheck Modes
@@ -153,28 +153,28 @@ python main.py --steps 1 --method network-api  # Network API detection (ad_break
 ```bash
 # Default flow (stealth): detect once, if No → auto-recheck 5 rounds inline
 # If any recheck round finds ads → flips ad_status to Yes
-python main.py --steps 1
+python3 main.py --steps 1
 
 # Resume interrupted detection (picks up unverified Nos + new videos)
-python main.py --steps 1 --skip-existing
+python3 main.py --steps 1 --skip-existing
 
 # Manual recheck: re-run all No videos through recheck (stealth)
-python main.py --steps 1 --recheck-no
+python3 main.py --steps 1 --recheck-no
 
 # Manual recheck with custom rounds (DOM/Network API methods)
-python main.py --steps 1 --method dom --recheck-no --recheck-rounds 5
-python main.py --steps 1 --method network-api --recheck-no --recheck-rounds 3
+python3 main.py --steps 1 --method dom --recheck-no --recheck-rounds 5
+python3 main.py --steps 1 --method network-api --recheck-no --recheck-rounds 3
 ```
 
 ### Standalone Scripts
 
 ```bash
-python scripts/step1_ad_detector.py              # Batch ad detection
-python scripts/step1_ad_detector.py VIDEO_ID      # Single video ad check
-python scripts/step1_ad_detector.py --skip-existing  # Resume detection
-python scripts/step3_sensitivity_analysis.py      # Sensitivity analysis
-python scripts/step5_algospeak_detection.py       # Algospeak detection
-python scripts/step7_visualizations.py            # Generate charts
+python3 scripts/step1_ad_detector.py              # Batch ad detection
+python3 scripts/step1_ad_detector.py VIDEO_ID      # Single video ad check
+python3 scripts/step1_ad_detector.py --skip-existing  # Resume detection
+python3 scripts/step3_sensitivity_analysis.py      # Sensitivity analysis
+python3 scripts/step5_algospeak_detection.py       # Algospeak detection
+python3 scripts/step7_visualizations.py            # Generate charts
 ```
 
 ## Folder Structure
