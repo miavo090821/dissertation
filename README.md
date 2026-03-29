@@ -2,6 +2,11 @@
 
 A computational audit examining whether YouTube's monetisation system influences creator language. Analyses 257 videos across 4 channels using automated ad detection, NLP-based sensitivity analysis, comment perception keywords, and algospeak detection.
 
+# Notes: 
+I have removed the raw data files, because they are limited by the number of files by submission's policies, which are only 35 files. 
+
+After running the main.py, the pipeline will access the input folder - video_url.csv, then it will generate the data files into data/raw folder. 
+
 ## Quick Setup
 
 1. **Python 3.11+** required
