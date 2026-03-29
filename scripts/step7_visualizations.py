@@ -24,9 +24,13 @@ except ImportError:
     sys.exit(1)
 
 try:
-    import pandas as pd              # used to load csv and excel files into dataframes
-    import matplotlib.pyplot as plt  # used for chart styling and figure handling
-    import seaborn as sns            # used to apply cleaner chart themes and colour palettes
+    import pandas as pd             
+# used to load csv and excel files into dataframes
+    import matplotlib.pyplot as plt  
+# used for chart styling and figure handling
+    import seaborn as sns           
+ # used to apply cleaner chart themes and colour palettes
+ 
 except ImportError as e:
     # stop the script if one of the required chart libraries is missing
     print(f"ERROR: Missing library - {e}")

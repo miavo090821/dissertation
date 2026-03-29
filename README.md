@@ -34,7 +34,7 @@ video_urls.csv
      ▼
 ┌─────────────────────────────────────────────────────────┐
 │  Step 1: Ad Detection (choose one method)               │
-│  ├─ 1a: Stealth/UI (default) — "Sponsored" label       │
+│  ├─ 1a: Stealth/UI (default) — "Sponsored" label        │
 │  ├─ 1b: HTML/DOM — adTimeOffset, playerAds              │
 │  └─ 1c: Network API — ad_break, pagead, doubleclick     │
 └─────────────────────────────────────────────────────────┘
@@ -74,6 +74,7 @@ video_urls.csv
 | 5 | `scripts/step5_algospeak_detection.py` | Algospeak coded language detection (128 terms) | `algospeak_findings.csv` |
 | 6 | `scripts/step6_generate_report.py` | Compile all results into Excel workbook | `analysis_results.xlsx` |
 | 7 | `scripts/step7_visualizations.py` | Generate 15 PNG charts across all RQs | `data/output/charts/` |
+
 
 ## Commands Reference
 
