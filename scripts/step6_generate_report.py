@@ -1,51 +1,68 @@
 # step 6: generate final report
 #
-#1. this script pulls together all the analysis outputs from steps 3-5 into one excel report
-#2. merges sensitivity scores, comments perception, algospeak findings, and manual ad status
-#3. calculates some derived fields like upload age and formatted duration
-#4. outputs a multi-sheet excel workbook so everything is in one place for the dissertation
-#5. run it with: python scripts/step6_generate_report.py
+# 1. this script brings together the outputs from steps 3 to 5 into one final excel report
+# 2. it combines sensitivity scores, comments perception results, algospeak findings, and ad status
+# 3. it also creates extra fields like upload age and a cleaner video duration format
+# 4. the final output is a multi-sheet excel workbook, which is easier to use for analysis and dissertation write-up
+# 5. run it with: python scripts/step6_generate_report.py
+
+import sys                  
+# used to exit the script early if something important is missing
+
+import os                   
+# used for file paths and checking whether files exist
+import csv                  
+# included for csv-related work, although pandas handles most csv loading here
+
+import json                 
+# included in case json data handling is needed in the report pipeline
+from datetime import datetime   
+# used to work out how old a video is based on its upload date
 
 
-import sys
-import os
-import csv
-import json
-from datetime import datetime
-
-# Add parent directory to import path so config and utils can be imported
+# add the parent directory to the python path
+# this lets the script import config.py and utility modules from the project folder
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 try:
-    # Import project wide configuration and file names
+    # import project-wide folder paths and file names from config.py
+    # this keeps file locations centralised instead of hardcoding them in the script
     from config import (
         DATA_RAW_DIR, DATA_OUTPUT_DIR, DATA_INPUT_DIR,
         SENSITIVITY_SCORES_FILE, COMMENTS_ANALYSIS_FILE, 
         ALGOSPEAK_FINDINGS_FILE, FINAL_REPORT_FILE
     )
 except ImportError:
+    # stop the script if config.py cannot be found
     print("ERROR: config.py not found!")
     sys.exit(1)
 
 try:
-    # Pandas is required for DataFrame operations and Excel export
+    # pandas is the main library used here for:
+    # - loading csv files into dataframes
+    # - merging tables together
+    # - creating the final excel workbook
     import pandas as pd
 except ImportError:
+    # stop the script if pandas is missing, because the report depends on it
     print("ERROR: pandas not installed. Run: pip install pandas openpyxl")
     sys.exit(1)
 
-# Import duration helper functions for formatting video length
+# import helper functions for turning youtube duration strings
+# into a more readable format such as minutes and seconds
 from scripts.utils.youtube_api import parse_duration, format_duration
 
 
-# Load a csv file if it exists otherwise return an empty DataFrame
+# load a csv file only if it exists
+# if the file is missing, return an empty dataframe instead of crashing
 def load_csv_if_exists(path: str) -> pd.DataFrame:
     if os.path.exists(path):
         return pd.read_csv(path)
     return pd.DataFrame()
 
 
-# Load the input video list including manual ad status annotations
+# load the original input csv that contains the list of videos
+# this is also where manual ad status annotations may be stored
 def load_input_csv(base_dir: str) -> pd.DataFrame:
     input_path = os.path.join(base_dir, DATA_INPUT_DIR, 'video_urls.csv')
     if os.path.exists(input_path):
@@ -53,7 +70,10 @@ def load_input_csv(base_dir: str) -> pd.DataFrame:
     return pd.DataFrame()
 
 
-# Extract a YouTube video id from a full url or plain id string
+# extract the youtube video id from either:
+# - a full youtube url
+# - or a plain 11-character video id
+# this helps create a consistent key for merging different datasets
 def extract_video_id_from_url(url: str) -> str:
     import re
     patterns = [
@@ -67,18 +87,27 @@ def extract_video_id_from_url(url: str) -> str:
     return ""
 
 
-# Compute how long ago a video was uploaded expressed in human friendly units
+# work out how old the video is based on its published date
+# returns both:
+# - the number value
+# - and the unit type (days, weeks, months, years)
+# this is more readable than just showing the raw upload timestamp
 def calculate_upload_age(published_at: str) -> tuple:
     if not published_at:
         return None, ""
     
     try:
+        # convert the youtube timestamp into a python datetime object
         pub_date = datetime.fromisoformat(published_at.replace('Z', '+00:00'))
+
+        # use the same timezone as the published date if it exists
         now = datetime.now(pub_date.tzinfo) if pub_date.tzinfo else datetime.now()
+
+        # find the difference between now and the upload date
         delta = now - pub_date
-        
         days = delta.days
         
+        # convert raw days into a more human-friendly unit
         if days < 7:
             return days, "days"
         elif days < 30:
@@ -88,27 +117,31 @@ def calculate_upload_age(published_at: str) -> tuple:
         else:
             return round(days / 365, 1), "years"
     except:
+        # if anything goes wrong with the date format, return blanks
         return None, ""
 
 
 def main():
-    # Set up base and output paths
+    # build the main project paths
+    # base_dir = project root
+    # output_dir = where analysis csv files are stored
+    # raw_dir = raw data folder
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     output_dir = os.path.join(base_dir, DATA_OUTPUT_DIR)
     raw_dir = os.path.join(base_dir, DATA_RAW_DIR)
     
-    # Build full paths for all input and output csv files
+    # build the full file paths for the datasets we want to combine
     sensitivity_path = os.path.join(output_dir, SENSITIVITY_SCORES_FILE)
     comments_summary_path = os.path.join(output_dir, COMMENTS_ANALYSIS_FILE.replace('.csv', '_summary.csv'))
     algospeak_summary_path = os.path.join(output_dir, ALGOSPEAK_FINDINGS_FILE.replace('.csv', '_summary.csv'))
     output_path = os.path.join(output_dir, FINAL_REPORT_FILE)
     
-    # High level progress header
+    # print a clear header so it is obvious which step is running
     print("=" * 70)
     print("STEP 6: GENERATE FINAL REPORT")
     print("=" * 70)
     
-    # Load all intermediate analysis outputs
+    # load all the main analysis outputs from earlier pipeline steps
     print("\nLoading data sources...")
     
     sensitivity_df = load_csv_if_exists(sensitivity_path)
@@ -123,18 +156,19 @@ def main():
     input_df = load_input_csv(base_dir)
     print(f"  Input CSV: {len(input_df)} videos")
     
-    # Sensitivity analysis is the core table so it must exist
+    # sensitivity analysis is treated as the core dataset
+    # if it does not exist, the final report cannot be built properly
     if sensitivity_df.empty:
         print("\nERROR: No sensitivity analysis data found.")
         print("Please run step3_sensitivity_analysis.py first")
         sys.exit(1)
     
-    # Start master DataFrame with sensitivity results
+    # start the main combined table using sensitivity results as the base
     master_df = sensitivity_df.copy()
     
-    # Merge in comments perception summary using dynamic columns
+    # merge comments analysis into the master table
+    # avoid duplicating the title column if it already exists
     if not comments_df.empty:
-        # Keep video id and other columns but avoid duplicate title column
         comments_cols = [c for c in comments_df.columns if c != 'title']
         if 'video_id' in comments_cols:
             master_df = master_df.merge(
@@ -143,7 +177,8 @@ def main():
                 how='left'
             )
     
-    # Merge algospeak aggregate metrics if they are present
+    # merge algospeak summary results into the master table
+    # only keep the aggregate columns that are useful for the final report
     if not algospeak_df.empty:
         algospeak_cols = ['video_id', 'total_algospeak_instances', 'unique_terms_found']
         available_cols = [c for c in algospeak_cols if c in algospeak_df.columns]
@@ -154,12 +189,14 @@ def main():
                 how='left'
             )
     
-    # Merge ad status from input csv if not already present from sensitivity scores
+    # merge ad status from the original input csv if it is not already there
+    # this is useful if ad_status was manually annotated outside the sensitivity file
     if 'ad_status' not in master_df.columns and not input_df.empty and 'url' in input_df.columns:
         input_df['video_id'] = input_df['url'].apply(extract_video_id_from_url)
         input_cols = ['video_id', 'ad_status']
         available_cols = [c for c in input_cols if c in input_df.columns]
-        # Only merge if there is at least one metric besides id
+
+        # only merge if there is at least one extra column besides video_id
         if len(available_cols) > 1:
             master_df = master_df.merge(
                 input_df[available_cols],
@@ -167,25 +204,26 @@ def main():
                 how='left'
             )
     
-    # Compute additional derived fields for the report
+    # create extra fields that make the final report easier to read
     print("\nCalculating derived fields...")
     
-    # Upload age in days weeks months or years
+    # calculate upload age from published_at
     if 'published_at' in master_df.columns:
         age_data = master_df['published_at'].apply(calculate_upload_age)
         master_df['upload_age'] = [a[0] for a in age_data]
         master_df['upload_age_type'] = [a[1] for a in age_data]
     
-    # Duration converted from iso period to nice text representation
+    # convert youtube ISO 8601 duration strings into a cleaner readable format
     if 'duration' in master_df.columns:
         master_df['duration_formatted'] = master_df['duration'].apply(
             lambda x: format_duration(parse_duration(x)) if pd.notna(x) else ''
         )
     
-    # Replace missing values with empty strings for a clean Excel view
+    # replace missing values with blank strings
+    # this makes the excel output cleaner and easier to inspect manually
     master_df = master_df.fillna('')
     
-    # Choose column order so the most useful fields appear first
+    # define the most important columns that should appear first in the final sheet
     priority_cols = [
         'video_id', 'title', 'channel_name', 'published_at',
         'duration_formatted', 'upload_age', 'upload_age_type',
@@ -194,31 +232,33 @@ def main():
         'ad_status'
     ]
     
-    # Build final column order by adding remaining columns after priority group
+    # keep priority columns first, then append any remaining columns after them
     ordered_cols = [c for c in priority_cols if c in master_df.columns]
     remaining_cols = [c for c in master_df.columns if c not in ordered_cols]
     master_df = master_df[ordered_cols + remaining_cols]
     
-    # Create Excel workbook with multiple sheets for different views
+    # write the final excel workbook
+    # using multiple sheets makes it easier to inspect both the combined data
+    # and the original analysis outputs separately
     print(f"\nWriting Excel report: {output_path}")
     
     with pd.ExcelWriter(output_path, engine='openpyxl') as writer:
-        # Main sheet with unified view over all metrics
+        # main combined analysis sheet
         master_df.to_excel(writer, sheet_name='Main Analysis', index=False)
         
-        # Raw sensitivity analysis scores
+        # raw sensitivity analysis sheet
         if not sensitivity_df.empty:
             sensitivity_df.to_excel(writer, sheet_name='Sensitivity Details', index=False)
         
-        # Comments perception summary per video
+        # comments analysis sheet
         if not comments_df.empty:
             comments_df.to_excel(writer, sheet_name='Comments Analysis', index=False)
         
-        # Algospeak metrics per video
+        # algospeak summary sheet
         if not algospeak_df.empty:
             algospeak_df.to_excel(writer, sheet_name='Algospeak Findings', index=False)
         
-        # Build summary statistics sheet for quick overview
+        # build a short summary sheet with key metrics for quick interpretation
         summary_metrics = [
             ('Total Videos', len(master_df)),
             ('Average Sensitive Ratio %', round(master_df['sensitive_ratio'].mean(), 2) if 'sensitive_ratio' in master_df.columns else 'N/A'),
@@ -229,20 +269,21 @@ def main():
             ('Likely Demonetised', len(master_df[master_df['classification'] == 'Likely Demonetised']) if 'classification' in master_df.columns else 'N/A'),
         ]
         
-        # Add aggregate algospeak information if present
+        # if algospeak data exists, count how many videos contain at least one algospeak instance
         if 'total_algospeak_instances' in master_df.columns:
             algospeak_videos = len(master_df[master_df['total_algospeak_instances'] > 0])
             summary_metrics.append(('Videos with Algospeak', algospeak_videos))
         
-        # Add perception comment count if present
+        # if perception comment data exists, sum the total across all videos
         if 'perception_comments' in master_df.columns:
             perception_sum = pd.to_numeric(master_df['perception_comments'], errors='coerce').sum()
             summary_metrics.append(('Total Perception Comments', int(perception_sum) if not pd.isna(perception_sum) else 0))
         
+        # convert summary metrics into a dataframe and save as its own sheet
         summary_df = pd.DataFrame(summary_metrics, columns=['Metric', 'Value'])
         summary_df.to_excel(writer, sheet_name='Summary Statistics', index=False)
     
-    # Final success messages with helpful next step
+    # final success messages so the user knows the report was created properly
     print("\nSUCCESS: Excel report generated")
     print(f"Report saved to: {output_path}")
     print("Sheets: Main Analysis, Sensitivity Details, Comments Analysis, Algospeak Findings, Summary Statistics")

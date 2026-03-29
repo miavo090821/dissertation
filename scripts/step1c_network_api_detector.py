@@ -1,63 +1,74 @@
 """
 Network API-Based Ad Detection for YouTube Self-Censorship Research
-====================================================================
 
-Detects advertisements on YouTube videos by monitoring network requests
-for ad-related URL patterns (ad_break, pagead, doubleclick, etc.).
+This script detects possible advertisements on YouTube videos by watching
+the network requests made while the page is open and the video is playing.
 
-Methodology:
-- Uses headed browser with stealth settings to avoid bot detection
-- Intercepts all network requests via page.on('request', ...)
-- Plays video and seeks to 25%, 50%, 75% to trigger mid-roll ad requests
-- Primary signal: ad_break pattern is the only conclusive verdict indicator
+Main idea:
+- instead of checking what appears on screen, this method checks what the browser requests in the background
+- it listens for ad-related request patterns such as ad_break, pagead, doubleclick, and similar signals
+- it also seeks through the video timeline to increase the chance of triggering mid-roll ad requests
 
-Note: This is a complementary detection method to the UI-based detector
-(step1_ad_detector.py). Network signals indicate ad infrastructure requests,
-which may differ from actual ad delivery observed in the UI.
+Important limitation:
+- network signals show ad-related infrastructure/activity, but not necessarily that an ad was actually shown to the viewer
+- because of that, this method is used as a supporting method, not the strongest one on its own
+- in this project, ad_break is treated as the main conclusive signal, while the others are tracked for comparison
 
-Reference: YouTube Self-Censorship Research Project (RQ1 Methodology)
+This file is kept as part of the research methodology so the three ad detection methods
+can be compared in the report:
+1. UI-based detection
+2. DOM-based detection
+3. Network API-based detection
 """
-#  this file is restored to prove the effeciency 
-# between 3 methods for the research report's purposes 
+
+# this file was restored mainly for research comparison
+# the point is to compare how effective the network method is against the ui and dom methods
+#  the main python3 running is not runing this file method, this is only for comparison
 
 # step 1c: network api-based ad detection
 #
-#1. detects ads by intercepting network requests while a youtube video plays
-#2. hooks into page.on('request') and matches urls against ad-related patterns (ad_break, pagead, doubleclick, etc.)
-#3. also seeks to 25%, 50%, 75% through the video to trigger any mid-roll ad requests
-#4. only ad_break is used for the final verdict since the other signals are too noisy (false positives)
-#5. this is the third detection method alongside ui (step1) and dom (step1b) for triangulation
-#6. this file is kept to compare efficiency between the 3 methods for the report
+# 1. this script checks for ads by intercepting network requests while a youtube video is open
+# 2. it listens to every request the page makes and checks whether the url matches known ad-related patterns
+# 3. the script also plays the video and seeks to 25%, 50%, and 75% to try to trigger mid-roll ad requests
+# 4. several signals are tracked, but only ad_break is used for the final Yes/No verdict
+# 5. this is because other signals like pagead or doubleclick can appear even when an actual ad is not clearly delivered
+# 6. so this method is useful for detecting ad-related activity in the background, but it is weaker than the ui method for proving delivery
+# 7. this method is kept in the project to help compare the strengths and weaknesses of all three detection approaches
 
-#  this file is restored to prove the effeciency
-# between 3 methods for the research report's purposes
 
-# Standard library imports
-import argparse
-import asyncio
-import logging
-import os
-import random
-import re
-import sys
+import argparse   # lets the script accept command-line arguments like flags and options
+import asyncio    # needed because Playwright runs with async browser actions
+import logging    # used for progress messages, warnings, and debugging output
+import os         # used for file paths and folder handling
+import random     # used to randomise delays, user agents, and viewport sizes
+import re         # used for regex pattern matching in request urls
+import sys        # used for system actions like exiting and editing sys.path
+
 from dataclasses import dataclass, field
+# dataclass makes it easier to create a clean result object
+# field(default_factory=list) is used so each result gets its own empty list
+
 from typing import Optional
+# Optional means a value can either exist normally or be None
 
-# Third-party imports
-import pandas as pd
+# third-party imports
+import pandas as pd   # used to read and update csv files
 
-# Add project root to path for imports
+# add project root to path for imports
+# this allows the script to import config.py from the parent project folder
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-# Import project configuration paths
+# import project configuration paths
 try:
     from config import DATA_INPUT_DIR, DATA_OUTPUT_DIR
 except ImportError:
-    # Fallback defaults if config not available (e.g., standalone testing)
+    # fallback defaults if config.py is missing
+    # useful when testing the file on its own
     DATA_INPUT_DIR = "data/input"
     DATA_OUTPUT_DIR = "data/output"
 
-# Check for optional stealth library (improves bot evasion)
+# check for optional stealth library
+# stealth helps the browser look less automated to YouTube
 try:
     from playwright_stealth import Stealth
     STEALTH_AVAILABLE = True
@@ -65,7 +76,8 @@ except ImportError:
     STEALTH_AVAILABLE = False
 
 
-# Network request URL patterns that indicate ad-related activity
+# these are regex patterns for urls that often appear in ad-related requests
+# not all of them are equally reliable, so they are tracked separately later
 NETWORK_AD_PATTERNS = [
     re.compile(r'googlevideo\.com.*adformat', re.IGNORECASE),
     re.compile(r'ad_break', re.IGNORECASE),
@@ -79,7 +91,8 @@ NETWORK_AD_PATTERNS = [
     re.compile(r'/activeview\?', re.IGNORECASE),
 ]
 
-# Individual signal patterns for granular tracking
+# separate patterns are kept so the script can record exactly which type of signal was seen
+# this helps later analysis in the report instead of just storing one simple yes/no
 AD_BREAK_PATTERN = re.compile(r'ad_break', re.IGNORECASE)
 PAGEAD_PATTERN = re.compile(r'pagead', re.IGNORECASE)
 DOUBLECLICK_PATTERN = re.compile(r'doubleclick\.net', re.IGNORECASE)
@@ -90,35 +103,34 @@ ACTIVEVIEW_PATTERN = re.compile(r'/activeview\?', re.IGNORECASE)
 @dataclass
 class NetworkDetectionResult:
     """
-    Results from network API ad detection.
+    Stores the result of network-based ad detection for one video.
 
-    Attributes:
-        ad_requests_count: Total number of ad-related network requests observed
-        ad_break_detected: True if ad_break pattern found (primary signal)
-        pagead_detected: True if pagead pattern found
-        doubleclick_detected: True if doubleclick.net pattern found
-        adunit_detected: True if el=adunit pattern found
-        activeview_detected: True if /activeview? pattern found
-        matched_urls: List of matched ad-related URLs for debugging
-        error: Error message if detection failed
+    The idea is to keep both:
+    - the final verdict
+    - the lower-level signals that led to that verdict
+
+    This is useful because for the report we do not just want a yes/no answer,
+    we also want to compare how noisy or reliable each network signal was.
     """
-    ad_requests_count: int = 0
-    ad_break_detected: bool = False
-    pagead_detected: bool = False
-    doubleclick_detected: bool = False
-    adunit_detected: bool = False
-    activeview_detected: bool = False
-    matched_urls: list = field(default_factory=list)
-    error: str = None
+    ad_requests_count: int = 0                 # total number of matched ad-related requests
+    ad_break_detected: bool = False            # strongest signal, used for final verdict
+    pagead_detected: bool = False              # weaker signal, tracked for comparison
+    doubleclick_detected: bool = False         # weaker signal, tracked for comparison
+    adunit_detected: bool = False              # weaker signal, tracked for comparison
+    activeview_detected: bool = False          # weaker signal, tracked for comparison
+    matched_urls: list = field(default_factory=list)   # stores matched urls for debugging/review
+    error: str = None                          # stores any error instead of crashing the whole run
 
     @property
     def has_ads(self) -> bool:
-        """Returns True only if ad_break was detected (conclusive signal)."""
+        # final verdict for this method
+        # only ad_break counts as conclusive enough to mark the video as having ads
         return self.ad_break_detected
 
 
 def check_url_for_ads(url: str) -> bool:
-    """Check if a URL matches any known ad-related pattern."""
+    # checks whether a request url matches any ad-related pattern at all
+    # this is the first broad filter before we look at specific signals
     for pattern in NETWORK_AD_PATTERNS:
         if pattern.search(url):
             return True
@@ -127,27 +139,23 @@ def check_url_for_ads(url: str) -> bool:
 
 class NetworkAPIDetector:
     """
-    YouTube ad detector using network request interception.
+    Detects ad-related activity by intercepting network requests.
 
-    Uses headed Chromium browser with stealth settings to avoid bot detection.
-    Monitors all network requests for ad-related URL patterns during video
-    playback and seeking.
+    The detector opens a real browser, visits a YouTube video page,
+    listens to outgoing requests, and then tries to trigger more requests
+    by playing and seeking through the video.
 
-    Usage:
-        detector = NetworkAPIDetector()
-        await detector.setup()
-        result = await detector.detect("VIDEO_ID")
-        await detector.cleanup()
+    This method looks at background network behaviour, not visible ad playback.
     """
 
-    # Initialise detector with browser mode and logging config
+    # initialise detector with browser mode and logging config
     def __init__(self, headless: bool = False, log_level: int = logging.INFO):
         self.headless = headless
         self.browser = None
         self.playwright = None
         self.logger = self._setup_logger(log_level)
 
-        # macOS Chrome user agents for rotation
+        # several user agents are rotated so the browser looks less repetitive
         self._user_agents = [
             'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
             'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
@@ -160,7 +168,7 @@ class NetworkAPIDetector:
         if headless:
             self.logger.warning("Headless mode may trigger bot detection on YouTube!")
 
-    # Configure stdout logger with timestamp format
+    # configure stdout logger with timestamp format
     def _setup_logger(self, log_level: int) -> logging.Logger:
         logger = logging.getLogger("network_api_detector")
         if not logger.handlers:
@@ -171,17 +179,17 @@ class NetworkAPIDetector:
         logger.setLevel(log_level)
         return logger
 
-    # Pick a random user agent from the rotation list
+    # pick a random user agent so each session looks a bit different
     def _random_user_agent(self) -> str:
         return random.choice(self._user_agents)
 
-    # Generate a randomised viewport to vary browser fingerprint
+    # generate a random window size to vary the browser fingerprint
     def _random_viewport(self) -> dict:
         width = random.randint(1250, 1400)
         height = random.randint(700, 800)
         return {'width': width, 'height': height}
 
-    # Launch Chromium with anti-detection arguments and stealth patches
+    # start playwright and launch the browser with anti-detection settings
     async def setup(self):
         try:
             from playwright.async_api import async_playwright
@@ -189,7 +197,7 @@ class NetworkAPIDetector:
             self.logger.info("Starting browser (headless=%s)", self.headless)
             self.playwright = await async_playwright().start()
 
-            # Stealth arguments to avoid bot detection
+            # these launch arguments try to hide obvious automation clues
             stealth_args = [
                 "--disable-blink-features=AutomationControlled",
                 "--disable-infobars",
@@ -200,7 +208,7 @@ class NetworkAPIDetector:
             self.browser = await self.playwright.chromium.launch(
                 headless=self.headless,
                 args=stealth_args,
-                channel="chrome"  # Use installed Chrome for better stealth
+                channel="chrome"  # use regular Chrome for better realism
             )
             self.logger.info("Browser launched with stealth settings")
 
@@ -209,7 +217,7 @@ class NetworkAPIDetector:
                 "Playwright not installed. Run: pip install playwright && playwright install chromium"
             )
 
-    # Close browser and release Playwright resources
+    # close the browser properly so resources do not stay open
     async def cleanup(self):
         if self.browser:
             self.logger.info("Closing browser")
@@ -217,7 +225,7 @@ class NetworkAPIDetector:
         if self.playwright:
             await self.playwright.stop()
 
-    # Dismiss Google/YouTube cookie consent banner if present
+    # dismiss the cookie popup because it can block interaction with the page
     async def _dismiss_consent(self, page):
         try:
             await asyncio.sleep(1)
@@ -239,14 +247,15 @@ class NetworkAPIDetector:
                     continue
 
         except Exception as e:
+            # not fatal, because some pages may not show the consent banner
             self.logger.debug("Consent handling: %s", e)
 
-    # Play video and seek to 25/50/75% to trigger mid-roll ad requests
+    # play the video and jump through the timeline to try to trigger more ad-related requests
     async def _play_and_seek(self, page):
         try:
             self.logger.info("Starting playback and seek sequence")
 
-            # Start video playback
+            # start playback muted so autoplay is less likely to fail
             await page.evaluate('''() => {
                 const player = document.querySelector('video');
                 if (player) {
@@ -255,10 +264,11 @@ class NetworkAPIDetector:
                 }
             }''')
 
-            # Wait for pre-roll ad requests
+            # wait a bit in case pre-roll ad requests happen near the start
             await asyncio.sleep(3)
 
-            # Seek to different positions to trigger mid-roll ad requests
+            # seek to different positions to try to trigger mid-roll requests
+            # these points are spread out so we sample different parts of the video
             for position in [0.25, 0.5, 0.75]:
                 self.logger.info("Seeking to %.0f%%", position * 100)
                 await page.evaluate(f'''() => {{
@@ -269,13 +279,13 @@ class NetworkAPIDetector:
                 }}''')
                 await asyncio.sleep(2)
 
-            # Final wait for any trailing ad requests
+            # final pause to catch any delayed requests after seeking
             await asyncio.sleep(2)
 
         except Exception as e:
             self.logger.warning("Playback/seek failed: %s", str(e))
 
-    # Run full network ad detection for a single video
+    # run detection for one video from start to finish
     async def detect(self, video_id: str) -> NetworkDetectionResult:
         url = f"https://www.youtube.com/watch?v={video_id}"
         self.logger.info("Detecting ads (network) for: %s", video_id)
@@ -284,13 +294,13 @@ class NetworkAPIDetector:
         captured_ad_urls = []
 
         try:
-            # Create fresh browser context with randomized fingerprint
+            # create a fresh browser context so each video starts in a cleaner environment
             ua = self._random_user_agent()
             vp = self._random_viewport()
             self.logger.info("Using viewport %dx%d", vp['width'], vp['height'])
             context = await self.browser.new_context(viewport=vp, user_agent=ua)
 
-            # Override navigator.webdriver to avoid detection
+            # remove webdriver flag because websites often use it to detect automation
             await context.add_init_script("""
                 Object.defineProperty(navigator, 'webdriver', {
                     get: () => undefined
@@ -299,19 +309,23 @@ class NetworkAPIDetector:
 
             page = await context.new_page()
 
-            # Apply stealth patches if available
+            # apply extra stealth patches if the package is installed
             if STEALTH_AVAILABLE:
                 stealth = Stealth()
                 await stealth.apply_stealth_async(page)
                 self.logger.info("Applied stealth patches")
 
-            # Set up network request listener before navigation
+            # set up the request listener before opening the page
+            # this is important because some useful requests may happen very early
             def handle_request(request):
                 req_url = request.url
+
+                # first check whether this request looks ad-related at all
                 if check_url_for_ads(req_url):
                     captured_ad_urls.append(req_url)
 
-                    # Track individual signal patterns
+                    # then record exactly which signal(s) appeared
+                    # this gives more detailed evidence than one single flag
                     if AD_BREAK_PATTERN.search(req_url):
                         result.ad_break_detected = True
                     if PAGEAD_PATTERN.search(req_url):
@@ -325,24 +339,24 @@ class NetworkAPIDetector:
 
             page.on('request', handle_request)
 
-            # Navigate to video
+            # now load the video page
             self.logger.info("Loading video page...")
             await page.goto(url, wait_until='networkidle', timeout=30000)
 
-            # Dismiss cookie consent
+            # close cookie popup if it appears
             await self._dismiss_consent(page)
 
-            # Wait for player to initialize
+            # wait so the player can finish loading properly
             await asyncio.sleep(2)
 
-            # Play video and seek to trigger mid-roll ad requests
+            # play and seek through the video to try to trigger more ad calls
             await self._play_and_seek(page)
 
-            # Finalise results from captured URLs
+            # once done, store all the matched request information
             result.ad_requests_count = len(captured_ad_urls)
             result.matched_urls = captured_ad_urls
 
-            # Log network detection summary
+            # log the breakdown of which signals were seen
             self.logger.info(
                 "Network summary: ad_requests=%d, ad_break=%s, pagead=%s, "
                 "doubleclick=%s, adunit=%s, activeview=%s",
@@ -360,12 +374,13 @@ class NetworkAPIDetector:
             result.error = str(e)
             self.logger.error("Detection failed: %s", result.error)
 
+        # final verdict uses only ad_break because it is treated as the most reliable network signal
         verdict_str = "Has Ads" if result.has_ads else "No Ads"
         self.logger.info("Verdict: %s (based on ad_break signal)", verdict_str)
 
         return result
 
-    # Detect ads for a list of videos with progress reporting
+    # run detection over many videos one by one
     async def detect_batch(self, video_ids: list, progress_callback=None) -> list:
         results = []
 
@@ -373,15 +388,18 @@ class NetworkAPIDetector:
             detection = await self.detect(video_id)
             results.append(detection)
 
+            # optional callback lets the main function print neat progress updates
             if progress_callback:
                 progress_callback(i + 1, len(video_ids), detection)
 
-            # Restart browser every 5 videos to get a fresh fingerprint
+            # restart browser every 5 videos so the session stays fresher
+            # this helps reduce the risk of long-session fingerprinting
             if (i + 1) % 5 == 0 and i < len(video_ids) - 1:
                 self.logger.info("Restarting browser to avoid detection...")
                 await self.cleanup()
                 await self.setup()
 
+            # small random gap between videos to look less robotic
             if i < len(video_ids) - 1:
                 wait_time = random.uniform(5.0, 12.0)
                 self.logger.info("Waiting %.1f seconds before next video...", wait_time)
@@ -390,7 +408,7 @@ class NetworkAPIDetector:
         return results
 
 
-# Extract the 11-character video ID from a YouTube URL
+# extract the 11-character video ID from different kinds of YouTube links
 def extract_video_id(url: str) -> str:
     patterns = [
         r'(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})',
@@ -400,10 +418,12 @@ def extract_video_id(url: str) -> str:
         match = re.search(pattern, url)
         if match:
             return match.group(1)
+    # if nothing matches, return the input as it is
     return url
 
 
-# Convert a NetworkDetectionResult to a flat dictionary for CSV export
+# flatten the result object into a normal dictionary
+# this makes it easy to save one row per video into a csv file
 def result_to_dict(video_id: str, result: NetworkDetectionResult) -> dict:
     return {
         'video_id': video_id,
@@ -418,25 +438,25 @@ def result_to_dict(video_id: str, result: NetworkDetectionResult) -> dict:
     }
 
 
-# Batch network ad detection on video_urls.csv
+# main batch mode: reads video_urls.csv, runs detection, then writes results back
 def main():
-    # Get base directory
+    # get project base folder
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-    # Resolve paths
+    # build input and output paths
     input_csv = os.path.join(base_dir, DATA_INPUT_DIR, "video_urls.csv")
     output_dir = os.path.join(base_dir, DATA_OUTPUT_DIR)
     output_csv = os.path.join(output_dir, "network_api_detection_results.csv")
 
-    # Check input exists
+    # stop early if the input file does not exist
     if not os.path.exists(input_csv):
         print(f"ERROR: {input_csv} not found")
         sys.exit(1)
 
-    # Ensure output directory exists
+    # make sure the output folder exists before writing files
     os.makedirs(output_dir, exist_ok=True)
 
-    # Read video URLs
+    # load the dataset of youtube urls
     print("Reading video_urls.csv...")
     df = pd.read_csv(input_csv)
 
@@ -444,7 +464,7 @@ def main():
         print("ERROR: 'url' column not found in CSV")
         sys.exit(1)
 
-    # Parse CLI arguments
+    # command-line options let us choose whether to re-check videos and how many rounds to run
     parser = argparse.ArgumentParser(description='Detect ads on YouTube videos via network API monitoring')
     parser.add_argument('--recheck-no', action='store_true',
                         help='Re-check only videos where ad_status is No')
@@ -452,19 +472,20 @@ def main():
                         help='Number of recheck rounds to run (default: 1)')
     args = parser.parse_args()
 
-    # Determine which videos need processing
+    # work out which videos still need processing
+    # by default, skip rows that already have Yes or No in ad_status
     ads_column = df.get('ad_status', pd.Series([''] * len(df)))
     videos_to_process = []
     video_indices = []
 
     if args.recheck_no:
-        # Re-check mode: only process videos currently marked as "No"
+        # in recheck mode, only re-run videos that were previously labelled No
         for i, (url, existing_ad) in enumerate(zip(df['url'], ads_column)):
             if str(existing_ad).strip().lower() == 'no':
                 videos_to_process.append(extract_video_id(url))
                 video_indices.append(i)
     else:
-        # Default mode: process videos with no ad_status yet
+        # normal mode: only process videos with no result yet
         for i, (url, existing_ad) in enumerate(zip(df['url'], ads_column)):
             existing_str = str(existing_ad).strip().lower()
             if existing_str not in ['yes', 'no']:
@@ -484,12 +505,13 @@ def main():
         print("All videos already processed. Nothing to do.")
         return
 
-    # Run detection
     print("\nStarting network API ad detection...")
     print("NOTE: This requires a visible browser window. Bot detection may interfere in headless mode.")
     print()
 
     async def run_detection():
+        # if multiple rounds are requested, keep the strongest result across rounds
+        # meaning: if any round finds ads, that video stays marked positive
         all_round_results = {}
 
         for round_num in range(1, args.recheck_rounds + 1):
@@ -511,7 +533,8 @@ def main():
                     progress_callback=progress_callback
                 )
 
-                # Merge results: if any round detects ads, keep that result
+                # merge round results:
+                # if any round detects ads for a video, keep that positive result
                 for vid, res in zip(videos_to_process, results):
                     if vid not in all_round_results or res.has_ads:
                         all_round_results[vid] = res
@@ -519,15 +542,15 @@ def main():
             finally:
                 await detector.cleanup()
 
-        # Return results in original order
+        # return results in the same order as the original input list
         return [all_round_results[vid] for vid in videos_to_process]
 
     results = asyncio.run(run_detection())
 
-    # Create results mapping
+    # create a quick lookup map from video id to result
     results_map = {vid: res for vid, res in zip(videos_to_process, results)}
 
-    # Update ad_status in video_urls.csv
+    # update ad_status in the original input csv
     if 'ad_status' not in df.columns:
         df['ad_status'] = ''
 
@@ -535,17 +558,17 @@ def main():
         if video_id in results_map:
             df.at[idx, 'ad_status'] = 'Yes' if results_map[video_id].has_ads else 'No'
 
-    # Save updated CSV back to input
+    # save updated input file
     df.to_csv(input_csv, index=False)
     print(f"\nUpdated {input_csv} with ad detection results")
 
-    # Save detailed results to output
+    # save a separate detailed output file for analysis and reporting
     detailed_data = [result_to_dict(vid, res) for vid, res in zip(videos_to_process, results)]
     detailed_df = pd.DataFrame(detailed_data)
     detailed_df.to_csv(output_csv, index=False)
     print(f"Saved detailed results to {output_csv}")
 
-    # Print summary
+    # summary counts for the batch
     yes_count = sum(1 for r in results if r.has_ads)
     no_count = len(results) - yes_count
     error_count = sum(1 for r in results if r.error)
@@ -559,7 +582,8 @@ def main():
     if error_count:
         print(f"Errors:              {error_count}")
 
-    # Additional signal breakdown
+    # also show how often each weaker signal appeared
+    # this is useful for comparing which signals were noisier
     pagead_count = sum(1 for r in results if r.pagead_detected)
     doubleclick_count = sum(1 for r in results if r.doubleclick_detected)
     adunit_count = sum(1 for r in results if r.adunit_detected)
@@ -574,7 +598,8 @@ def main():
 
 
 if __name__ == "__main__":
-    # Single video mode: pass a video ID as argument (not a flag)
+    # single video mode:
+    # if the user passes one plain argument, treat it as a video id
     if len(sys.argv) == 2 and not sys.argv[1].startswith('--'):
         video_id = sys.argv[1]
         print(f"Detecting ads (network API) for video: {video_id}")
@@ -601,8 +626,11 @@ if __name__ == "__main__":
         print(f"  adunit:       {result.adunit_detected}")
         print(f"  activeview:   {result.activeview_detected}")
         print(f"\nVerdict: {'Has Ads' if result.has_ads else 'No Ads'} (based on ad_break)")
+
         if result.error:
             print(f"Error: {result.error}")
+
+        # print only the first 20 matched urls so the output does not become too long
         if result.matched_urls:
             print(f"\nMatched URLs ({len(result.matched_urls)}):")
             for u in result.matched_urls[:20]:
@@ -610,5 +638,5 @@ if __name__ == "__main__":
             if len(result.matched_urls) > 20:
                 print(f"  ... and {len(result.matched_urls) - 20} more")
     else:
-        # Batch processing on video_urls.csv (supports --recheck-no and --recheck-rounds flags)
+        # otherwise run normal batch mode on video_urls.csv
         main()
