@@ -1,9 +1,12 @@
+This is the link for my code package submission via OneDrive link: https://cityuni-my.sharepoint.com/:f:/g/personal/thi_vo_3_city_ac_uk/IgBQ-L6U-oHhQ4BjvP6deeI4AUsXbxzQ8zW2EY0XiynK0mk?e=GwBPTJ
+
+
 # YouTube Self-Censorship Research Pipeline
 
 A computational audit examining whether YouTube's monetisation system influences creator language. Analyses 257 videos across 4 channels using automated ad detection, NLP-based sensitivity analysis, comment perception keywords, and algospeak detection.
 
 # Notes: 
-I have removed the raw folder and archive files from data folder, because they are limited by the number of files by submission's policies, which are only 35 files. While the total videos are about 1000 videos, then all the raw and archive files from 1000 videos are more than 1000 files. 
+I have removed the output files, raw folder and archive files from data folder, because they are limited by the number of files by submission's policies, which are only 35 files. While the total videos are about 1000 videos, then all the raw and archive files from 1000 videos are more than 1000 files. 
 
 After running the main.py, the pipeline will access the input folder - video_url.csv, then it will generate the data files into data/raw folder. 
 
